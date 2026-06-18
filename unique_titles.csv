@@ -1,0 +1,296 @@
+title
+""
+fix(Init): fix a typo in _ask_version_provider options and remove unnecessary filter
+"refactor(Init): remove unnecessary methods from ProjectInfo and refactor _ask_tag, improve test coverage"
+docs(external_links): typo
+Absolute link or link to Markdown files?
+"refactor(bump): add type for out, replace function with re escape"
+refactor: misc cleanup
+refactor(customize): improve code readability
+Make 1 single command to paste all desired information
+Add py.typed file
+Encourage installation through pipx
+"Add option for ""cz.toml"" config file"
+conventional keyword in body would be parsed
+refactor: move ruff and black from the format file to the pre-commit hooks
+Add support for `argcomplete` 3.x
+"`cz init` fails, When any one or none of the pre-commit hooks are selected"
+Lotram/customizable allowed prefixes
+Support tox >= 4.0.0
+cz changelog --no-prereleases
+cz commit with prepare-commit-msg hook
+GitHub actions to bump and publish
+refactor(changelog): simplify logic for get_oldest_and_newest_rev
+refactor(Init): remove the variable values_to_add and the _update_config_file function for readability
+refactor(Init): use ternary operator
+fix(init): make welcome message easier to read
+refactor(git): retype get_commits parameter to make it more friendly to call sites
+ci(pyproject.toml): strict check for invalid commit messages
+Add type hints for cli.py
+Semver refactor
+docs: improve clarity of docs and fix typo/grammar issues
+"cz commit -s  should fail with deprecation warning BEFORE going through dialog, --help should reflect behavior"
+Bumping issue with PATCH version
+Shortcut for commit types
+"Support `charset-normalizer` 3.x versions, not just 3.0.x"
+feat: Introduce tag_regex option with smart default 
+Is there any way to use this in a prepare-commit-msg hook?
+Does not work with python 3.6
+--major-version-zero is meaningless for current version 3.0.0
+Add Unicode Support
+Developmental releases
+clear way to manage settings
+Exception when command is not given
+docs(defaults): deprecate type Questions
+refactor(init): code cleanup and better test coverage
+test(cz_customize): add missing YAML configuration file tests
+docs(feature_request): eliminate duplicated label
+build(.gitignore): ignore `pyrightconfig.json` and `poetry.toml`
+docs(commit): rewrite command commit page
+refactor(changelog): minor cleanup
+refactor(bump): code cleanup and better test coverage
+fix: bump changelog for prerelease without commits
+Specify `bash` shell in CI Workflows
+Add a `--quiet` option
+cz check fails
+Run `cz init` will raise `UnicodeDecodeError`
+brew install commitizen fail on linux brew
+refactor(process_commit_message): better type and early return
+refactor(questions): type questions with TypedDict
+fix(question): strict type with pydantic for questions
+Refactor changelog 5
+docs(bug_report.yml): update bug_report.yml
+build(deps): bump typing-extensions from 4.11.0 to 4.12.0
+Turn on isort for ruff
+ci(workflow): move 'generate_cli_screenshots' steps to 'docspublish'
+build(poetry)(deps): bump importlib-metadata from 4.13.0 to 5.2.0
+docs: add commit cli
+make tag creation optional
+[Feature Request] Allow commit signing
+style: previous PR broke style guidelines
+"Correct typo to spell ""convention"""
+Discussion: deprecate configParser
+refactor(Init): extract _get_config_data for readability
+refactor(bump): eliminate similar patterns in code
+refactor(git): simplify tag logic
+feat: add check against default branch
+`_valid_command_argument`
+fix(deprecated): mark deprecated will be removed in v5
+docs(pull_request_template): add task to fix broken external links in the docs
+"Those ""XXX will be removed in commitizen 4."" are not removed in v4, discuss when to remove them?"
+Refactor changelog 6
+Add filter/search feature for commit change type
+style: move codespell configuration to pyproject.toml
+"feat(config_files): add suport for ""cz.toml"" config file"
+"option `ci` reads `Changes to our CI configuration`, possibly an error"
+fix(changelog): handle custom tag_format in changelog generation
+Fix/deps
+build(poetry)(deps-dev): bump types-pyyaml from 5.4.12 to 6.0.12.9
+feat: draft of the --empty parameter
+Report hook installation fail
+Unclear documentation regarding `bump_map`
+Incorporate --version-files flag to cz bump instead of hard-reading it from the config
+feat(commands/commit): apply prepare-commit-msg hook
+docs(Tutorial): Tutorial section added. GitLab tutorial added
+Travis is not running in PR
+refactor(ExpectedExit): make the constructor more compact
+refactor(changelog): shorten condition expression and early return
+"Redo #1466, #1479 and #1480"
+Fix `tpl.filename` type
+[DO NOT MERGE] Testing invalid commit messages
+refactor(cz): better typing and refactor message method
+refactor(check): rename variable and compile pattern once
+docs(README): fix broken bullet points
+refactor(commit): simplify call
+fix: add description for subcommands
+"missing help text when subcommand is used (e.g., `cz commit --help`)"
+Create a flag to build the changelog from commits in multiple git repositories
+build(poetry)(deps): bump importlib-metadata from 4.13.0 to 6.6.0
+build(poetry)(deps): bump argcomplete from 2.1.2 to 3.0.6
+Bump development dependencies
+cz bump after git revert doesn't work
+Command changelog
+fix mypy warning and enforce it in scripts
+ci: run tests on pull_requests
+Investigation on how to run: git cz
+docs(contributing): add Contributing TL;DR page
+docs: add installation and usage guide for cz-ai plugin leveraging GP…
+refactor(containers): add unique list
+"refactor(changelog): better typing, yield"
+"docs(faq): add ""features we won't add"" section"
+docs(label_pr.yml): add labels based on new PR title
+build(poetry)(deps-dev): bump types-termcolor from 0.1.1 to 1.1.6.2
+How to add link issue on changelog?
+cz bump fails with --changelog and no local tag exists for local version
+correcting style mistake
+"pytest failure: shutil.py:606: PermissionError, bump.py:126: SystemExit"
+"docs(config.md): fix format issue, add period and add title to example config code blocks"
+build: remove not needed importlib-metadata dependency for python >= 3.10
+build(deps-dev): bump mypy to 1.16.0
+docs(taplo): add toml formatter
+refactor(cli): early return and improve test coverage
+refactor(check): code cleanup
+"Skip ""git push"" is no screenshot is updated in job ""update-cli-screenshots"""
+commitizen v4
+Enable multiple locations of config file .cz.*
+"cz bump cannot find version scheme ""semver"" after upgrade"
+`cz bump` with a breaking change after an RC does not automatically increase the major version
+Issues Running cz bump in ci/cd pipeline
+feat: pre-release seperated changelog
+fix(commands/check.py): make --commit-msg-file a required argument for check command
+77 GitHub actions
+New command: cz init
+refactor(init): remote extra words
+docs(bump.md): fix minor grammar issue and add titles for code blocks
+Enable `ruff` rule PGH003
+Mention why we don't use pydantic in FAQ
+Add type annotations for the arguments of the CLI entry point
+"refactor(BaseConfig): update function name, upgrade mypy version"
+refactor(git): code cleanup and test coverage
+Inject the output of `cz --help` into README with GitHub workflow
+New `retry_after_failure` config option and `--no-retry` overwrite flag
+Feat 451 add commit args
+Add  example and illustration to `cz commit --retry` 
+Add documentation for gitlab-ci
+Fixes #56: feat(Commands/commit): add ´--dry-run´ flag to the Commit command
+How to type multiple lines for body part?
+refactor(bump): use a loop to shorten a series of similar NotAllowed exceptions
+docs(CHANGELOG): run `pre-commit run --all-files` to fix CI
+Upgrade ruff and add RUF022 & RUF100
+fix(base.py): add encoding when open changlelog_file
+Installing pre-commit hook step in `cz init` fails when using rye
+Turn on mypy check_untyped_defs = true
+build(poetry)(deps-dev): bump mypy from 0.931 to 1.2.0
+`bump` does not pick a breaking change for `chore!:`
+create a dev bump straight after a normal bump
+Support placeholders for local version bumping
+prerelease can't comply with the semver.org specification
+fix: issue 67: shutil.py:606: PermissionError
+fix(test_cli): testing the version command
+Add --dry-run option to command commit
+Easier Customization
+refactor(ParseArgs): simplify `__call__` function body
+"build: add PGH003 and PGH004, add types-colorama"
+Deprecate `Questions` in defaults.py
+"fix(commit): emit deprecated warning of cz commit -s BEFORE going through dialog, add deprecation warning on cz commit --help"
+Add FAQ explaining why Pydantic is not used
+fix(defaults): add non-capitalized default constants back and deprecated warning
+"refactor(git): extract _create_commit_cmd_string, better test coverage"
+feat(ci/cd): automates the generation of CLI screenshots
+`cz bump` fails when running with `rye`
+cz bump fails if any non semver tag exist
+Bump Increments `PATCH` Version on `ci` Commit
+Be able to configure the allowed prefixes list
+Feature/allow empty commit
+`cz init` failed if there is already a config with identical filename (json format)
+New command: cz check
+Generate Changelog from commits
+fix(CommitizenProvider): raise if version is None
+refactor(Init): fix unbounded variable in _ask_tag_format
+Support the latest version of `Ruff`
+docs(cli): fix minor grammatical issue
+README.md Usage section is misleading
+feat(commit): add --write-message-to-file option
+Commitizen-branch with pre-commit prevents from push to origin with exit code 23
+Relax specification for argcomplete dependency
+Improve `cz init` command
+Proposal for v3
+fix(cz/exceptions): Fix AnswerRequiredException not caught
+feat(Commands/check): enforce the project to always use conventional …
+Fixes #60: Add 'git-cz' entrypoint in user's PATH.
+ci: codeconv for github actions
+fix(Bump): rewrite --get-next NotAllowed error message for consistency
+fix(Changelog): fix _export_template variable type
+refactor(TagRules): extract tag_formats property and simplify list comprehension
+refactor(ScmProvider): replace sorted with max
+refactor(changelog): shorten generate_tree_from_commits and use set to check used tags
+Restore branch
+Check every commit message in PR CI
+Upgrade `mypy` to 1.16
+refactor(conventional_commits): make schema_pattern more readable
+refactor(check): remove unnecessary list construction
+build(termcolor): remove termcolor <3 restriction
+refactor(version_scheme): cleanup
+fix: set shell to False if running subprocess on Windows
+build(deps-dev): bump pytest from 8.2.0 to 8.2.1
+chore: add chore to types list
+"version store strategy: ""VERSION"" file"
+docs: Fix spelling mistakes
+fix: commit dry-run doesnt require staging to be clean
+show the version of the current project
+refactor(Changelog): remove unnecessary intermediate variables for better readability
+ci(mypy): redo #1480
+build(poetry): run poetry update to keep the packages up to date
+"refactor: do not guess if changelog format is provided, make function private"
+refactor(BaseCommitizen): remove unused process_commit
+docs(init): rewrite commands init page
+"docs(bump): rewrite bump about section, fix incorrect version increment rules"
+refactor(changelog): cleanup and add test cases
+refactor: improve readability and fix typos
+feat: filter search for commit change type
+build(deps-dev): bump ruff from 0.4.4 to 0.4.5
+docs: fix a few typos in CHANGELOG.md and .pre-commit-hooks.yaml
+[outdated] fix: set shell to False if running subprocess on Windows
+Add py.typed marker
+Allow releasing after a release candidate without commits
+ci(dependabot): add prefix-development
+Error with Vim when trying to bump to a new version
+Writes git commit messages with AI
+"I use https://formulae.brew.sh/formula/commitizen, but can't not use.  Intel macOS Ventura 13.1"
+[BUG]: Windows CI Tests False-Positive of Passing
+Add documentation for Github Actions
+Customize committing and bumping through toml file
+Project status
+ci(github-actions): set organization to true for JamesIves/github-sponsors-readme-action@v1
+refactor(git): remove redundant if branch
+"docs(customization.md): fix grammar mistake, add title to code blocks"
+4.8.3 candidate
+"feat(bump_rule): add BumpRule, VersionIncrement, Prerelease Enum"
+Support `termcolor` version 3
+refactor: fix typos
+ci: skip 'update-cli-screenshots' if no changes
+Add won't added features to FAQ page
+CLI screenshots will not be updated on Github Pages
+UnicodeDecodeError when running `cz bump`
+refactor: strip possessive from note about ci option
+"Error ""fatal: unknown refname: format lstrip=2"" raised when running ""cz bump"""
+change log was generated with garbage data
+build(poetry)(deps): bump argcomplete from 2.1.2 to 3.0.8
+cz changelog does not create breaking change for feat(pipeline)!
+Global Configuration
+feat: check if commit message is no more than 72 characters
+Deprecation warning for config through ini files
+Add documentation for Jenkinsfile
+README typo should be convention
+ci: new github actions
+Restrict list of types / scopes
+"fix(ExitCode): add from_str in ExitCode and replace parse_no_raise with it, warn if the error code is not in range"
+commitizen 4.8.3 includes dependency `importlib_metadata` for Python > 3.9
+refactor(bump): simplify nested if
+perf(bump): avoid unnecessary list construction and rename variable t…
+docs(contributing): improve documentation for first-time contributors
+refactor(bump): TypedDict for bump argument
+"refactor: improve types and avoid nested loop, add types for untyped functions"
+docs: correct case GitHub
+test(changelog): code cleanup and better type
+docs(pull_request_template): make the checklist holistic
+Add check against main branch hook
+build(deps-dev): bump requests from 2.31.0 to 2.32.0
+build(deps-dev): bump mkdocs-material from 9.5.23 to 9.5.24
+`cz ch` cannot decode Chinese word
+build commit is not eligible to be bumped
+test: add test for 'additional' types in conventional commits
+Fix/major version zero bump map
+feat: add --allow-no-commit option
+Current release changelog with merged pre-release changelog
+Commitizen pre-commit fails when using `git commit -v`
+Discussion for PR https://github.com/commitizen-tools/commitizen/pull/486
+"`bump` is also changing dependency versions in `pyproject.toml`, when the versions are the same"
+No tag found to do an incremental changelog
+Option to allow `fixup!` and `squash!` in commit messages
+[Bug] Bump commits ALL files
+[Feature Request] Respect --allow-empty flag
+[feature] support finding latest relase version in bump version commit message
+docs: added github actions to nav
+"Rename ""files"" in configuration"
+Enhance customization
