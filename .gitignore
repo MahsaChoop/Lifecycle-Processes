@@ -26,11 +26,7 @@ env/
 .DS_Store
 Thumbs.db
 
-# Large raw data (keep folder layout; do not commit binaries)
-data/raw/*.duckdb
-data/raw/*.sqlite
-data/raw/*.json
-data/raw/*.xlsx
+
 
 # Local scratch / build helpers
 _extract_tmp/
