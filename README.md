@@ -64,7 +64,7 @@ Outputs are written under `results/tables/` and `results/figures/`.
 
 ## Citation
 
-The complexity metrics use the vendored [process-complexity](process-complexity/) toolkit (EPA / graph entropy style measures). Prefer citing the upstream project if you publish results that rely on those metrics.
+
 
 ## Legacy notebooks
 
