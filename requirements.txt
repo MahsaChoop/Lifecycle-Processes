@@ -1,0 +1,13 @@
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+duckdb>=0.9
+pm4py>=2.7
+
+# Optional / used by process-complexity (EPA toolkit under process-complexity/)
+BitVector
+lempel_ziv_complexity
+
+# Notebook
+jupyter
+ipykernel

@@ -1,0 +1,44 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor
+.idea/
+.cursor/
+.vscode/
+*.swp
+
+# Environments
+.venv/
+venv/
+env/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large raw data (keep folder layout; do not commit binaries)
+data/raw/*.duckdb
+data/raw/*.sqlite
+data/raw/*.json
+data/raw/*.xlsx
+
+# Local scratch / build helpers
+_extract_tmp/
+_parity_baseline/
+_assemble_remaining.py
+_build_modules.py
+_build_modules2.py
+_create_main_nb.py
+_list_cells.py
+_migrate_layout.py
+_parity_check.py
