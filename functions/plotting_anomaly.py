@@ -10,6 +10,94 @@ import pandas as pd
 from functions.commits import CATEGORIES
 from functions.config import RESULTS_FIGURES, save_figure
 
+_CALLOUT_OFFSETS = [(0, 14), (0, -18), (12, 22), (-12, -26)]
+
+
+def _annotate_anomaly_callouts(ax, annotated_states, severity_colors, close_days=14):
+    """Place numbered callouts; nudge left/right when anomalies fall within close_days."""
+    prev_week = None
+    for plot_index, (_, row) in enumerate(annotated_states.iterrows()):
+        severity = row["severity"]
+        color = severity_colors.get(severity, "#444444")
+        week = pd.Timestamp(row["week_start"])
+        ax.scatter(
+            row["week_start"],
+            row["value"],
+            color=color,
+            edgecolor="white",
+            linewidth=0.9,
+            s=85,
+            zorder=4,
+        )
+        offset = list(_CALLOUT_OFFSETS[plot_index % len(_CALLOUT_OFFSETS)])
+        if prev_week is not None and abs((week - prev_week).days) <= close_days:
+            offset[0] += 10 if plot_index % 2 == 0 else -10
+        ax.annotate(
+            str(plot_index + 1),
+            xy=(row["week_start"], row["value"]),
+            xytext=tuple(offset),
+            textcoords="offset points",
+            ha="center",
+            va="center",
+            fontsize=7,
+            fontweight="bold",
+            color="#1F3B5B",
+            arrowprops={"arrowstyle": "-", "color": color, "lw": 0.6},
+            bbox={
+                "boxstyle": "circle,pad=0.2",
+                "fc": "white",
+                "ec": color,
+                "lw": 0.7,
+                "alpha": 0.95,
+            },
+            zorder=5,
+        )
+        prev_week = week
+
+
+def _anomaly_state_legend_handles(annotated_states, severity_colors):
+    """One colored marker handle per numbered anomaly state."""
+    handles = []
+    for i, (_, row) in enumerate(annotated_states.iterrows(), start=1):
+        color = severity_colors.get(row["severity"], "#444444")
+        handles.append(
+            plt.Line2D(
+                [0], [0],
+                marker="o",
+                linestyle="",
+                markerfacecolor=color,
+                markeredgecolor="white",
+                markersize=7,
+                label=f"{i}. {row['severity']} | {row['component']}",
+            )
+        )
+    return handles
+
+
+def _place_right_legends(ax, series_handles, series_labels, state_handles):
+    """Stack series legend then colored anomaly-state list on the right."""
+    leg1 = ax.legend(
+        series_handles,
+        series_labels,
+        loc="upper left",
+        bbox_to_anchor=(1.01, 1.0),
+        fontsize=8,
+        ncol=1,
+        frameon=True,
+    )
+    ax.add_artist(leg1)
+    if state_handles:
+        ax.legend(
+            handles=state_handles,
+            loc="upper left",
+            bbox_to_anchor=(1.01, 0.62),
+            fontsize=6.5,
+            ncol=1,
+            frameon=True,
+            title="States (severity | component)",
+            title_fontsize=8,
+        )
+
 
 def plot_weekly_event_counts(weekly, figures_dir=None, event_ids=None, show=True):
     figures_dir = Path(figures_dir or RESULTS_FIGURES)
@@ -58,8 +146,8 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         markersize=3,
         label="weekly rate of issue_closed",
     )
-    ax.plot(weekly_105_anomaly_frame["week_start"], weekly_105_anomaly_frame["upper_bound"], linestyle="--", label="IQR upper")
-    ax.plot(weekly_105_anomaly_frame["week_start"], weekly_105_anomaly_frame["lower_bound"], linestyle="--", label="IQR lower")
+    ax.plot(weekly_105_anomaly_frame["week_start"], weekly_105_anomaly_frame["upper_bound"], linestyle="--", label="IQR upper band")
+    ax.plot(weekly_105_anomaly_frame["week_start"], weekly_105_anomaly_frame["lower_bound"], linestyle="--", label="IQR lower band")
     if not anomaly_states.empty:
         ax.scatter(
             anomaly_states["week_start"],
@@ -69,9 +157,9 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
             zorder=3,
             label="anomaly states",
         )
-    ax.set_title("Rolling IQR anomalies with k=1.5")
+    ax.set_title("Finding anomalies with Rolling IQR method with k=1.5 for issue_closed rate")
     ax.set_xlabel("Week start")
-    ax.set_ylabel("Closed issues/week")
+    ax.set_ylabel("issue_closed rate (weekly)")
     ax.grid(alpha=0.25)
     ax.legend(frameon=False)
     fig.autofmt_xdate()
@@ -109,7 +197,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         axes[0].invert_yaxis()
         axes[0].set_xlabel("Week start")
         axes[0].set_ylabel("Severity")
-        axes[0].set_title("Anomaly severity over time")
+        axes[0].set_title("Severity over time")
         axes[0].grid(alpha=0.25)
 
         severity_counts = severity_plot["severity"].value_counts().reindex(severity_order, fill_value=0)
@@ -121,7 +209,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
             linewidth=0.5,
         )
         axes[1].set_xlabel("Severity")
-        axes[1].set_ylabel("Anomaly weeks")
+        axes[1].set_ylabel("Count of weeks")
         axes[1].set_title("Severity distribution")
         axes[1].grid(axis="y", alpha=0.25)
 
@@ -185,23 +273,17 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
             zorder=4,
             label=severity_legend_labels[severity],
         )
-        for _, row in subset.iterrows():
-            label = f"{row['severity']}: {row['component']}"
-            axes[0].annotate(
-                label,
-                xy=(row["week_start"], row["value"]),
-                xytext=(0, 12),
-                textcoords="offset points",
-                ha="center",
-                fontsize=8,
-                color=severity_colors[severity],
-                bbox={"boxstyle": "round,pad=0.2", "fc": "white", "ec": severity_colors[severity], "alpha": 0.75},
-            )
+
+    annotated_states_tv = anomaly_states.dropna(subset=["week_start", "value"]).copy()
+    annotated_states_tv = annotated_states_tv.sort_values("week_start").reset_index(drop=True)
+    _annotate_anomaly_callouts(axes[0], annotated_states_tv, severity_colors)
 
     axes[0].set_title("Engineering ticket volume - multimodal anomaly detection")
     axes[0].set_ylabel("Tickets per week")
     axes[0].grid(axis="y", alpha=0.2)
-    axes[0].legend(loc="upper left", fontsize=8, frameon=True)
+    series_handles, series_labels = axes[0].get_legend_handles_labels()
+    state_handles_tv = _anomaly_state_legend_handles(annotated_states_tv, severity_colors)
+    _place_right_legends(axes[0], series_handles, series_labels, state_handles_tv)
 
     axes[1].fill_between(
         plot_frame["week_start"],
@@ -225,7 +307,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
     axes[1].legend(loc="upper right", fontsize=8, frameon=True)
 
     fig.autofmt_xdate()
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0, 0.78, 1])
     save_figure(fig, FIGURES_DIR, "ticket_volume_anomaly_detection")
     plt.show()
 
@@ -242,9 +324,9 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         fig, axes = plt.subplots(
             3,
             1,
-            figsize=(14, 8.5),
+            figsize=(14, 9.5),
             sharex=True,
-            gridspec_kw={"height_ratios": [4, 1, 1.6], "hspace": 0.12},
+            gridspec_kw={"height_ratios": [4.5, 1, 1.6], "hspace": 0.12},
         )
 
         metric_ax, severity_ax, score_ax = axes
@@ -274,35 +356,11 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         )
 
         annotated_states = anomaly_states.dropna(subset=["week_start", "value"]).copy()
-        annotated_states = annotated_states.sort_values("week_start")
-        label_offsets = [(0, 16), (0, -22), (0, 28), (0, -34)]
-        for plot_index, (_, row) in enumerate(annotated_states.iterrows()):
-            severity = row["severity"]
-            color = severity_colors.get(severity, "#444444")
-            metric_ax.scatter(
-                row["week_start"],
-                row["value"],
-                color=color,
-                edgecolor="white",
-                linewidth=0.9,
-                s=85,
-                zorder=4,
-            )
-            offset = label_offsets[plot_index % len(label_offsets)]
-            metric_ax.annotate(
-                f"{severity} | {row['component']}",
-                xy=(row["week_start"], row["value"]),
-                xytext=offset,
-                textcoords="offset points",
-                ha="center",
-                fontsize=8,
-                color="#1F3B5B",
-                arrowprops={"arrowstyle": "-", "color": color, "lw": 0.6},
-                bbox={"boxstyle": "round,pad=0.25", "fc": "white", "ec": color, "lw": 0.7, "alpha": 0.9},
-            )
+        annotated_states = annotated_states.sort_values("week_start").reset_index(drop=True)
+        _annotate_anomaly_callouts(metric_ax, annotated_states, severity_colors)
 
-        metric_ax.set_title("Weekly closed issues with rolling-IQR anomalies and severity context")
-        metric_ax.set_ylabel("Closed issues / week")
+        metric_ax.set_title("Weekly issue_closed rate with rolling-IQR anomalies and severity context")
+        metric_ax.set_ylabel("Anomaly score bands")
         metric_ax.grid(axis="y", alpha=0.2)
         handles, labels = metric_ax.get_legend_handles_labels()
         severity_handles = [
@@ -311,8 +369,13 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
             for s in severity_order
             if s in set(annotated_states["severity"])
         ]
-        metric_ax.legend(handles + severity_handles, labels + [h.get_label() for h in severity_handles],
-                         loc="upper left", fontsize=8, ncol=2, frameon=True)
+        state_handles = _anomaly_state_legend_handles(annotated_states, severity_colors)
+        _place_right_legends(
+            metric_ax,
+            handles + severity_handles,
+            labels + [h.get_label() for h in severity_handles],
+            state_handles,
+        )
 
         severity_ax.set_yticks(range(len(severity_order)))
         severity_ax.set_yticklabels(severity_order)
@@ -358,9 +421,9 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         score_ax.grid(axis="y", alpha=0.2)
         score_ax.legend(loc="upper right", fontsize=8, frameon=True)
 
-        fig.suptitle("Anomaly summary: metric, severity timeline, and detector score", fontsize=14, y=0.995)
+        fig.suptitle("Lifecycle's states, severity timeline and anomaly score timeline ", fontsize=14, y=0.995)
         fig.autofmt_xdate()
-        plt.tight_layout(rect=[0, 0, 1, 0.985])
+        plt.tight_layout(rect=[0, 0, 0.78, 0.985])
         save_figure(fig, FIGURES_DIR, "anomaly_summary_dashboard")
         plt.show()
     return FIGURES_DIR
