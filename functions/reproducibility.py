@@ -11,7 +11,6 @@ from pm4py.algo.evaluation.replay_fitness import algorithm as replay_fitness_eva
 from functions.complexity_metrics import (
     _gini,
     _variant_case_counts,
-    ensure_complexity_deps,
 )
 from functions.config import REPRO_SEEDS, RESULTS_TABLES
 from functions.discovery import (
@@ -35,8 +34,6 @@ def run_seed_reproducibility(
     tables_dir.mkdir(parents=True, exist_ok=True)
     if repro_seeds is None:
         repro_seeds = REPRO_SEEDS
-
-    Complexity = ensure_complexity_deps()
 
     repro_discovery_rows = []
     repro_complexity_rows = []
@@ -99,34 +96,6 @@ def run_seed_reproducibility(
 
         crow = {"seed": seed}
         try:
-            plain = Complexity.generate_log(elog)
-            pa = Complexity.build_graph(plain)
-
-            var_ent, var_ent_norm = Complexity.graph_complexity(pa)
-            seq_ent, seq_ent_norm = Complexity.log_complexity(pa)
-            crow.update(
-                {
-                    "variant_entropy": var_ent,
-                    "norm_variant_entropy": var_ent_norm,
-                    "sequence_entropy": seq_ent,
-                    "norm_sequence_entropy": seq_ent_norm,
-                }
-            )
-
-            measures = Complexity.perform_measurements(
-                ["all"], log=plain, pm4py_log=elog, pa=pa, quiet=True
-            )
-            for key, value in measures.items():
-                if isinstance(value, dict):
-                    for sub_key, sub_val in value.items():
-                        crow[f"{key} ({sub_key})"] = sub_val
-                else:
-                    crow[key] = value
-        except Exception as exc:
-            crow["error"] = str(exc)
-            print(f"[seed={seed}] complexity computation failed: {exc}")
-
-        try:
             counts = _variant_case_counts(elog)
             total = counts.sum()
             crow["top1_variant_coverage"] = float(counts[0] / total) if counts.size else np.nan
@@ -175,7 +144,7 @@ def run_seed_reproducibility(
     print(f"Reproducibility over {len(repro_seeds)} seeds: {repro_seeds}")
     print("\nDiscovery metrics summary (mean/std/CV per miner):")
     print(repro_discovery_summary)
-    print("\nComplexity + within-log similarity summary (mean/std/CV per metric, sorted by CV):")
+    print("\nWithin-log similarity summary (mean/std/CV per metric, sorted by CV):")
     print(repro_complexity_summary)
 
     seed_fscore_mean = (
