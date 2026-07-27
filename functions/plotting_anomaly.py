@@ -8,7 +8,13 @@ import numpy as np
 import pandas as pd
 
 from functions.commits import CATEGORIES
-from functions.config import RESULTS_FIGURES, save_figure
+from functions.config import (
+    ANOMALY_EVENT_TYPE_ID,
+    CREATE_EVENT_TYPE_ID,
+    RESULTS_FIGURES,
+    RESULTS_TABLES,
+    save_figure,
+)
 
 _CALLOUT_OFFSETS = [(0, 14), (0, -18), (12, 22), (-12, -26)]
 
@@ -97,6 +103,65 @@ def _place_right_legends(ax, series_handles, series_labels, state_handles):
             title="States (severity | component)",
             title_fontsize=8,
         )
+
+
+def _open_closed_weekly_series(weekly, created_col=None, closed_col=None):
+    created_col = CREATE_EVENT_TYPE_ID if created_col is None else created_col
+    closed_col = ANOMALY_EVENT_TYPE_ID if closed_col is None else closed_col
+    created_counts = weekly[created_col] if created_col in weekly.columns else pd.Series(dtype=int)
+    closed_counts = weekly[closed_col] if closed_col in weekly.columns else pd.Series(dtype=int)
+    return created_counts, closed_counts
+
+
+def weekly_open_closed_summary_table(weekly, created_col=None, closed_col=None, tables_dir=None):
+    """Table 1: summary statistics for weekly created (open) vs closed issue counts."""
+    tables_dir = Path(tables_dir or RESULTS_TABLES)
+    tables_dir.mkdir(parents=True, exist_ok=True)
+    if weekly.empty:
+        summary_table = pd.DataFrame()
+    else:
+        created_counts, closed_counts = _open_closed_weekly_series(weekly, created_col, closed_col)
+        summary_table = pd.DataFrame({
+            "Open issues (weekly created)": created_counts,
+            "Closed issues (weekly closed)": closed_counts,
+        }).describe().round(2)
+    out_path = tables_dir / "weekly_open_closed_summary.csv"
+    summary_table.to_csv(out_path)
+    print(f"Saved {out_path}")
+    return summary_table
+
+
+def plot_weekly_open_vs_closed_histogram(
+    weekly, created_col=None, closed_col=None, figures_dir=None, show=True,
+):
+    """Histogram: distribution of weekly created (open) vs closed issue counts."""
+    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+    figures_dir.mkdir(parents=True, exist_ok=True)
+    fig, ax = plt.subplots(figsize=(10, 4.5))
+    if weekly.empty:
+        ax.text(
+            0.5, 0.5, "No weekly data available",
+            ha="center", va="center", transform=ax.transAxes,
+        )
+    else:
+        created_counts, closed_counts = _open_closed_weekly_series(weekly, created_col, closed_col)
+        ax.hist(
+            created_counts, bins=20, alpha=0.6,
+            label="Open issues (created per week)", edgecolor="black",
+        )
+        ax.hist(
+            closed_counts, bins=20, alpha=0.6,
+            label="Closed issues (closed per week)", edgecolor="black",
+        )
+        ax.legend()
+    ax.set_xlabel("Count per week")
+    ax.set_ylabel("Number of weeks")
+    ax.set_title("Distribution of weekly open vs closed issues")
+    plt.tight_layout()
+    save_figure(fig, figures_dir, "weekly_open_vs_closed_issue_distribution")
+    if show:
+        plt.show()
+    return fig
 
 
 def plot_weekly_event_counts(weekly, figures_dir=None, event_ids=None, show=True):
