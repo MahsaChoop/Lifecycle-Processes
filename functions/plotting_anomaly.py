@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 from functions.commits import CATEGORIES
-from functions.config import RESULTS_FIGURES
+from functions.config import RESULTS_FIGURES, save_figure
 
 
 def plot_weekly_event_counts(weekly, figures_dir=None, event_ids=None, show=True):
@@ -39,7 +39,7 @@ def plot_weekly_event_counts(weekly, figures_dir=None, event_ids=None, show=True
     ax.grid(True, alpha=0.3)
     fig.autofmt_xdate()
     plt.tight_layout()
-    fig.savefig(figures_dir / "weekly_event_counts.png", dpi=150, bbox_inches="tight")
+    save_figure(fig, figures_dir, "weekly_event_counts")
     if show:
         plt.show()
     return fig
@@ -76,7 +76,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
     ax.legend(frameon=False)
     fig.autofmt_xdate()
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "rolling_iqr_anomalies.png", dpi=150, bbox_inches="tight")
+    save_figure(fig, FIGURES_DIR, "rolling_iqr_anomalies")
     plt.show()
 
     severity_order = ["P0", "P1", "P2", "P3", "P4"]
@@ -127,7 +127,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
 
     fig.autofmt_xdate()
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "anomaly_severity_overview.png", dpi=150, bbox_inches="tight")
+    save_figure(fig, FIGURES_DIR, "anomaly_severity_overview")
     plt.show()
 
     severity_legend_labels = {
@@ -226,7 +226,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
 
     fig.autofmt_xdate()
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "ticket_volume_anomaly_detection.png", dpi=150, bbox_inches="tight")
+    save_figure(fig, FIGURES_DIR, "ticket_volume_anomaly_detection")
     plt.show()
 
 
@@ -361,7 +361,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         fig.suptitle("Anomaly summary: metric, severity timeline, and detector score", fontsize=14, y=0.995)
         fig.autofmt_xdate()
         plt.tight_layout(rect=[0, 0, 1, 0.985])
-        fig.savefig(FIGURES_DIR / "anomaly_summary_dashboard.png", dpi=150, bbox_inches="tight")
+        save_figure(fig, FIGURES_DIR, "anomaly_summary_dashboard")
         plt.show()
     return FIGURES_DIR
 
@@ -433,9 +433,6 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, figure
     )
 
     plt.tight_layout()
-    fig.savefig(
-        FIGURES_DIR / "commit_context_category_stack.png",
-        dpi=150, bbox_inches="tight",
-    )
+    save_figure(fig, FIGURES_DIR, "commit_context_category_stack")
     plt.show()
     return FIGURES_DIR

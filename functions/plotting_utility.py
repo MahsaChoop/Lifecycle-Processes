@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from functions.config import RESULTS_FIGURES
+from functions.config import RESULTS_FIGURES, save_figure
 
 LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
 LOG_COLORS = {
@@ -101,8 +101,8 @@ def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, sho
         ylim01=True,
     )
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "clean_log_f_score_grouped_bars.png", dpi=150, bbox_inches="tight")
-    print(f"Saved {FIGURES_DIR / 'clean_log_f_score_grouped_bars.png'}")
+    save_figure(fig, FIGURES_DIR, "clean_log_f_score_grouped_bars")
+    print(f"Saved {FIGURES_DIR / 'clean_log_f_score_grouped_bars'}.{{png,pdf}}")
     if show:
         plt.show()
 
@@ -110,8 +110,8 @@ def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, sho
     plot_grouped_bars(wide_fitness_clean, "Fitness", "Fitness", axes[0], ylim01=True)
     plot_grouped_bars(wide_precision_clean, "Precision", "Precision", axes[1], ylim01=True)
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "clean_log_fitness_precision.png", dpi=150, bbox_inches="tight")
-    print(f"Saved {FIGURES_DIR / 'clean_log_fitness_precision.png'}")
+    save_figure(fig, FIGURES_DIR, "clean_log_fitness_precision")
+    print(f"Saved {FIGURES_DIR / 'clean_log_fitness_precision'}.{{png,pdf}}")
     if show:
         plt.show()
 
@@ -120,8 +120,8 @@ def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, sho
     plot_grouped_bars(wide_cfc_clean, "CFC", "CFC", axes[1])
     plot_grouped_bars(wide_simplicity_clean, "Simplicity", "Simplicity", axes[2], ylim01=True)
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "clean_log_complexity.png", dpi=150, bbox_inches="tight")
-    print(f"Saved {FIGURES_DIR / 'clean_log_complexity.png'}")
+    save_figure(fig, FIGURES_DIR, "clean_log_complexity")
+    print(f"Saved {FIGURES_DIR / 'clean_log_complexity'}.{{png,pdf}}")
     if show:
         plt.show()
 
@@ -161,8 +161,8 @@ def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, sho
     _style_axes(axes[1], ylim01=True)
 
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "clean_log_threshold_sensitivity.png", dpi=150, bbox_inches="tight")
-    print(f"Saved {FIGURES_DIR / 'clean_log_threshold_sensitivity.png'}")
+    save_figure(fig, FIGURES_DIR, "clean_log_threshold_sensitivity")
+    print(f"Saved {FIGURES_DIR / 'clean_log_threshold_sensitivity'}.{{png,pdf}}")
     if show:
         plt.show()
 
@@ -199,8 +199,8 @@ def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, sho
     ax.legend(title="Log group")
     _style_axes(ax, ylim01=True)
     plt.tight_layout()
-    fig.savefig(FIGURES_DIR / "clean_log_f_score_slopegraph.png", dpi=150, bbox_inches="tight")
-    print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph.png'}")
+    save_figure(fig, FIGURES_DIR, "clean_log_f_score_slopegraph")
+    print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph'}.{{png,pdf}}")
     if show:
         plt.show()
 
@@ -277,12 +277,8 @@ def plot_repro_slopegraph(consolidated_results_table_clean_repro, figures_dir=No
     ax.legend(title="Log group", frameon=True)
     _style_axes(ax, ylim01=True)
     plt.tight_layout()
-    fig.savefig(
-        FIGURES_DIR / "clean_log_f_score_slopegraph_repro.png",
-        dpi=300,
-        bbox_inches="tight",
-    )
-    print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph_repro.png'}")
+    save_figure(fig, FIGURES_DIR, "clean_log_f_score_slopegraph_repro")
+    print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph_repro'}.{{png,pdf}}")
     if show:
         plt.show()
     return fig
