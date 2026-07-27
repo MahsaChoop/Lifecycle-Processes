@@ -434,11 +434,11 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, figure
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
     CATEGORY_COLORS = {
-        "feature_work": "#2E5D8E",
-        "bug_fixes":    "#C97B55",
-        "tech_debt":    "#7B9EB8",
-        "docs":         "#5B8C7A",
-        "other":        "#A8A8A8",
+        "feature_work": "#8FA6BF",
+        "bug_fixes":    "#EF8A62",
+        "tech_debt":    "#1F3A5F",
+        "docs":         "#8C9B6E",
+        "other":        "#D9D9D9",
     }
 
     cat_count_cols = [f"cat_{c}_count" for c in CATEGORIES]
@@ -485,8 +485,8 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, figure
             )
 
     ax.set_ylim(0, ymax * 1.12 if ymax > 0 else 1)
-    ax.set_ylabel("Commits")
-    ax.set_title("Commit context: commits per anomaly week (stacked by category)")
+    ax.set_ylabel("Count of Commits")
+    ax.set_title("Interventions context: commit categories in each state")
     ax.tick_params(axis="x", rotation=45)
     for lbl in ax.get_xticklabels():
         lbl.set_ha("right")
