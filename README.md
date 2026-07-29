@@ -1,21 +1,19 @@
 # Lifecycles-Processes
 
-Process-mining analysis of software lifecycles on the **Commitizen** GitHub repository (OCEL2). The pipeline detects weekly anomaly states (rolling IQR + lexicon severity/component) and evaluates whether a vitalizing sublog improves discovery quality versus whole-log and random-control baselines.
+Process-mining analysis of software lifecycles on the **Commitizen** GitHub repository.
 
-Algorithms, thresholds, seeds, lexicons, and miner settings match the original notebooks; this repository only reorganizes code into a `functions/` package and portable paths.
 
 ## Layout
 
 ```text
 Lifecycles-Processes/
   main.ipynb              # run top-to-bottom
-  functions/              # analysis modules (no algorithm changes)
-  data/raw/               # place DuckDB + OCEL2 SQLite here (gitignored)
+  functions/              # analysis modules 
+  data/raw/               # place DuckDB + OCEL2 SQLite here 
   results/tables/         # CSV outputs
-  results/figures/        # PNG figures
-  docs/                   # reporting drafts, threats to validity
-  notebooks/legacy/       # original notebooks (kept for history)
-  process-complexity/     # vendored EPA complexity toolkit
+  results/figures/        # Figures in v and PDF formats
+  docs/                   # motivation, threats to validity and future works idea
+  notebooks/legacy/       # retired projects
 ```
 
 ## Setup
@@ -66,6 +64,3 @@ Outputs are written under `results/tables/` and `results/figures/`.
 
 
 
-## Legacy notebooks
-
-Original notebooks remain under `notebooks/legacy/` for reference. Prefer `main.ipynb` for new runs.
