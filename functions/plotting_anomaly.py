@@ -1,4 +1,4 @@
-"""Anomaly and commit-context figures (logic unchanged; paths via RESULTS_FIGURES)."""
+"""Anomaly and commit-context figures  paths via RESULTS_FIGURES)."""
 from __future__ import annotations
 
 from pathlib import Path

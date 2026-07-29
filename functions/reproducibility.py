@@ -1,4 +1,4 @@
-"""Multi-seed random-control reproducibility loop (logic unchanged)."""
+"""Multi-seed random-control reproducibility loop """
 from __future__ import annotations
 
 from pathlib import Path

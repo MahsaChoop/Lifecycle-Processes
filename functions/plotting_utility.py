@@ -1,4 +1,4 @@
-"""Utility-experiment comparison figures (logic unchanged; paths via RESULTS_FIGURES)."""
+"""Utility-experiment comparison figures paths via RESULTS_FIGURES"""
 from __future__ import annotations
 
 from pathlib import Path

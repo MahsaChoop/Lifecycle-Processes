@@ -1,4 +1,4 @@
-"""Load DuckDB tables and build weekly issue counts (same as original notebooks)."""
+"""Load DuckDB tables and build weekly issue counts """
 from __future__ import annotations
 
 import duckdb

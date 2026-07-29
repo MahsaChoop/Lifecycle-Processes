@@ -1,4 +1,4 @@
-"""Discovery miners and clean-log F1 evaluation (logic unchanged)."""
+"""Discovery miners and clean-log F1 evaluation """
 from __future__ import annotations
 
 from pathlib import Path

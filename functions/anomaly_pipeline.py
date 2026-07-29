@@ -1,4 +1,4 @@
-"""Run anomaly detection + state extraction and write tables (same as notebook cell 4)."""
+"""Run anomaly detection + state extraction and write tables """
 from __future__ import annotations
 
 from pathlib import Path
