@@ -1,4 +1,4 @@
-"""Portable paths and shared constants (values match the original notebooks)."""
+"""Portable paths and shared constants """
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
