@@ -11,7 +11,7 @@ build/
 .ipynb_checkpoints/
 
 # IDE / editor
-.idea/
+.idea
 .cursor/
 .vscode/
 *.swp
