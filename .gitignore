@@ -16,6 +16,7 @@ build/
 .vscode/
 *.swp
 notebooks/legacy/
+data/configToken
 
 # Environments
 .venv/
