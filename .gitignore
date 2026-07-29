@@ -15,6 +15,7 @@ build/
 .cursor/
 .vscode/
 *.swp
+.notebooks/legacy/
 
 # Environments
 .venv/
