@@ -5,8 +5,6 @@ from pathlib import Path
 
 import pandas as pd
 
-from functions.config import RESULTS_TABLES
-
 
 def build_anomaly_object_ids(anomaly_context):
     return (
@@ -30,8 +28,8 @@ def build_anomaly_event_ids(anomaly_context):
     )
 
 
-def export_anomaly_ids(anomaly_context, tables_dir=None):
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+def export_anomaly_ids(anomaly_context, cfg, tables_dir=None):
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
     anomaly_object_ids = build_anomaly_object_ids(anomaly_context)
     anomaly_event_ids = build_anomaly_event_ids(anomaly_context)

@@ -6,34 +6,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from functions.config import OBJECT_TYPE, OCEL2_SQLITE
 
-SUBTABLES = [
-    "event_assigned", "event_closed", "event_commented", "event_committed",
-    "event_created", "event_cross_referenced", "event_labeled", "event_merged",
-    "event_referenced", "event_renamed", "event_reopened", "event_reviewed",
-    "event_review_requested", "event_subscribed", "event_head_ref_deleted",
-    "event_head_ref_force_pushed", "event_ready_for_review",
-    "event_convert_to_draft", "event_unlabeled", "event_milestoned",
-    "event_demilestoned", "event_unassigned", "event_mentioned",
-    "event_auto_merge_disabled", "event_auto_rebase_enabled",
-    "event_auto_squash_enabled", "event_base_ref_changed",
-    "event_base_ref_deleted", "event_base_ref_force_pushed",
-    "event_connected", "event_converted_to_discussion",
-    "event_copilot_work_finished", "event_copilot_work_started",
-    "event_head_ref_restored", "event_issue_type_added",
-    "event_issue_type_changed", "event_locked", "event_parent_issue_added",
-    "event_pinned", "event_review_request_removed",
-    "event_sub_issue_added", "event_unsubscribed", "event_unpinned",
-]
-
-
-def flatten_ocel2_issue_log(sqlite_path=None, object_type=OBJECT_TYPE):
-    sqlite_path = Path(sqlite_path or OCEL2_SQLITE)
+def flatten_ocel2_issue_log(cfg, sqlite_path=None, object_type=None):
+    sqlite_path = Path(sqlite_path or cfg.sqlite_path)
+    object_type = object_type or cfg.issue_object_type
     CONN = sqlite3.connect(str(sqlite_path))
 
     union_sql = " UNION ALL ".join(
-        f"SELECT ocel_id, ocel_time FROM {t}" for t in SUBTABLES
+        f"SELECT ocel_id, ocel_time FROM {t}" for t in cfg.event_subtables
     )
     times_df = pd.read_sql(union_sql, CONN)
 

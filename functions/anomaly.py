@@ -4,7 +4,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from functions.config import ANOMALY_EVENT_TYPE_ID, ANOMALY_OBJECT_TYPE, IQR_CONFIG
+from functions.config import IQR_CONFIG
 
 def _week_start(values):
     ts = pd.to_datetime(values)
@@ -51,17 +51,18 @@ def rolling_iqr_detect(series, window_size=30, min_periods=8, iqr_multiplier=1.5
     )
 
 
-def build_weekly_titles_for_105(eventsPerobj_df, objects_attributes, event_type_id=ANOMALY_EVENT_TYPE_ID):
-    events_105_objects = eventsPerobj_df.loc[
-        eventsPerobj_df["event_type_id"].eq(event_type_id) & eventsPerobj_df["object_type"].eq(ANOMALY_OBJECT_TYPE)	
+def build_weekly_titles(eventsPerobj_df, objects_attributes, cfg, event_type_id=None):
+    event_type_id = cfg.closed_event_type_id if event_type_id is None else event_type_id
+    closed_events_objects = eventsPerobj_df.loc[
+        eventsPerobj_df["event_type_id"].eq(event_type_id) & eventsPerobj_df["object_type"].eq(cfg.issue_object_type)
     ].copy()
-    events_105_objects["week_start"] = _week_start(events_105_objects["event_timestamp"])
-    events_105_objects["object_id_key"] = pd.to_numeric(
-        events_105_objects["object_id"], errors="coerce"
+    closed_events_objects["week_start"] = _week_start(closed_events_objects["event_timestamp"])
+    closed_events_objects["object_id_key"] = pd.to_numeric(
+        closed_events_objects["object_id"], errors="coerce"
     ).astype("Int64")
 
     title_attributes = objects_attributes.loc[
-        objects_attributes["object_attribute_id"].eq(6) #object_attribute_id 6 as title of issues
+        objects_attributes["object_attribute_id"].eq(cfg.title_attribute_id)
     ].copy()
     title_attributes["object_id_key"] = pd.to_numeric(
         title_attributes["object_id"], errors="coerce"
@@ -70,7 +71,7 @@ def build_weekly_titles_for_105(eventsPerobj_df, objects_attributes, event_type_
     if "timestamp" in title_attributes.columns:
         title_cols.append("timestamp")
 
-    joined = events_105_objects.merge(
+    joined = closed_events_objects.merge(
         title_attributes[title_cols],
         on="object_id_key",
         how="left",

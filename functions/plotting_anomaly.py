@@ -1,4 +1,4 @@
-"""Anomaly and commit-context figures  paths via RESULTS_FIGURES)."""
+"""Anomaly and commit-context figures (paths via the dataset config)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -8,13 +8,7 @@ import numpy as np
 import pandas as pd
 
 from functions.commits import CATEGORIES
-from functions.config import (
-    ANOMALY_EVENT_TYPE_ID,
-    CREATE_EVENT_TYPE_ID,
-    RESULTS_FIGURES,
-    RESULTS_TABLES,
-    save_figure,
-)
+from functions.config import save_figure
 
 _CALLOUT_OFFSETS = [(0, 14), (0, -18), (12, 22), (-12, -26)]
 
@@ -114,22 +108,22 @@ def _place_right_legends(ax, series_handles, series_labels, state_handles):
         )
 
 
-def _open_closed_weekly_series(weekly, created_col=None, closed_col=None):
-    created_col = CREATE_EVENT_TYPE_ID if created_col is None else created_col
-    closed_col = ANOMALY_EVENT_TYPE_ID if closed_col is None else closed_col
+def _open_closed_weekly_series(weekly, cfg, created_col=None, closed_col=None):
+    created_col = cfg.create_event_type_id if created_col is None else created_col
+    closed_col = cfg.closed_event_type_id if closed_col is None else closed_col
     created_counts = weekly[created_col] if created_col in weekly.columns else pd.Series(dtype=int)
     closed_counts = weekly[closed_col] if closed_col in weekly.columns else pd.Series(dtype=int)
     return created_counts, closed_counts
 
 
-def weekly_open_closed_summary_table(weekly, created_col=None, closed_col=None, tables_dir=None):
+def weekly_open_closed_summary_table(weekly, cfg, created_col=None, closed_col=None, tables_dir=None):
     """Table 1: summary statistics for weekly created (open) vs closed issue counts."""
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
     if weekly.empty:
         summary_table = pd.DataFrame()
     else:
-        created_counts, closed_counts = _open_closed_weekly_series(weekly, created_col, closed_col)
+        created_counts, closed_counts = _open_closed_weekly_series(weekly, cfg, created_col, closed_col)
         summary_table = pd.DataFrame({
             "Open issues (weekly created)": created_counts,
             "Closed issues (weekly closed)": closed_counts,
@@ -141,10 +135,10 @@ def weekly_open_closed_summary_table(weekly, created_col=None, closed_col=None, 
 
 
 def plot_weekly_open_vs_closed_histogram(
-    weekly, created_col=None, closed_col=None, figures_dir=None, show=True,
+    weekly, cfg, created_col=None, closed_col=None, figures_dir=None, show=True,
 ):
     """Histogram: distribution of weekly created (open) vs closed issue counts."""
-    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+    figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     with plt.rc_context(FIGURE_FONT):
         fig, ax = plt.subplots(figsize=(10, 4.5))
@@ -154,7 +148,7 @@ def plot_weekly_open_vs_closed_histogram(
                 ha="center", va="center", transform=ax.transAxes,
             )
         else:
-            created_counts, closed_counts = _open_closed_weekly_series(weekly, created_col, closed_col)
+            created_counts, closed_counts = _open_closed_weekly_series(weekly, cfg, created_col, closed_col)
             ax.hist(
                 created_counts, bins=20, alpha=0.6,
                 label="Open issues (created per week)", edgecolor="black",
@@ -174,14 +168,14 @@ def plot_weekly_open_vs_closed_histogram(
     return fig
 
 
-def plot_weekly_event_counts(weekly, figures_dir=None, event_ids=None, show=True):
-    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+def plot_weekly_event_counts(weekly, cfg, figures_dir=None, event_ids=None, show=True):
+    figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     if event_ids is None:
-        event_ids = [31, 105]
+        event_ids = [cfg.create_event_type_id, cfg.closed_event_type_id]
     event_labels = {
-        31: "31: created issue",
-        105: "105: closed issue",
+        cfg.create_event_type_id: f"{cfg.create_event_type_id}: created issue",
+        cfg.closed_event_type_id: f"{cfg.closed_event_type_id}: closed issue",
     }
     with plt.rc_context(FIGURE_FONT):
         fig, ax = plt.subplots(figsize=(11, 4.5))
@@ -209,8 +203,8 @@ def plot_weekly_event_counts(weekly, figures_dir=None, event_ids=None, show=True
     return fig
 
 
-def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=None, show=True):
-    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+def plot_anomaly_figures(weekly_closed_anomaly_frame, anomaly_states, cfg, figures_dir=None, show=True):
+    figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
 
@@ -234,14 +228,14 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
     with plt.rc_context(FIGURE_FONT):
         fig, ax = plt.subplots(figsize=(12, 4.5))
         ax.plot(
-            weekly_105_anomaly_frame["week_start"],
-            weekly_105_anomaly_frame["value"],
+            weekly_closed_anomaly_frame["week_start"],
+            weekly_closed_anomaly_frame["value"],
             marker="o",
             markersize=3,
             label="weekly rate of issue_closed",
         )
-        ax.plot(weekly_105_anomaly_frame["week_start"], weekly_105_anomaly_frame["upper_bound"], linestyle="--", label="IQR upper band")
-        ax.plot(weekly_105_anomaly_frame["week_start"], weekly_105_anomaly_frame["lower_bound"], linestyle="--", label="IQR lower band")
+        ax.plot(weekly_closed_anomaly_frame["week_start"], weekly_closed_anomaly_frame["upper_bound"], linestyle="--", label="IQR upper band")
+        ax.plot(weekly_closed_anomaly_frame["week_start"], weekly_closed_anomaly_frame["lower_bound"], linestyle="--", label="IQR lower band")
         if not anomaly_states.empty:
             ax.scatter(
                 anomaly_states["week_start"],
@@ -312,7 +306,7 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
         save_figure(fig, FIGURES_DIR, "anomaly_severity_overview")
         plt.show()
 
-        plot_frame = weekly_105_anomaly_frame.copy().sort_values("week_start")
+        plot_frame = weekly_closed_anomaly_frame.copy().sort_values("week_start")
         plot_frame["rolling_trend"] = plot_frame["value"].rolling(window=8, min_periods=2).mean()
         score_max = plot_frame["anomaly_score"].max()
         if pd.isna(score_max) or score_max <= 0:
@@ -512,8 +506,8 @@ def plot_anomaly_figures(weekly_105_anomaly_frame, anomaly_states, figures_dir=N
     return FIGURES_DIR
 
 
-def plot_commit_category_stack(commit_context, commit_typeclass_per_week, figures_dir=None, show=True):
-    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, figures_dir=None, show=True):
+    figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
     CATEGORY_COLORS = {

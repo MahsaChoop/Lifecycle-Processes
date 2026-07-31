@@ -19,6 +19,7 @@ notebooks/legacy/
 data/configToken.py
 data/raw/*.duckdb
 data/raw/*.sqlite
+scripts/
 
 # Environments
 .venv/

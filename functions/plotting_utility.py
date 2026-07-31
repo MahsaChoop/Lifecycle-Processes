@@ -1,4 +1,4 @@
-"""Utility-experiment comparison figures paths via RESULTS_FIGURES"""
+"""Utility-experiment comparison figures (paths via the dataset config)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from functions.config import RESULTS_FIGURES, save_figure
+from functions.config import save_figure
 
 LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
 LOG_COLORS = {
@@ -51,8 +51,8 @@ def plot_grouped_bars(wide_df, title, ylabel, ax, ylim01=False):
     _style_axes(ax, ylim01=ylim01)
 
 
-def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, show=True):
-    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None, show=True):
+    figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
 
@@ -211,8 +211,8 @@ def plot_utility_figures(consolidated_results_table_clean, figures_dir=None, sho
     }
 
 
-def plot_repro_slopegraph(consolidated_results_table_clean_repro, figures_dir=None, show=True):
-    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+def plot_repro_slopegraph(consolidated_results_table_clean_repro, cfg, figures_dir=None, show=True):
+    figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
 

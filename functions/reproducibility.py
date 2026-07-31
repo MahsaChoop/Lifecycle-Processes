@@ -12,7 +12,7 @@ from functions.complexity_metrics import (
     _gini,
     _variant_case_counts,
 )
-from functions.config import REPRO_SEEDS, RESULTS_TABLES
+from functions.config import REPRO_SEEDS
 from functions.discovery import (
     complexity_size_cfc_simplicity,
     compute_generalization,
@@ -27,10 +27,11 @@ def run_seed_reproducibility(
     num_vital_cases_clean,
     miners,
     consolidated_results_table_clean,
+    cfg,
     repro_seeds=None,
     tables_dir=None,
 ):
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
     if repro_seeds is None:
         repro_seeds = REPRO_SEEDS

@@ -1,0 +1,84 @@
+week_start,value,rolling_q1,rolling_q3,iqr,lower_bound,upper_bound,is_anomaly,anomaly_direction,anomaly_score,commit_event_count,message_count,messages_in_week,commit_event_descriptions,commit_event_ids,commit_object_ids,messages_text
+2023-10-09,5,0.25,1.75,1.5,-2.0,4.0,True,high,0.6666666666666666,57,24,"['accuracy - f1 score: without RAG:\nf1 score:  0.7876588021778584\naccuracy score:  0.7876588021778584\n\nwith RAG:\nf1 score:  0.8130671506352088\naccuracy score:  0.8130671506352087', 'Updates on the best model ever: FinGPT v3.3', 'selenium works; stick to ChromeDriverManager', 'add demo, rearrange code', 'Update readme.md', 'Merge pull request #91 from Noir97/master\n\nFinGPT-Benchmark', 'compare RAG vs. non-RAG sentiment classification using gpt, data as sent_valid_penultimate_run_classified_classified.csv', 'correct mistake: compare non-RAG vs. RAG sentiment classification using gpt: 0.7876588021778584 vs. 0.8130671506352088', 'Update README.md', 'Update instructions in readme.md', 'reorganize llm modules', 'add sentiment_classification_by_external_LLMs', ""Merge branch 'AI4Finance-Foundation:master' into master"", 'extract news classification logic out of external LLMs, put into utils', 'Merge pull request #94 from raphaelzhou1/master\n\nFinGPT-RAG: update on experiment on usefulness of RAG', 'Merge pull request #95 from Noir97/master\n\nadd demo, rearrange code', 'Merge pull request #90 from eltociear/patch-2\n\nUpdate FinGPT-RAG/README.md', 'compare RAG vs. non-RAG sentiment classification using gpt: 0.7876588021778584 vs. 0.8130671506352088', 'update README on RAG', 'add files for FinGPT-Benchmark', 'Update FinGPT-RAG/README.md\n\nFramwork -> Framework', 'Merge pull request #96 from Noir97/master\n\nUpdate instructions in readme.md', 'updates on finbert of FinGPT v3', ""Merge branch 'master' of https://github.com/AI4Finance-Foundation/FinGPT""]","['committed (#166)', 'committed (#94)', 'committed (#96)', 'committed (#95)', 'committed (#91)', 'committed (#117)', 'committed (#90)']","[3202, 3210, 3218, 3226, 3234, 3243, 3251, 3259, 3267, 3275, 3283, 3291, 3299, 3307, 3315, 3323, 3331, 3339, 3347, 3355, 3363, 3371, 3379, 3387, 3395, 3403, 3411, 3419, 3427, 3435, 3443, 3451, 3459, 3467, 3475, 3483, 3491, 3499, 3507, 3515, 3523, 3531, 5406, 5874, 5900, 5966, 5974, 5982, 5990, 5998, 6006, 6014, 6022, 6030, 6081, 6089, 6115]","[3204, 3212, 3220, 3228, 3236, 3245, 3253, 3261, 3269, 3277, 3285, 3293, 3301, 3309, 3317, 3325, 3333, 3341, 3349, 3357, 3365, 3373, 3381, 3389, 3397, 3405, 3413, 3421, 3429, 3437, 3445, 3453, 3461, 3469, 3477, 3485, 3493, 3501, 3509, 3517, 3525, 3533, 5408, 5876, 5902, 5968, 5976, 5984, 5992, 6000, 6008, 6016, 6024, 6032, 6083, 6091, 6117]","accuracy - f1 score: without RAG:
+f1 score:  0.7876588021778584
+accuracy score:  0.7876588021778584
+
+with RAG:
+f1 score:  0.8130671506352088
+accuracy score:  0.8130671506352087
+Updates on the best model ever: FinGPT v3.3
+selenium works; stick to ChromeDriverManager
+add demo, rearrange code
+Update readme.md
+Merge pull request #91 from Noir97/master
+
+FinGPT-Benchmark
+compare RAG vs. non-RAG sentiment classification using gpt, data as sent_valid_penultimate_run_classified_classified.csv
+correct mistake: compare non-RAG vs. RAG sentiment classification using gpt: 0.7876588021778584 vs. 0.8130671506352088
+Update README.md
+Update instructions in readme.md
+reorganize llm modules
+add sentiment_classification_by_external_LLMs
+Merge branch 'AI4Finance-Foundation:master' into master
+extract news classification logic out of external LLMs, put into utils
+Merge pull request #94 from raphaelzhou1/master
+
+FinGPT-RAG: update on experiment on usefulness of RAG
+Merge pull request #95 from Noir97/master
+
+add demo, rearrange code
+Merge pull request #90 from eltociear/patch-2
+
+Update FinGPT-RAG/README.md
+compare RAG vs. non-RAG sentiment classification using gpt: 0.7876588021778584 vs. 0.8130671506352088
+update README on RAG
+add files for FinGPT-Benchmark
+Update FinGPT-RAG/README.md
+
+Framwork -> Framework
+Merge pull request #96 from Noir97/master
+
+Update instructions in readme.md
+updates on finbert of FinGPT v3
+Merge branch 'master' of https://github.com/AI4Finance-Foundation/FinGPT"
+2026-03-30,6,0.0,1.0,1.0,-1.5,2.5,True,high,3.5,3,3,"['Add multi-agent financial analysis notebook with AG2\n\nAdds a notebook demonstrating how AG2 agents collaborate on financial\nnews analysis: fetching stock data via yfinance, running sentiment\nclassification with FinBERT, and producing structured investment briefs.', 'docs: suggest FinancialReports.eu as data source for global regulatory filings\n\nAdd documentation proposing FinancialReports.eu API integration for\nregulatory filing coverage (14M+ filings, 33K+ companies, 35 official\nsources across 30+ countries). Includes API details, SDK examples,\nand MCP server integration.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>', 'docs: remove specific data source references from integration proposal\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>']","['committed (#224)', 'committed (#225)']","[1470, 1479, 1504]","[1472, 1481, 1506]","Add multi-agent financial analysis notebook with AG2
+
+Adds a notebook demonstrating how AG2 agents collaborate on financial
+news analysis: fetching stock data via yfinance, running sentiment
+classification with FinBERT, and producing structured investment briefs.
+docs: suggest FinancialReports.eu as data source for global regulatory filings
+
+Add documentation proposing FinancialReports.eu API integration for
+regulatory filing coverage (14M+ filings, 33K+ companies, 35 official
+sources across 30+ countries). Includes API details, SDK examples,
+and MCP server integration.
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+docs: remove specific data source references from integration proposal
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+2026-05-18,3,0.0,1.0,1.0,-1.5,2.5,True,high,0.5,58,21,"['Continuous enhancement: quantamental AI model selection', 'Continuous enhancement: add gap risk stability diagnostic', 'Document quantamental QAM validation', 'Fix CI path handling for collection sidecar test', 'Add market-relative quantamental resilience diagnostic', 'Continuous enhancement: add tail risk momentum diagnostic', 'Continuous enhancement: quality context panel', 'Continuous enhancement: range support transparency', 'Continuous enhancement: add trend efficiency diagnostic', 'Continuous enhancement: AI briefing evidence UI', 'Continuous enhancement: add range discipline diagnostic', 'Refresh and expand investment universes', 'Continuous enhancement: dashboard quality and AI guards', 'Continuous enhancement: drawdown resilience quant diagnostic', 'Continuous enhancement: add accumulation quality diagnostic', 'Continuous enhancement: add quantamental breakout diagnostic', 'Continuous enhancement: add liquidity stability diagnostic', 'Continuous enhancement: visible quality summary details', 'Continuous enhancement: quantamental UI and risk momentum', 'Continuous enhancement: range safety and section labels', 'Continuous enhancement: add volatility compression diagnostic']","['committed (#243)', 'committed (#242)', 'committed (#241)']","[520, 528, 536, 544, 552, 560, 568, 576, 584, 592, 600, 608, 616, 624, 632, 640, 648, 656, 664, 672, 705, 856, 864, 872, 880, 888, 896, 904, 912, 920, 928, 936, 944, 952, 960, 968, 976, 984, 992, 1000, 1152, 1160, 1168, 1176, 1184, 1192, 1200, 1208, 1216, 1224, 1232, 1240, 1248, 1256, 1264, 1272, 1280, 1293]","[522, 530, 538, 546, 554, 562, 570, 578, 586, 594, 602, 610, 618, 626, 634, 642, 650, 658, 666, 674, 707, 858, 866, 874, 882, 890, 898, 906, 914, 922, 930, 938, 946, 954, 962, 970, 978, 986, 994, 1002, 1154, 1162, 1170, 1178, 1186, 1194, 1202, 1210, 1218, 1226, 1234, 1242, 1250, 1258, 1266, 1274, 1282, 1295]","Continuous enhancement: quantamental AI model selection
+Continuous enhancement: add gap risk stability diagnostic
+Document quantamental QAM validation
+Fix CI path handling for collection sidecar test
+Add market-relative quantamental resilience diagnostic
+Continuous enhancement: add tail risk momentum diagnostic
+Continuous enhancement: quality context panel
+Continuous enhancement: range support transparency
+Continuous enhancement: add trend efficiency diagnostic
+Continuous enhancement: AI briefing evidence UI
+Continuous enhancement: add range discipline diagnostic
+Refresh and expand investment universes
+Continuous enhancement: dashboard quality and AI guards
+Continuous enhancement: drawdown resilience quant diagnostic
+Continuous enhancement: add accumulation quality diagnostic
+Continuous enhancement: add quantamental breakout diagnostic
+Continuous enhancement: add liquidity stability diagnostic
+Continuous enhancement: visible quality summary details
+Continuous enhancement: quantamental UI and risk momentum
+Continuous enhancement: range safety and section labels
+Continuous enhancement: add volatility compression diagnostic"
+2026-07-27,8,0.0,2.0,2.0,-3.0,5.0,True,high,1.5,3,3,"['fix(data): return pd.Series in get_one_content to resolve scalar index error (#29)', 'fixed Python version compatibility version and updated documentation', 'Fix #204: Add generation parameters to tfns.py for consistent sentiment\nclassification']","['committed (#261)', 'committed (#260)', 'committed (#259)']","[44, 90, 128]","[47, 92, 130]","fix(data): return pd.Series in get_one_content to resolve scalar index error (#29)
+fixed Python version compatibility version and updated documentation
+Fix #204: Add generation parameters to tfns.py for consistent sentiment
+classification"

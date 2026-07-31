@@ -8,16 +8,6 @@ from pathlib import Path
 import pandas as pd
 
 from functions.anomaly import _week_start
-from functions.config import (
-    COMMIT_EVENT_TYPE_ID,
-    COMMIT_MESSAGE_ATTRIBUTE_ID,
-    COMMIT_OBJECT_TYPE,
-    RESULTS_TABLES,
-)
-
-COMMIT_EVENT_TYPE_ID = COMMIT_EVENT_TYPE_ID
-COMMIT_OBJECT_TYPE = COMMIT_OBJECT_TYPE
-COMMIT_MESSAGE_ATTRIBUTE_ID = COMMIT_MESSAGE_ATTRIBUTE_ID
 
 CONVENTIONAL_TYPES = [
     "feat", "fix", "chore", "docs", "style", "refactor",
@@ -48,17 +38,18 @@ CONVENTIONAL_RE = re.compile(
 )
 
 
-def build_weekly_commitmessages_for_43(eventsPerobj_df, objects_attributes, event_type_id=COMMIT_EVENT_TYPE_ID):
-    events_43_objects = eventsPerobj_df.loc[
-        eventsPerobj_df["event_type_id"].eq(event_type_id) & eventsPerobj_df["object_type"].eq(COMMIT_OBJECT_TYPE)
+def build_weekly_commit_messages(eventsPerobj_df, objects_attributes, cfg, event_type_id=None):
+    event_type_id = cfg.commit_event_type_id if event_type_id is None else event_type_id
+    commit_events_objects = eventsPerobj_df.loc[
+        eventsPerobj_df["event_type_id"].eq(event_type_id) & eventsPerobj_df["object_type"].eq(cfg.commit_object_type)
     ].copy()
-    events_43_objects["week_start"] = _week_start(events_43_objects["event_timestamp"])
-    events_43_objects["object_id_key"] = pd.to_numeric(
-        events_43_objects["object_id"], errors="coerce"
+    commit_events_objects["week_start"] = _week_start(commit_events_objects["event_timestamp"])
+    commit_events_objects["object_id_key"] = pd.to_numeric(
+        commit_events_objects["object_id"], errors="coerce"
     ).astype("Int64")
 
     message_attributes = objects_attributes.loc[
-        objects_attributes["object_attribute_id"].eq(COMMIT_MESSAGE_ATTRIBUTE_ID)
+        objects_attributes["object_attribute_id"].eq(cfg.commit_message_attribute_id)
     ].copy()
     message_attributes["object_id_key"] = pd.to_numeric(
         message_attributes["object_id"], errors="coerce"
@@ -67,7 +58,7 @@ def build_weekly_commitmessages_for_43(eventsPerobj_df, objects_attributes, even
     if "timestamp" in message_attributes.columns:
         msg_cols.append("timestamp")
 
-    joined = events_43_objects.merge(
+    joined = commit_events_objects.merge(
         message_attributes[msg_cols],
         on="object_id_key",
         how="left",
@@ -101,19 +92,20 @@ def build_weekly_commitmessages_for_43(eventsPerobj_df, objects_attributes, even
     return weekly_messages, joined
 
 
-def build_commit_context(weekly_105_anomaly_frame, eventsPerobj_df, objects_attributes, tables_dir=None):
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+def build_commit_context(weekly_closed_anomaly_frame, eventsPerobj_df, objects_attributes, cfg, tables_dir=None):
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
 
-    weekly_43_messages, event_43_message_join = build_weekly_commitmessages_for_43(
+    weekly_commit_messages, event_commit_message_join = build_weekly_commit_messages(
         eventsPerobj_df,
         objects_attributes,
-        event_type_id=COMMIT_EVENT_TYPE_ID,
+        cfg,
+        event_type_id=cfg.commit_event_type_id,
     )
 
     commit_context = (
-        weekly_105_anomaly_frame.loc[weekly_105_anomaly_frame["is_anomaly"]]
-        .merge(weekly_43_messages, on="week_start", how="left")
+        weekly_closed_anomaly_frame.loc[weekly_closed_anomaly_frame["is_anomaly"]]
+        .merge(weekly_commit_messages, on="week_start", how="left")
     )
     commit_context["commit_event_count"] = commit_context["commit_event_count"].fillna(0).astype(int)
     commit_context["message_count"] = commit_context["message_count"].fillna(0).astype(int)
@@ -129,7 +121,7 @@ def build_commit_context(weekly_105_anomaly_frame, eventsPerobj_df, objects_attr
     n_rows, n_cols = commit_context.shape
     print(f"commit_context summary: {n_rows} rows x {n_cols} columns")
     print(f"Saved commit_context to {tables_dir / 'commit_context.csv'}")
-    return commit_context, event_43_message_join
+    return commit_context, event_commit_message_join
 
 
 def _classify_message(message):
@@ -204,8 +196,8 @@ def _classify_week(messages):
     }
 
 
-def build_commit_typeclass(commit_context, tables_dir=None):
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+def build_commit_typeclass(commit_context, cfg, tables_dir=None):
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
 
     _typeclass_rows = commit_context.apply(

@@ -14,7 +14,6 @@ from pm4py.algo.evaluation.replay_fitness import algorithm as replay_fitness_eva
 from pm4py.objects.conversion.process_tree import converter as pt_converter
 from pm4py.objects.log.obj import Event, EventLog, Trace
 
-from functions.config import RESULTS_TABLES
 
 IMF_NOISE_THRESHOLDS = [0.3, 0.4, 0.5, 0.6]
 HEURISTICS_DEP_THRESHOLDS = [0.6, 0.7, 0.8, 0.9]
@@ -149,8 +148,8 @@ def build_miners(
     return miners
 
 
-def evaluate_clean_logs(clean_log_groups_df, miners=None, tables_dir=None):
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+def evaluate_clean_logs(clean_log_groups_df, cfg, miners=None, tables_dir=None):
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
     if miners is None:
         miners = build_miners()

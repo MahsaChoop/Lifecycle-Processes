@@ -4,7 +4,7 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 
-from functions.config import END_ACTIVITY_1, END_ACTIVITY_2, MAX_REP, SEED
+from functions.config import MAX_REP, SEED
 
 required_cols = ["case:concept:name", "concept:name", "time:timestamp"]
 
@@ -74,12 +74,15 @@ def remove_traces_with_high_activity_repetition(
 def build_preprocessed_logs(
     flat,
     anomaly_events_df,
+    cfg,
     seed=SEED,
-    end_activity_1=END_ACTIVITY_1,
-    end_activity_2=END_ACTIVITY_2,
+    end_activity_1=None,
+    end_activity_2=None,
     max_rep=MAX_REP,
 ):
     """Validate, drop incomplete ends, filter high repetition, sample random control."""
+    end_activity_1 = cfg.end_activity_1 if end_activity_1 is None else end_activity_1
+    end_activity_2 = cfg.end_activity_2 if end_activity_2 is None else end_activity_2
     rng = np.random.default_rng(seed)
 
     flat_df = validate_and_standardize(flat.copy(), "flat")

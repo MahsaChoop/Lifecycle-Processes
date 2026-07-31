@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import pm4py
 
-from functions.config import COMPLEXITY_REPO, RESULTS_TABLES
+from functions.config import COMPLEXITY_REPO
 
 LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
 
@@ -44,8 +44,8 @@ def _gini(counts):
     return float((2 * np.sum(np.arange(1, n + 1) * x) - (n + 1) * total) / (n * total))
 
 
-def compute_log_complexity_table(clean_log_groups_eventlog, log_order=None, tables_dir=None):
-    tables_dir = Path(tables_dir or RESULTS_TABLES)
+def compute_log_complexity_table(clean_log_groups_eventlog, cfg, log_order=None, tables_dir=None):
+    tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
     if log_order is None:
         log_order = LOG_ORDER
