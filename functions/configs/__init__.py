@@ -19,6 +19,8 @@ _DATASET_MODULES = {
     "tradingagents": "tradingagents",
     "trading_agents": "tradingagents",
     "fingpt": "fingpt",
+    "finrl": "finrl",
+    "fin_rl": "finrl",
     "vibe_trading": "vibe_trading",
     "vibetrading": "vibe_trading",
     "openbb": "openbb",
