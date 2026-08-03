@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from functions.config import save_figure
+from functions.config import RESULTS_FIGURES, save_figure
 
 LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
 LOG_COLORS = {
@@ -15,6 +15,12 @@ LOG_COLORS = {
     "random_case_control": "#1f77b4",
     "whole": "#ff7f0e",
 }
+LOG_LABELS = {
+    "vitalizing": "Vitalizing",
+    "random_case_control": "Random control",
+    "whole": "Whole",
+}
+LOG_MARKERS = {"vitalizing": "o", "random_case_control": "s", "whole": "^"}
 
 
 def _style_axes(ax, ylim01=False):
@@ -279,6 +285,126 @@ def plot_repro_slopegraph(consolidated_results_table_clean_repro, cfg, figures_d
     plt.tight_layout()
     save_figure(fig, FIGURES_DIR, "clean_log_f_score_slopegraph_repro")
     print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph_repro'}.{{png,pdf}}")
+    if show:
+        plt.show()
+    return fig
+
+
+def plot_f_score_dotplot_by_miner_different_repos(
+    f_score_comparison,
+    repos=None,
+    discovery_methods=None,
+    ncols=5,
+    figures_dir=None,
+    stem="f_score_dotplot_by_miner",
+    show=True,
+):
+    """One panel per discovery method; repos on x, F1 on y, one marker per log group.
+
+    `f_score_comparison` is the cross-repo table with a (log_name, discovery_method)
+    MultiIndex in either order and one column per repo.
+    """
+    figures_dir = Path(figures_dir or RESULTS_FIGURES)
+    figures_dir.mkdir(parents=True, exist_ok=True)
+
+    long_df = f_score_comparison.reset_index().melt(
+        id_vars=["log_name", "discovery_method"],
+        var_name="repo",
+        value_name="f_score",
+    )
+
+    available_repos = list(f_score_comparison.columns)
+    if repos is None:
+        repos = available_repos
+    else:
+        unknown = [r for r in repos if r not in available_repos]
+        if unknown:
+            raise ValueError(
+                f"Unknown repos {unknown}; available repos are {available_repos}"
+            )
+    if not repos:
+        raise ValueError("No repos to plot.")
+
+    if discovery_methods is None:
+        discovery_methods = sorted(long_df["discovery_method"].unique())
+    else:
+        available_methods = set(long_df["discovery_method"])
+        unknown = [m for m in discovery_methods if m not in available_methods]
+        if unknown:
+            raise ValueError(
+                f"Unknown discovery methods {unknown}; "
+                f"available methods are {sorted(available_methods)}"
+            )
+    if not discovery_methods:
+        raise ValueError("No discovery methods to plot.")
+
+    log_groups = [g for g in LOG_ORDER if g in set(long_df["log_name"])]
+
+    nrows = int(np.ceil(len(discovery_methods) / ncols))
+    fig, axes = plt.subplots(
+        nrows,
+        ncols,
+        figsize=(3.6 * ncols, 4.0 * nrows),
+        sharey=True,
+        squeeze=False,
+    )
+    flat_axes = axes.ravel()
+    x = np.arange(len(repos))
+
+    for ax_idx, ax in enumerate(flat_axes):
+        if ax_idx >= len(discovery_methods):
+            ax.set_visible(False)
+            continue
+
+        method = discovery_methods[ax_idx]
+        panel = (
+            long_df[long_df["discovery_method"] == method]
+            .pivot(index="log_name", columns="repo", values="f_score")
+            .reindex(index=log_groups, columns=repos)
+        )
+
+        for repo_idx, repo in enumerate(repos):
+            ax.plot(
+                [repo_idx] * len(log_groups),
+                panel[repo].astype(float).values,
+                color="#d9d9d9",
+                linewidth=1.0,
+                zorder=1,
+            )
+
+        for log_name in log_groups:
+            ax.scatter(
+                x,
+                panel.loc[log_name, repos].astype(float).values,
+                color=LOG_COLORS.get(log_name),
+                marker=LOG_MARKERS.get(log_name, "o"),
+                s=60,
+                alpha=0.85,
+                zorder=2,
+                edgecolors="white",
+                linewidths=0.8,
+                label=LOG_LABELS.get(log_name, log_name) if ax_idx == 0 else None,
+            )
+
+        ax.set_title(method)
+        ax.set_xticks(x)
+        ax.set_xticklabels(repos, rotation=45, ha="right")
+        if ax_idx % ncols == 0:
+            ax.set_ylabel("F1-score")
+        _style_axes(ax, ylim01=True)
+
+    handles, labels = flat_axes[0].get_legend_handles_labels()
+    fig.legend(
+        handles,
+        labels,
+        title="Log group",
+        ncol=len(log_groups),
+        loc="lower center",
+        frameon=True,
+    )
+    fig.tight_layout(rect=(0, 0.06, 1, 1))
+    save_figure(fig, figures_dir, stem)
+    print(f"Saved {figures_dir / stem}.{{png,pdf}}")
     if show:
         plt.show()
     return fig
