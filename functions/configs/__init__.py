@@ -25,6 +25,8 @@ _DATASET_MODULES = {
     "vibetrading": "vibe_trading",
     "openbb": "openbb",
     "qlib": "qlib",
+    "nautilus_trader": "nautilus_trader",
+    "nautilustrader": "nautilus_trader",
 }
 
 

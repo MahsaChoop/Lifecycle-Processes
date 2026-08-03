@@ -1,0 +1,530 @@
+week_start,value,rolling_q1,rolling_q3,iqr,lower_bound,upper_bound,is_anomaly,anomaly_direction,anomaly_score,event_count,title_count,titles_in_week,event_descriptions,event_ids,object_ids,titles_text
+2020-09-14,10,2.75,4.25,1.5,0.5,6.5,True,high,2.3333333333333335,10,8,"['Remove pre-release', 'MaxBidMinAsk', 'Develop', 'Commission is not applied when executing a trade in the same dir as the position', 'Further refactor indicator data handling API', 'Order Fill event has no knowledge about the execution state', 'Registering an indicator for quotes results in an error', 'Commission open/increase position changes']","['closed (#35)', 'closed (#28)', 'closed (#26)', 'closed (#29)', 'closed (#27)', 'closed (#33)', 'closed (#31)', 'closed (#30)', 'closed (#34)', 'closed (#32)']","[375253, 375290, 375447, 375479, 375528, 375631, 375668, 375712, 375744, 375792]","[375233, 375262, 375299, 375456, 375500, 375618, 375640, 375680, 375724, 375756]","Remove pre-release
+MaxBidMinAsk
+Develop
+Commission is not applied when executing a trade in the same dir as the position
+Further refactor indicator data handling API
+Order Fill event has no knowledge about the execution state
+Registering an indicator for quotes results in an error
+Commission open/increase position changes"
+2020-09-21,21,3.0,5.0,2.0,0.0,8.0,True,high,6.5,21,14,"['Test position.unrealized_pnl', 'Develop', 'Rework the commission into maker and taker commission', 'Handcraft towards Black stylistic conventions', 'Order object should have 2 ids, a client id and an exchange/broker id', 'Fix applying the commission to position & tests', 'BidAskMinMax', 'Have commission as part of the OrderFillEvent and Position', 'Extend commission model to maker and taker', 'Order Fill event has no knowledge about the execution state', 'Test position change', 'Position direction unchanged after executing an order of size greater than position size in the opposite direction', ""Add 'commission' to OrderPartiallyFilled and OrderFilled"", 'WIP: Calculate realized_pnl considering the commission']","['closed (#54)', 'closed (#53)', 'closed (#48)', 'closed (#47)', 'closed (#43)', 'closed (#37)', 'closed (#52)', 'closed (#45)', 'closed (#41)', 'closed (#36)', 'closed (#50)', 'closed (#40)', 'closed (#31)', 'closed (#58)', 'closed (#51)', 'closed (#59)', 'closed (#46)', 'closed (#61)', 'closed (#60)', 'closed (#38)', 'closed (#42)']","[373596, 373620, 373687, 373778, 374008, 374055, 374126, 374253, 374309, 374434, 374457, 374568, 374591, 374661, 374695, 374754, 374843, 375062, 375144, 375227, 375606]","[373536, 373599, 373661, 373694, 373984, 374011, 374058, 374129, 374256, 374351, 374437, 374460, 374571, 374613, 374675, 374701, 374767, 375039, 375068, 375150, 375500]","Test position.unrealized_pnl
+Develop
+Rework the commission into maker and taker commission
+Handcraft towards Black stylistic conventions
+Order object should have 2 ids, a client id and an exchange/broker id
+Fix applying the commission to position & tests
+BidAskMinMax
+Have commission as part of the OrderFillEvent and Position
+Extend commission model to maker and taker
+Order Fill event has no knowledge about the execution state
+Test position change
+Position direction unchanged after executing an order of size greater than position size in the opposite direction
+Add 'commission' to OrderPartiallyFilled and OrderFilled
+WIP: Calculate realized_pnl considering the commission"
+2020-10-05,11,3.0,5.0,2.0,0.0,8.0,True,high,1.5,11,6,"['ExecutionEngine now handles position flipping', 'Develop', 'Rework the PNL mechanics', 'Fix incorrect type error in performance analyzer.', 'Position in base currency', '[Proposal] AssetClass + AssetType']","['closed (#69)', 'closed (#66)', 'closed (#74)', 'closed (#72)', 'closed (#75)', 'closed (#55)', 'closed (#76)', 'closed (#70)', 'closed (#73)', 'closed (#68)', 'closed (#71)']","[372312, 372352, 372464, 372491, 372538, 372633, 372696, 372722, 372761, 373265, 373981]","[372180, 372315, 372355, 372467, 372515, 372541, 372636, 372702, 372733, 373173, 373932]","ExecutionEngine now handles position flipping
+Develop
+Rework the PNL mechanics
+Fix incorrect type error in performance analyzer.
+Position in base currency
+[Proposal] AssetClass + AssetType"
+2021-07-05,21,4.0,9.5,5.5,-4.25,17.75,True,high,0.5909090909090909,21,21,"['Convert analysis tests to pytest', 'Network sub-package', 'Risk metrics calculation', 'Randomize order of high/low ticks generated from bar data', 'Convert backtest and cache tests to pytest', 'Convert unittest tests to pytest (tests/unit_tests/data)', 'Convert tests to pytest', 'Performance benchmarking with pytest-benchmark', 'Convert unittest tests to pytest (tests/unit_tests/indicators)', 'Release 1.124.0', 'Backtest bar data with PriceType.LAST', 'Oanda integration', 'Convert unittest tests to pytest (misc files)', 'Convert unittest tests to pytest (tests/unit_tests/adapters)', 'Update VenueStatus and ClosingPrice to be data not event', 'Fix missing benchmark cases', 'Backtest realism', 'RiskEngine: Iteration 2', 'Convert unittest tests to pytest (tests/unit_tests/cache)', 'Convert unittest tests to pytest (tests/unit_tests/trading)', 'Convert unittest tests to pytest (tests/unit_tests/execution)']","['closed (#372)', 'closed (#231)', 'closed (#248)', 'closed (#119)', 'closed (#380)', 'closed (#373)', 'closed (#325)', 'closed (#272)', 'closed (#371)', 'closed (#366)', 'closed (#269)', 'closed (#230)', 'closed (#375)', 'closed (#377)', 'closed (#365)', 'closed (#369)', 'closed (#286)', 'closed (#255)', 'closed (#376)', 'closed (#368)', 'closed (#374)']","[340689, 340724, 340759, 340826, 340853, 340880, 340915, 340958, 341078, 341159, 342315, 342366, 347934, 351341, 352463, 353156, 355823, 356879, 358592, 358630, 369112]","[340608, 340692, 340727, 340762, 340829, 340856, 340883, 340918, 341054, 341084, 341206, 342318, 347903, 351306, 352383, 353090, 355790, 356839, 358567, 358595, 369026]","Convert analysis tests to pytest
+Network sub-package
+Risk metrics calculation
+Randomize order of high/low ticks generated from bar data
+Convert backtest and cache tests to pytest
+Convert unittest tests to pytest (tests/unit_tests/data)
+Convert tests to pytest
+Performance benchmarking with pytest-benchmark
+Convert unittest tests to pytest (tests/unit_tests/indicators)
+Release 1.124.0
+Backtest bar data with PriceType.LAST
+Oanda integration
+Convert unittest tests to pytest (misc files)
+Convert unittest tests to pytest (tests/unit_tests/adapters)
+Update VenueStatus and ClosingPrice to be data not event
+Fix missing benchmark cases
+Backtest realism
+RiskEngine: Iteration 2
+Convert unittest tests to pytest (tests/unit_tests/cache)
+Convert unittest tests to pytest (tests/unit_tests/trading)
+Convert unittest tests to pytest (tests/unit_tests/execution)"
+2021-11-22,0,5.0,8.0,3.0,0.5,12.5,True,low,0.16666666666666666,0,0,[],[],,,
+2022-11-14,20,3.25,8.75,5.5,-5.0,17.0,True,high,0.5454545454545454,20,20,"['InteractiveBrokers Client connectivity', 'InteractiveBrokers parsing instruments', ""Unify the InstrumentId as per 'localSymbol@exchange.IB'"", 'IB connect timeout', 'Allow passing instance_id to nodes via kernel', 'adding_data_to_catalog.ipynb uses FTX broken endpoint', ""ib_instruments.ipynb raises ModuleNotFoundError: No module named 'lxml'"", ""ImportableClientConfig factory_path doesn't work"", 'Correct loading factory when using dict config with TradingNode', 'Fix bug in list_partitions', 'Fixes to IB Adapter', 'FTX Integration', 'Bot start on FTX futures exchange -> problem generating trade report', 'Release 1.159.0', 'Doc Error - Bar', 'Return single latest record for Bar and Instrument', 'BacktestRunConfig to use NautilusConfig, fix bug in parse_obj', 'Remove unused notebook', 'Parquet Catalog #839', 'catalog.list_partitions path error']","['closed (#812)', 'closed (#813)', 'closed (#864)', 'closed (#862)', 'closed (#865)', 'closed (#855)', 'closed (#854)', 'closed (#815)', 'closed (#860)', 'closed (#858)', 'closed (#857)', 'closed (#517)', 'closed (#799)', 'closed (#867)', 'closed (#856)', 'closed (#853)', 'closed (#869)', 'closed (#859)', 'closed (#852)', 'closed (#829)']","[290700, 291408, 291496, 291713, 291739, 291765, 291800, 291829, 291901, 291932, 291956, 291975, 292019, 292045, 293805, 295276, 295309, 295342, 296756, 324922]","[290664, 290759, 291476, 291502, 291719, 291745, 291777, 291806, 291838, 291916, 291935, 291959, 291984, 292025, 293784, 295251, 295285, 295318, 296732, 324875]","InteractiveBrokers Client connectivity
+InteractiveBrokers parsing instruments
+Unify the InstrumentId as per 'localSymbol@exchange.IB'
+IB connect timeout
+Allow passing instance_id to nodes via kernel
+adding_data_to_catalog.ipynb uses FTX broken endpoint
+ib_instruments.ipynb raises ModuleNotFoundError: No module named 'lxml'
+ImportableClientConfig factory_path doesn't work
+Correct loading factory when using dict config with TradingNode
+Fix bug in list_partitions
+Fixes to IB Adapter
+FTX Integration
+Bot start on FTX futures exchange -> problem generating trade report
+Release 1.159.0
+Doc Error - Bar
+Return single latest record for Bar and Instrument
+BacktestRunConfig to use NautilusConfig, fix bug in parse_obj
+Remove unused notebook
+Parquet Catalog #839
+catalog.list_partitions path error"
+2022-12-05,18,3.25,8.0,4.75,-3.875,15.125,True,high,0.6052631578947368,18,18,"['Fix bug in BettingInstrument runner name', 'Skip windows tests', 'Fix main', 'Reuseability of IB Contract/Dict to InstrumentId', 'Ladder steps are not sorted (test on binance spot)', 'IB contract account cleanup', 'Improve for request_bars function', 'Breakfix for Instrument filters after PR #890', 'InstrumentProviderConfig broken in develop branch', 'Release 1.162.0', 'AccountId function to return id without issuer string', ""Using account_id from config to filter IB's balances and direct orders to specific account"", 'Release 1.161.0', 'Remove pydantic', 'Documentation Table of Contents', 'IB balances filter and placeOrder for intended account_id', 'Bump certifi from 2022.9.24 to 2022.12.7', 'Betfair msgspec']","['closed (#895)', 'closed (#905)', 'closed (#900)', 'closed (#898)', 'closed (#894)', 'closed (#899)', 'closed (#693)', 'closed (#902)', 'closed (#901)', 'closed (#908)', 'closed (#891)', 'closed (#878)', 'closed (#907)', 'closed (#890)', 'closed (#887)', 'closed (#892)', 'closed (#906)', 'closed (#874)']","[286710, 287458, 287485, 287515, 287760, 287792, 287821, 287876, 287918, 288057, 288097, 288188, 288217, 288371, 288679, 289216, 290475, 304762]","[286366, 286713, 287461, 287495, 287733, 287769, 287801, 287827, 287882, 288037, 288063, 288125, 288194, 288223, 288654, 289168, 289829, 304686]","Fix bug in BettingInstrument runner name
+Skip windows tests
+Fix main
+Reuseability of IB Contract/Dict to InstrumentId
+Ladder steps are not sorted (test on binance spot)
+IB contract account cleanup
+Improve for request_bars function
+Breakfix for Instrument filters after PR #890
+InstrumentProviderConfig broken in develop branch
+Release 1.162.0
+AccountId function to return id without issuer string
+Using account_id from config to filter IB's balances and direct orders to specific account
+Release 1.161.0
+Remove pydantic
+Documentation Table of Contents
+IB balances filter and placeOrder for intended account_id
+Bump certifi from 2022.9.24 to 2022.12.7
+Betfair msgspec"
+2023-10-16,19,3.25,8.0,4.75,-3.875,15.125,True,high,0.8157894736842105,19,18,"['Bump urllib3 from 2.0.4 to 2.0.7', 'Add CryptoFuture instrument for Rust', 'Passing Headers to WebSocketClient.connect()', 'Clock condition check', 'Peak memory usage with DataBackendSession.to_query_result()', 'feat: fills report', 'fix: added partially filled orders to the orders and fills report', 'BinanceTimeInForce missing GTD', 'Release 1.179.0', 'bugfix: adds partial fills to orders and fills report', 'data catalog: set the min_rows_per_goup when writing a parquet datase…', 'Modified NautilusConfig.validate to validate the data_types', 'Partial fills missing from orders and fills report', 'Extra parameter for headers in WebsocketClient.connect()', 'Improve order fills report', 'Headers to WebSocketClient.connect()', 'Fills report', 'report all fills in orders and fills report']","['closed (#1277)', 'closed (#1276)', 'closed (#1292)', 'closed (#1285)', 'closed (#1253)', 'closed (#1289)', 'closed (#1283)', 'closed (#1226)', 'closed (#1294)', 'closed (#1288)', 'closed (#1281)', 'closed (#1279)', 'closed (#1286)', 'closed (#1282)', 'closed (#1291)', 'closed (#1290)', 'closed (#1293)', 'closed (#1287)', 'closed (#1284)']","[245451, 245473, 245535, 245617, 245688, 245762, 245802, 245833, 245870, 245901, 245945, 245969, 246007, 246121, 246199, 246236, 246298, 247567, 248922]","[243435, 245454, 245526, 245541, 245620, 245697, 245771, 245805, 245842, 245885, 245914, 245948, 245972, 246013, 246175, 246205, 246246, 247530, 248871]","Bump urllib3 from 2.0.4 to 2.0.7
+Add CryptoFuture instrument for Rust
+Passing Headers to WebSocketClient.connect()
+Clock condition check
+Peak memory usage with DataBackendSession.to_query_result()
+feat: fills report
+fix: added partially filled orders to the orders and fills report
+BinanceTimeInForce missing GTD
+Release 1.179.0
+bugfix: adds partial fills to orders and fills report
+data catalog: set the min_rows_per_goup when writing a parquet datase…
+Modified NautilusConfig.validate to validate the data_types
+Partial fills missing from orders and fills report
+Extra parameter for headers in WebsocketClient.connect()
+Improve order fills report
+Headers to WebSocketClient.connect()
+Fills report
+report all fills in orders and fills report"
+2023-10-23,19,3.25,8.75,5.5,-5.0,17.0,True,high,0.36363636363636365,19,18,"['WebSocketClient.connect(): Ability to pass connection headers', 'Add WeightedMovingAverage indicator in rust', 'Include async-timeout package in Interactive Brokers extra dependencies', 'backtest: using multiple BacktestDataConfig with start and end date set does not run', 'Catalog filename', 'Drop support for Python 3.9', 'Add imports to Python snippets in documentation', 'Add CurrencyPair in rust with pyo3', 'Allow registering Strategy in runtime', 'Adds fills report to Trader', 'IB bug fixes', 'Unable to fetch historical crypto bars from Interactive Brokers', 'Headers to WebSocketClient.connect()', 'data config: validate that the end time is set after the start time', 'WIP Create historic ticks downloader for Interactive Brokers', 'refactor: use `is` to compare type of objects', 'Pass headers in websocket connection', 'All Backtests in BacktestsNode fail if one Backtest Completely Fails']","['closed (#1236)', 'closed (#1305)', 'closed (#1295)', 'closed (#1304)', 'closed (#1303)', 'closed (#1222)', 'closed (#1297)', 'closed (#1313)', 'closed (#1095)', 'closed (#1301)', 'closed (#1302)', 'closed (#1296)', 'closed (#1293)', 'closed (#1311)', 'closed (#1308)', 'closed (#1298)', 'closed (#1312)', 'closed (#1299)', 'closed (#1280)']","[242576, 242607, 242657, 242808, 242919, 242982, 243032, 243081, 243149, 243245, 243332, 243357, 243390, 243426, 245523, 246160, 248271, 249101, 267136]","[242537, 242582, 242613, 242763, 242878, 242933, 243004, 243041, 243096, 243158, 243257, 243338, 243366, 243399, 245454, 246134, 248233, 249076, 267111]","WebSocketClient.connect(): Ability to pass connection headers
+Add WeightedMovingAverage indicator in rust
+Include async-timeout package in Interactive Brokers extra dependencies
+backtest: using multiple BacktestDataConfig with start and end date set does not run
+Catalog filename
+Drop support for Python 3.9
+Add imports to Python snippets in documentation
+Add CurrencyPair in rust with pyo3
+Allow registering Strategy in runtime
+Adds fills report to Trader
+IB bug fixes
+Unable to fetch historical crypto bars from Interactive Brokers
+Headers to WebSocketClient.connect()
+data config: validate that the end time is set after the start time
+WIP Create historic ticks downloader for Interactive Brokers
+refactor: use `is` to compare type of objects
+Pass headers in websocket connection
+All Backtests in BacktestsNode fail if one Backtest Completely Fails"
+2024-05-20,23,10.0,12.75,2.75,5.875,16.875,True,high,2.227272727272727,23,23,"['Refactor mocks in Interactive Brokers integration tests', 'Adapters development guide', 'Add DataEngine deltas buffering until F_LAST flag', 'Multi-currency support for SANDBOX mode', 'Improve Bybit handling for top-of-book quotes and deltas', 'Port VolumeWeightedAveragePrice indicator', 'Fix order event object conversion', 'Fix parsing Bybit deltas', 'Release 1.193.0', 'Incorrect import for OrderBookImbalance example strategy', 'Process `OrderBookDeltas` for backtest streaming', 'Set F_LAST flag for Bybit deltas', 'Fix IB tick level historical data downloading', 'Streaming Backtest with multiple datasets time synchronization issue', 'Port VerticalHorizontalFilter indicator', 'Cannot pull out account information in SANDBOX mode', 'Add PSQL cache database update orders', 'Improve error message when no tick scheme for instrument', 'Improve sandbox by adding account settings to the SandboxExecutionCli…', 'Order by ts_init to read row groups in order', 'Add support for MOC and LOC order types in IB', 'Low level backtest in documentation needs some adjustments so it works straight away', 'Add sandbox example for Bybit']","['closed (#1669)', 'closed (#1492)', 'closed (#1673)', 'closed (#1671)', 'closed (#1672)', 'closed (#1665)', 'closed (#1649)', 'closed (#1668)', 'closed (#1664)', 'closed (#1651)', 'closed (#1578)', 'closed (#1670)', 'closed (#1653)', 'closed (#1515)', 'closed (#1666)', 'closed (#1657)', 'closed (#1650)', 'closed (#1667)', 'closed (#1658)', 'closed (#1656)', 'closed (#1663)', 'closed (#1655)', 'closed (#1659)']","[208975, 209018, 209043, 209130, 209180, 209244, 209302, 209343, 209388, 209630, 209656, 209692, 209757, 209832, 209861, 209883, 209976, 210044, 210124, 210180, 217290, 222478, 226073]","[208935, 208981, 209027, 209056, 209136, 209186, 209250, 209312, 209349, 209394, 209633, 209662, 209698, 209801, 209835, 209867, 209913, 210015, 210059, 210130, 217241, 222364, 226052]","Refactor mocks in Interactive Brokers integration tests
+Adapters development guide
+Add DataEngine deltas buffering until F_LAST flag
+Multi-currency support for SANDBOX mode
+Improve Bybit handling for top-of-book quotes and deltas
+Port VolumeWeightedAveragePrice indicator
+Fix order event object conversion
+Fix parsing Bybit deltas
+Release 1.193.0
+Incorrect import for OrderBookImbalance example strategy
+Process `OrderBookDeltas` for backtest streaming
+Set F_LAST flag for Bybit deltas
+Fix IB tick level historical data downloading
+Streaming Backtest with multiple datasets time synchronization issue
+Port VerticalHorizontalFilter indicator
+Cannot pull out account information in SANDBOX mode
+Add PSQL cache database update orders
+Improve error message when no tick scheme for instrument
+Improve sandbox by adding account settings to the SandboxExecutionCli…
+Order by ts_init to read row groups in order
+Add support for MOC and LOC order types in IB
+Low level backtest in documentation needs some adjustments so it works straight away
+Add sandbox example for Bybit"
+2024-06-24,28,7.5,12.0,4.5,0.75,18.75,True,high,2.0555555555555554,28,28,"['Port RelativeVolatilityIndex indicator to Rust', 'Port OnBalanceVolume indicator to Rust', 'Add venue option to Binance adapter', 'Port MovingAverageConvergenceDivergence indicator to Rust', 'Port Pressure indicator to Rust', 'Add amend order qty for Betfair', 'Port RateOfChange indicator to Rust', 'Enhancement: Changed <Arc<Mutex<bool>> to AtomicBool', 'Port KeltnerChannel indicator to Rust', 'Port CommodityChannelIndex indicator to Rust', 'Port PsychologicalLine indicator to Rust', 'Network clients can use `AtomicBool` instead of `<Arc<Mutex<bool>>`', 'Betfair: Amend order qty support + a few minor fixes', 'Mutliplier not imported from databento definition file for FuturesContract and OptionsContract', 'Refactor accounting in Rust', 'Add request_order_book_snapshot method', 'Limit order fill behavior incorrect for multiple level books', 'Add initial Rust cach tests in Postgres', 'Port Stochastics indicator to Rust', 'Port BollingerBands indicator to Rust', 'Fix OrderMatchingEngine processing by book type for quotes and deltas', 'Port LinearRegression indicator to Rust', 'Port DonchianChannel indicator to Rust', 'Port Swings indicator to Rust', 'Implement PSQL Rust cache database adding accounts', ""Futures data from databento doesn't load correctly with nautilus loader"", 'Add serial test group to Rust nextest runner for Postgres E2E tests', 'Port VolatilityRatio indicator to Rust']","['closed (#1748)', 'closed (#1756)', 'closed (#1738)', 'closed (#1752)', 'closed (#1739)', 'closed (#1751)', 'closed (#1750)', 'closed (#1749)', 'closed (#1746)', 'closed (#1742)', 'closed (#1740)', 'closed (#1732)', 'closed (#1687)', 'closed (#1757)', 'closed (#1755)', 'closed (#1745)', 'closed (#1733)', 'closed (#1747)', 'closed (#1736)', 'closed (#1734)', 'closed (#1754)', 'closed (#1743)', 'closed (#1744)', 'closed (#1731)', 'closed (#1758)', 'closed (#1737)', 'closed (#1753)', 'closed (#1735)']","[204297, 204330, 204372, 204418, 204460, 204503, 204547, 204651, 204683, 204768, 204815, 204864, 204890, 204948, 204991, 205017, 205043, 205157, 205183, 205235, 205280, 205330, 205356, 205386, 205422, 205458, 205498, 208250]","[204251, 204303, 204352, 204378, 204424, 204466, 204509, 204553, 204663, 204689, 204771, 204821, 204870, 204896, 204971, 204997, 205023, 205121, 205163, 205189, 205241, 205294, 205336, 205362, 205392, 205428, 205467, 208152]","Port RelativeVolatilityIndex indicator to Rust
+Port OnBalanceVolume indicator to Rust
+Add venue option to Binance adapter
+Port MovingAverageConvergenceDivergence indicator to Rust
+Port Pressure indicator to Rust
+Add amend order qty for Betfair
+Port RateOfChange indicator to Rust
+Enhancement: Changed <Arc<Mutex<bool>> to AtomicBool
+Port KeltnerChannel indicator to Rust
+Port CommodityChannelIndex indicator to Rust
+Port PsychologicalLine indicator to Rust
+Network clients can use `AtomicBool` instead of `<Arc<Mutex<bool>>`
+Betfair: Amend order qty support + a few minor fixes
+Mutliplier not imported from databento definition file for FuturesContract and OptionsContract
+Refactor accounting in Rust
+Add request_order_book_snapshot method
+Limit order fill behavior incorrect for multiple level books
+Add initial Rust cach tests in Postgres
+Port Stochastics indicator to Rust
+Port BollingerBands indicator to Rust
+Fix OrderMatchingEngine processing by book type for quotes and deltas
+Port LinearRegression indicator to Rust
+Port DonchianChannel indicator to Rust
+Port Swings indicator to Rust
+Implement PSQL Rust cache database adding accounts
+Futures data from databento doesn't load correctly with nautilus loader
+Add serial test group to Rust nextest runner for Postgres E2E tests
+Port VolatilityRatio indicator to Rust"
+2024-07-01,19,7.5,12.0,4.5,0.75,18.75,True,high,0.05555555555555555,19,18,"['Wrong account balance when MARKET order trigger multiple fills', '`free` amount was negative', 'Port KeltnerPosition indicator to Rust', 'Indicators Rust port', 'Implement HullMovingAverage indicator in Rust', 'Add pyo3 exports for Postgres cache database updating account in Rust', 'Port SpreadAnalyzer indicator to Rust', 'Release 1.196.0', 'Port FuzzyCandlesticks indicator to Rust', 'Refactor cache database tests', 'Add option to saving market data in Rust cache', 'Implement PSQL Rust cache database updating accounts', 'Add pyo3 exports for Postgres cache database in Rust', 'BinanceFuturesInstrumentProvider loading MIN_NOTIONAL from wrong field', 'Implement and test Rust cache_accounts', 'Make trader_id foreign key in order_events table', 'Small mistake in Cache.get function documentation', 'Make `websocket` and `socket` disconnect sync function post atomic bool changes']","['closed (#1769)', 'closed (#1770)', 'closed (#1763)', 'closed (#1199)', 'closed (#1344)', 'closed (#1774)', 'closed (#1762)', 'closed (#1777)', 'closed (#1766)', 'closed (#1775)', 'closed (#1773)', 'closed (#1768)', 'closed (#1765)', 'closed (#1771)', 'closed (#1760)', 'closed (#1761)', 'closed (#1772)', 'closed (#1759)']","[203265, 203434, 203492, 203538, 203571, 203604, 203645, 203719, 203774, 203908, 203957, 204075, 204106, 204121, 204167, 204210, 204245, 239704, 253932]","[201853, 203391, 203440, 203498, 203544, 203583, 203624, 203654, 203737, 203840, 203914, 204039, 204081, 204127, 204173, 204216, 239682, 253864]","Wrong account balance when MARKET order trigger multiple fills
+`free` amount was negative
+Port KeltnerPosition indicator to Rust
+Indicators Rust port
+Implement HullMovingAverage indicator in Rust
+Add pyo3 exports for Postgres cache database updating account in Rust
+Port SpreadAnalyzer indicator to Rust
+Release 1.196.0
+Port FuzzyCandlesticks indicator to Rust
+Refactor cache database tests
+Add option to saving market data in Rust cache
+Implement PSQL Rust cache database updating accounts
+Add pyo3 exports for Postgres cache database in Rust
+BinanceFuturesInstrumentProvider loading MIN_NOTIONAL from wrong field
+Implement and test Rust cache_accounts
+Make trader_id foreign key in order_events table
+Small mistake in Cache.get function documentation
+Make `websocket` and `socket` disconnect sync function post atomic bool changes"
+2025-01-06,28,12.0,18.0,6.0,3.0,27.0,True,high,0.16666666666666666,28,26,"['Document FillModel', 'Add adaptive_bar_ordering to BacktestVenueConfig', 'Document FillModel and bar based execution', 'Refine cache key for sccache in CI', 'Port OrderEmulator to Rust', 'Add `enable_event_logging` for `StrategyConfig`', 'Implement trailing stop logic in Rust', 'Fix docstring typo for fill_order function in OrderMatchingEngine', 'Add docs on choosing data and bars processing', 'Update docs for bar OHLC processing in backtests', 'Add fee model to OrderMatchingEngine in Rust', 'Docs updated: FillModel + Bar based execution mechanics', 'Refine error logs when sending pong for dYdX', 'Implement ids generator for OrderMatchingEngine in Rust', 'Docs updated: FillModel explained (#2177)', 'add position management', 'Add test for bar_adaptive_high_low_ordering', 'Port market order filling for OrderMatchingEngine in Rust', 'Refine WebSocket client re-subscribe log in Bybit', 'Fix markets schema for dYdX', 'Extend docs - Bar based execution mechanics', 'Rename WebSocket private client for Bybit', 'Fix backtest start and end time validation assertion', 'Release 1.210.0', 'Achieving Consistent Custom Data Subscription in Backtesting and living', 'Use retry manager when sending websocket messages for dYdX']","['closed (#2177)', 'closed (#2188)', 'closed (#2187)', 'closed (#2182)', 'closed (#2171)', 'closed (#2183)', 'closed (#2174)', 'closed (#2189)', 'closed (#2195)', 'closed (#2157)', 'closed (#2198)', 'closed (#2191)', 'closed (#2186)', 'closed (#2184)', 'closed (#2193)', 'closed (#2178)', 'closed (#2200)', 'closed (#2197)', 'closed (#2202)', 'closed (#2179)', 'closed (#2190)', 'closed (#2185)', 'closed (#2180)', 'closed (#2203)', 'closed (#2201)', 'closed (#2181)', 'closed (#2196)']","[165222, 165290, 166807, 166889, 166987, 167036, 167081, 167125, 167252, 167353, 167413, 167459, 167518, 167545, 167615, 167659, 167705, 167731, 167773, 167819, 167837, 167860, 167909, 167943, 167993, 168219, 168664, 169183]","[165202, 165228, 165299, 166810, 166956, 167006, 167045, 167090, 167203, 167316, 167359, 167419, 167465, 167581, 167634, 167662, 167711, 167737, 167783, 167825, 167840, 167866, 167915, 167946, 168139, 168598, 169143]","Document FillModel
+Add adaptive_bar_ordering to BacktestVenueConfig
+Document FillModel and bar based execution
+Refine cache key for sccache in CI
+Port OrderEmulator to Rust
+Add `enable_event_logging` for `StrategyConfig`
+Implement trailing stop logic in Rust
+Fix docstring typo for fill_order function in OrderMatchingEngine
+Add docs on choosing data and bars processing
+Update docs for bar OHLC processing in backtests
+Add fee model to OrderMatchingEngine in Rust
+Docs updated: FillModel + Bar based execution mechanics
+Refine error logs when sending pong for dYdX
+Implement ids generator for OrderMatchingEngine in Rust
+Docs updated: FillModel explained (#2177)
+add position management
+Add test for bar_adaptive_high_low_ordering
+Port market order filling for OrderMatchingEngine in Rust
+Refine WebSocket client re-subscribe log in Bybit
+Fix markets schema for dYdX
+Extend docs - Bar based execution mechanics
+Rename WebSocket private client for Bybit
+Fix backtest start and end time validation assertion
+Release 1.210.0
+Achieving Consistent Custom Data Subscription in Backtesting and living
+Use retry manager when sending websocket messages for dYdX"
+2025-01-20,30,12.0,18.75,6.75,1.875,28.875,True,high,0.16666666666666666,30,29,"['Improve Databento tutorial formatting', ""DecodeError('JSON is malformed: invalid character (byte 0)')"", 'Fix realized pnl bug in Portfolio', 'Fix schema for listing markets of dYdX', 'Port batch cancel command for OrderMatchingEngine in Rust', 'Migrate old parquet file to high precision throws panic', 'Improve OrderMatchingEngine tests with delta builder', 'Port process cancel for OrderMatchingEngine in Rust', 'Refine OrderEmulator', 'Fix update order in Rust cache', 'Port stop limit order processing for OrderMatchingEngine in Rust', 'Add optional params dict to order strategy functions', 'Live trading raise QueueFull', 'chore: update delta.rs', 'Refactor CI with composite actions', 'Use clang as the default compiler', 'Fix reconnect handling for Betfair', 'Continue OrderEmulator', 'Fix CI composite actions', 'Add docs for Databento overview + Actors + Portfolio', 'Add DataList to better handle several instruments', 'Use mold as the linker in CI', 'Port process cancel all for OrderMatchingEngine in Rust', 'Add bar support to compute Portfolio pnls', 'Data engine `_create_new_book`  failure upon missing instrument', 'Move model crate stubs into defaults', 'Fix memory leak in live trading', 'Fix for `CARGO_TARGET_DIR` environment variable', 'Change notebook option demo data to bbo-1m']","['closed (#2252)', 'closed (#2227)', 'closed (#2243)', 'closed (#2240)', 'closed (#2256)', 'closed (#2249)', 'closed (#2234)', 'closed (#2231)', 'closed (#2226)', 'closed (#2247)', 'closed (#2225)', 'closed (#2251)', 'closed (#2224)', 'closed (#2230)', 'closed (#2242)', 'closed (#2241)', 'closed (#2232)', 'closed (#2219)', 'closed (#2248)', 'closed (#2233)', 'closed (#2222)', 'closed (#2254)', 'closed (#2253)', 'closed (#2239)', 'closed (#2237)', 'closed (#2235)', 'closed (#2229)', 'closed (#2228)', 'closed (#2223)']","[162663, 162878, 162924, 162950, 162976, 163010, 163037, 163065, 163114, 163304, 163476, 163499, 163525, 163578, 163680, 163828, 163870, 163953, 164005, 164072, 164112, 164160, 164192, 164225, 164257, 164300, 164337, 164394, 164427, 164542]","[162626, 162725, 162887, 162930, 162953, 162982, 163040, 163071, 163274, 163310, 163482, 163505, 163531, 163646, 163784, 163831, 163876, 163956, 164011, 164078, 164121, 164172, 164198, 164237, 164263, 164306, 164371, 164400, 164487]","Improve Databento tutorial formatting
+DecodeError('JSON is malformed: invalid character (byte 0)')
+Fix realized pnl bug in Portfolio
+Fix schema for listing markets of dYdX
+Port batch cancel command for OrderMatchingEngine in Rust
+Migrate old parquet file to high precision throws panic
+Improve OrderMatchingEngine tests with delta builder
+Port process cancel for OrderMatchingEngine in Rust
+Refine OrderEmulator
+Fix update order in Rust cache
+Port stop limit order processing for OrderMatchingEngine in Rust
+Add optional params dict to order strategy functions
+Live trading raise QueueFull
+chore: update delta.rs
+Refactor CI with composite actions
+Use clang as the default compiler
+Fix reconnect handling for Betfair
+Continue OrderEmulator
+Fix CI composite actions
+Add docs for Databento overview + Actors + Portfolio
+Add DataList to better handle several instruments
+Use mold as the linker in CI
+Port process cancel all for OrderMatchingEngine in Rust
+Add bar support to compute Portfolio pnls
+Data engine `_create_new_book`  failure upon missing instrument
+Move model crate stubs into defaults
+Fix memory leak in live trading
+Fix for `CARGO_TARGET_DIR` environment variable
+Change notebook option demo data to bbo-1m"
+2025-02-24,45,13.25,22.0,8.75,0.125,35.125,True,high,1.1285714285714286,45,41,"['Fix example load bars from custom CSV', 'Fix bad ts_init value in IB weekly and monthly bar (#2355)', 'Add backtest cache example', 'Add BarSpecification to config.py msgspec encoding and decoding hooks', 'Incorrect handling of IB execution.time timestring when tz is UTC', 'Refine adapters concept documentation', 'Fix bar timestamps for IB', 'Fix catalog path error on windows', 'Add BarSpecification to msgspec encoding hooks', 'Add Transformer to parse redis value to struct', 'Add indicators example', 'Refactor examples: Reduce repetitive code', 'Request order books snapshots with HTTP for dYdX', 'Improve and expand bar aggregation docs', 'Add support for `CARGO_BUILD_TARGET` environment variable', 'Fix time parsing for IB adapter', 'Implement processing of market-to-limit orders in matching engine', 'Refine data request constructors', 'Refactor reconciliation interfaces into messages', 'RFC: Change package managament to UV', 'Port processing of trailing stop orders for matching engine', 'Improve Binance websocket connections management', 'Improve Binance adapter to handle greater number of websocket data streams', 'Update adapters concept documentation', 'Refactor repetitive code in examples', 'Add pnl information to greeks data', 'Add catalog write modes', 'Add Multi Processing Feature Flag in BacktestNode', 'Add initial leverage config for Binance Futures', 'Add Parallel Config Processing to BacktestNode', 'Add test for time-bar aggregation', 'Port updating of trailing stop orders for matching engine', 'Refine Rust date functions', 'Log timestamps misaligned with TimeEvent in backtests', 'Fix subscribe composite bars', 'Refine parsing of IB symbols', 'RFC: Fills are applied multiple times to the same limit order', 'Refine underlying filtering in portfolio_greeks', 'Add backtest portfolio example', 'Refine Controller creation']","['closed (#2383)', 'closed (#2368)', 'closed (#2370)', 'closed (#2371)', 'closed (#2359)', 'closed (#2358)', 'closed (#2380)', 'closed (#2377)', 'closed (#2373)', 'closed (#2338)', 'closed (#2396)', 'closed (#2394)', 'closed (#2393)', 'closed (#2384)', 'closed (#2385)', 'closed (#2361)', 'closed (#2354)', 'closed (#2349)', 'closed (#2375)', 'closed (#2199)', 'closed (#2366)', 'closed (#2369)', 'closed (#2367)', 'closed (#2348)', 'closed (#2387)', 'closed (#2378)', 'closed (#2365)', 'closed (#2372)', 'closed (#2363)', 'closed (#2395)', 'closed (#2374)', 'closed (#2391)', 'closed (#2376)', 'closed (#2356)', 'closed (#2319)', 'closed (#2390)', 'closed (#2388)', 'closed (#2360)', 'closed (#2267)', 'closed (#2382)', 'closed (#2364)', 'closed (#2362)', 'closed (#2357)']","[154529, 154558, 154581, 154604, 154640, 154666, 154727, 154800, 154881, 154922, 154985, 155017, 155122, 155145, 155184, 155231, 155270, 155313, 155389, 155417, 155471, 155497, 155558, 155601, 155648, 155691, 155743, 155803, 155875, 155909, 155937, 155946, 155966, 155982, 156015, 156045, 156077, 156110, 156182, 156416, 156445, 156939, 157815, 162260, 166950]","[154506, 154535, 154564, 154584, 154610, 154646, 154704, 154736, 154858, 154887, 154944, 154991, 155070, 155125, 155151, 155190, 155237, 155279, 155322, 155392, 155426, 155474, 155503, 155561, 155604, 155651, 155697, 155749, 155812, 155878, 155915, 155949, 155988, 156018, 156051, 156083, 156116, 156393, 156422, 156857, 157765, 162201, 166892]","Fix example load bars from custom CSV
+Fix bad ts_init value in IB weekly and monthly bar (#2355)
+Add backtest cache example
+Add BarSpecification to config.py msgspec encoding and decoding hooks
+Incorrect handling of IB execution.time timestring when tz is UTC
+Refine adapters concept documentation
+Fix bar timestamps for IB
+Fix catalog path error on windows
+Add BarSpecification to msgspec encoding hooks
+Add Transformer to parse redis value to struct
+Add indicators example
+Refactor examples: Reduce repetitive code
+Request order books snapshots with HTTP for dYdX
+Improve and expand bar aggregation docs
+Add support for `CARGO_BUILD_TARGET` environment variable
+Fix time parsing for IB adapter
+Implement processing of market-to-limit orders in matching engine
+Refine data request constructors
+Refactor reconciliation interfaces into messages
+RFC: Change package managament to UV
+Port processing of trailing stop orders for matching engine
+Improve Binance websocket connections management
+Improve Binance adapter to handle greater number of websocket data streams
+Update adapters concept documentation
+Refactor repetitive code in examples
+Add pnl information to greeks data
+Add catalog write modes
+Add Multi Processing Feature Flag in BacktestNode
+Add initial leverage config for Binance Futures
+Add Parallel Config Processing to BacktestNode
+Add test for time-bar aggregation
+Port updating of trailing stop orders for matching engine
+Refine Rust date functions
+Log timestamps misaligned with TimeEvent in backtests
+Fix subscribe composite bars
+Refine parsing of IB symbols
+RFC: Fills are applied multiple times to the same limit order
+Refine underlying filtering in portfolio_greeks
+Add backtest portfolio example
+Refine Controller creation"
+2025-12-01,49,14.25,24.0,9.75,-0.375,38.625,True,high,1.064102564102564,49,48,"['Enhance LatencyModel to handle message ingress dynamic data latency', 'strategy.close_all_positions() list tags argument does not work.', 'Position-reducing trailing stop market orders incorrectly validated against cash balance', 'Improve dYdX v4 data/exec testers and fix GTT', 'Data holes and race conditions for historical data requests', 'Move OptionExerciseModule to models folder', '# Issue: Instruments not loading automatically on market data subscription', 'Add additional event hook and system process for strategy stop/graceful shutdown', 'Add Uniswap V4 swap execution infrastructure', 'Improve dYdX v3 resilience and reliability', 'Implement a data hole warning (customizable)', 'BacktestDataConfig adds all the bar objects for the instrument instead of the specified timeframe', 'Refine databento utils', 'Allow hyphens in evalexpr expression for InstrumentId', 'Fix IB parsing of invalid prices', 'Refine BacktestDataConfig.query', 'Sending external commands through MessageBus and Redis', 'Add dYdX batch cancel and expose missing Python bindings', 'Add BybitRawHttpClient Python bindings', 'Add BarType.to_str_proxy method', 'Improve log output piping to programs such as less', 'Enhance backtest execution model with state-aware fills', 'GTD order expiry KeyError: incorrect dict key in _generate_order_expired', 'Refactor HistoricInteractiveBrokersClient', 'Add Bybit HTTP request_tickers support', 'Change of default behavior from ""load all data at once"" to streaming in high-level API', 'Add configuration for execution based on trades', 'Add Kraken spot order placement via REST and WebSocket', 'Change the API, so customizable OHLC prices simulation are possible', 'Bullsheedo', 'Add Kraken Futures demo support', 'Add Kraken spot order placement via REST', 'Add pool discovery service with full Uniswap(V2/V3/V4) support', 'Refactor IB Historical client', '[dYdX] Execution and reconciliation testing', 'resolve conf pr', '[Polymarket] Incorrect parsing of trade timestamp', 'Standardize dYdX per adapter guide conventions', 'Error on empty data when converting from feather to parquet', 'Fix ParquetDataCatalog.from_uri to support Windows paths', 'Work7 rebased with develop branch f0425ac1eaac854df100a10c0e7568b6e8ce8eff 2025-12-03', 'Refine BacktestDataIterator docstrings', 'Add ParquetDataCatalog.query_first_timestamp', 'Add check for empty data in _handle_table_nautilus', 'Add dYdX v4 Python adapter layer', 'Fix OKX fee rate sign handling causing backtest errors', 'Refactor dYdX v4 conditional orders to unified method', 'IBKR example throws exception due to function signature mismatch']","['closed (#2612)', 'closed (#3277)', 'closed (#3256)', 'closed (#3254)', 'closed (#2585)', 'closed (#3270)', 'closed (#3237)', 'closed (#2572)', 'closed (#3250)', 'closed (#3225)', 'closed (#2604)', 'closed (#3263)', 'closed (#3258)', 'closed (#3257)', 'closed (#3246)', 'closed (#3266)', 'closed (#3251)', 'closed (#3282)', 'closed (#3268)', 'closed (#3252)', 'closed (#3249)', 'closed (#2571)', 'closed (#2564)', 'closed (#3272)', 'closed (#3261)', 'closed (#3241)', 'closed (#2565)', 'closed (#2549)', 'closed (#3271)', 'closed (#2579)', 'closed (#3281)', 'closed (#3262)', 'closed (#3280)', 'closed (#3255)', 'closed (#3276)', 'closed (#3155)', 'closed (#3278)', 'closed (#3273)', 'closed (#3267)', 'closed (#3247)', 'closed (#3283)', 'closed (#3265)', 'closed (#3264)', 'closed (#3253)', 'closed (#3248)', 'closed (#3275)', 'closed (#3260)', 'closed (#3259)', 'closed (#3226)']","[88513, 88583, 88638, 88716, 89003, 89027, 89066, 89151, 89227, 89278, 89382, 89405, 89566, 89632, 89674, 89747, 89780, 89828, 89904, 89952, 89987, 90065, 90103, 90219, 90251, 90429, 90484, 90560, 90610, 90644, 90689, 90736, 90793, 90824, 90866, 91539, 91692, 92517, 92719, 96638, 138315, 138808, 139736, 139912, 141274, 141308, 141477, 141525, 141964]","[88468, 88522, 88595, 88641, 88776, 89006, 89036, 89078, 89204, 89252, 89303, 89388, 89543, 89578, 89644, 89686, 89750, 89792, 89831, 89916, 89964, 90012, 90077, 90109, 90228, 90276, 90441, 90496, 90569, 90622, 90653, 90695, 90742, 90805, 90827, 91484, 91675, 92493, 92528, 96607, 138261, 138769, 139724, 139903, 141262, 141277, 141454, 141480, 141917]","Enhance LatencyModel to handle message ingress dynamic data latency
+strategy.close_all_positions() list tags argument does not work.
+Position-reducing trailing stop market orders incorrectly validated against cash balance
+Improve dYdX v4 data/exec testers and fix GTT
+Data holes and race conditions for historical data requests
+Move OptionExerciseModule to models folder
+# Issue: Instruments not loading automatically on market data subscription
+Add additional event hook and system process for strategy stop/graceful shutdown
+Add Uniswap V4 swap execution infrastructure
+Improve dYdX v3 resilience and reliability
+Implement a data hole warning (customizable)
+BacktestDataConfig adds all the bar objects for the instrument instead of the specified timeframe
+Refine databento utils
+Allow hyphens in evalexpr expression for InstrumentId
+Fix IB parsing of invalid prices
+Refine BacktestDataConfig.query
+Sending external commands through MessageBus and Redis
+Add dYdX batch cancel and expose missing Python bindings
+Add BybitRawHttpClient Python bindings
+Add BarType.to_str_proxy method
+Improve log output piping to programs such as less
+Enhance backtest execution model with state-aware fills
+GTD order expiry KeyError: incorrect dict key in _generate_order_expired
+Refactor HistoricInteractiveBrokersClient
+Add Bybit HTTP request_tickers support
+Change of default behavior from ""load all data at once"" to streaming in high-level API
+Add configuration for execution based on trades
+Add Kraken spot order placement via REST and WebSocket
+Change the API, so customizable OHLC prices simulation are possible
+Bullsheedo
+Add Kraken Futures demo support
+Add Kraken spot order placement via REST
+Add pool discovery service with full Uniswap(V2/V3/V4) support
+Refactor IB Historical client
+[dYdX] Execution and reconciliation testing
+resolve conf pr
+[Polymarket] Incorrect parsing of trade timestamp
+Standardize dYdX per adapter guide conventions
+Error on empty data when converting from feather to parquet
+Fix ParquetDataCatalog.from_uri to support Windows paths
+Work7 rebased with develop branch f0425ac1eaac854df100a10c0e7568b6e8ce8eff 2025-12-03
+Refine BacktestDataIterator docstrings
+Add ParquetDataCatalog.query_first_timestamp
+Add check for empty data in _handle_table_nautilus
+Add dYdX v4 Python adapter layer
+Fix OKX fee rate sign handling causing backtest errors
+Refactor dYdX v4 conditional orders to unified method
+IBKR example throws exception due to function signature mismatch"
+2026-02-02,55,20.25,29.75,9.5,6.0,44.0,True,high,1.1578947368421053,55,50,"['Fix spurious tick size warnings for IB index subscriptions', 'Fix Interactive Brokers crash when handling external orders with empty orderRef', 'Add more fields in Instrument class', 'Improve dYdX data client subscription handling', 'Add OKX instIdCode support for WebSocket order operations', 'Add configurable bulk read batch size for Redis cache', 'Portfolio handling for multi-venue Accounts', 'Refactor dYdX v4 data client', 'Add TypeScript/Bun FFI bindings for NautilusTrader core, model, and common modules', 'Add Interactive Brokers subscribe index price functionality', 'Add Databento bulk subscription and historical request support', '[Databento/IBKR] Memory leak in live data path - linear growth at capsule_to_data', 'Make price in increments', 'Ensure consistent market exit for a strategy', 'Exchange field for Ticks', 'Fix IB contract for ESTX50 IND contract', 'Cache loads stale orders/positions from Redis before flush_on_start clears them', 'Refine processing of expirations in SimulatedExchange', 'Fix Tardis deltas snapshot boundaries with CLEAR', '[Tardis] stream_batched_deltas missing CLEAR on snapshot boundary (is_snapshot=true)', 'Canceling (accepted, non-filled) orders during backtesting does not update/reset balance', '[Betfair] Adapter refinements', 'How to configure a demo account connected to Binance, not a testnet？', 'RFC: Comparison of Bybit `HTTP` vs `WebSocket` order placement speed', '[Interactive Brokers] Subscribing to index does not produce expected price updates', 'Fix cache loading stale data when flush_on_start is True', 'Enhance Databento integration', '[BitMEX] Trailing stop orders', 'Support for multi-leg options orders', 'MetaTrader 5 Integration', 'Add Http request_order_book_snapshot method', 'How to set up time event handlers?', 'Refine exercise and settlement of expiring instruments', 'Add Polymarket event_slug_builder support', 'Missing historical data in streaming feather', 'Exchange: DYDX', 'Fix Deribit trades requests with proper pagination', 'Refactor dYdX v4 adapter', '[OKX] Add support for instIdCode parameter in WebSocket order operations', 'Add OrderBookDeltas historical request support', '[Binance] Spot positions calculation error', 'Emit revised bars from internal time bar aggregator', 'Refine handling of timers in backtest engine', 'Add Ichimoku Cloud indicator', 'Refine memory management for PyCapsule', 'Add Polymarket batch order support', 'RFC: Comparison of Bybit Python vs Rust adapter performance', '[Hyperliquid] Execution and reconciliation testing', 'Fix IB options missing ^ prefix on index underlying symbols', '[RFC] Filter catalog by ts_event instead of ts_init']","['closed (#3543)', 'closed (#3494)', 'closed (#851)', 'closed (#3537)', 'closed (#3536)', 'closed (#3534)', 'closed (#1051)', 'closed (#3547)', 'closed (#3527)', 'closed (#3514)', 'closed (#3490)', 'closed (#3485)', 'closed (#1026)', 'closed (#2876)', 'closed (#1046)', 'closed (#3556)', 'closed (#3550)', 'closed (#3538)', 'closed (#3530)', 'closed (#3529)', 'closed (#3525)', 'closed (#3544)', 'closed (#3533)', 'closed (#2146)', 'closed (#3535)', 'closed (#3413)', 'closed (#3551)', 'closed (#3528)', 'closed (#1491)', 'closed (#3150)', 'closed (#941)', 'closed (#1764)', 'closed (#1741)', 'closed (#3532)', 'closed (#3531)', 'closed (#3501)', 'closed (#1042)', 'closed (#866)', 'closed (#3548)', 'closed (#3521)', 'closed (#3507)', 'closed (#3438)', 'closed (#3546)', 'closed (#3489)', 'closed (#3456)', 'closed (#3552)', 'closed (#3526)', 'closed (#3506)', 'closed (#3180)', 'closed (#3152)', 'closed (#3540)', 'closed (#3491)']","[69885, 70113, 70174, 70195, 70237, 70317, 70355, 70444, 70514, 70800, 70812, 70966, 71115, 71164, 71198, 71231, 71250, 71299, 71338, 71399, 71442, 71469, 71499, 71529, 71592, 71610, 71864, 72245, 72737, 72832, 73163, 73540, 73721, 73780, 73970, 74181, 75972, 75978, 76859, 78716, 94895, 96872, 97013, 119332, 169807, 204033, 205109, 226130, 270792, 271809, 271953, 273804, 282300, 291473, 292094]","[69852, 70090, 70122, 70180, 70201, 70246, 70329, 70421, 70447, 70783, 70946, 70975, 71124, 71170, 71214, 71234, 71270, 71308, 71347, 71448, 71472, 71508, 71544, 71598, 71735, 72080, 72706, 72740, 73080, 73511, 73681, 73724, 73792, 74112, 75922, 76799, 78666, 94871, 96806, 96988, 119292, 169771, 203963, 205049, 226082, 270759, 271797, 271933, 273758, 282211, 291411, 292051]","Fix spurious tick size warnings for IB index subscriptions
+Fix Interactive Brokers crash when handling external orders with empty orderRef
+Add more fields in Instrument class
+Improve dYdX data client subscription handling
+Add OKX instIdCode support for WebSocket order operations
+Add configurable bulk read batch size for Redis cache
+Portfolio handling for multi-venue Accounts
+Refactor dYdX v4 data client
+Add TypeScript/Bun FFI bindings for NautilusTrader core, model, and common modules
+Add Interactive Brokers subscribe index price functionality
+Add Databento bulk subscription and historical request support
+[Databento/IBKR] Memory leak in live data path - linear growth at capsule_to_data
+Make price in increments
+Ensure consistent market exit for a strategy
+Exchange field for Ticks
+Fix IB contract for ESTX50 IND contract
+Cache loads stale orders/positions from Redis before flush_on_start clears them
+Refine processing of expirations in SimulatedExchange
+Fix Tardis deltas snapshot boundaries with CLEAR
+[Tardis] stream_batched_deltas missing CLEAR on snapshot boundary (is_snapshot=true)
+Canceling (accepted, non-filled) orders during backtesting does not update/reset balance
+[Betfair] Adapter refinements
+How to configure a demo account connected to Binance, not a testnet？
+RFC: Comparison of Bybit `HTTP` vs `WebSocket` order placement speed
+[Interactive Brokers] Subscribing to index does not produce expected price updates
+Fix cache loading stale data when flush_on_start is True
+Enhance Databento integration
+[BitMEX] Trailing stop orders
+Support for multi-leg options orders
+MetaTrader 5 Integration
+Add Http request_order_book_snapshot method
+How to set up time event handlers?
+Refine exercise and settlement of expiring instruments
+Add Polymarket event_slug_builder support
+Missing historical data in streaming feather
+Exchange: DYDX
+Fix Deribit trades requests with proper pagination
+Refactor dYdX v4 adapter
+[OKX] Add support for instIdCode parameter in WebSocket order operations
+Add OrderBookDeltas historical request support
+[Binance] Spot positions calculation error
+Emit revised bars from internal time bar aggregator
+Refine handling of timers in backtest engine
+Add Ichimoku Cloud indicator
+Refine memory management for PyCapsule
+Add Polymarket batch order support
+RFC: Comparison of Bybit Python vs Rust adapter performance
+[Hyperliquid] Execution and reconciliation testing
+Fix IB options missing ^ prefix on index underlying symbols
+[RFC] Filter catalog by ts_event instead of ts_init"
+2026-05-04,76,24.0,32.5,8.5,11.25,45.25,True,high,3.6176470588235294,76,71,"['[Deribit] Rust adapter silently drops quote updates when instrument is missing from WS handler cache', '[Polymarket] accepted order can remain ACCEPTED without fill or terminal event', 'Fix Deribit cross-margin balance overcounting in account state parsing', 'Fix OKX OKXInstrumentStatus to gracefully handle future schema additions', 'Add Deribit DVOL volatility index CustomData support', 'Codex/reapply polymarket order path', '[Polymarket] Prevent secondary exceptions in websocket parse-error logging', 'Fix custom data Parquet schema registration', 'Drop unrepresentable IB market data tick sizes', 'Execution reconciliation overwrites position reports by instrument_id', 'Fully redact DatabaseConfig passwords in repr', 'JupyterLab Dockerfile runs unauthenticated on 0.0.0.0', 'Sandbox cancel/state inconsistency for cache-open PartiallyFilled orders', '# Pull Request', 'Fix IB shutdown reader RuntimeError', '[Binance] WS client fails to recover from server-initiated close mid-pong', 'IB callbacks execute while mutex held causing reentrancy/deadlock risk', 'Harden Interactive Brokers callback ordering races', '[Kraken] Add spot margin trading support', 'IB ExecClient _connect crashes with TypeError on reconnect when serverVersion() is None', 'Add Hyperliquid allMids CustomData support', 'Custom data dynamic Parquet queries can miss registered schema during DataFusion planning', 'Account equity on-demand calculation support', 'Provide strategy helpers to help end dev user and hide complexity', 'Codex/sync upstream master v1 226 0', 'Harden matching engine and sandbox against stale-precision ticks', 'Performance Stats in streaming feather', 'Execution/Sandbox: harden market-data update failure paths', '[Interactive Brokers] Implement subscribe_option_greeks using tickOptionComputation callback', 'Add Bullet.xyz perpetuals adapter', 'Harden Polymarket websocket parse-error handling', 'Unsafe Send/Sync on Rc-backed TimeEventCallback variant', 'BaseAccount::clone causes O(n^2) allocation cost in Rust backtest', 'Preserve Databento market data price precision', '[Hyperliquid testnet] No OrderStatusReport received for orders', 'Fix Kraken spot margin wallet balance for multi-asset collateral', 'Add Binance market data collectors for T1 basis research', '[Interactive Brokers] Fractional tick sizes can stall market data dispatch', '[Interactive Brokers] Shutdown logs RuntimeError from reader tasks', 'Potential path traversal in feather listing via unsanitized instance_id', 'Add Kraken Spot WebSocket v2 order submission', 'Fix Interactive Brokers market data farm reconnect events', '[Polymarket] market IOC orders are submitted as FOK', '[Hyperliquid] Incorrect modify action when partial fill', 'Fix Interactive Brokers post-shutdown RuntimeError in TWS reader', 'Wire Interactive Brokers Rust adapter into v2 live trading', 'Add Kraken spot margin trading support', 'Fix custom data parquet schema registration', 'RiskEngine bypasses checks for missing/margin accounts', '[Kraken] WebSocket order submission (add_order, amend_order, cancel_order)', 'Fix OKX missing rebase instrument status', 'Custom position_id silently accepted under NETTING OMS', '[Hyperliquid testnet] Order rejected: builder fee not approved', 'BacktestEngine does not enable `calculate_account_state` on accounts', 'hyperliquid: predicted markets (outcome) support (draft)', 'Scope live position reconciliation by account', 'Fix IB reconnect before server version handshake', 'Support serialized fields in custom_data macro', 'Fix sandbox race on tick-size precision changes', 'SQL injection surface in ParquetDataCatalog where filter', 'Netting reconciliation aggregates positions across accounts', '[Deribit] OrderRejected raised for StopMarket orders', 'PyO3 Strategy v2 from nautilus_pyo3 not compatible with TradingNode v1', '[Interactive Brokers] Residual callback-ordering issues after #3957', '[Deribit] Rust adapter silently drops quote updates on WebSocket handler cache miss', 'Fix SQL ParserError for symbols containing ampersand', 'DatabaseConfig __repr__ leaks partial password material', 'Make arrow support optional', '[Databento] Live 6E quote/trade ticks decode with price_precision=2', 'Fix Cython OrderMatchingEngine.reset leaking OrderBook.ts_last on repeated runs', ""Loading custom Tick objects via BacktestDataConfig doesn't add instruments to Engine""]","['closed (#4034)', 'closed (#4024)', 'closed (#4009)', 'closed (#4005)', 'closed (#3985)', 'closed (#4049)', 'closed (#4036)', 'closed (#3924)', 'closed (#4022)', 'closed (#4012)', 'closed (#4028)', 'closed (#4016)', 'closed (#4039)', 'closed (#4033)', 'closed (#4023)', 'closed (#4020)', 'closed (#4018)', 'closed (#3976)', 'closed (#3962)', 'closed (#4026)', 'closed (#3984)', 'closed (#3923)', 'closed (#985)', 'closed (#794)', 'closed (#4048)', 'closed (#4044)', 'closed (#1041)', 'closed (#4037)', 'closed (#3835)', 'closed (#4045)', 'closed (#4038)', 'closed (#4017)', 'closed (#4004)', 'closed (#4002)', 'closed (#4010)', 'closed (#3996)', 'closed (#3993)', 'closed (#3951)', 'closed (#3950)', 'closed (#4015)', 'closed (#4007)', 'closed (#3968)', 'closed (#4006)', 'closed (#3997)', 'closed (#3986)', 'closed (#3975)', 'closed (#3974)', 'closed (#3965)', 'closed (#4021)', 'closed (#4011)', 'closed (#4000)', 'closed (#3998)', 'closed (#3991)', 'closed (#3989)', 'closed (#3988)', 'closed (#4032)', 'closed (#4029)', 'closed (#4027)', 'closed (#4003)', 'closed (#3994)', 'closed (#4014)', 'closed (#4013)', 'closed (#3995)', 'closed (#3990)', 'closed (#3958)', 'closed (#4035)', 'closed (#4025)', 'closed (#4019)', 'closed (#4008)', 'closed (#3999)', 'closed (#3992)', 'closed (#807)']","[35396, 35940, 36533, 36601, 36728, 36773, 36811, 36836, 36865, 36893, 36938, 37123, 37241, 37267, 37303, 37330, 37387, 37413, 37476, 37518, 37588, 37626, 37662, 37678, 37694, 37697, 37713, 37716, 37732, 37735, 37751, 37770, 37789, 37805, 37808, 37838, 37891, 37917, 37962, 37998, 38044, 38087, 38154, 38199, 38245, 38260, 38315, 38362, 38436, 38451, 38508, 38547, 38586, 38616, 38678, 38710, 38747, 38853, 38926, 39022, 39301, 39351, 39418, 39791, 39995, 40128, 40272, 42642, 42711, 43848, 43882, 47621, 271997, 276815, 295480, 296985]","[35279, 35399, 36054, 36536, 36712, 36740, 36776, 36824, 36839, 36881, 36899, 36941, 37211, 37247, 37273, 37309, 37345, 37390, 37443, 37488, 37527, 37600, 37645, 37665, 37681, 37700, 37719, 37738, 37754, 37773, 37792, 37811, 37857, 37897, 37923, 37975, 38017, 38064, 38109, 38163, 38233, 38248, 38279, 38321, 38375, 38439, 38478, 38520, 38550, 38589, 38635, 38687, 38729, 38821, 38872, 38938, 39275, 39307, 39364, 39737, 39896, 40094, 40250, 42601, 42657, 43768, 43866, 47598, 271956, 276742, 295458, 296968]","[Deribit] Rust adapter silently drops quote updates when instrument is missing from WS handler cache
+[Polymarket] accepted order can remain ACCEPTED without fill or terminal event
+Fix Deribit cross-margin balance overcounting in account state parsing
+Fix OKX OKXInstrumentStatus to gracefully handle future schema additions
+Add Deribit DVOL volatility index CustomData support
+Codex/reapply polymarket order path
+[Polymarket] Prevent secondary exceptions in websocket parse-error logging
+Fix custom data Parquet schema registration
+Drop unrepresentable IB market data tick sizes
+Execution reconciliation overwrites position reports by instrument_id
+Fully redact DatabaseConfig passwords in repr
+JupyterLab Dockerfile runs unauthenticated on 0.0.0.0
+Sandbox cancel/state inconsistency for cache-open PartiallyFilled orders
+# Pull Request
+Fix IB shutdown reader RuntimeError
+[Binance] WS client fails to recover from server-initiated close mid-pong
+IB callbacks execute while mutex held causing reentrancy/deadlock risk
+Harden Interactive Brokers callback ordering races
+[Kraken] Add spot margin trading support
+IB ExecClient _connect crashes with TypeError on reconnect when serverVersion() is None
+Add Hyperliquid allMids CustomData support
+Custom data dynamic Parquet queries can miss registered schema during DataFusion planning
+Account equity on-demand calculation support
+Provide strategy helpers to help end dev user and hide complexity
+Codex/sync upstream master v1 226 0
+Harden matching engine and sandbox against stale-precision ticks
+Performance Stats in streaming feather
+Execution/Sandbox: harden market-data update failure paths
+[Interactive Brokers] Implement subscribe_option_greeks using tickOptionComputation callback
+Add Bullet.xyz perpetuals adapter
+Harden Polymarket websocket parse-error handling
+Unsafe Send/Sync on Rc-backed TimeEventCallback variant
+BaseAccount::clone causes O(n^2) allocation cost in Rust backtest
+Preserve Databento market data price precision
+[Hyperliquid testnet] No OrderStatusReport received for orders
+Fix Kraken spot margin wallet balance for multi-asset collateral
+Add Binance market data collectors for T1 basis research
+[Interactive Brokers] Fractional tick sizes can stall market data dispatch
+[Interactive Brokers] Shutdown logs RuntimeError from reader tasks
+Potential path traversal in feather listing via unsanitized instance_id
+Add Kraken Spot WebSocket v2 order submission
+Fix Interactive Brokers market data farm reconnect events
+[Polymarket] market IOC orders are submitted as FOK
+[Hyperliquid] Incorrect modify action when partial fill
+Fix Interactive Brokers post-shutdown RuntimeError in TWS reader
+Wire Interactive Brokers Rust adapter into v2 live trading
+Add Kraken spot margin trading support
+Fix custom data parquet schema registration
+RiskEngine bypasses checks for missing/margin accounts
+[Kraken] WebSocket order submission (add_order, amend_order, cancel_order)
+Fix OKX missing rebase instrument status
+Custom position_id silently accepted under NETTING OMS
+[Hyperliquid testnet] Order rejected: builder fee not approved
+BacktestEngine does not enable `calculate_account_state` on accounts
+hyperliquid: predicted markets (outcome) support (draft)
+Scope live position reconciliation by account
+Fix IB reconnect before server version handshake
+Support serialized fields in custom_data macro
+Fix sandbox race on tick-size precision changes
+SQL injection surface in ParquetDataCatalog where filter
+Netting reconciliation aggregates positions across accounts
+[Deribit] OrderRejected raised for StopMarket orders
+PyO3 Strategy v2 from nautilus_pyo3 not compatible with TradingNode v1
+[Interactive Brokers] Residual callback-ordering issues after #3957
+[Deribit] Rust adapter silently drops quote updates on WebSocket handler cache miss
+Fix SQL ParserError for symbols containing ampersand
+DatabaseConfig __repr__ leaks partial password material
+Make arrow support optional
+[Databento] Live 6E quote/trade ticks decode with price_precision=2
+Fix Cython OrderMatchingEngine.reset leaking OrderBook.ts_last on repeated runs
+Loading custom Tick objects via BacktestDataConfig doesn't add instruments to Engine"
+2026-07-20,72,29.0,40.0,11.0,12.5,56.5,True,high,1.4090909090909092,72,72,"['Bound live node startup and shutdown by the lifecycle timeouts', 'Prepare both cross-zero reconciliation legs before the first cache mutation', 'Fix BitMEX binary WebSocket frame routing', 'Fix BitMEX sparse order update merge semantics', 'Reconcile out-of-order fill voids through positions, portfolio, and replay', 'Fix TWAP child-order sizing and interval validation', 'Set margin_trading info field on Bybit spot instruments', 'Collect Polymarket data events through the correlated response', 'Commit reconciliation fill dedup after canonical apply, and bound its retention', 'Fix stale live position reconciliation snapshots', '[Kraken] Futures order status reports fail to deserialize open orders (missing field `unfilledSize`) when untouched trigger orders are resting', 'Fix Polymarket reconciliation report completeness', 'Fix O(n^2) NETTING backtest cost (snapshot replay state, account event-log clones)', 'Make the Binance Spot WS trading setup timeout configurable', 'Forward high-precision to nautilus-serialization from dependent crates', 'BarDataWrangler.process raises ChainedAssignmentError', 'Allow useless_conversion in two feature-conditional Quantity tests', 'OOM when backtesting with multiple types of data', 'Time out hung reconciliation report tasks', 'Fix nested runtime panic in Parquet catalog queries', ""Live reconciliation-tracking dicts leak in `LiveExecutionEngine._handle_event_with_tracking` when an order isn't found in cache"", 'BitMEX: sparse order updates lose explicit-null vs missing-field semantics on merge', 'Defer recent-fill dedup marking until the fill applies to its order', 'Serialize the global logger lifecycle and keep its worker process-lifetime', 'Fix CVec FFI soundness with checked reconstruction and unique ownership', 'Postgres cache: persisting a filled order panics the Rust write channel — ""Failed to assemble order from events: Invalid order state transition""', '`asset_class` not exposed to Python for some instruments in 2.0.0rc1', 'MsgSpecSerializer.deserialize: k in (""expire_time_ns"") is a string-membership test (missing comma), corrupts short user state keys', 'Portfolio events and unrealised pnl', 'Cut fixed-time waits from four bitmex tests', 'Parse Bybit commision currency from WebSocket stream', ""Mixed-instrument OrderList fills the second leg against the first leg's order book"", 'Fix Bybit missing due_post_only flag on post-only rejections', '[Binance] COIN-M / USD-M architecture integration (effective 2026-06-30)', 'Add indicator values to streamed feather files', 'Enhance Binance adapter to allow unauthed use of public endpoints', 'Add historical instrument close requests', 'Stop backtest order and account queries panicking the simulated exchange', 'Remove unsound Send/Sync impls from TimeEventCallback', 'Support batch modify for orders', 'Fail closed on incomplete live reconciliation', 'Add pending-update to submitted order status transition', 'fix(polymarket): replace Price::from with fallible path to prevent panic on excess tick precision', 'Parquet catalog queries panic when called from the Rust live runtime', 'request_bars: ""Received <Bar[N]>"" logged from params data_count even when zero bars reach on_historical_data (silent FSM-gated drop)', 'Stop dYdX error-path tests waiting out the production retry ladder', 'Prevent time-event callback destructors from aborting on thread-local teardown', '[BitMEX] Quanto instrument multipliers forwarded at raw satoshi scale', 'Fix three dead pre-commit checks and the violations they hid', '[Polymarket] Correct total equity / PnL by marking open positions to market', 'Auto-repay Bybit SPOT margin borrows', 'Replace timer-driven mock stream teardown in Betfair tests', 'Forward submit params through execution algorithms', 'Fix clippy lints that fire outside the pinned-stable gate', ""Postgres cache: LimitOrder cannot be loaded back — KeyError: 'price' in transform_order_from_pyo3"", '[Polymarket] Auto-loaded instruments skip WebSocket subscription despite success log', 'Run architect-ax connection-failure tests in paused time', '[Polymarket] Gamma tick precision can panic before validation', 'Fix inflight coverage and bookkeeping-map retention in live reconciliation', 'Normalize typographic Unicode in comments and docs', 'Stop okx data-client tests waiting out the event-drain deadline', 'Fix non-atomic order event application', 'Parse min_notional for Bybit spot instruments', 'Fix Interactive Brokers startup instrument loading', 'BitMEX: binary WebSocket frames carrying UTF-8 JSON are dropped instead of routed to the JSON handler', '[Interactive Brokers] A failed load_contracts resolution at startup is silent and never retried — node runs ""connected"" but cannot trade the instrument', 'Remove real-time retry ladders from two bybit adapter tests', 'Fail BitMEX WebSocket authentication on rejection instead of waiting out the timeout', '[Binance] Add OCO (One-Cancels-Other) Spot order support', 'Run Rust doctests before nextest', 'Preserve hedge-mode position reports during live reconciliation', 'Make execution order-event log level configurable']","['closed (#4528)', 'closed (#4521)', 'closed (#4512)', 'closed (#4511)', 'closed (#4491)', 'closed (#4544)', 'closed (#4540)', 'closed (#4539)', 'closed (#4518)', 'closed (#4517)', 'closed (#4492)', 'closed (#4566)', 'closed (#4546)', 'closed (#4538)', 'closed (#4550)', 'closed (#4558)', 'closed (#4556)', 'closed (#4542)', 'closed (#4529)', 'closed (#4526)', 'closed (#4533)', 'closed (#4508)', 'closed (#4522)', 'closed (#4520)', 'closed (#4499)', 'closed (#4498)', 'closed (#4495)', 'closed (#4484)', 'closed (#726)', 'closed (#4555)', 'closed (#4536)', 'closed (#4514)', 'closed (#4500)', 'closed (#4301)', 'closed (#1356)', 'closed (#2621)', 'closed (#4548)', 'closed (#4545)', 'closed (#4496)', 'closed (#3946)', 'closed (#4557)', 'closed (#4549)', 'closed (#4537)', 'closed (#4525)', 'closed (#4485)', 'closed (#4532)', 'closed (#4516)', 'closed (#4507)', 'closed (#4506)', 'closed (#3880)', 'closed (#4543)', 'closed (#4531)', 'closed (#4524)', 'closed (#4505)', 'closed (#4497)', 'closed (#4574)', 'closed (#4554)', 'closed (#4534)', 'closed (#4523)', 'closed (#4504)', 'closed (#4547)', 'closed (#4530)', 'closed (#4527)', 'closed (#4519)', 'closed (#4509)', 'closed (#4455)', 'closed (#4553)', 'closed (#4541)', 'closed (#3591)', 'closed (#4570)', 'closed (#4535)', 'closed (#4513)']","[4007, 4291, 4495, 4682, 4811, 4850, 4888, 4926, 4974, 5012, 5132, 5182, 5220, 5305, 5356, 5394, 5483, 5523, 5570, 5628, 5667, 5745, 5781, 5839, 5904, 5948, 6003, 6077, 6124, 6188, 6272, 6336, 6418, 6464, 6497, 6540, 6594, 6644, 6689, 6752, 6822, 6861, 6933, 6994, 7042, 7076, 7113, 7147, 7172, 7200, 7231, 7323, 7368, 7419, 7816, 7868, 7907, 7938, 7976, 8014, 8131, 8204, 8572, 8618, 9967, 19902, 42892, 45705, 68130, 137865, 238903, 302481]","[3973, 4258, 4467, 4647, 4710, 4821, 4859, 4897, 4935, 4983, 5036, 5141, 5191, 5232, 5327, 5365, 5403, 5486, 5541, 5585, 5640, 5682, 5760, 5793, 5851, 5919, 5976, 6042, 6092, 6142, 6209, 6287, 6354, 6430, 6476, 6500, 6552, 6612, 6662, 6713, 6767, 6834, 6894, 6957, 7009, 7045, 7088, 7122, 7156, 7184, 7212, 7273, 7335, 7380, 7730, 7831, 7880, 7916, 7947, 7994, 8100, 8159, 8542, 8584, 9927, 19862, 42859, 45680, 68089, 137850, 238822, 302450]","Bound live node startup and shutdown by the lifecycle timeouts
+Prepare both cross-zero reconciliation legs before the first cache mutation
+Fix BitMEX binary WebSocket frame routing
+Fix BitMEX sparse order update merge semantics
+Reconcile out-of-order fill voids through positions, portfolio, and replay
+Fix TWAP child-order sizing and interval validation
+Set margin_trading info field on Bybit spot instruments
+Collect Polymarket data events through the correlated response
+Commit reconciliation fill dedup after canonical apply, and bound its retention
+Fix stale live position reconciliation snapshots
+[Kraken] Futures order status reports fail to deserialize open orders (missing field `unfilledSize`) when untouched trigger orders are resting
+Fix Polymarket reconciliation report completeness
+Fix O(n^2) NETTING backtest cost (snapshot replay state, account event-log clones)
+Make the Binance Spot WS trading setup timeout configurable
+Forward high-precision to nautilus-serialization from dependent crates
+BarDataWrangler.process raises ChainedAssignmentError
+Allow useless_conversion in two feature-conditional Quantity tests
+OOM when backtesting with multiple types of data
+Time out hung reconciliation report tasks
+Fix nested runtime panic in Parquet catalog queries
+Live reconciliation-tracking dicts leak in `LiveExecutionEngine._handle_event_with_tracking` when an order isn't found in cache
+BitMEX: sparse order updates lose explicit-null vs missing-field semantics on merge
+Defer recent-fill dedup marking until the fill applies to its order
+Serialize the global logger lifecycle and keep its worker process-lifetime
+Fix CVec FFI soundness with checked reconstruction and unique ownership
+Postgres cache: persisting a filled order panics the Rust write channel — ""Failed to assemble order from events: Invalid order state transition""
+`asset_class` not exposed to Python for some instruments in 2.0.0rc1
+MsgSpecSerializer.deserialize: k in (""expire_time_ns"") is a string-membership test (missing comma), corrupts short user state keys
+Portfolio events and unrealised pnl
+Cut fixed-time waits from four bitmex tests
+Parse Bybit commision currency from WebSocket stream
+Mixed-instrument OrderList fills the second leg against the first leg's order book
+Fix Bybit missing due_post_only flag on post-only rejections
+[Binance] COIN-M / USD-M architecture integration (effective 2026-06-30)
+Add indicator values to streamed feather files
+Enhance Binance adapter to allow unauthed use of public endpoints
+Add historical instrument close requests
+Stop backtest order and account queries panicking the simulated exchange
+Remove unsound Send/Sync impls from TimeEventCallback
+Support batch modify for orders
+Fail closed on incomplete live reconciliation
+Add pending-update to submitted order status transition
+fix(polymarket): replace Price::from with fallible path to prevent panic on excess tick precision
+Parquet catalog queries panic when called from the Rust live runtime
+request_bars: ""Received <Bar[N]>"" logged from params data_count even when zero bars reach on_historical_data (silent FSM-gated drop)
+Stop dYdX error-path tests waiting out the production retry ladder
+Prevent time-event callback destructors from aborting on thread-local teardown
+[BitMEX] Quanto instrument multipliers forwarded at raw satoshi scale
+Fix three dead pre-commit checks and the violations they hid
+[Polymarket] Correct total equity / PnL by marking open positions to market
+Auto-repay Bybit SPOT margin borrows
+Replace timer-driven mock stream teardown in Betfair tests
+Forward submit params through execution algorithms
+Fix clippy lints that fire outside the pinned-stable gate
+Postgres cache: LimitOrder cannot be loaded back — KeyError: 'price' in transform_order_from_pyo3
+[Polymarket] Auto-loaded instruments skip WebSocket subscription despite success log
+Run architect-ax connection-failure tests in paused time
+[Polymarket] Gamma tick precision can panic before validation
+Fix inflight coverage and bookkeeping-map retention in live reconciliation
+Normalize typographic Unicode in comments and docs
+Stop okx data-client tests waiting out the event-drain deadline
+Fix non-atomic order event application
+Parse min_notional for Bybit spot instruments
+Fix Interactive Brokers startup instrument loading
+BitMEX: binary WebSocket frames carrying UTF-8 JSON are dropped instead of routed to the JSON handler
+[Interactive Brokers] A failed load_contracts resolution at startup is silent and never retried — node runs ""connected"" but cannot trade the instrument
+Remove real-time retry ladders from two bybit adapter tests
+Fail BitMEX WebSocket authentication on rejection instead of waiting out the timeout
+[Binance] Add OCO (One-Cancels-Other) Spot order support
+Run Rust doctests before nextest
+Preserve hedge-mode position reports during live reconciliation
+Make execution order-event log level configurable"
