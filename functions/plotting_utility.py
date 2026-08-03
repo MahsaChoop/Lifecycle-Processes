@@ -9,11 +9,11 @@ import pandas as pd
 
 from functions.config import save_figure
 
-LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
+LOG_ORDER = ["vitalizing sublog", "random_case_control sublog", "whole log"]
 LOG_COLORS = {
-    "vitalizing": "#2ca02c",
-    "random_case_control": "#1f77b4",
-    "whole": "#ff7f0e",
+    "vitalizing sublog": "#2ca02c",
+    "random_case_control sublog": "#1f77b4",
+    "whole log": "#ff7f0e",
 }
 
 
@@ -273,7 +273,7 @@ def plot_repro_slopegraph(consolidated_results_table_clean_repro, cfg, figures_d
     ax.set_xticks(x)
     ax.set_xticklabels(configs, rotation=45, ha="right")
     ax.set_ylabel("F-score")
-    ax.set_title("F-score across discovery methods (clean logs; random baseline = seed mean)")
+    ax.set_title("F1-Score Comparison Across Discovery Algorithms: Vitalizing Sublog vs. Baselines (Whole log; 10 Random sublogs)")
     ax.legend(title="Log group", frameon=True)
     _style_axes(ax, ylim01=True)
     plt.tight_layout()
