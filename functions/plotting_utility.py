@@ -9,11 +9,11 @@ import pandas as pd
 
 from functions.config import save_figure
 
-LOG_ORDER = ["vitalizing sublog", "random_case_control sublog", "whole log"]
+LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
 LOG_COLORS = {
-    "vitalizing sublog": "#2ca02c",
-    "random_case_control sublog": "#1f77b4",
-    "whole log": "#ff7f0e",
+    "vitalizing": "#2ca02c",
+    "random_case_control": "#1f77b4",
+    "whole": "#ff7f0e",
 }
 
 
