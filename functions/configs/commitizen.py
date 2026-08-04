@@ -1,5 +1,5 @@
 """Dataset config: Commitizen."""
-from functions.config import DATA_RAW, RESULTS_FIGURES, RESULTS_TABLES
+from functions.config import DATA_RAW, RESULTS_FIGURES, RESULTS_FIGURES_NO_TITLES, RESULTS_TABLES
 
 DATASET_NAME = "commitizen"
 DUCKDB_PATH = DATA_RAW / "commitizen.duckdb"
@@ -18,6 +18,7 @@ END_ACTIVITY_2 = "head_ref_deleted"
 
 TABLES_DIR = RESULTS_TABLES / DATASET_NAME
 FIGURES_DIR = RESULTS_FIGURES / DATASET_NAME
+FIGURES_NO_TITLES_DIR = RESULTS_FIGURES_NO_TITLES / DATASET_NAME
 
 # OCEL2 event tables present in this dataset's sqlite file (43 tables).
 # Kept in the order the pre-refactor SUBTABLES list used, so the UNION ALL and

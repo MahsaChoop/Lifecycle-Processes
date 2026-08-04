@@ -48,6 +48,7 @@ class DatasetConfig:
     end_activity_2: str
     tables_dir: Path
     figures_dir: Path
+    figures_no_titles_dir: Path
     event_subtables: tuple
 
 
@@ -85,7 +86,13 @@ def load_dataset_config(name):
             )
         values[field.name] = getattr(module, constant)
 
-    for path_field in ("duckdb_path", "sqlite_path", "tables_dir", "figures_dir"):
+    for path_field in (
+        "duckdb_path",
+        "sqlite_path",
+        "tables_dir",
+        "figures_dir",
+        "figures_no_titles_dir",
+    ):
         values[path_field] = Path(values[path_field])
     values["event_subtables"] = tuple(values["event_subtables"])
 

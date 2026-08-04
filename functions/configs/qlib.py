@@ -1,5 +1,5 @@
 """Dataset config: Qlib."""
-from functions.config import DATA_RAW, RESULTS_FIGURES, RESULTS_TABLES
+from functions.config import DATA_RAW, RESULTS_FIGURES, RESULTS_FIGURES_NO_TITLES, RESULTS_TABLES
 
 DATASET_NAME = "Qlib"
 DUCKDB_PATH = DATA_RAW / "Qlib.duckdb"
@@ -18,6 +18,7 @@ END_ACTIVITY_2 = "head_ref_deleted"
 
 TABLES_DIR = RESULTS_TABLES / DATASET_NAME
 FIGURES_DIR = RESULTS_FIGURES / DATASET_NAME
+FIGURES_NO_TITLES_DIR = RESULTS_FIGURES_NO_TITLES / DATASET_NAME
 
 # OCEL2 event tables present in this dataset's sqlite file (30 tables).
 EVENT_SUBTABLES = [

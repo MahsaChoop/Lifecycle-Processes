@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from functions.config import RESULTS_FIGURES, save_figure
+from functions.config import RESULTS_FIGURES, RESULTS_FIGURES_NO_TITLES, save_figure
 
 LOG_ORDER = ["vitalizing", "random_case_control", "whole"]
 LOG_COLORS = {
@@ -61,6 +61,7 @@ def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None
     figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
+    NO_TITLES_DIR = cfg.figures_no_titles_dir
 
     plot_df = consolidated_results_table_clean[
         consolidated_results_table_clean["status"] == "ok"
@@ -107,7 +108,10 @@ def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None
         ylim01=True,
     )
     plt.tight_layout()
-    save_figure(fig, FIGURES_DIR, "clean_log_f_score_grouped_bars")
+    save_figure(
+        fig, FIGURES_DIR, "clean_log_f_score_grouped_bars",
+        no_titles_dir=NO_TITLES_DIR,
+    )
     print(f"Saved {FIGURES_DIR / 'clean_log_f_score_grouped_bars'}.{{png,pdf}}")
     if show:
         plt.show()
@@ -116,7 +120,10 @@ def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None
     plot_grouped_bars(wide_fitness_clean, "Fitness", "Fitness", axes[0], ylim01=True)
     plot_grouped_bars(wide_precision_clean, "Precision", "Precision", axes[1], ylim01=True)
     plt.tight_layout()
-    save_figure(fig, FIGURES_DIR, "clean_log_fitness_precision")
+    save_figure(
+        fig, FIGURES_DIR, "clean_log_fitness_precision",
+        no_titles_dir=NO_TITLES_DIR,
+    )
     print(f"Saved {FIGURES_DIR / 'clean_log_fitness_precision'}.{{png,pdf}}")
     if show:
         plt.show()
@@ -126,7 +133,10 @@ def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None
     plot_grouped_bars(wide_cfc_clean, "CFC", "CFC", axes[1])
     plot_grouped_bars(wide_simplicity_clean, "Simplicity", "Simplicity", axes[2], ylim01=True)
     plt.tight_layout()
-    save_figure(fig, FIGURES_DIR, "clean_log_complexity")
+    save_figure(
+        fig, FIGURES_DIR, "clean_log_complexity",
+        no_titles_dir=NO_TITLES_DIR,
+    )
     print(f"Saved {FIGURES_DIR / 'clean_log_complexity'}.{{png,pdf}}")
     if show:
         plt.show()
@@ -167,7 +177,10 @@ def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None
     _style_axes(axes[1], ylim01=True)
 
     plt.tight_layout()
-    save_figure(fig, FIGURES_DIR, "clean_log_threshold_sensitivity")
+    save_figure(
+        fig, FIGURES_DIR, "clean_log_threshold_sensitivity",
+        no_titles_dir=NO_TITLES_DIR,
+    )
     print(f"Saved {FIGURES_DIR / 'clean_log_threshold_sensitivity'}.{{png,pdf}}")
     if show:
         plt.show()
@@ -205,7 +218,10 @@ def plot_utility_figures(consolidated_results_table_clean, cfg, figures_dir=None
     ax.legend(title="Log group")
     _style_axes(ax, ylim01=True)
     plt.tight_layout()
-    save_figure(fig, FIGURES_DIR, "clean_log_f_score_slopegraph")
+    save_figure(
+        fig, FIGURES_DIR, "clean_log_f_score_slopegraph",
+        no_titles_dir=NO_TITLES_DIR,
+    )
     print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph'}.{{png,pdf}}")
     if show:
         plt.show()
@@ -221,6 +237,7 @@ def plot_repro_slopegraph(consolidated_results_table_clean_repro, cfg, figures_d
     figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
+    NO_TITLES_DIR = cfg.figures_no_titles_dir
 
     plt.rcParams.update(
         {
@@ -283,7 +300,10 @@ def plot_repro_slopegraph(consolidated_results_table_clean_repro, cfg, figures_d
     ax.legend(title="Log group", frameon=True)
     _style_axes(ax, ylim01=True)
     plt.tight_layout()
-    save_figure(fig, FIGURES_DIR, "clean_log_f_score_slopegraph_repro")
+    save_figure(
+        fig, FIGURES_DIR, "clean_log_f_score_slopegraph_repro",
+        no_titles_dir=NO_TITLES_DIR,
+    )
     print(f"Saved {FIGURES_DIR / 'clean_log_f_score_slopegraph_repro'}.{{png,pdf}}")
     if show:
         plt.show()
@@ -306,6 +326,7 @@ def plot_f_score_dotplot_by_miner_different_repos(
     """
     figures_dir = Path(figures_dir or RESULTS_FIGURES)
     figures_dir.mkdir(parents=True, exist_ok=True)
+    no_titles_dir = RESULTS_FIGURES_NO_TITLES
 
     long_df = f_score_comparison.reset_index().melt(
         id_vars=["log_name", "discovery_method"],
@@ -403,7 +424,7 @@ def plot_f_score_dotplot_by_miner_different_repos(
         frameon=True,
     )
     fig.tight_layout(rect=(0, 0.06, 1, 1))
-    save_figure(fig, figures_dir, stem)
+    save_figure(fig, figures_dir, stem, no_titles_dir=no_titles_dir)
     print(f"Saved {figures_dir / stem}.{{png,pdf}}")
     if show:
         plt.show()

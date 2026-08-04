@@ -140,6 +140,7 @@ def plot_weekly_open_vs_closed_histogram(
     """Histogram: distribution of weekly created (open) vs closed issue counts."""
     figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
+    no_titles_dir = cfg.figures_no_titles_dir
     with plt.rc_context(FIGURE_FONT):
         fig, ax = plt.subplots(figsize=(10, 4.5))
         if weekly.empty:
@@ -162,7 +163,10 @@ def plot_weekly_open_vs_closed_histogram(
         ax.set_ylabel("Number of weeks")
         ax.set_title("Distribution of weekly open vs closed issues")
         plt.tight_layout()
-        save_figure(fig, figures_dir, "weekly_open_vs_closed_issue_distribution")
+        save_figure(
+            fig, figures_dir, "weekly_open_vs_closed_issue_distribution",
+            no_titles_dir=no_titles_dir,
+        )
         if show:
             plt.show()
     return fig
@@ -171,6 +175,7 @@ def plot_weekly_open_vs_closed_histogram(
 def plot_weekly_event_counts(weekly, cfg, figures_dir=None, event_ids=None, show=True):
     figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
+    no_titles_dir = cfg.figures_no_titles_dir
     if event_ids is None:
         event_ids = [cfg.create_event_type_id, cfg.closed_event_type_id]
     event_labels = {
@@ -197,7 +202,7 @@ def plot_weekly_event_counts(weekly, cfg, figures_dir=None, event_ids=None, show
         ax.grid(True, alpha=0.3)
         fig.autofmt_xdate()
         plt.tight_layout()
-        save_figure(fig, figures_dir, "weekly_event_counts")
+        save_figure(fig, figures_dir, "weekly_event_counts", no_titles_dir=no_titles_dir)
         if show:
             plt.show()
     return fig
@@ -207,6 +212,7 @@ def plot_anomaly_figures(weekly_closed_anomaly_frame, anomaly_states, cfg, figur
     figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
+    NO_TITLES_DIR = cfg.figures_no_titles_dir
 
     severity_order = ["P0", "P1", "P2", "P3", "P4"]
     severity_to_level = {severity: idx for idx, severity in enumerate(severity_order)}
@@ -252,7 +258,7 @@ def plot_anomaly_figures(weekly_closed_anomaly_frame, anomaly_states, cfg, figur
         ax.legend(frameon=False)
         fig.autofmt_xdate()
         plt.tight_layout()
-        save_figure(fig, FIGURES_DIR, "rolling_iqr_anomalies")
+        save_figure(fig, FIGURES_DIR, "rolling_iqr_anomalies", no_titles_dir=NO_TITLES_DIR)
         plt.show()
 
         fig, axes = plt.subplots(1, 2, figsize=(13, 4.5), gridspec_kw={"width_ratios": [2, 1]})
@@ -303,7 +309,7 @@ def plot_anomaly_figures(weekly_closed_anomaly_frame, anomaly_states, cfg, figur
 
         fig.autofmt_xdate()
         plt.tight_layout()
-        save_figure(fig, FIGURES_DIR, "anomaly_severity_overview")
+        save_figure(fig, FIGURES_DIR, "anomaly_severity_overview", no_titles_dir=NO_TITLES_DIR)
         plt.show()
 
         plot_frame = weekly_closed_anomaly_frame.copy().sort_values("week_start")
@@ -389,7 +395,10 @@ def plot_anomaly_figures(weekly_closed_anomaly_frame, anomaly_states, cfg, figur
 
         fig.autofmt_xdate()
         plt.tight_layout(rect=[0, 0, 0.78, 1])
-        save_figure(fig, FIGURES_DIR, "ticket_volume_anomaly_detection")
+        save_figure(
+            fig, FIGURES_DIR, "ticket_volume_anomaly_detection",
+            no_titles_dir=NO_TITLES_DIR,
+        )
         plt.show()
 
         with plt.rc_context({
@@ -501,7 +510,10 @@ def plot_anomaly_figures(weekly_closed_anomaly_frame, anomaly_states, cfg, figur
             fig.suptitle("Lifecycle's states, severity timeline and anomaly score timeline ", fontsize=15, y=0.995)
             fig.autofmt_xdate()
             plt.tight_layout(rect=[0, 0, 0.78, 0.985])
-            save_figure(fig, FIGURES_DIR, "anomaly_summary_dashboard")
+            save_figure(
+                fig, FIGURES_DIR, "anomaly_summary_dashboard",
+                no_titles_dir=NO_TITLES_DIR,
+            )
             plt.show()
     return FIGURES_DIR
 
@@ -510,6 +522,7 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
     figures_dir = Path(figures_dir or cfg.figures_dir)
     figures_dir.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR = figures_dir
+    NO_TITLES_DIR = cfg.figures_no_titles_dir
     CATEGORY_COLORS = {
         "feature_work": "#8FA6BF",
         "bug_fixes":    "#EF8A62",
@@ -574,6 +587,9 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
         )
 
         plt.tight_layout()
-        save_figure(fig, FIGURES_DIR, "commit_context_category_stack")
+        save_figure(
+            fig, FIGURES_DIR, "commit_context_category_stack",
+            no_titles_dir=NO_TITLES_DIR,
+        )
         plt.show()
     return FIGURES_DIR

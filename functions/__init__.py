@@ -5,6 +5,7 @@ from functions.config import (
     MAX_REP,
     PROJECT_ROOT,
     RESULTS_FIGURES,
+    RESULTS_FIGURES_NO_TITLES,
     RESULTS_TABLES,
     SEED,
 )
@@ -14,6 +15,7 @@ __all__ = [
     "PROJECT_ROOT",
     "RESULTS_TABLES",
     "RESULTS_FIGURES",
+    "RESULTS_FIGURES_NO_TITLES",
     "IQR_CONFIG",
     "SEED",
     "MAX_REP",
