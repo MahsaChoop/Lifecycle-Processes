@@ -15,8 +15,8 @@ from pm4py.objects.conversion.process_tree import converter as pt_converter
 from pm4py.objects.log.obj import Event, EventLog, Trace
 
 
-IMF_NOISE_THRESHOLDS = [0.3, 0.4, 0.5, 0.6]
-HEURISTICS_DEP_THRESHOLDS = [0.6, 0.7, 0.8, 0.9]
+IMF_NOISE_THRESHOLDS = [0.2, 0.3, 0.4, 0.5, 0.6]
+HEURISTICS_DEP_THRESHOLDS = [0.5, 0.6, 0.7, 0.8]
 
 
 def df_to_event_log(df: pd.DataFrame) -> EventLog:
