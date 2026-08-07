@@ -314,7 +314,7 @@ def plot_f_score_dotplot_by_miner_different_repos(
     f_score_comparison,
     repos=None,
     discovery_methods=None,
-    ncols=5,
+    ncols=4,
     figures_dir=None,
     stem="f_score_dotplot_by_miner",
     show=True,
