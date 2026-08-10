@@ -9,14 +9,19 @@ import pandas as pd
 from pm4py.algo.discovery.alpha import algorithm as alpha_miner
 from pm4py.algo.discovery.heuristics import algorithm as heuristics_miner
 from pm4py.algo.discovery.inductive import algorithm as inductive_miner
+from pm4py.algo.discovery.split_miner import algorithm as split_miner
 from pm4py.algo.evaluation.precision import algorithm as precision_evaluator
 from pm4py.algo.evaluation.replay_fitness import algorithm as replay_fitness_evaluator
+from pm4py.objects.conversion.bpmn import converter as bpmn_converter
 from pm4py.objects.conversion.process_tree import converter as pt_converter
 from pm4py.objects.log.obj import Event, EventLog, Trace
+from pm4py.algo.discovery.split_miner.variants.classic import Parameters
 
 
-IMF_NOISE_THRESHOLDS = [0.2, 0.3, 0.4, 0.5, 0.6]
-HEURISTICS_DEP_THRESHOLDS = [0.5, 0.6, 0.7, 0.8]
+IMF_NOISE_THRESHOLDS = [0.2, 0.3, 0.4]
+HEURISTICS_DEP_THRESHOLDS = [0.5, 0.6, 0.7]
+SPLIT_MINER_EPSILON_THRESHOLDS = [0.1, 0.2, 0.3]
+SPLIT_MINER_ETA_THRESHOLDS = [0.4, 0.5, 0.6]
 
 
 def df_to_event_log(df: pd.DataFrame) -> EventLog:
@@ -80,6 +85,18 @@ def discover_inductive(elog: EventLog, variant_name: str = "IM", noise_threshold
     return net, im, fm
 
 
+def discover_split_miner(elog: EventLog, epsilon: float, eta: float) -> Tuple[Any, Any, Any]:
+    bpmn = split_miner.apply(
+        elog,
+        variant=split_miner.Variants.CLASSIC,
+        parameters={
+            "split_miner_epsilon": epsilon,
+            "split_miner_eta": eta,
+        },
+    )
+    return bpmn_converter.apply(bpmn)
+
+
 def safe_f1(fitness: float, precision: float) -> float:
     if pd.isna(fitness) or pd.isna(precision):
         return np.nan
@@ -125,11 +142,17 @@ def compute_generalization(elog: EventLog, net: Any, im: Any, fm: Any) -> float:
 def build_miners(
     heuristics_dep_thresholds=None,
     imf_noise_thresholds=None,
+    split_miner_epsilon_thresholds=None,
+    split_miner_eta_thresholds=None,
 ):
     if heuristics_dep_thresholds is None:
         heuristics_dep_thresholds = HEURISTICS_DEP_THRESHOLDS
     if imf_noise_thresholds is None:
         imf_noise_thresholds = IMF_NOISE_THRESHOLDS
+    if split_miner_epsilon_thresholds is None:
+        split_miner_epsilon_thresholds = SPLIT_MINER_EPSILON_THRESHOLDS
+    if split_miner_eta_thresholds is None:
+        split_miner_eta_thresholds = SPLIT_MINER_ETA_THRESHOLDS
 
     miners = {
         "alpha_classic": lambda elog: discover_alpha(elog),
@@ -145,6 +168,12 @@ def build_miners(
         miners[f"inductive_IMf_noise_{noise_thr:.1f}"] = (
             lambda elog, n=noise_thr: discover_inductive(elog, "IMf", n)
         )
+
+    for epsilon in split_miner_epsilon_thresholds:
+        for eta in split_miner_eta_thresholds:
+            miners[f"split_miner_eps_{epsilon:.1f}_eta_{eta:.1f}"] = (
+                lambda elog, e=epsilon, n=eta: discover_split_miner(elog, e, n)
+            )
     return miners
 
 
