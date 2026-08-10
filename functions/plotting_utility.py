@@ -365,7 +365,7 @@ def plot_f_score_dotplot_by_miner_different_repos(
     fig, axes = plt.subplots(
         nrows,
         ncols,
-        figsize=(3.6 * ncols, 4.0 * nrows),
+        figsize=(3.6 * ncols, 4 * nrows),
         sharey=True,
         squeeze=False,
     )
