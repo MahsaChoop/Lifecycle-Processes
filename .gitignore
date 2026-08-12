@@ -17,8 +17,8 @@ build/
 *.swp
 notebooks/legacy/
 data/configToken.py
-data/raw/*.duckdb
-data/raw/*.sqlite
+data/raw/OpenBB.duckdb
+data/raw/OpenBB.sqlite
 scripts/
 
 # Environments
