@@ -4,6 +4,9 @@ matplotlib>=3.7
 duckdb>=0.9
 pm4py>=2.7
 
+# Data extraction (GitHub → DuckDB / OCEL2)
+pystackt
+
 # Optional / used by process-complexity (EPA toolkit under process-complexity/)
 BitVector
 lempel_ziv_complexity
