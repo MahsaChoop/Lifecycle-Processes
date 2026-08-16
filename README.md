@@ -66,5 +66,3 @@ Each step calls into `functions/` and writes CSVs/figures under `results/`.
 
 
 
-% ## Citation
-
