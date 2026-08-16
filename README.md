@@ -64,7 +64,7 @@ pip install -r requirements.txt
 
 Each step calls into `functions/` and writes CSVs/figures under `results/`.
 
-## Key constants (unchanged)
 
-## Citation
+
+% ## Citation
 
