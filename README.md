@@ -1,6 +1,6 @@
 # Lifecycles-Processes
 
-Process-mining analysis of software lifecycles on the **Commitizen** GitHub repository.
+Process-mining analysis of software lifecycles on the GitHub repositories.
 
 ## What is the layout of the repo
 
