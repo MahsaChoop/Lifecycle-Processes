@@ -18,7 +18,6 @@ Lifecycles-Processes/
     figures_no_titles/    # untitled figure copies
   replication/            # per-repo notebooks (FinRL, OpenBB, …)
   docs/                   # motivation, threats to validity, future work
-  notebooks/legacy/       # retired notebooks
   requirements.txt
 ```
 
