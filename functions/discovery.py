@@ -278,3 +278,4 @@ def evaluate_clean_logs(clean_log_groups_df, cfg, miners=None, tables_dir=None):
         print(failed_rows_clean)
 
     return consolidated_results_table_clean, clean_log_groups_eventlog, miners
+

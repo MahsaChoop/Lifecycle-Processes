@@ -59,3 +59,38 @@ def build_vitalizing_subset(flat, anomaly_object_ids):
         f"{anomaly_events_df['case:concept:name'].nunique()} cases"
     )
     return anomaly_events_df, anomaly_df
+
+
+def build_commit_category_logs(
+    vitalizing_df_clean,
+    anomaly_object_ids,
+    commit_typeclass_per_week,
+    categories=("feature_work", "tech_debt"),
+):
+    """Subset the clean vitalizing log by week-level commit dominant_category."""
+    def _week_key(series):
+        return pd.to_datetime(series, utc=True).dt.tz_localize(None).dt.normalize()
+
+    labeled = anomaly_object_ids.copy()
+    labeled["week_start"] = _week_key(labeled["week_start"])
+    labeled["object_id"] = labeled["object_id"].astype(str)
+
+    typeclass = commit_typeclass_per_week[["week_start", "dominant_category"]].copy()
+    typeclass["week_start"] = _week_key(typeclass["week_start"])
+    labeled = labeled.merge(typeclass, on="week_start", how="left")
+
+    logs = {}
+    print("=== Commit-category log subsets ===")
+    for category in categories:
+        n_weeks = typeclass.loc[typeclass["dominant_category"].eq(category), "week_start"].nunique()
+        ids = labeled.loc[labeled["dominant_category"].eq(category), "object_id"]
+        log_df = vitalizing_df_clean[
+            vitalizing_df_clean["case:concept:name"].astype(str).isin(ids)
+        ].copy()
+        logs[category] = log_df
+        print(
+            f"{category}: {n_weeks} weeks | "
+            f"{log_df['case:concept:name'].nunique()} cases | "
+            f"{len(log_df)} events"
+        )
+    return logs
