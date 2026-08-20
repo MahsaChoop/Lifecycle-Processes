@@ -1,4 +1,4 @@
-"""Commit-message context and Conventional Commit classification for anomaly weeks."""
+"""Commit-message context and Conventional Commit classification."""
 from __future__ import annotations
 
 import re
@@ -232,3 +232,134 @@ def build_commit_typeclass(commit_context, cfg, tables_dir=None):
 
     print(f"\nSaved commit_typeclass_per_week to {tables_dir / 'commit_typeclass_per_week.csv'}")
     return commit_typeclass_per_week
+
+
+def build_whole_commit_category_logs(
+    flat_df_clean,
+    eventsPerobj_df,
+    objects_attributes,
+    cfg,
+    tables_dir=None,
+):
+    """Classify all commit messages and subset the preprocessed whole log by overlapping commit categories."""
+    tables_dir = Path(tables_dir or cfg.tables_dir)
+    tables_dir.mkdir(parents=True, exist_ok=True)
+
+    _, joined = build_weekly_commit_messages(
+        eventsPerobj_df,
+        objects_attributes,
+        cfg,
+        event_type_id=cfg.commit_event_type_id,
+    )
+
+    parsed = joined["message_text"].map(_classify_message)
+    classified = joined.copy()
+    classified["cm_type"] = parsed.map(lambda value: value[0])
+    classified["cm_scope"] = parsed.map(lambda value: value[1])
+    classified["cm_breaking"] = parsed.map(lambda value: value[2])
+    classified["category"] = classified["cm_type"].map(
+        lambda cm_type: None if cm_type is None else CATEGORY_MAP.get(cm_type, "other")
+    )
+
+    commit_classified_all = classified.loc[classified["object_id_key"].notna()].copy()
+    commit_classified_all["commit_object_id"] = commit_classified_all["object_id_key"]
+    commit_classified_all = (
+        commit_classified_all[
+            [
+                "commit_object_id",
+                "event_id",
+                "message_text",
+                "cm_type",
+                "cm_scope",
+                "cm_breaking",
+                "category",
+            ]
+        ]
+        .drop_duplicates(subset=["commit_object_id"])
+        .reset_index(drop=True)
+    )
+    commit_classified_path = tables_dir / "commit_classified_all.csv"
+    commit_classified_all.to_csv(commit_classified_path, index=False)
+
+    issue_links = eventsPerobj_df.loc[
+        eventsPerobj_df["object_type"].eq(cfg.issue_object_type),
+        ["event_id", "object_id"],
+    ].rename(columns={"object_id": "issue_id"})
+    commit_issue = classified.merge(issue_links, on="event_id", how="inner")
+    per_commit_issue = (
+        commit_issue.dropna(subset=["issue_id", "object_id_key", "category"])
+        .drop_duplicates(subset=["issue_id", "object_id_key"])
+    )
+    per_commit_issue["issue_id"] = per_commit_issue["issue_id"].astype(str)
+
+    clean_cases = set(flat_df_clean["case:concept:name"].astype(str))
+    issue_commit_categories = (
+        per_commit_issue.loc[per_commit_issue["issue_id"].isin(clean_cases)]
+        .groupby(["issue_id", "category"], as_index=False)
+        .agg(commit_count=("object_id_key", "nunique"))
+    )
+    n_with_classified = int(issue_commit_categories["issue_id"].nunique())
+    missing_ids = sorted(clean_cases - set(issue_commit_categories["issue_id"]))
+    if missing_ids:
+        issue_commit_categories = pd.concat(
+            [
+                issue_commit_categories,
+                pd.DataFrame(
+                    {
+                        "issue_id": missing_ids,
+                        "category": "other",
+                        "commit_count": 0,
+                    }
+                ),
+            ],
+            ignore_index=True,
+        )
+    issue_cats_path = tables_dir / "issue_commit_categories.csv"
+    issue_commit_categories.to_csv(issue_cats_path, index=False)
+
+    n_clean_cases = flat_df_clean["case:concept:name"].nunique()
+    print("=== Commit message classification (preprocessed whole log) ===")
+    print(f"Preprocessed whole-log cases: {n_clean_cases}")
+    print(f"Classified unique commits: {len(commit_classified_all)}")
+    category_counts = commit_classified_all["category"].value_counts(dropna=False)
+    for category in CATEGORIES:
+        print(f"  {category:<13s} {int(category_counts.get(category, 0))}")
+    print(f"Saved {commit_classified_path}")
+
+    n_issues_in_table = issue_commit_categories["issue_id"].nunique()
+    n_multi = int(
+        (issue_commit_categories.groupby("issue_id")["category"].nunique() > 1).sum()
+    )
+    print("\n=== Issue commit categories (overlapping, preprocessed whole log) ===")
+    print(f"Whole-log cases: {n_clean_cases}")
+    print(f"Issues with classified commits: {n_with_classified}")
+    print(
+        f"Issues with no classified commit (assigned to other): {len(missing_ids)}"
+    )
+    print(f"Issues in issue_commit_categories: {n_issues_in_table}")
+    print(f"Issues in more than one category log: {n_multi}")
+    issue_counts = issue_commit_categories.groupby("category")["issue_id"].nunique()
+    for category in CATEGORIES:
+        print(f"  {category:<13s} {int(issue_counts.get(category, 0))}")
+    print(f"Saved {issue_cats_path}")
+
+    logs = {}
+    print("\n=== Preprocessed-log commit-category subsets (overlapping) ===")
+    for category in CATEGORIES:
+        ids = issue_commit_categories.loc[
+            issue_commit_categories["category"].eq(category),
+            "issue_id",
+        ]
+        log_df = flat_df_clean[
+            flat_df_clean["case:concept:name"].astype(str).isin(set(ids))
+        ].copy()
+        if log_df.empty:
+            print(f"  {category}: empty — skipped")
+            continue
+        logs[category] = log_df
+        print(
+            f"  {category}: {log_df['case:concept:name'].nunique()} cases | "
+            f"{len(log_df)} events"
+        )
+
+    return logs, issue_commit_categories, commit_classified_all

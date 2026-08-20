@@ -139,6 +139,29 @@ def compute_generalization(elog: EventLog, net: Any, im: Any, fm: Any) -> float:
         return np.nan
 
 
+def log_descriptive_stats(df: pd.DataFrame) -> Dict[str, float]:
+    if df is None or df.empty:
+        return {
+            "n_cases": 0,
+            "avg_cycle_time_days": np.nan,
+            "avg_trace_length": np.nan,
+        }
+
+    n_cases = int(df["case:concept:name"].nunique())
+    lengths = df.groupby("case:concept:name", sort=False).size()
+    ts = pd.to_datetime(df["time:timestamp"], utc=True, errors="coerce")
+    cycle = (
+        ts.groupby(df["case:concept:name"], sort=False).max()
+        - ts.groupby(df["case:concept:name"], sort=False).min()
+    ).dt.total_seconds() / 86400.0
+
+    return {
+        "n_cases": n_cases,
+        "avg_cycle_time_days": float(cycle.mean()) if len(cycle) else np.nan,
+        "avg_trace_length": float(lengths.mean()) if len(lengths) else np.nan,
+    }
+
+
 def build_miners(
     heuristics_dep_thresholds=None,
     imf_noise_thresholds=None,
@@ -177,7 +200,26 @@ def build_miners(
     return miners
 
 
-def evaluate_clean_logs(clean_log_groups_df, cfg, miners=None, tables_dir=None):
+def select_miners(names=None):
+    miners = build_miners()
+    if names is None:
+        return miners
+    unknown = [name for name in names if name not in miners]
+    if unknown:
+        available = ", ".join(miners)
+        raise ValueError(
+            f"Unknown miner name(s): {unknown}. Available: {available}"
+        )
+    return {name: miners[name] for name in names}
+
+
+def evaluate_clean_logs(
+    clean_log_groups_df,
+    cfg,
+    miners=None,
+    tables_dir=None,
+    out_filename="consolidated_results_table_clean.csv",
+):
     tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
     if miners is None:
@@ -189,13 +231,13 @@ def evaluate_clean_logs(clean_log_groups_df, cfg, miners=None, tables_dir=None):
 
     clean_records = []
     for group_name, elog in clean_log_groups_eventlog.items():
-        distinct_traces = len({tuple(ev["concept:name"] for ev in tr) for tr in elog})
+        log_stats = log_descriptive_stats(clean_log_groups_df[group_name])
 
         for miner_name, miner_fn in miners.items():
             rec = {
                 "log_name": group_name,
                 "discovery_method": miner_name,
-                "distinct_traces": distinct_traces,
+                **log_stats,
                 "generalization": np.nan,
                 "fitness": np.nan,
                 "precision": np.nan,
@@ -245,7 +287,9 @@ def evaluate_clean_logs(clean_log_groups_df, cfg, miners=None, tables_dir=None):
             [
                 "log_name",
                 "discovery_method",
-                "distinct_traces",
+                "n_cases",
+                "avg_cycle_time_days",
+                "avg_trace_length",
                 "generalization",
                 "fitness",
                 "precision",
@@ -266,7 +310,7 @@ def evaluate_clean_logs(clean_log_groups_df, cfg, miners=None, tables_dir=None):
     )
     print("\n7) Consolidated results table in clean logs")
     print(consolidated_results_table_clean)
-    out_path = tables_dir / "consolidated_results_table_clean.csv"
+    out_path = tables_dir / out_filename
     consolidated_results_table_clean.to_csv(out_path, index=False)
     print(f"Saved {out_path}")
 
