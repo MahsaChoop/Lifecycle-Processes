@@ -294,7 +294,7 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
 
         ax.set_ylim(0, ymax * 1.12 if ymax > 0 else 1)
         ax.set_ylabel("Count of Commits")
-        ax.set_title("Interventions context: commit categories in each anomaly week")
+        ax.set_title("Interventions context: commit categories on issues closed in each anomaly week")
         ax.tick_params(axis="x", rotation=45)
         for lbl in ax.get_xticklabels():
             lbl.set_ha("right")

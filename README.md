@@ -52,7 +52,7 @@ pip install -r requirements.txt
 2. **Rolling IQR anomaly detection** — Flag anomalous weeks with rolling IQR (`is_anomaly`) and an `anomaly_score`.
 3. **Export anomaly object/event IDs** — Save object and event IDs from closed-issue events in anomalous weeks for downstream subsetting.
 4. **Anomaly figures** — Plot weekly activity, rolling IQR bands, flagged weeks, and anomaly scores.
-5. **Commit context + Conventional Commit classification** — Collect commit messages around anomalies and map types to categories (feature, bug, tech debt, docs, other).
+5. **Commit context + Conventional Commit classification** — Link commits to issues that closed in anomalous weeks via a shared `event_id`, classify those messages, and map types to overlapping categories (feature, bug, tech debt, docs, other).
 6. **Flatten OCEL2 issue log** — Convert the OCEL2 SQLite export into a flat issue-level event log.
 7. **Vitalizing subset** — Restrict the flat log to issues linked to anomaly object IDs.
 8. **Preprocess + random control** — Clean traces (valid ends, `MAX_REP=5`) and build a size-matched random control (`SEED=40`).

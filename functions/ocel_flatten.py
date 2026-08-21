@@ -61,36 +61,27 @@ def build_vitalizing_subset(flat, anomaly_object_ids):
     return anomaly_events_df, anomaly_df
 
 
-def build_commit_category_logs(
-    vitalizing_df_clean,
-    anomaly_object_ids,
-    commit_typeclass_per_week,
-    categories=("feature_work", "tech_debt"),
-):
-    """Subset the clean vitalizing log by week-level commit dominant_category."""
-    def _week_key(series):
-        return pd.to_datetime(series, utc=True).dt.tz_localize(None).dt.normalize()
+def split_flat_by_anomaly_object_ids(flat_df, anomaly_object_ids):
+    """Split a flat log into anomaly vs complementary normal case subsets."""
+    anomaly_ids = set(anomaly_object_ids["object_id"].astype(str))
+    case_ids = flat_df["case:concept:name"].astype(str)
+    anomaly_log_df = flat_df[case_ids.isin(anomaly_ids)].copy()
+    normal_log_df = flat_df[~case_ids.isin(anomaly_ids)].copy()
+    print(
+        f"Anomaly log: {anomaly_log_df['case:concept:name'].nunique()} cases | "
+        f"{len(anomaly_log_df)} events"
+    )
+    print(
+        f"Normal log: {normal_log_df['case:concept:name'].nunique()} cases | "
+        f"{len(normal_log_df)} events"
+    )
+    return anomaly_log_df, normal_log_df
 
-    labeled = anomaly_object_ids.copy()
-    labeled["week_start"] = _week_key(labeled["week_start"])
-    labeled["object_id"] = labeled["object_id"].astype(str)
 
-    typeclass = commit_typeclass_per_week[["week_start", "dominant_category"]].copy()
-    typeclass["week_start"] = _week_key(typeclass["week_start"])
-    labeled = labeled.merge(typeclass, on="week_start", how="left")
+def build_commit_category_logs(flat_df, issue_commit_categories, categories=None):
+    """Subset a flat issue log by overlapping commit categories (shared event_id mapping)."""
+    from functions.commits import CATEGORIES, subset_log_by_overlapping_categories
 
-    logs = {}
-    print("=== Commit-category log subsets ===")
-    for category in categories:
-        n_weeks = typeclass.loc[typeclass["dominant_category"].eq(category), "week_start"].nunique()
-        ids = labeled.loc[labeled["dominant_category"].eq(category), "object_id"]
-        log_df = vitalizing_df_clean[
-            vitalizing_df_clean["case:concept:name"].astype(str).isin(ids)
-        ].copy()
-        logs[category] = log_df
-        print(
-            f"{category}: {n_weeks} weeks | "
-            f"{log_df['case:concept:name'].nunique()} cases | "
-            f"{len(log_df)} events"
-        )
-    return logs
+    categories = CATEGORIES if categories is None else categories
+    print("=== Commit-category log subsets (overlapping, anomaly issues) ===")
+    return subset_log_by_overlapping_categories(flat_df, issue_commit_categories, categories)
