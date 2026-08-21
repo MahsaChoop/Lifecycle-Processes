@@ -49,9 +49,9 @@ pip install -r requirements.txt
 ## What are the analyses in `main.ipynb`?
 
 1. **Load DuckDB + weekly issue counts** — Load OCED tables and build weekly open/closed issue activity series.
-2. **Rolling IQR + lexicon state extraction** — Flag anomalous weeks with rolling IQR and label severity/state with a lexicon.
-3. **Export anomaly object/event IDs** — Save object and event IDs tied to anomalous weeks for downstream subsetting.
-4. **Anomaly figures** — Plot weekly activity, rolling IQR bands, and anomaly severity overviews.
+2. **Rolling IQR anomaly detection** — Flag anomalous weeks with rolling IQR (`is_anomaly`) and an `anomaly_score`.
+3. **Export anomaly object/event IDs** — Save object and event IDs from closed-issue events in anomalous weeks for downstream subsetting.
+4. **Anomaly figures** — Plot weekly activity, rolling IQR bands, flagged weeks, and anomaly scores.
 5. **Commit context + Conventional Commit classification** — Collect commit messages around anomalies and map types to categories (feature, bug, tech debt, docs, other).
 6. **Flatten OCEL2 issue log** — Convert the OCEL2 SQLite export into a flat issue-level event log.
 7. **Vitalizing subset** — Restrict the flat log to issues linked to anomaly object IDs.

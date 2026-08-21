@@ -92,7 +92,7 @@ def build_weekly_commit_messages(eventsPerobj_df, objects_attributes, cfg, event
     return weekly_messages, joined
 
 
-def build_commit_context(weekly_closed_anomaly_frame, eventsPerobj_df, objects_attributes, cfg, tables_dir=None):
+def build_commit_context(rolling_iqr_anomalies, eventsPerobj_df, objects_attributes, cfg, tables_dir=None):
     tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
 
@@ -104,7 +104,7 @@ def build_commit_context(weekly_closed_anomaly_frame, eventsPerobj_df, objects_a
     )
 
     commit_context = (
-        weekly_closed_anomaly_frame.loc[weekly_closed_anomaly_frame["is_anomaly"]]
+        rolling_iqr_anomalies.loc[rolling_iqr_anomalies["is_anomaly"]]
         .merge(weekly_commit_messages, on="week_start", how="left")
     )
     commit_context["commit_event_count"] = commit_context["commit_event_count"].fillna(0).astype(int)
