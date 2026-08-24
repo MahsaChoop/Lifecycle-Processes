@@ -168,6 +168,26 @@ def overlapping_issue_categories(per_commit_issue, case_ids):
     return issue_commit_categories, n_with_classified, missing_ids
 
 
+def assign_disjoint_issue_categories(issue_commit_categories):
+    """Keep one category per issue. Issues with mixed commit categories go to other."""
+    nunique = issue_commit_categories.groupby("issue_id")["category"].transform("nunique")
+    mixed_mask = nunique > 1
+    mixed_ids = issue_commit_categories.loc[mixed_mask, "issue_id"].astype(str).unique()
+    n_mixed = int(len(mixed_ids))
+    if n_mixed == 0:
+        return issue_commit_categories.copy(), 0
+
+    single = issue_commit_categories.loc[~mixed_mask].copy()
+    mixed = (
+        issue_commit_categories.loc[mixed_mask]
+        .groupby("issue_id", as_index=False)
+        .agg(commit_count=("commit_count", "sum"))
+    )
+    mixed["category"] = "other"
+    disjoint = pd.concat([single, mixed], ignore_index=True)
+    return disjoint, n_mixed
+
+
 def subset_log_by_overlapping_categories(flat_df, issue_commit_categories, categories=None):
     """Subset a flat issue log: each case goes into every category log it belongs to."""
     categories = CATEGORIES if categories is None else categories
@@ -409,7 +429,7 @@ def build_whole_commit_category_logs(
     cfg,
     tables_dir=None,
 ):
-    """Classify all commit messages and subset the preprocessed whole log by overlapping commit categories."""
+    """Classify all commit messages and subset the preprocessed whole log into disjoint category logs."""
     tables_dir = Path(tables_dir or cfg.tables_dir)
     tables_dir.mkdir(parents=True, exist_ok=True)
 
@@ -422,6 +442,9 @@ def build_whole_commit_category_logs(
     clean_cases = set(flat_df_clean["case:concept:name"].astype(str))
     issue_commit_categories, n_with_classified, missing_ids = overlapping_issue_categories(
         per_commit_issue, clean_cases
+    )
+    issue_commit_categories, n_mixed = assign_disjoint_issue_categories(
+        issue_commit_categories
     )
     issue_cats_path = tables_dir / "issue_commit_categories.csv"
     issue_commit_categories.to_csv(issue_cats_path, index=False)
@@ -436,22 +459,21 @@ def build_whole_commit_category_logs(
     print(f"Saved {commit_classified_path}")
 
     n_issues_in_table = issue_commit_categories["issue_id"].nunique()
-    n_multi = int(
-        (issue_commit_categories.groupby("issue_id")["category"].nunique() > 1).sum()
-    )
-    print("\n=== Issue commit categories (overlapping, preprocessed whole log) ===")
+    print("\n=== Issue commit categories (disjoint, preprocessed whole log) ===")
     print(f"Whole-log cases: {n_clean_cases}")
     print(f"Issues with classified commits: {n_with_classified}")
     print(
         f"Issues with no classified commit (assigned to other): {len(missing_ids)}"
     )
+    print(
+        f"Issues with mixed commit categories (assigned to other): {n_mixed}"
+    )
     print(f"Issues in issue_commit_categories: {n_issues_in_table}")
-    print(f"Issues in more than one category log: {n_multi}")
     issue_counts = issue_commit_categories.groupby("category")["issue_id"].nunique()
     for category in CATEGORIES:
         print(f"  {category:<13s} {int(issue_counts.get(category, 0))}")
     print(f"Saved {issue_cats_path}")
 
-    print("\n=== Preprocessed-log commit-category subsets (overlapping) ===")
+    print("\n=== Preprocessed-log commit-category subsets (disjoint) ===")
     logs = subset_log_by_overlapping_categories(flat_df_clean, issue_commit_categories)
     return logs, issue_commit_categories, commit_classified_all
