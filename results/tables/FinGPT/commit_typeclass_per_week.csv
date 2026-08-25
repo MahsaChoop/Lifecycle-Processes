@@ -1,5 +1,5 @@
 week_start,anomaly_direction,anomaly_score,commit_event_count,cm_total,cm_breaking_count,cm_feat_count,cm_fix_count,cm_chore_count,cm_docs_count,cm_style_count,cm_refactor_count,cm_test_count,cm_build_count,cm_ci_count,cm_perf_count,cm_revert_count,cm_bump_count,cm_wip_count,cm_other_count,cat_feature_work_count,cat_bug_fixes_count,cat_tech_debt_count,cat_docs_count,cat_other_count,cat_feature_work_ratio,cat_bug_fixes_ratio,cat_tech_debt_ratio,cat_docs_ratio,cat_other_ratio,dominant_category,dominant_type,top_scopes
-2023-10-09,high,0.6666666666666666,57,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,24,0,0,0,0,24,0.0,0.0,0.0,0.0,1.0,other,other,[]
-2026-03-30,high,3.5,3,3,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1,0,0,0,2,1,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,docs,docs,[]
-2026-05-18,high,0.5,58,21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,0,0,0,0,21,0.0,0.0,0.0,0.0,1.0,other,other,[]
-2026-07-27,high,1.5,3,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,2,0.0,0.3333333333333333,0.0,0.0,0.6666666666666666,other,other,['data']
+2023-10-09,high,0.6666666666666666,19,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,18,0.0,0.0,0.0,0.0,1.0,other,other,[]
+2026-03-30,high,3.5,5,5,0,0,1,0,2,0,0,0,0,0,0,0,0,0,2,0,1,0,2,2,0.0,0.2,0.0,0.4,0.4,docs,other,[]
+2026-05-18,high,0.5,106,37,0,4,0,1,0,0,0,0,0,0,0,0,0,0,32,4,0,1,0,32,0.10810810810810811,0.0,0.02702702702702703,0.0,0.8648648648648649,other,other,[]
+2026-07-27,high,1.5,4,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,0,1,0,0,3,0.0,0.25,0.0,0.0,0.75,other,other,['data']

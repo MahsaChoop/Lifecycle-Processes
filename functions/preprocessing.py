@@ -33,6 +33,7 @@ def remove_incomplete_traces_two_ends(
     end_activity_1: str,
     end_activity_2: str,
 ) -> pd.DataFrame:
+    """Keep cases whose last activity is end_activity_1 or end_activity_2."""
     if df.empty:
         return df.copy()
 
@@ -47,6 +48,23 @@ def remove_incomplete_traces_two_ends(
         .copy()
         .reset_index(drop=True)
     )
+
+
+def keep_traces_containing_end_activities(
+    df: pd.DataFrame,
+    end_activity_1: str,
+    end_activity_2: str,
+) -> pd.DataFrame:
+    """Keep full traces that contain end_activity_1 or end_activity_2 anywhere."""
+    if df.empty:
+        return df.copy()
+
+    ordered = df.sort_values(["case:concept:name", "time:timestamp"]).copy()
+    ends = {end_activity_1, end_activity_2}
+    has_end = ordered.groupby("case:concept:name")["concept:name"].transform(
+        lambda s: s.isin(ends).any()
+    )
+    return ordered.loc[has_end].reset_index(drop=True)
 
 
 def remove_traces_with_high_activity_repetition(
@@ -80,7 +98,7 @@ def build_preprocessed_logs(
     end_activity_2=None,
     max_rep=MAX_REP,
 ):
-    """Validate, drop incomplete ends, filter high repetition, sample random control."""
+    """Validate, keep traces containing end activities, filter high repetition, sample random control."""
     end_activity_1 = cfg.end_activity_1 if end_activity_1 is None else end_activity_1
     end_activity_2 = cfg.end_activity_2 if end_activity_2 is None else end_activity_2
     rng = np.random.default_rng(seed)
@@ -88,8 +106,10 @@ def build_preprocessed_logs(
     flat_df = validate_and_standardize(flat.copy(), "flat")
     vitalizing_df = validate_and_standardize(anomaly_events_df.copy(), "anomaly_events_df")
 
-    flat_df = remove_incomplete_traces_two_ends(flat_df, end_activity_1, end_activity_2)
-    vitalizing_df = remove_incomplete_traces_two_ends(vitalizing_df, end_activity_1, end_activity_2)
+    flat_df = keep_traces_containing_end_activities(flat_df, end_activity_1, end_activity_2)
+    vitalizing_df = keep_traces_containing_end_activities(
+        vitalizing_df, end_activity_1, end_activity_2
+    )
 
     if flat_df.empty or vitalizing_df.empty:
         raise ValueError("Preprocessing removed all traces from whole or vitalizing log.")
@@ -152,7 +172,7 @@ def build_preprocessed_logs(
 
 
 def preprocess_flat_log(flat, cfg, max_rep=7, end_activity_1=None, end_activity_2=None):
-    """Validate, drop incomplete ends, and filter high repetition on the flat log only."""
+    """Validate, keep traces containing end activities, and filter high repetition."""
     end_activity_1 = cfg.end_activity_1 if end_activity_1 is None else end_activity_1
     end_activity_2 = cfg.end_activity_2 if end_activity_2 is None else end_activity_2
 
@@ -160,7 +180,7 @@ def preprocess_flat_log(flat, cfg, max_rep=7, end_activity_1=None, end_activity_
     n_events_raw = len(flat)
 
     out = validate_and_standardize(flat.copy(), "flat")
-    out = remove_incomplete_traces_two_ends(out, end_activity_1, end_activity_2)
+    out = keep_traces_containing_end_activities(out, end_activity_1, end_activity_2)
     n_cases_complete = out["case:concept:name"].nunique()
     n_events_complete = len(out)
 
@@ -168,12 +188,15 @@ def preprocess_flat_log(flat, cfg, max_rep=7, end_activity_1=None, end_activity_
     if out.empty:
         raise ValueError("Category-log preprocessing removed all traces from the flat log.")
 
-    print(f"=== Category-log preprocess (end={end_activity_1}/{end_activity_2}, max_rep={max_rep}) ===")
+    print(
+        f"=== Category-log preprocess "
+        f"(contain={end_activity_1}/{end_activity_2}, max_rep={max_rep}) ==="
+    )
     print(
         f"Raw: {n_cases_raw} cases | {n_events_raw} events"
     )
     print(
-        f"After incomplete-end filter: {n_cases_complete} cases | {n_events_complete} events"
+        f"After contain-end filter: {n_cases_complete} cases | {n_events_complete} events"
     )
     print(
         f"After max_rep={max_rep}: {out['case:concept:name'].nunique()} cases | {len(out)} events"
