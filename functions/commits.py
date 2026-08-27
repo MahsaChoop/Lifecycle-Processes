@@ -29,7 +29,6 @@ CATEGORY_MAP = {
     "docs": "docs",
 }
 CATEGORIES = ["feature_work", "bug_fixes", "tech_debt", "docs", "other"]
-CATEGORY_TIE_BREAK = ["feature_work", "bug_fixes", "tech_debt", "docs"]
 
 CONVENTIONAL_RE = re.compile(
     r"^(?P<type>feat|fix|chore|docs|style|refactor|test|build|ci|perf|revert|bump|wip)"
@@ -329,15 +328,12 @@ def _classify_week(messages):
     if not isinstance(messages, list):
         messages = []
     type_counter = Counter()
-    scope_counter = Counter()
     breaking_count = 0
     for msg in messages:
-        cm_type, scope, breaking = _classify_message(msg)
+        cm_type, _, breaking = _classify_message(msg)
         if cm_type is None:
             continue
         type_counter[cm_type] += 1
-        if scope:
-            scope_counter[scope.lower()] += 1
         if breaking:
             breaking_count += 1
 
@@ -356,31 +352,12 @@ def _classify_week(messages):
         cnt = cat_counts[f"cat_{c}_count"]
         cat_ratios[f"cat_{c}_ratio"] = (cnt / cm_total) if cm_total else 0.0
 
-    if cm_total == 0:
-        dominant_category = None
-        dominant_type = None
-    else:
-        best_cat, best_n = None, -1
-        for c in CATEGORY_TIE_BREAK:
-            n = cat_counts[f"cat_{c}_count"]
-            if n > best_n:
-                best_cat, best_n = c, n
-        if cat_counts["cat_other_count"] > best_n:
-            best_cat = "other"
-        dominant_category = best_cat
-        dominant_type = type_counter.most_common(1)[0][0] if type_counter else None
-
-    top_scopes = [scope for scope, _ in scope_counter.most_common(3)]
-
     return {
         "cm_total": int(cm_total),
         "cm_breaking_count": int(breaking_count),
         **type_counts,
         **cat_counts,
         **cat_ratios,
-        "dominant_category": dominant_category,
-        "dominant_type": dominant_type,
-        "top_scopes": top_scopes,
     }
 
 
