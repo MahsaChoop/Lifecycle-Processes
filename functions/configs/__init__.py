@@ -27,6 +27,9 @@ _DATASET_MODULES = {
     "qlib": "qlib",
     "nautilus_trader": "nautilus_trader",
     "nautilustrader": "nautilus_trader",
+    "yargs": "yargs",
+    "semantic_release": "semantic_release",
+    "semanticrelease": "semantic_release",
 }
 
 
