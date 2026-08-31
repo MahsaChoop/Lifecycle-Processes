@@ -141,12 +141,14 @@ def plot_anomaly_figures(rolling_iqr_anomalies, cfg, figures_dir=None, show=True
             plot_frame["value"],
             marker="o",
             markersize=3,
+            color="#1F3A5F", 
             label="weekly rate of issue_closed",
         )
         ax.plot(plot_frame["week_start"], plot_frame["upper_bound"], linestyle="--", label="IQR upper band")
-        ax.plot(plot_frame["week_start"], plot_frame["lower_bound"], linestyle="--", label="IQR lower band")
+        #ax.plot(plot_frame["week_start"], plot_frame["lower_bound"], linestyle="--", label="IQR lower band")
         if not flagged.empty:
             ax.scatter(
+    
                 flagged["week_start"],
                 flagged["value"],
                 color="red",
@@ -177,7 +179,7 @@ def plot_anomaly_figures(rolling_iqr_anomalies, cfg, figures_dir=None, show=True
             plot_frame["week_start"],
             plot_frame["value"],
             width=5,
-            color="#9CC9F2",
+            color="#1F3A5F",
             alpha=0.75,
             label="Tickets per week",
         )
