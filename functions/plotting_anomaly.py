@@ -263,6 +263,14 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
         .reset_index(drop=True)
     )
     ctx["week_label"] = pd.to_datetime(ctx["week_start"]).dt.strftime("%Y-%m-%d")
+    stack = ctx[cat_count_cols].fillna(0).sum(axis=1)
+    commit_n = ctx["commit_event_count"].fillna(0).astype(float)
+    scale = commit_n.div(stack.replace(0, np.nan)).fillna(0)
+    for c in CATEGORIES:
+        ctx[f"cat_{c}_plot"] = ctx[f"cat_{c}_count"].fillna(0) * scale
+    no_mix = (stack <= 0) & (commit_n > 0)
+    if no_mix.any():
+        ctx.loc[no_mix, "cat_other_plot"] = commit_n.loc[no_mix]
 
     with plt.rc_context(FIGURE_FONT):
         fig, ax = plt.subplots(figsize=(12, 4.8))
@@ -270,13 +278,13 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
         bottom = np.zeros(len(ctx))
         for c in CATEGORIES:
             ax.bar(
-                ctx["week_label"], ctx[f"cat_{c}_count"],
+                ctx["week_label"], ctx[f"cat_{c}_plot"],
                 bottom=bottom, color=CATEGORY_COLORS[c], label=c,
                 edgecolor="white", linewidth=0.3,
             )
-            bottom += ctx[f"cat_{c}_count"].values
+            bottom += ctx[f"cat_{c}_plot"].values
 
-        ymax = float(bottom.max()) if len(bottom) else 1.0
+        ymax = float(np.nanmax(bottom)) if len(bottom) else 1.0
         for i, (x, total) in enumerate(zip(ctx["week_label"], ctx["commit_event_count"])):
             ax.text(
                 x, bottom[i] + ymax * 0.01,
@@ -300,10 +308,8 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
         ax.tick_params(axis="x", rotation=45)
         for lbl in ax.get_xticklabels():
             lbl.set_ha("right")
-        ax.legend(
-            loc="upper center", bbox_to_anchor=(0.5, -0.28),
-            ncol=len(CATEGORIES), frameon=False, fontsize=10,
-        )
+        ax.legend(frameon=False)
+        ax.grid(axis="y", alpha=0.2)
 
         plt.tight_layout()
         save_figure(
