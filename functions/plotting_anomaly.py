@@ -292,16 +292,6 @@ def plot_commit_category_stack(commit_context, commit_typeclass_per_week, cfg, f
                 fontsize=10, color="#333333",
             )
 
-        dir_marker = {"high": "^", "low": "v"}
-        for x, direction in zip(ctx["week_label"], ctx["anomaly_direction"]):
-            m = dir_marker.get(str(direction))
-            if m:
-                ax.annotate(
-                    m, xy=(x, 0), xytext=(0, -28),
-                    textcoords="offset points", ha="center", va="top",
-                    fontsize=10, color="#555555", annotation_clip=False,
-                )
-
         ax.set_ylim(0, ymax * 1.12 if ymax > 0 else 1)
         ax.set_ylabel("Count of Commits")
         ax.set_title("Interventions context: commit categories on issues closed in each anomaly week")
