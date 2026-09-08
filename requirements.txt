@@ -4,6 +4,7 @@ matplotlib>=3.7
 openpyxl>=3.1
 duckdb>=0.9
 pm4py>=2.7
+pypdf>=5.0
 
 # Data extraction (GitHub → DuckDB / OCEL2)
 pystackt
