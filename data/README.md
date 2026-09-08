@@ -72,14 +72,14 @@ Pipeline order:
 1. `get_github_log` → writes `raw/commitizen.duckdb`
 2. `export_to_ocel2` → writes `raw/ocel2_commitizen.sqlite`
 3. `create_statistics_views` → optional statistics schema
-4. `prepare_graph_data` → creates `graph_data_prep.graph_base_table` required by `main.ipynb`
+4. `prepare_graph_data` → creates `graph_data_prep.graph_base_table` required by `commitizen.ipynb`
 
 ## Expected outputs
 
 | File | Role |
 |------|------|
 | `data/raw/commitizen.duckdb` | OCED DuckDB for weekly counts, anomalies, and commits |
-| `data/raw/ocel2_commitizen.sqlite` | OCEL2 export flattened in `main.ipynb` |
+| `data/raw/ocel2_commitizen.sqlite` | OCEL2 export flattened in `commitizen.ipynb` |
 
 ## Other repositories
 
