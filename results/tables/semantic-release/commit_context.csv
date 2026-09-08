@@ -1,0 +1,966 @@
+week_start,value,rolling_q1,rolling_q3,iqr,lower_bound,upper_bound,is_anomaly,anomaly_direction,anomaly_score,commit_event_count,message_count,messages_in_week,commit_event_descriptions,commit_event_ids,commit_object_ids,messages_text
+2015-05-11,7,0.25,2.0,1.75,-2.375,4.625,True,high,1.3571428571428572,1,1,['docs(readme): now also tested on io.js `^2`'],['committed (#27)'],[198209],[198211],docs(readme): now also tested on io.js `^2`
+2015-06-08,7,0.0,2.0,2.0,-3.0,5.0,True,high,1.0,19,19,"['chore(tests): add coverage reports and coveralls', 'chore(package): update standard and tap-spec', 'style: use es6 in src', 'fix(npm-info): support basic auth', 'docs(readme): Link to Travis profile for enabling the repo', 'chore(package): add build-step', ""test(createModule): not installing semantic-release's deps all over again"", 'style(tests): require deps in every file', 'test: convert from tape to tap', 'docs(readme): Reminder to enable Travis to make encrypt work', 'test(npm-info): support private modules', 'chore(tests): add build to allow es6 in tests', 'feat(npm-info): support private modules\n\ncloses #28', 'style: backport import to require', 'test(verify): not publishing placeholder versions', 'style: use es6 in tests', 'fix(verify): not publishing placeholder versions closes #24', 'chore: allow es6 in src, wile keeping every commit addressable', 'chore(lib): move inside src folder']","['committed (#39)', 'committed (#30)', 'committed (#42)', 'committed (#38)']","[196991, 197004, 197206, 197214, 197222, 197230, 197241, 197249, 197257, 197265, 197276, 197311, 197319, 197327, 197359, 197367, 198071, 198082, 198093]","[196993, 197006, 197208, 197216, 197224, 197232, 197243, 197251, 197259, 197267, 197278, 197313, 197321, 197329, 197361, 197369, 198073, 198084, 198095]","chore(tests): add coverage reports and coveralls
+chore(package): update standard and tap-spec
+style: use es6 in src
+fix(npm-info): support basic auth
+docs(readme): Link to Travis profile for enabling the repo
+chore(package): add build-step
+test(createModule): not installing semantic-release's deps all over again
+style(tests): require deps in every file
+test: convert from tape to tap
+docs(readme): Reminder to enable Travis to make encrypt work
+test(npm-info): support private modules
+chore(tests): add build to allow es6 in tests
+feat(npm-info): support private modules
+
+closes #28
+style: backport import to require
+test(verify): not publishing placeholder versions
+style: use es6 in tests
+fix(verify): not publishing placeholder versions closes #24
+chore: allow es6 in src, wile keeping every commit addressable
+chore(lib): move inside src folder"
+2015-07-20,8,0.25,2.75,2.5,-3.5,6.5,True,high,0.6,1,1,['docs(readme): various grammar fixes'],['committed (#49)'],[196650],[196652],docs(readme): various grammar fixes
+2015-08-17,14,0.0,2.75,2.75,-4.125,6.875,True,high,2.590909090909091,11,10,"['feat(commit-analyzer): Call commit-analyzer multiple times\n\ntype.js will now call commit-analyzer multiple times, and keep track of the\nrelease type itself. This makes the commit-analyzer drastically simpler.\n\nBREAKING CHANGE:\n\tThe commit-analyzer plugin is now called only once, and with only a single\n\tcommit (as the `commit` config option, vs. `commits`). The plugin also does\n\tnot have to keep track of the release type for multiple commits. To migrate,\n\tsimply have your plugin only accept and parse a single commit. This should\n\treduce the complexity a good deal.', 'feat(type): Add support for rskip\n\nAdd support for rskip release type, and skipping releases.\nSkipping releases is supported by semantic-release/commit-analyzer#2.\n\nFixes #41', 'docs(readme): enhance plugin section grammar', ""feat(getLastRelease): Move getLastRelease to plugin. Remove npm tag\n\nMove getLastRelease into it's very own plugin (@semantic-release/last-release-npm),\nwhich this project now depends on.\n\nBREAKING CHANGE: Remove npmTag from output of getLastRelease. It wasn't used anywhere.\nRefs semantic-release/semantic-release#56, semantic-release/semantic-release#51"", 'chore(git): Resolve merge conflict', ""chore(git): Merge branch 'next' into analysis2.0"", 'docs(readme): document the getLastRelease plugin', 'docs(readme): Update semantic-release setup cmd', 'fix(getLastRelease): Add @semantic-release/last-release-npm to dependencies', 'fix: set npm registry from publishConfig.registry if existent']","['committed (#59)', 'committed (#58)', 'committed (#57)', 'committed (#62)', 'committed (#53)']","[195782, 195892, 195900, 195908, 195916, 195924, 195956, 195965, 195995, 196011, 196327]","[195784, 195894, 195902, 195910, 195918, 195926, 195958, 195967, 195997, 196013, 196329]","feat(commit-analyzer): Call commit-analyzer multiple times
+
+type.js will now call commit-analyzer multiple times, and keep track of the
+release type itself. This makes the commit-analyzer drastically simpler.
+
+BREAKING CHANGE:
+	The commit-analyzer plugin is now called only once, and with only a single
+	commit (as the `commit` config option, vs. `commits`). The plugin also does
+	not have to keep track of the release type for multiple commits. To migrate,
+	simply have your plugin only accept and parse a single commit. This should
+	reduce the complexity a good deal.
+feat(type): Add support for rskip
+
+Add support for rskip release type, and skipping releases.
+Skipping releases is supported by semantic-release/commit-analyzer#2.
+
+Fixes #41
+docs(readme): enhance plugin section grammar
+feat(getLastRelease): Move getLastRelease to plugin. Remove npm tag
+
+Move getLastRelease into it's very own plugin (@semantic-release/last-release-npm),
+which this project now depends on.
+
+BREAKING CHANGE: Remove npmTag from output of getLastRelease. It wasn't used anywhere.
+Refs semantic-release/semantic-release#56, semantic-release/semantic-release#51
+chore(git): Resolve merge conflict
+chore(git): Merge branch 'next' into analysis2.0
+docs(readme): document the getLastRelease plugin
+docs(readme): Update semantic-release setup cmd
+fix(getLastRelease): Add @semantic-release/last-release-npm to dependencies
+fix: set npm registry from publishConfig.registry if existent"
+2016-11-14,61,0.0,2.0,2.0,-3.0,5.0,True,high,28.0,51,51,"['chore(package): update github to version 5.3.3', 'chore(package): update github to version 5.0.1', 'chore(package): update github to version 3.1.0', 'chore(package): update nock to version 9.0.0', 'chore(package): update lodash to version 4.16.2', 'chore(package): update standard to version 8.0.0', 'chore(package): update nyc to version 8.1.0', 'chore(package): update github to version 5.0.0', 'chore(package): update github to version 4.0.0', 'chore(package): update github to version 3.1.1', 'chore(package): update github to version 2.5.2', 'chore(package): update tap to version 6.3.1', 'chore(package): update tap to version 7.1.1', 'chore(package): update nyc to version 8.3.2', 'chore(package): update github to version 5.1.0', 'chore(package): update nock to version 8.1.0', 'chore(package): update github to version 4.1.0', 'chore(package): update github to version 1.2.0\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 1.4.0\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 5.2.3', 'chore(package): update github to version 3.0.0', 'chore(package): update github to version 2.3.0\n\nhttps://greenkeeper.io/', 'chore(package): update tap to version 8.0.0', 'chore(package): update standard to version 8.2.0', 'chore(package): update tap to version 7.0.1', 'chore(package): update github to version 2.5.1', 'chore(package): update github to version 1.3.0\n\nhttps://greenkeeper.io/', 'chore(package): update nyc to version 8.0.0', 'chore(package): update standard to version 8.1.0', 'chore(package): update github to version 1.1.0\n\nhttps://greenkeeper.io/', 'chore(package): update standard to version 8.4.0', 'chore(package): update standard to version 8.3.0', 'chore(package): update github to version 2.4.1\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 2.4.0\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 1.1.2\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 1.2.1\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 5.2.1', 'chore(package): update github to version 5.2.0', 'chore(package): update nyc to version 8.3.0', 'chore(package): update github to version 1.1.1\n\nhttps://greenkeeper.io/', 'chore(package): update tap to version 7.1.0', 'chore(package): update github to version 2.6.0', 'chore(package): update tap to version 7.1.2', 'chore(package): update tap to version 7.0.0', 'chore(package): update github to version 2.2.0\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 2.1.0\n\nhttps://greenkeeper.io/', 'chore(package): update github to version 2.0.1\n\nhttps://greenkeeper.io/', 'fix: use travis-deploy-once to reenable travis-pro support', 'chore(package): update github to version 5.2.2', 'chore(package): update nyc to version 8.3.1', 'chore(package): update github to version 2.0.0\n\nhttps://greenkeeper.io/']","['committed (#325)', 'committed (#313)', 'committed (#298)', 'committed (#323)', 'committed (#303)', 'committed (#277)', 'committed (#272)', 'committed (#311)', 'committed (#307)', 'committed (#302)', 'committed (#281)', 'committed (#270)', 'committed (#295)', 'committed (#321)', 'committed (#315)', 'committed (#312)', 'committed (#310)', 'committed (#240)', 'committed (#243)', 'committed (#324)', 'committed (#290)', 'committed (#264)', 'committed (#326)', 'committed (#305)', 'committed (#291)', 'committed (#275)', 'committed (#242)', 'committed (#271)', 'committed (#299)', 'committed (#228)', 'committed (#314)', 'committed (#306)', 'committed (#269)', 'committed (#266)', 'committed (#232)', 'committed (#241)', 'committed (#317)', 'committed (#316)', 'committed (#297)', 'committed (#230)', 'committed (#293)', 'committed (#287)', 'committed (#296)', 'committed (#284)', 'committed (#259)', 'committed (#249)', 'committed (#247)', 'committed (#330)', 'committed (#318)', 'committed (#309)', 'committed (#246)']","[181258, 181562, 181622, 181681, 181707, 181801, 182005, 182031, 182087, 182113, 182139, 182165, 182191, 182217, 182243, 182269, 182348, 182374, 182400, 184486, 184512, 184667, 184693, 184719, 184748, 184774, 184816, 184872, 184901, 185134, 185243, 185433, 185715, 185901, 186046, 186075, 186101, 186127, 186223, 186269, 186472, 187098, 187171, 187206, 187368, 187406, 187444, 187482, 187735, 187802, 187881]","[181260, 181564, 181624, 181683, 181709, 181803, 182007, 182033, 182089, 182115, 182141, 182167, 182193, 182219, 182245, 182271, 182350, 182376, 182402, 184488, 184514, 184669, 184695, 184721, 184750, 184776, 184818, 184874, 184903, 185136, 185245, 185435, 185717, 185903, 186048, 186077, 186103, 186129, 186225, 186271, 186474, 187100, 187173, 187208, 187370, 187408, 187446, 187484, 187737, 187804, 187883]","chore(package): update github to version 5.3.3
+chore(package): update github to version 5.0.1
+chore(package): update github to version 3.1.0
+chore(package): update nock to version 9.0.0
+chore(package): update lodash to version 4.16.2
+chore(package): update standard to version 8.0.0
+chore(package): update nyc to version 8.1.0
+chore(package): update github to version 5.0.0
+chore(package): update github to version 4.0.0
+chore(package): update github to version 3.1.1
+chore(package): update github to version 2.5.2
+chore(package): update tap to version 6.3.1
+chore(package): update tap to version 7.1.1
+chore(package): update nyc to version 8.3.2
+chore(package): update github to version 5.1.0
+chore(package): update nock to version 8.1.0
+chore(package): update github to version 4.1.0
+chore(package): update github to version 1.2.0
+
+https://greenkeeper.io/
+chore(package): update github to version 1.4.0
+
+https://greenkeeper.io/
+chore(package): update github to version 5.2.3
+chore(package): update github to version 3.0.0
+chore(package): update github to version 2.3.0
+
+https://greenkeeper.io/
+chore(package): update tap to version 8.0.0
+chore(package): update standard to version 8.2.0
+chore(package): update tap to version 7.0.1
+chore(package): update github to version 2.5.1
+chore(package): update github to version 1.3.0
+
+https://greenkeeper.io/
+chore(package): update nyc to version 8.0.0
+chore(package): update standard to version 8.1.0
+chore(package): update github to version 1.1.0
+
+https://greenkeeper.io/
+chore(package): update standard to version 8.4.0
+chore(package): update standard to version 8.3.0
+chore(package): update github to version 2.4.1
+
+https://greenkeeper.io/
+chore(package): update github to version 2.4.0
+
+https://greenkeeper.io/
+chore(package): update github to version 1.1.2
+
+https://greenkeeper.io/
+chore(package): update github to version 1.2.1
+
+https://greenkeeper.io/
+chore(package): update github to version 5.2.1
+chore(package): update github to version 5.2.0
+chore(package): update nyc to version 8.3.0
+chore(package): update github to version 1.1.1
+
+https://greenkeeper.io/
+chore(package): update tap to version 7.1.0
+chore(package): update github to version 2.6.0
+chore(package): update tap to version 7.1.2
+chore(package): update tap to version 7.0.0
+chore(package): update github to version 2.2.0
+
+https://greenkeeper.io/
+chore(package): update github to version 2.1.0
+
+https://greenkeeper.io/
+chore(package): update github to version 2.0.1
+
+https://greenkeeper.io/
+fix: use travis-deploy-once to reenable travis-pro support
+chore(package): update github to version 5.2.2
+chore(package): update nyc to version 8.3.1
+chore(package): update github to version 2.0.0
+
+https://greenkeeper.io/"
+2016-11-28,8,0.0,2.0,2.0,-3.0,5.0,True,high,1.5,12,11,"[""Merge branch 'caribou' into patch-1"", 'fix(package): update github to version 7.0.0\n\nhttps://greenkeeper.io/', 'docs(readme): fix link to how the CLI works', ""Merge branch 'caribou' into 286-spawn-instead-of-exec"", ""fix: use spawn instead of exec for 'git log' to avoid maxBuffer err"", 'chore(package): parse-github-repo-url', 'docs(readme): note for linux installation instructions\n\nfor Linux users, keytar requires installation of `libgnome-keyring`', 'docs(README): update setup link', 'test: fix ""/bin/bash: NO_PROMPT=yes: command not found""', 'docs(README.md): discourage use of pre-patch, pre-minor and pre-release', 'chore(package): update dependencies\n\nhttps://greenkeeper.io/']","['committed (#180)', 'committed (#336)', 'committed (#334)', 'committed (#332)', 'committed (#254)', 'committed (#218)', 'committed (#209)', 'committed (#327)']","[180806, 181046, 181120, 181129, 181494, 186892, 186901, 188313, 188915, 190377, 190409, 190423]","[180808, 181048, 181122, 181131, 181496, 186894, 186903, 188315, 188917, 190379, 190411, 190425]","Merge branch 'caribou' into patch-1
+fix(package): update github to version 7.0.0
+
+https://greenkeeper.io/
+docs(readme): fix link to how the CLI works
+Merge branch 'caribou' into 286-spawn-instead-of-exec
+fix: use spawn instead of exec for 'git log' to avoid maxBuffer err
+chore(package): parse-github-repo-url
+docs(readme): note for linux installation instructions
+
+for Linux users, keytar requires installation of `libgnome-keyring`
+docs(README): update setup link
+test: fix ""/bin/bash: NO_PROMPT=yes: command not found""
+docs(README.md): discourage use of pre-patch, pre-minor and pre-release
+chore(package): update dependencies
+
+https://greenkeeper.io/"
+2017-03-06,3,0.0,1.0,1.0,-1.5,2.5,True,high,0.5,1,1,['chore(package): update standard to version 9.0.0\n\nhttps://greenkeeper.io/'],['committed (#366)'],[178958],[178960],"chore(package): update standard to version 9.0.0
+
+https://greenkeeper.io/"
+2017-08-14,10,0.0,1.0,1.0,-1.5,2.5,True,high,7.5,11,11,"[""Merge branch 'caribou' into node-8-only"", 'fix: remove support for node < 8\n\nBREAKING CHANGE: Remove support for publishing a package with node < 8. [Details](https://github.com/semantic-release/semantic-release#why-does-semantic-release-require-node-version-8).', 'chore(package): add `preferGlobal` key\n\nIf we prefer this package to be installed globally,\r\nthen we better add the key', 'fix(package): update @semantic-release/condition-travis to version 6.0.0', 'fix(post): fix target_commitish to be the default branch\n\ntarget_commitish in GitHub Releases has two different meanings:\n* Target commit that a new associated tag will be created on\n* Target branch to compute how many ""commits to since this release""\n\ntarget_commitish is usually the default branch (aka master), because the\ndistance between the release and the latest branch is the primary concern.\n\nBefore this change, target_commitish was left to be a hash and the\nfeature of GitHub Releases that shows how much time passed since the\nrelease is ruined, because no tracking branch is given.\n\nBy this change, target_commitish is changed to be the default branch\ngiven in the configuration (options.branch) via edit a release API after\nthe release and tag are created via crate a release API.', 'chore: add package-lock', 'fix(bin): addapt build leader error to new leader detection algorithm', 'feat(errors): detect non-terminating errors and use appropriate exit code\n\ndepends on:\n- semantic-release/condition-travis#56\n- semantic-release/error#63', 'fix(post): create git tag properly\n\nrefs/heads are for branches and refs/tags for tags.', 'fix(package): @semantic-release/condition-travis@6.0.0\n\nThis also introduces the new build leader detecation from https://github.com/semantic-release/travis-deploy-once/releases/tag/v2.0.0', 'fix(post): Create a tag before makeing a release']","['committed (#414)', 'committed (#387)', 'committed (#418)', 'committed (#335)', 'committed (#342)', 'committed (#416)']","[176232, 176297, 176385, 176428, 176455, 176474, 176482, 178050, 180322, 180943, 180951]","[176234, 176299, 176387, 176430, 176457, 176476, 176484, 178052, 180324, 180945, 180953]","Merge branch 'caribou' into node-8-only
+fix: remove support for node < 8
+
+BREAKING CHANGE: Remove support for publishing a package with node < 8. [Details](https://github.com/semantic-release/semantic-release#why-does-semantic-release-require-node-version-8).
+chore(package): add `preferGlobal` key
+
+If we prefer this package to be installed globally,
+then we better add the key
+fix(package): update @semantic-release/condition-travis to version 6.0.0
+fix(post): fix target_commitish to be the default branch
+
+target_commitish in GitHub Releases has two different meanings:
+* Target commit that a new associated tag will be created on
+* Target branch to compute how many ""commits to since this release""
+
+target_commitish is usually the default branch (aka master), because the
+distance between the release and the latest branch is the primary concern.
+
+Before this change, target_commitish was left to be a hash and the
+feature of GitHub Releases that shows how much time passed since the
+release is ruined, because no tracking branch is given.
+
+By this change, target_commitish is changed to be the default branch
+given in the configuration (options.branch) via edit a release API after
+the release and tag are created via crate a release API.
+chore: add package-lock
+fix(bin): addapt build leader error to new leader detection algorithm
+feat(errors): detect non-terminating errors and use appropriate exit code
+
+depends on:
+- semantic-release/condition-travis#56
+- semantic-release/error#63
+fix(post): create git tag properly
+
+refs/heads are for branches and refs/tags for tags.
+fix(package): @semantic-release/condition-travis@6.0.0
+
+This also introduces the new build leader detecation from https://github.com/semantic-release/travis-deploy-once/releases/tag/v2.0.0
+fix(post): Create a tag before makeing a release"
+2017-09-18,12,0.0,1.0,1.0,-1.5,2.5,True,high,9.5,11,10,"[""Merge branch 'caribou' into engines-node-4"", 'fix(package): Set minimum node version to 4\n\nFix #433', 'fix(package): update @semantic-release/release-notes-generator to version 4.0.0', 'docs: fix grammatical error in README\n\nJust a small fix to make this sentence parse.', 'fix(package): update @semantic-release/commit-analyzer to version 3.0.0', 'fix(package): update @semantic-release/last-release-npm to version 2.0.0', ""Merge branch 'caribou' into patch-1"", 'chore(package): update cz-conventional-changelog to version 2.0.0\n\nhttps://greenkeeper.io/', 'fix(package): update @semantic-release/commit-analyzer to version 3.0.1', 'chore(package): update commitizen config']","['committed (#442)', 'committed (#437)', 'committed (#428)', 'committed (#435)', 'committed (#436)', 'committed (#443)', 'committed (#362)', 'committed (#341)']","[174693, 174735, 174765, 174965, 174976, 175008, 175044, 175614, 175626, 179231, 180414]","[174695, 174737, 174767, 174967, 174978, 175010, 175046, 175616, 175628, 179233, 180416]","Merge branch 'caribou' into engines-node-4
+fix(package): Set minimum node version to 4
+
+Fix #433
+fix(package): update @semantic-release/release-notes-generator to version 4.0.0
+docs: fix grammatical error in README
+
+Just a small fix to make this sentence parse.
+fix(package): update @semantic-release/commit-analyzer to version 3.0.0
+fix(package): update @semantic-release/last-release-npm to version 2.0.0
+Merge branch 'caribou' into patch-1
+chore(package): update cz-conventional-changelog to version 2.0.0
+
+https://greenkeeper.io/
+fix(package): update @semantic-release/commit-analyzer to version 3.0.1
+chore(package): update commitizen config"
+2017-09-25,27,0.0,1.75,1.75,-2.625,4.375,True,high,12.928571428571429,13,13,"['chore: More generic `.gitignore` (Windows, Mac OS, Linux)', 'chore: Remove editorconfig', 'chore(package): update coveralls to version 3.0.0', 'fix(package): update github to version 9.0.0\n\nhttps://greenkeeper.io/', 'chore: Update badges', 'refactor: Use ES6, Test with AVA\n\n- Use async/await instead of callbacks\n- Use execa to run command line\n- Use AVA for tests\n- Add several assertions in the unit tests\n- Add documentation (comments) in the tests\n- Run tests with a real git repo instead of mocking child_process and add test helpers to create repos, commits and checkout\n- Simplify test directory structure\n- Simplify code readability (mostly with async/await)\n- Use eslint for for linting, prettier for formatting', 'ci(travis): Update .travis.yml\n\n- Avoid double build on PR\n- Add git fetch depth\n- Remove cache\n- Retry npm install', 'chore: Add license file', 'chore: Remove lockfiles', 'ci(codecov): Set default branch in codecov.yml', 'ci: Use codecov for code coverage', 'chore(package): update nyc to version 11.0.1', 'chore(package): update standard to version 10.0.0\n\nhttps://greenkeeper.io/']","['committed (#451)', 'committed (#450)', 'committed (#361)', 'committed (#454)', 'committed (#391)', 'committed (#378)']","[173905, 174059, 174067, 174075, 174083, 174150, 174158, 174166, 174174, 174216, 177792, 178468, 179257]","[173907, 174061, 174069, 174077, 174085, 174152, 174160, 174168, 174176, 174218, 177794, 178470, 179259]","chore: More generic `.gitignore` (Windows, Mac OS, Linux)
+chore: Remove editorconfig
+chore(package): update coveralls to version 3.0.0
+fix(package): update github to version 9.0.0
+
+https://greenkeeper.io/
+chore: Update badges
+refactor: Use ES6, Test with AVA
+
+- Use async/await instead of callbacks
+- Use execa to run command line
+- Use AVA for tests
+- Add several assertions in the unit tests
+- Add documentation (comments) in the tests
+- Run tests with a real git repo instead of mocking child_process and add test helpers to create repos, commits and checkout
+- Simplify test directory structure
+- Simplify code readability (mostly with async/await)
+- Use eslint for for linting, prettier for formatting
+ci(travis): Update .travis.yml
+
+- Avoid double build on PR
+- Add git fetch depth
+- Remove cache
+- Retry npm install
+chore: Add license file
+chore: Remove lockfiles
+ci(codecov): Set default branch in codecov.yml
+ci: Use codecov for code coverage
+chore(package): update nyc to version 11.0.1
+chore(package): update standard to version 10.0.0
+
+https://greenkeeper.io/"
+2017-10-02,17,0.0,2.0,2.0,-3.0,5.0,True,high,6.0,7,6,"['feat: Retrieve version gitHead from git tags and unshallow the repo if necessary\n\nAdd several fixes and improvements in the identification of the last release gitHead:\n- If there is no last release, unshallow the repo in order to retrieve all existing commits\n- If git head is not present in last release, try to retrieve it from git tag with format ‘v\\<version\\>’ or ‘\\<version\\>’\n- If the last release git head cannot be determined and  found in commit history, unshallow the repo and try again\n- Throw a ENOGITHEAD error if the gitHead for the last release cannot be found in the npm metadata nor in the git tags, preventing to make release based on the all the commits in the repo as before\n- Add integration test for the scenario with a packed repo from which `npm republish` fails to read the git head\n\nFix #447, Fix #393, Fix #280, Fix #276', 'fix: handle missing gitHead issue\n\nresort to using git tag from last version\n\nre https://github.com/semantic-release/semantic-release/issues/280 (Warn user about nonexistent gitHead returned by npm-registry-client)', 'fix: Always pass pluginConfig to plugins as a defined object', ""fix: pre-write gitHead to package.json\n\ngitHead property is some undocumented thing, not a part of NPM contract (see e.g. https://github.com/npm/npm/issues/3363) and they mostly write it on publish but sometimes not. Let's pre-write it ourselves instead because we rely on it indeed.\n\nfixes https://github.com/semantic-release/semantic-release/issues/280 (Warn user about nonexistent gitHead returned by npm-registry-client)"", 'fix: Exit with 1 if unexpected error happens', 'feat: support custom (additional) tag in GitHub release']","['committed (#453)', 'committed (#393)', 'committed (#461)', 'committed (#462)', 'committed (#447)', 'committed (#431)']","[173203, 173253, 173955, 174420, 175363, 177626, 177634]","[173205, 173255, 173957, 174422, 175365, 177628, 177636]","feat: Retrieve version gitHead from git tags and unshallow the repo if necessary
+
+Add several fixes and improvements in the identification of the last release gitHead:
+- If there is no last release, unshallow the repo in order to retrieve all existing commits
+- If git head is not present in last release, try to retrieve it from git tag with format ‘v\<version\>’ or ‘\<version\>’
+- If the last release git head cannot be determined and  found in commit history, unshallow the repo and try again
+- Throw a ENOGITHEAD error if the gitHead for the last release cannot be found in the npm metadata nor in the git tags, preventing to make release based on the all the commits in the repo as before
+- Add integration test for the scenario with a packed repo from which `npm republish` fails to read the git head
+
+Fix #447, Fix #393, Fix #280, Fix #276
+fix: handle missing gitHead issue
+
+resort to using git tag from last version
+
+re https://github.com/semantic-release/semantic-release/issues/280 (Warn user about nonexistent gitHead returned by npm-registry-client)
+fix: Always pass pluginConfig to plugins as a defined object
+fix: pre-write gitHead to package.json
+
+gitHead property is some undocumented thing, not a part of NPM contract (see e.g. https://github.com/npm/npm/issues/3363) and they mostly write it on publish but sometimes not. Let's pre-write it ourselves instead because we rely on it indeed.
+
+fixes https://github.com/semantic-release/semantic-release/issues/280 (Warn user about nonexistent gitHead returned by npm-registry-client)
+fix: Exit with 1 if unexpected error happens
+feat: support custom (additional) tag in GitHub release"
+2017-10-09,7,0.0,2.0,2.0,-3.0,5.0,True,high,1.0,3,3,"[""Merge branch 'caribou' into feature/include-remote-when-checking-for-which-branch-contains-commit"", ""feat: Allow to recover from ENOTINHISTORY with a tag and handle detached head repo\n\n- Tag sha will now be used also if there is a gitHead in last release and it's not in the history\n- Use `git merge-base` to determine if a commit is in history, allowing to use CI creating detached head repo\n- Mention recovery solution by creating a version tag in `ENOTINHISTORY` and `ENOGITHEAD` error messages\n- Do not mention branches containing missing commit in `ENOTINHISTORY` and `ENOGITHEAD` error messages as it's not available by default on most CI"", 'feat(commits): check remote branches to contain the current releases commit\n\nDepending on how the git repository got initialized on a CI system there\nmight occur issues when not\nchecking remote branches for the `from` commit.\n\nFor example Bitrise initializes it\'s git repositories as follows:\n```\ngit ""init""\ngit ""remote"" ""add"" ""origin""\n""git@github.com:zetaron/condition-bitrise.git""\ngit ""fetch""\ngit ""checkout"" ""52ab116ffe04c0f03e24e566b861cc1bde70024b""\ngit ""submodule"" ""update"" ""--init"" ""--recursive""\n```\n\nThis results in semantic-release being unable to detect which branch\ncontains the \'52ab116ffe04c0f03e24e566b861cc1bde70024b\' commit, as git\nis in a detatched HEAD mode.\nThere will be no release as semantic-release breaks with a message just\nlike the following:\n```\n$ semantic-release pre && npm publish && semantic-release post\nsemantic-release ERR! commits The commit the last release of this\npackage was derived from is not in the direct history of the ""master""\nbranch.\nsemantic-release ERR! commits This means semantic-release can not\nextract the commits between now and then.\nsemantic-release ERR! commits This is usually caused by force pushing,\nreleasing from an unrelated branch, or using an already existing package\nname.\nsemantic-release ERR! commits You can recover from this error by\npublishing manually or restoring the commit\n""52ab116ffe04c0f03e24e566b861cc1bde70024b"".\nsemantic-release ERR! commits Here is a list of branches that still\ncontain the commit in question:\nsemantic-release ERR! commits  * * (HEAD detached at 52ab116)\nsemantic-release ERR! pre Failed to determine new version.\nsemantic-release ERR! pre ENOTINHISTORY Commit not in history\nerror Command failed with exit code 1.\n```\n\nThis commit introduces a small change to the comamnd used to detect the\ncommits branch, by addint the `--remote` option and normalizing remote\nbranch names to be matchable against the `options.branch` (eg. master)']","['committed (#408)', 'committed (#458)']","[173385, 176984, 177033]","[173387, 176986, 177035]","Merge branch 'caribou' into feature/include-remote-when-checking-for-which-branch-contains-commit
+feat: Allow to recover from ENOTINHISTORY with a tag and handle detached head repo
+
+- Tag sha will now be used also if there is a gitHead in last release and it's not in the history
+- Use `git merge-base` to determine if a commit is in history, allowing to use CI creating detached head repo
+- Mention recovery solution by creating a version tag in `ENOTINHISTORY` and `ENOGITHEAD` error messages
+- Do not mention branches containing missing commit in `ENOTINHISTORY` and `ENOGITHEAD` error messages as it's not available by default on most CI
+feat(commits): check remote branches to contain the current releases commit
+
+Depending on how the git repository got initialized on a CI system there
+might occur issues when not
+checking remote branches for the `from` commit.
+
+For example Bitrise initializes it's git repositories as follows:
+```
+git ""init""
+git ""remote"" ""add"" ""origin""
+""git@github.com:zetaron/condition-bitrise.git""
+git ""fetch""
+git ""checkout"" ""52ab116ffe04c0f03e24e566b861cc1bde70024b""
+git ""submodule"" ""update"" ""--init"" ""--recursive""
+```
+
+This results in semantic-release being unable to detect which branch
+contains the '52ab116ffe04c0f03e24e566b861cc1bde70024b' commit, as git
+is in a detatched HEAD mode.
+There will be no release as semantic-release breaks with a message just
+like the following:
+```
+$ semantic-release pre && npm publish && semantic-release post
+semantic-release ERR! commits The commit the last release of this
+package was derived from is not in the direct history of the ""master""
+branch.
+semantic-release ERR! commits This means semantic-release can not
+extract the commits between now and then.
+semantic-release ERR! commits This is usually caused by force pushing,
+releasing from an unrelated branch, or using an already existing package
+name.
+semantic-release ERR! commits You can recover from this error by
+publishing manually or restoring the commit
+""52ab116ffe04c0f03e24e566b861cc1bde70024b"".
+semantic-release ERR! commits Here is a list of branches that still
+contain the commit in question:
+semantic-release ERR! commits  * * (HEAD detached at 52ab116)
+semantic-release ERR! pre Failed to determine new version.
+semantic-release ERR! pre ENOTINHISTORY Commit not in history
+error Command failed with exit code 1.
+```
+
+This commit introduces a small change to the comamnd used to detect the
+commits branch, by addint the `--remote` option and normalizing remote
+branch names to be matchable against the `options.branch` (eg. master)"
+2017-10-23,28,0.0,2.0,2.0,-3.0,5.0,True,high,11.5,16,16,"['fix(package): update github to version 12.0.0', 'chore(package): update ava to version 0.23.0', 'fix(package): update @semantic-release/release-notes-generator to version 5.0.0', 'chore(package): update codecov to version 3.0.0', 'fix: Log error messages on reject', 'fix(api): adding an optional call back', 'feat(api): allow running semantic release from node\n\nMoving the main semantic release function to a seprate module to allow requiring and calling it from\na node script. In addition, added support for passing the run configuration programmatically.', ""feat: Refactor CLI to run with one command, improve logs, modularize, add tests\n\n- Run with one command and do not rely on error exit codes to stop the process when a release is not necessary\n- Break `index.js` in smaller modules in order to improve testability and simplify the code\n- Add several missing unit and integration tests to reach 100% coverage\n- Integration tests now test end to end, including publishing to Github (with http://www.mock-server.com on Docker)\n- Use `tj/commander.js` to print an help message, verify and parse CLI arguments\n- Semantic-release can now be called via Javascript API: `require('semantic-release')(options)`\n- Remove npmlog dependency and add more log messages\n- Logger is now passed to plugins\n- Add debug logs with `visionmedia/debug`. `debug` is enabled for both semantic-release and plugins with `--debug`\n- Use `kevva/npm-conf` in place of the deprecated `npm/npmconf`\n- Pass lastRelease, nextRelease and commits to generate-notes plugin\n- In dry-run mode, print the release note instead of publishing it to Github as draft, and skip the CI verifications\n- The dry-run mode does not require npm and Github TOKEN to be set anymore and can be run locally\n\nBREAKING CHANGE: Semantic-Release must now be executed with `semantic-release` instead of `semantic-release pre && npm publish && semantic-release post`.\nBREAKING CHANGE: The `semantic-release` command now returns with exit code 0 on expected exception (no release has to be done, running on a PR, gitHead not found, other CI job failed etc...). It only returns with 1 when there is an unexpected error (code error in a plugin, plugin not found, git command cannot be run etc..).\nBREAKING CHANGE: Calling the `semantic-release` command with unexpected argument(s) now exit with 1 and print an help message.\nBREAKING CHANGE: Semantic-Release does not rely on `npmlog` anymore and the log level cannot be configured. Debug logs can be activated with CLI option `--debug` or with environment variable `DEBUG=semantic-release:*`\nBREAKING CHANGE: The CLI options `--debug` doesn't enable the dry-run mode anymore but activate the debugs. The dry run mode is now set with the CLI command `--dry-run` or `-d`."", 'fix: Include Error properties in logs', ""fix: Remove loglevel notice error\n\n`notice` was added as a loglevl in 4.1.0 (See https://github.com/npm/npmlog/commit/77b3b95c3474afdc164eae9caa80749452d42300). Here, I up the `npmlog` version to stop an error I've been getting. Should close #430, but I don't know how to test that."", 'chore(CODE_OF_CONDUCT): Contributor Covenant', 'fix(ci): fix ci after master rebase', 'fix: Check SemanticReleaseError by error.semanticRelease property', ""Merge branch 'caribou' into greenkeeper/codecov-3.0.0"", 'test: Fix typos: only in tests and useless console.log()', 'chore(gitignore): adding intellij project files to gitignore']","['committed (#481)', 'committed (#479)', 'committed (#489)', 'committed (#478)', 'committed (#475)', 'committed (#210)', 'committed (#480)', 'committed (#491)', 'committed (#432)', 'committed (#483)']","[171027, 171035, 171043, 171158, 171721, 171883, 171987, 172169, 172201, 172212, 172329, 175276, 188855, 188864, 188872, 188883]","[171029, 171037, 171045, 171160, 171723, 171885, 171989, 172171, 172203, 172214, 172331, 175278, 188857, 188866, 188874, 188885]","fix(package): update github to version 12.0.0
+chore(package): update ava to version 0.23.0
+fix(package): update @semantic-release/release-notes-generator to version 5.0.0
+chore(package): update codecov to version 3.0.0
+fix: Log error messages on reject
+fix(api): adding an optional call back
+feat(api): allow running semantic release from node
+
+Moving the main semantic release function to a seprate module to allow requiring and calling it from
+a node script. In addition, added support for passing the run configuration programmatically.
+feat: Refactor CLI to run with one command, improve logs, modularize, add tests
+
+- Run with one command and do not rely on error exit codes to stop the process when a release is not necessary
+- Break `index.js` in smaller modules in order to improve testability and simplify the code
+- Add several missing unit and integration tests to reach 100% coverage
+- Integration tests now test end to end, including publishing to Github (with http://www.mock-server.com on Docker)
+- Use `tj/commander.js` to print an help message, verify and parse CLI arguments
+- Semantic-release can now be called via Javascript API: `require('semantic-release')(options)`
+- Remove npmlog dependency and add more log messages
+- Logger is now passed to plugins
+- Add debug logs with `visionmedia/debug`. `debug` is enabled for both semantic-release and plugins with `--debug`
+- Use `kevva/npm-conf` in place of the deprecated `npm/npmconf`
+- Pass lastRelease, nextRelease and commits to generate-notes plugin
+- In dry-run mode, print the release note instead of publishing it to Github as draft, and skip the CI verifications
+- The dry-run mode does not require npm and Github TOKEN to be set anymore and can be run locally
+
+BREAKING CHANGE: Semantic-Release must now be executed with `semantic-release` instead of `semantic-release pre && npm publish && semantic-release post`.
+BREAKING CHANGE: The `semantic-release` command now returns with exit code 0 on expected exception (no release has to be done, running on a PR, gitHead not found, other CI job failed etc...). It only returns with 1 when there is an unexpected error (code error in a plugin, plugin not found, git command cannot be run etc..).
+BREAKING CHANGE: Calling the `semantic-release` command with unexpected argument(s) now exit with 1 and print an help message.
+BREAKING CHANGE: Semantic-Release does not rely on `npmlog` anymore and the log level cannot be configured. Debug logs can be activated with CLI option `--debug` or with environment variable `DEBUG=semantic-release:*`
+BREAKING CHANGE: The CLI options `--debug` doesn't enable the dry-run mode anymore but activate the debugs. The dry run mode is now set with the CLI command `--dry-run` or `-d`.
+fix: Include Error properties in logs
+fix: Remove loglevel notice error
+
+`notice` was added as a loglevl in 4.1.0 (See https://github.com/npm/npmlog/commit/77b3b95c3474afdc164eae9caa80749452d42300). Here, I up the `npmlog` version to stop an error I've been getting. Should close #430, but I don't know how to test that.
+chore(CODE_OF_CONDUCT): Contributor Covenant
+fix(ci): fix ci after master rebase
+fix: Check SemanticReleaseError by error.semanticRelease property
+Merge branch 'caribou' into greenkeeper/codecov-3.0.0
+test: Fix typos: only in tests and useless console.log()
+chore(gitignore): adding intellij project files to gitignore"
+2017-10-30,10,0.0,2.0,2.0,-3.0,5.0,True,high,2.5,3,3,"['feat: Additional commit information\n\nAdd `author`, `commiter`, `gitTags` and `committerDate` to the commit object passed to plugin', 'docs: Add FAQ section for using with yarn', 'fix(package): update @semantic-release/commit-analyzer to version 4.0.0']","['committed (#494)', 'committed (#490)', 'committed (#493)']","[170775, 170823, 171091]","[170777, 170825, 171093]","feat: Additional commit information
+
+Add `author`, `commiter`, `gitTags` and `committerDate` to the commit object passed to plugin
+docs: Add FAQ section for using with yarn
+fix(package): update @semantic-release/commit-analyzer to version 4.0.0"
+2017-11-20,30,0.0,5.5,5.5,-8.25,13.75,True,high,2.9545454545454546,17,17,"['refactor: Simplify file tree', 'fix: Import plugin when running globally', 'test: Ignore the ~/.npmrc file during tests\n\nWhen the test are run npm read the ~/.npmrc and ./.npmrc files and set some environment variables starting with `npm_`.\nWhen the test create temporary folders and created a `.npmrc` the values there are ignored as the environment variables take precedence.\nThis commit remove this environment variable (from the local `process.env`) before starting the integrations test and restore them after. This way the `./.npmrc` files created in temp directory for the test are correctly used.', 'fix: README typo', 'chore(package): update dependencies', ""Merge branch 'caribou' into gr2m-patch-1"", 'feat: Make semantic-release language agnostic\n\n- Do not rely on `package.json` anymore\n- Use `cosmiconfig` to load the configation. `semantic-release` can be configured:\n  - via CLI options (including plugin names but not plugin options)\n  - in the `release` property of `package.json` (as before)\n  - in a `.releaserc.yml` or `.releaserc.js` or `.releaserc.js` or `release.config.js` file\n  - in a `.releaserc` file containing `json`, `yaml` or `javascript` module\n- Add the `repositoryUrl` options (used across `semantic-release` and plugins). The value is determined from CLi option, or option configuration, or package.json or the git remote url\n- Verifies that `semantic-release` runs from a git repository\n- `pkg` and `env` are not passed to plugin anymore\n- `semantic-release` can be run both locally and globally. If ran globally with non default plugins, the plugins can be installed both globally or locally.\n\nBREAKING CHANGE: `pkg` and `env` are not passed to plugin anymore.\nPlugins relying on a `package.json` must verify the presence of a valid `package.json` and load it.\nPlugins can use `process.env` instead of `env`.', 'docs(README): fix plugin anchor links', 'feat: Expect plugins to return Promises\n\nBREAKING CHANGE: Each plugin is expected to return an async function or a Promise returning function. The callback parameter is not passed to plugins anymore.', 'ci: Run npm registry in Docker', 'ci: Lint with XO', 'Update README.md', 'feat(plugins): Make config verification a plugin', 'fix(package): update @semantic-release/commit-analyzer to version 5.0.0', ""feat: Extract npm and github publish to plugins\n\n- Add a new plugin type: `publish`\n- Add support for multi-plugin. A plugin module can now return an object with a property for each plugin type\n- Uses by default [npm](https://github.com/semantic-release/npm) and [github](https://github.com/semantic-release/github) in addition of Travis for the verify condition plugin\n- Uses by default [npm](https://github.com/semantic-release/npm) and [github](https://github.com/semantic-release/github) for the publish plugin\n- `gitTag` if one can be found is passed to `generateNotes` for both `lastRelease` and `nextRelease`\n- `semantic-release` now verifies the plugin configuration (in the `release` property of `package.json`) and throws an error if it's invalid\n- `semantic-release` now verifies each plugin output and will throw an error if a plugin returns an unexpected value.\n\nBREAKING CHANGE: `githubToken`, `githubUrl` and `githubApiPathPrefix` have to be set at the [github](https://github.com/semantic-release/github) plugin level. They can be set via `GH_TOKEN`, `GH_URL` and `GH_PREFIX` environment variables.\n\nBREAKING CHANGE: the `npm` parameter is not passed to any plugin anymore. Each plugin have to read `.npmrc` if they needs to (with https://github.com/kevva/npm-conf for example)."", 'feat: add create-npmrc option', 'fix(package): update @semantic-release/condition-travis to version 7.0.0']","['committed (#515)', 'committed (#463)', 'committed (#530)', 'committed (#516)', 'committed (#517)', 'committed (#504)', 'committed (#524)', 'committed (#519)', 'committed (#173)', 'committed (#526)', 'committed (#368)', 'committed (#525)']","[168819, 168842, 168868, 168897, 168923, 168980, 169107, 169178, 169212, 169292, 169326, 169956, 169967, 169979, 173153, 178806, 190740]","[168821, 168844, 168870, 168899, 168925, 168982, 169109, 169180, 169214, 169294, 169328, 169958, 169969, 169981, 173155, 178808, 190742]","refactor: Simplify file tree
+fix: Import plugin when running globally
+test: Ignore the ~/.npmrc file during tests
+
+When the test are run npm read the ~/.npmrc and ./.npmrc files and set some environment variables starting with `npm_`.
+When the test create temporary folders and created a `.npmrc` the values there are ignored as the environment variables take precedence.
+This commit remove this environment variable (from the local `process.env`) before starting the integrations test and restore them after. This way the `./.npmrc` files created in temp directory for the test are correctly used.
+fix: README typo
+chore(package): update dependencies
+Merge branch 'caribou' into gr2m-patch-1
+feat: Make semantic-release language agnostic
+
+- Do not rely on `package.json` anymore
+- Use `cosmiconfig` to load the configation. `semantic-release` can be configured:
+  - via CLI options (including plugin names but not plugin options)
+  - in the `release` property of `package.json` (as before)
+  - in a `.releaserc.yml` or `.releaserc.js` or `.releaserc.js` or `release.config.js` file
+  - in a `.releaserc` file containing `json`, `yaml` or `javascript` module
+- Add the `repositoryUrl` options (used across `semantic-release` and plugins). The value is determined from CLi option, or option configuration, or package.json or the git remote url
+- Verifies that `semantic-release` runs from a git repository
+- `pkg` and `env` are not passed to plugin anymore
+- `semantic-release` can be run both locally and globally. If ran globally with non default plugins, the plugins can be installed both globally or locally.
+
+BREAKING CHANGE: `pkg` and `env` are not passed to plugin anymore.
+Plugins relying on a `package.json` must verify the presence of a valid `package.json` and load it.
+Plugins can use `process.env` instead of `env`.
+docs(README): fix plugin anchor links
+feat: Expect plugins to return Promises
+
+BREAKING CHANGE: Each plugin is expected to return an async function or a Promise returning function. The callback parameter is not passed to plugins anymore.
+ci: Run npm registry in Docker
+ci: Lint with XO
+Update README.md
+feat(plugins): Make config verification a plugin
+fix(package): update @semantic-release/commit-analyzer to version 5.0.0
+feat: Extract npm and github publish to plugins
+
+- Add a new plugin type: `publish`
+- Add support for multi-plugin. A plugin module can now return an object with a property for each plugin type
+- Uses by default [npm](https://github.com/semantic-release/npm) and [github](https://github.com/semantic-release/github) in addition of Travis for the verify condition plugin
+- Uses by default [npm](https://github.com/semantic-release/npm) and [github](https://github.com/semantic-release/github) for the publish plugin
+- `gitTag` if one can be found is passed to `generateNotes` for both `lastRelease` and `nextRelease`
+- `semantic-release` now verifies the plugin configuration (in the `release` property of `package.json`) and throws an error if it's invalid
+- `semantic-release` now verifies each plugin output and will throw an error if a plugin returns an unexpected value.
+
+BREAKING CHANGE: `githubToken`, `githubUrl` and `githubApiPathPrefix` have to be set at the [github](https://github.com/semantic-release/github) plugin level. They can be set via `GH_TOKEN`, `GH_URL` and `GH_PREFIX` environment variables.
+
+BREAKING CHANGE: the `npm` parameter is not passed to any plugin anymore. Each plugin have to read `.npmrc` if they needs to (with https://github.com/kevva/npm-conf for example).
+feat: add create-npmrc option
+fix(package): update @semantic-release/condition-travis to version 7.0.0"
+2017-12-11,29,0.25,10.0,9.75,-14.375,24.625,True,high,0.44871794871794873,10,10,"['test: add a delay after starting the npm registry\n\nAttempt at improving test reliability on CI', ""docs: Update readme for 0.x.x\n\nAdd to Q&A section on how to configure `semantic-release` for 0.x.x development.\r\n\r\nI couldn't find this information until I'm almost ready to publish a `commit-analyzer-zero` for this purpose."", 'feat(gitlab): provide support for gitlab based repositories. To enable the support the github based verification checks are refactord into own verificationConditions plugin. Also the plugin mechanism is modified a little so that all plugins can be called with Array notation.\n\nThe configuration for gitlab scenarios is as follows:\npackage.json\n{\n ""release"": {\n    ""debug"": false,\n    ""verifyConditions"": ""semantic-release/dist/lib/plugin-noop""\n  },\n  scripts: {\n    ""semantic-release"": ""semantic-release pre && npm publish""\n  }\n}', 'chore(package): update @semantic-release/github to version 2.2.3', 'test: limit information stored in context\n\nStore only objects set in `beforeEach` used in `test`.\nAvoid logging useless info on test failure.', 'chore(package): update fs-extra to version 5.0.0', ""Merge branch 'caribou' into gitlab-support"", 'fix(gitlab): improved test coverage and adapted code style according js-standard', 'chore(package): update prettier to version 1.9.2', 'Update README.md\n\nAdd missing colon']","['committed (#561)', 'committed (#532)', 'committed (#77)', 'committed (#568)', 'committed (#555)', 'committed (#557)']","[166024, 166996, 167004, 167239, 167290, 168514, 168522, 194683, 194716, 194725]","[166026, 166998, 167006, 167241, 167292, 168516, 168524, 194685, 194718, 194727]","test: add a delay after starting the npm registry
+
+Attempt at improving test reliability on CI
+docs: Update readme for 0.x.x
+
+Add to Q&A section on how to configure `semantic-release` for 0.x.x development.
+
+I couldn't find this information until I'm almost ready to publish a `commit-analyzer-zero` for this purpose.
+feat(gitlab): provide support for gitlab based repositories. To enable the support the github based verification checks are refactord into own verificationConditions plugin. Also the plugin mechanism is modified a little so that all plugins can be called with Array notation.
+
+The configuration for gitlab scenarios is as follows:
+package.json
+{
+ ""release"": {
+    ""debug"": false,
+    ""verifyConditions"": ""semantic-release/dist/lib/plugin-noop""
+  },
+  scripts: {
+    ""semantic-release"": ""semantic-release pre && npm publish""
+  }
+}
+chore(package): update @semantic-release/github to version 2.2.3
+test: limit information stored in context
+
+Store only objects set in `beforeEach` used in `test`.
+Avoid logging useless info on test failure.
+chore(package): update fs-extra to version 5.0.0
+Merge branch 'caribou' into gitlab-support
+fix(gitlab): improved test coverage and adapted code style according js-standard
+chore(package): update prettier to version 1.9.2
+Update README.md
+
+Add missing colon"
+2018-11-26,20,5.0,9.75,4.75,-2.125,16.875,True,high,0.6578947368421053,19,16,"[""Merge branch 'master' into fix-push-function"", ""Merge branch 'master' into patch-1"", 'docs: add `@semantic-release/apm` to plugins list', 'Update section about maven-semantic-release', 'fix: correctly resolve plugins installed globally with `npx`\n\nThis bug affects only plugins defined with the `plugins` option and wrapped in an Array to add a configuration', 'docs: add maven-semantic-release to list of community plugins', 'chore(package): fix(package): update nyc and sinon', 'fix: remove unnecessary `branch` parameter from `push` function', 'fix: fetch all release branches on CI', 'docs: syntax fixes in plugins list', 'test: delete unused test helper file', 'fix: rename default branch', 'feat: support multiple branches and distribution channels\n\n- Allow to configure multiple branches to release from\n- Allow to define a distribution channel associated with each branch\n- Manage the availability on distribution channels based on git merges\n- Support regular releases, maintenance releases and pre-releases\n- Add the `addChannel` plugin step to make an existing release available on a different distribution channel\n\nBREAKING CHANGE: the `branch` option has been removed in favor of `branches`\n\nThe new `branches` option expect either an Array or a single branch definition. To migrate your configuration:\n- If you want to publish package from multiple branches, please the configuration documentation\n- If you use the default configuration and want to publish only from `master`: nothing to change\n- If you use the `branch` configuration and want to publish only from one branch: replace `branch` by `branches` (`""branch"": ""my-release-branch""` => `""branches"": ""my-release-branch""`)', 'docs(configuration.md): tweak grammar [ci skip]\n\njust a few tweaks to reduce distraction', 'Add maven-semantic-release to list of community plugins\n\nThis change adds [maven-semantic-release](https://github.com/conveyal/maven-semantic-release) to the list of community plugins.', ""feat(package): update @semantic-release/commit-analyzer to version 7.0.0\n\nBREAKING CHANGE: Regexp are not supported anymore for property matching in the `releaseRules` option.\n\nRegex are replaced by [globs](https://github.com/micromatch/micromatch#matching-features). For example `/core-.*/` should be changed to `'core-*'`.""]","['committed (#1007)', 'committed (#997)', 'committed (#1013)', 'committed (#1000)', 'committed (#1012)', 'committed (#1011)', 'committed (#1006)', 'committed (#1010)', 'committed (#1004)', 'committed (#1009)', 'committed (#991)', 'committed (#1002)', 'committed (#1008)']","[142515, 142523, 142578, 142638, 142676, 142728, 142783, 142812, 142833, 142881, 142951, 143059, 143117, 143290, 143324, 143332, 143347, 143915, 143926]","[142517, 142525, 142580, 142640, 142678, 142730, 142785, 142814, 142835, 142883, 142953, 143061, 143119, 143292, 143326, 143334, 143349, 143917, 143928]","Merge branch 'master' into fix-push-function
+Merge branch 'master' into patch-1
+docs: add `@semantic-release/apm` to plugins list
+Update section about maven-semantic-release
+fix: correctly resolve plugins installed globally with `npx`
+
+This bug affects only plugins defined with the `plugins` option and wrapped in an Array to add a configuration
+docs: add maven-semantic-release to list of community plugins
+chore(package): fix(package): update nyc and sinon
+fix: remove unnecessary `branch` parameter from `push` function
+fix: fetch all release branches on CI
+docs: syntax fixes in plugins list
+test: delete unused test helper file
+fix: rename default branch
+feat: support multiple branches and distribution channels
+
+- Allow to configure multiple branches to release from
+- Allow to define a distribution channel associated with each branch
+- Manage the availability on distribution channels based on git merges
+- Support regular releases, maintenance releases and pre-releases
+- Add the `addChannel` plugin step to make an existing release available on a different distribution channel
+
+BREAKING CHANGE: the `branch` option has been removed in favor of `branches`
+
+The new `branches` option expect either an Array or a single branch definition. To migrate your configuration:
+- If you want to publish package from multiple branches, please the configuration documentation
+- If you use the default configuration and want to publish only from `master`: nothing to change
+- If you use the `branch` configuration and want to publish only from one branch: replace `branch` by `branches` (`""branch"": ""my-release-branch""` => `""branches"": ""my-release-branch""`)
+docs(configuration.md): tweak grammar [ci skip]
+
+just a few tweaks to reduce distraction
+Add maven-semantic-release to list of community plugins
+
+This change adds [maven-semantic-release](https://github.com/conveyal/maven-semantic-release) to the list of community plugins.
+feat(package): update @semantic-release/commit-analyzer to version 7.0.0
+
+BREAKING CHANGE: Regexp are not supported anymore for property matching in the `releaseRules` option.
+
+Regex are replaced by [globs](https://github.com/micromatch/micromatch#matching-features). For example `/core-.*/` should be changed to `'core-*'`."
+2018-12-10,18,5.0,9.0,4.0,-1.0,15.0,True,high,0.75,25,22,"['refactor: remove unnecessary `default` of `addChannel` plugin', 'fix: fix branch type regexp to handle version with multiple digits', 'docs: new `branches` option in JS API example', 'fix: correctly handle skipped releases', 'chore(package): update nyc and sinon', 'test: delete unused test helper file', 'docs: mention that `debug` option is CLI only', 'build: fix Travis maintenance branch regexp', 'docs: add `@semantic-release/apm` to plugins list', 'docs(workflow-configuration): typo', 'docs: syntax fixes in plugins list', 'docs: switch to spectrum.chat', 'fix: allow to set `ci` option via API and config file', 'fix(package): update `@semantic-release/github`', 'fix(package): update `@semantic-release/npm` and `@semantic-release/github`', 'docs: remove mentions of `travis-deploy-once`', ""Merge branch 'beta' into skipped-releases"", 'feat: allow `publish` plugins to return `false` in order to signify no release was done', 'docs: add maven-semantic-release to list of community plugins', 'feat: allow `addChannel` plugins to return `false` in order to signify no release was done', 'chore(package): update p-retry to version 3.0.0', 'docs: fix broken link in CircleCI recipe']","['committed (#1030)', 'committed (#1027)', 'committed (#1022)', 'committed (#1036)', 'committed (#1023)', 'committed (#1033)', 'committed (#1026)', 'committed (#1032)', 'committed (#1031)', 'committed (#1028)', 'committed (#1029)', 'committed (#1037)', 'committed (#1025)', 'committed (#1021)']","[141225, 141296, 141307, 141445, 141497, 141549, 141601, 141609, 141664, 141719, 141727, 141788, 141843, 141892, 141974, 141982, 141990, 141998, 142006, 142014, 142022, 142030, 142079, 142131, 142139]","[141227, 141298, 141309, 141447, 141499, 141551, 141603, 141611, 141666, 141721, 141729, 141790, 141845, 141894, 141976, 141984, 141992, 142000, 142008, 142016, 142024, 142032, 142081, 142133, 142141]","refactor: remove unnecessary `default` of `addChannel` plugin
+fix: fix branch type regexp to handle version with multiple digits
+docs: new `branches` option in JS API example
+fix: correctly handle skipped releases
+chore(package): update nyc and sinon
+test: delete unused test helper file
+docs: mention that `debug` option is CLI only
+build: fix Travis maintenance branch regexp
+docs: add `@semantic-release/apm` to plugins list
+docs(workflow-configuration): typo
+docs: syntax fixes in plugins list
+docs: switch to spectrum.chat
+fix: allow to set `ci` option via API and config file
+fix(package): update `@semantic-release/github`
+fix(package): update `@semantic-release/npm` and `@semantic-release/github`
+docs: remove mentions of `travis-deploy-once`
+Merge branch 'beta' into skipped-releases
+feat: allow `publish` plugins to return `false` in order to signify no release was done
+docs: add maven-semantic-release to list of community plugins
+feat: allow `addChannel` plugins to return `false` in order to signify no release was done
+chore(package): update p-retry to version 3.0.0
+docs: fix broken link in CircleCI recipe"
+2021-01-18,23,2.0,5.0,3.0,-2.5,9.5,True,high,4.5,32,31,"['Update .github/workflows/test.yml', 'fix: pin initial branch to master', 'WIP ignore GitHub Action related environment variables, and fix ""Use the repository URL as is if none of the given git credentials are valid"" which should never have passed before but well here we are', 'fix(deps): update to yargs 16.2.0\n\nfixes vulnerability in y18n which is a dependency of yargs version 15:\nhttps://nvd.nist.gov/vuln/detail/CVE-2020-7774\n\nSigned-off-by: Roland Weiss <roland.weiss@mobi.ch>', 'ci: replace travis with actions, setup renovate', 'chore(deps): update dependency nock to v13', 'test(integration): do not mock environment variables with `null`\n\nThat results in the value `""null""` instead of undefined', 'fix(deps): update dependency cosmiconfig to v7', 'WIP trying to mock unset environment variables by setting them to empty strings', 'chore(deps): update dependency got to v11.8.1', 'fix(deps): update to yargs 16.2.0\n\nfixes vulnerability in y18n which is a dependency of yargs version 15:\nhttps://nvd.nist.gov/vuln/detail/CVE-2020-7774', 'WIP oops actually use `processEnv`', 'chore(deps): update dependency tempy to v1', 'fix(deps): update dependency get-stream to v6', 'chore(deps): update dependency fs-extra to v9.1.0', 'WIP I hear angels singing', 'chore(deps): pin dependencies', 'docs: clarify renovate/** branches\n\nSigned-off-by: Josh Soref <jsoref@users.noreply.github.com>', 'chore(deps): update actions/setup-node action to v2', 'style: xo', 'Add renovate.json', 'WIP reverting to simulating Travis CI test environment and setting GITHUB_API_URL', 'chore(deps): update dependency p-retry to v4.3.0', 'chore(deps): update dependency sinon to v9.2.3', 'ci: replace Travis environment variables with GitHub Action variables', 'fix(deps): update dependency execa to v5', 'chore(deps): update dependency ava to v3.15.0', 'WIP run integration tests sequentially', 'chore(deps): update dependency sinon to v9.2.4', 'build(package): lock file', 'WIP we might not need serial testing after all']","['committed (#1757)', 'committed (#1740)', 'committed (#1699)', 'committed (#1739)', 'committed (#1754)', 'committed (#1742)', 'committed (#1749)', 'committed (#1755)', 'committed (#1748)', 'committed (#1747)', 'committed (#1744)', 'committed (#1741)', 'committed (#1664)', 'committed (#1759)', 'committed (#1750)', 'committed (#1745)', 'committed (#1746)', 'committed (#1760)']","[105188, 105232, 105296, 105316, 105389, 105428, 106436, 106475, 106535, 106908, 106955, 106998, 107050, 107101, 107153, 107193, 107239, 107248, 107256, 108612, 108620, 108628, 108643, 108651, 108663, 108683, 108695, 108703, 108719, 108727, 108735, 110186]","[105190, 105234, 105298, 105318, 105391, 105430, 106438, 106477, 106537, 106910, 106957, 107000, 107052, 107103, 107155, 107195, 107241, 107250, 107258, 108614, 108622, 108630, 108645, 108653, 108665, 108685, 108697, 108705, 108721, 108729, 108737, 110188]","Update .github/workflows/test.yml
+fix: pin initial branch to master
+WIP ignore GitHub Action related environment variables, and fix ""Use the repository URL as is if none of the given git credentials are valid"" which should never have passed before but well here we are
+fix(deps): update to yargs 16.2.0
+
+fixes vulnerability in y18n which is a dependency of yargs version 15:
+https://nvd.nist.gov/vuln/detail/CVE-2020-7774
+
+Signed-off-by: Roland Weiss <roland.weiss@mobi.ch>
+ci: replace travis with actions, setup renovate
+chore(deps): update dependency nock to v13
+test(integration): do not mock environment variables with `null`
+
+That results in the value `""null""` instead of undefined
+fix(deps): update dependency cosmiconfig to v7
+WIP trying to mock unset environment variables by setting them to empty strings
+chore(deps): update dependency got to v11.8.1
+fix(deps): update to yargs 16.2.0
+
+fixes vulnerability in y18n which is a dependency of yargs version 15:
+https://nvd.nist.gov/vuln/detail/CVE-2020-7774
+WIP oops actually use `processEnv`
+chore(deps): update dependency tempy to v1
+fix(deps): update dependency get-stream to v6
+chore(deps): update dependency fs-extra to v9.1.0
+WIP I hear angels singing
+chore(deps): pin dependencies
+docs: clarify renovate/** branches
+
+Signed-off-by: Josh Soref <jsoref@users.noreply.github.com>
+chore(deps): update actions/setup-node action to v2
+style: xo
+Add renovate.json
+WIP reverting to simulating Travis CI test environment and setting GITHUB_API_URL
+chore(deps): update dependency p-retry to v4.3.0
+chore(deps): update dependency sinon to v9.2.3
+ci: replace Travis environment variables with GitHub Action variables
+fix(deps): update dependency execa to v5
+chore(deps): update dependency ava to v3.15.0
+WIP run integration tests sequentially
+chore(deps): update dependency sinon to v9.2.4
+build(package): lock file
+WIP we might not need serial testing after all"
+2021-02-08,10,2.0,5.0,3.0,-2.5,9.5,True,high,0.16666666666666666,6,6,"['docs(discussions): updated spectrum references to point to discussions instead\n\nfor #1764', 'chore(deps): lock file maintenance', 'docs: add semantic-release-github-pullrequest to list of community plugins', 'fix(deps): update dependency marked to v2', 'fix: update link to GitLab CI introduction', 'chore(deps): update dependency js-yaml to v3.14.1']","['committed (#1782)', 'committed (#1779)', 'committed (#1790)', 'committed (#1778)', 'committed (#1794)', 'committed (#1797)']","[103748, 103803, 104301, 104445, 104495, 104535]","[103750, 103805, 104303, 104447, 104497, 104537]","docs(discussions): updated spectrum references to point to discussions instead
+
+for #1764
+chore(deps): lock file maintenance
+docs: add semantic-release-github-pullrequest to list of community plugins
+fix(deps): update dependency marked to v2
+fix: update link to GitLab CI introduction
+chore(deps): update dependency js-yaml to v3.14.1"
+2022-06-13,10,1.0,4.0,3.0,-3.5,8.5,True,high,0.5,7,5,"['docs: fix typo', 'docs: fix typos', 'docs: replace issue templates with forms\n\nFix #2215', 'docs: drop duplicate word', 'Fix docs about `dryRun` skipped steps\n\nAdd `addChannel` to the list of steps that are skipped by dryRun=true']","['committed (#2472)', 'committed (#2476)', 'committed (#2474)', 'committed (#2468)', 'committed (#2473)', 'committed (#2471)', 'committed (#2465)']","[64241, 64288, 64335, 64386, 64432, 64478, 64526]","[64243, 64290, 64337, 64388, 64434, 64480, 64528]","docs: fix typo
+docs: fix typos
+docs: replace issue templates with forms
+
+Fix #2215
+docs: drop duplicate word
+Fix docs about `dryRun` skipped steps
+
+Add `addChannel` to the list of steps that are skipped by dryRun=true"
+2022-08-22,11,0.25,2.75,2.5,-3.5,6.5,True,high,1.8,11,11,"['chore(deps): update dependency mockserver-client to v5.14.0', 'Revert ""fix(deps): update dependency yargs to v17 (#1912)""\n\nThis reverts commit f419080fbf86c6319b08ee6b5299525ecc8ee831.', 'chore(deps): update dependency dockerode to v3.3.4', 'test: replaced proxyquire with testdouble\n\nfor #2133', 'docs: add semantic-release-react-native to plugin list', ""Merge branch 'master' into c8"", 'test(mockserver): switched to the modern mockserver/mockserver image to get multi-arch support\n\nfixes #2478', 'test(coverage): switched from nyc to c8', ""Merge branch 'master' into testdouble"", 'Update plugins-list.md', 'fix(deps): update dependency yargs to v17']","['committed (#2540)', 'committed (#2534)', 'committed (#2539)', 'committed (#2537)', 'committed (#2523)', 'committed (#2538)', 'committed (#2536)', 'committed (#1912)']","[62749, 62798, 62848, 62861, 62924, 62939, 62985, 63082, 63250, 63266, 90337]","[62751, 62800, 62850, 62863, 62926, 62941, 62987, 63084, 63252, 63268, 90339]","chore(deps): update dependency mockserver-client to v5.14.0
+Revert ""fix(deps): update dependency yargs to v17 (#1912)""
+
+This reverts commit f419080fbf86c6319b08ee6b5299525ecc8ee831.
+chore(deps): update dependency dockerode to v3.3.4
+test: replaced proxyquire with testdouble
+
+for #2133
+docs: add semantic-release-react-native to plugin list
+Merge branch 'master' into c8
+test(mockserver): switched to the modern mockserver/mockserver image to get multi-arch support
+
+fixes #2478
+test(coverage): switched from nyc to c8
+Merge branch 'master' into testdouble
+Update plugins-list.md
+fix(deps): update dependency yargs to v17"
+2022-08-29,9,0.25,2.75,2.5,-3.5,6.5,True,high,1.0,7,7,"['chore(deps): update dependency nock to v13.2.9', 'chore(deps): update actions/setup-node action to v3', 'chore(deps): update actions/checkout action to v3', 'docs: document that .cjs extensions are supported for config files', 'chore(deps): update dependency p-retry to v4.6.2', 'docs: fix troubleshooting git delete remote tag command', 'docs: fix typo\n\nFixes a small typo in the line introducing examples.']","['committed (#2544)', 'committed (#2541)', 'committed (#2546)', 'committed (#2547)', 'committed (#2545)', 'committed (#2551)', 'committed (#2550)']","[62085, 62145, 62238, 62302, 62358, 62407, 62698]","[62087, 62147, 62240, 62304, 62360, 62409, 62700]","chore(deps): update dependency nock to v13.2.9
+chore(deps): update actions/setup-node action to v3
+chore(deps): update actions/checkout action to v3
+docs: document that .cjs extensions are supported for config files
+chore(deps): update dependency p-retry to v4.6.2
+docs: fix troubleshooting git delete remote tag command
+docs: fix typo
+
+Fixes a small typo in the line introducing examples."
+2023-01-02,27,1.0,3.75,2.75,-3.125,7.875,True,high,6.954545454545454,43,40,"['fix(deps): update dependency cosmiconfig to v8', 'chore(deps): update dependency testdouble to v3.16.8', 'test(integration): omitted the `GITHUB_ACTION` env var as well', ""Merge branch 'master' of github.com:semantic-release/semantic-release into beta"", 'fix(deps): update dependency env-ci to v8', 'test(integration): updated the simulated environment to omit the `GITHUB_ACTIONS` variable from the test env', 'Revert ""test(integration): ran tests serially in hope of avoiding conflicts in the ci environment""\n\nThis reverts commit 71f45f97b11dcd87c90834ecd1da78bc340cc5c6.', 'chore(deps): update dependency fs-extra to v11', 'build(deps): bump json5 and tsconfig-paths\n\nBumps [json5](https://github.com/json5/json5) and [tsconfig-paths](https://github.com/dividab/tsconfig-paths). These dependencies needed to be updated together.\n\nUpdates `json5` from 2.2.0 to 2.2.3\n- [Release notes](https://github.com/json5/json5/releases)\n- [Changelog](https://github.com/json5/json5/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/json5/json5/compare/v2.2.0...v2.2.3)\n\nUpdates `tsconfig-paths` from 3.9.0 to 3.10.1\n- [Release notes](https://github.com/dividab/tsconfig-paths/releases)\n- [Changelog](https://github.com/dividab/tsconfig-paths/blob/master/CHANGELOG.md)\n- [Commits](https://github.com/dividab/tsconfig-paths/compare/v3.9.0...v3.10.1)\n\n---\nupdated-dependencies:\n- dependency-name: json5\n  dependency-type: indirect\n- dependency-name: tsconfig-paths\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'style: prettier (#2624)', 'fix(deps): update dependency hook-std to v3', 'chore(deps): update dependency ava to v5', 'feat(node-versions): raised the minimum required node version to v18 (#2620)', 'test(integration): ran tests serially in hope of avoiding conflicts in the ci environment', 'test(integration): used token auth for registry interactions rather than legacy auth', 'chore(deps): update dependency xo to v0.39.1', 'fix(secrets-masking): used the proper named import from hook-std to enable masking for stderr (#2619)', 'fix(env-ci): updated to the stable esm-only version (#2632)', 'fix(deps): update dependency read-pkg-up to v9', 'build(deps): bump glob-parent and xo\n\nBumps [glob-parent](https://github.com/gulpjs/glob-parent) to 5.1.2 and updates ancestor dependency [xo](https://github.com/xojs/xo). These dependencies need to be updated together.\n\n\nUpdates `glob-parent` from 3.1.0 to 5.1.2\n- [Release notes](https://github.com/gulpjs/glob-parent/releases)\n- [Changelog](https://github.com/gulpjs/glob-parent/blob/main/CHANGELOG.md)\n- [Commits](https://github.com/gulpjs/glob-parent/compare/v3.1.0...v5.1.2)\n\nUpdates `xo` from 0.32.1 to 0.52.3\n- [Release notes](https://github.com/xojs/xo/releases)\n- [Commits](https://github.com/xojs/xo/compare/v0.32.1...v0.52.3)\n\n---\nupdated-dependencies:\n- dependency-name: glob-parent\n  dependency-type: indirect\n- dependency-name: xo\n  dependency-type: direct:development\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'fix: update find-versions package and use ESM import', 'chore(deps): update dependency file-url to v4', 'Merge pull request #2606 from semantic-release/travi/esm', 'fix(deps): update dependency p-reduce to v3', 'test(index): forced plugins to use semantic-release beta\n\nwhich deduped env-ci to the esm-only version, allowing test double to stub properly', 'fix(deps): update dependency semver-diff to v4', 'fix(deps): update dependency aggregate-error to v4', 'docs(node-version): raised the minimum version to align with `engines.node`', 'chore(deps): update dependency got to 11.8.5 [security]', 'fix(deps): update dependency execa to v6', 'test: aligned pluginName with naming for functions', 'Merge pull request #2610 from semantic-release/index-test', 'chore(overrides): removed the `overrides` definition (#2634)', 'chore(deps): update dependency glob-parent to 5.1.2 [security]', 'fix(deps): update dependency p-each-series to v3', 'chore(deps): update dependency sinon to v14.0.2', 'feat(esm): convert to esm (#2569)\n\nfor #2543\r\n\r\nBREAKING CHANGE: semantic-release is now ESM-only. since it is used through its own executable, the impact on consuming projects should be minimal\r\n\r\nBREAKING CHANGE: references to plugin files in configs need to include the file extension because of executing in an ESM context', 'fix(deps): update dependency hosted-git-info to v6', 'chore(deps): update dependency sinon to v15', 'fix(deps): update dependency find-versions to v5']","['committed (#2654)', 'committed (#2646)', 'committed (#2607)', 'committed (#2284)', 'committed (#2650)', 'committed (#2643)', 'committed (#2131)', 'committed (#2649)', 'committed (#1751)', 'committed (#2189)', 'committed (#2572)', 'committed (#2452)', 'committed (#1875)', 'committed (#1878)', 'committed (#1915)', 'committed (#1897)', 'committed (#2484)', 'committed (#2250)', 'committed (#2542)', 'committed (#1881)', 'committed (#2645)', 'committed (#2655)', 'committed (#2653)', 'committed (#1907)']","[59325, 59379, 59426, 59537, 59577, 59707, 59743, 59780, 60639, 60647, 60655, 60667, 60675, 60687, 60695, 60707, 60719, 60727, 60735, 60743, 60751, 60763, 60771, 60782, 60810, 60818, 60826, 60842, 61271, 62659, 64111, 64837, 70459, 71319, 75599, 77435, 90036, 90885, 91426, 91874, 92355, 92751, 106399]","[59327, 59381, 59428, 59539, 59579, 59709, 59745, 59782, 60641, 60649, 60657, 60669, 60677, 60689, 60697, 60709, 60721, 60729, 60737, 60745, 60753, 60765, 60773, 60784, 60812, 60820, 60828, 60844, 61273, 62661, 64113, 64839, 70461, 71321, 75601, 77437, 90038, 90887, 91428, 91876, 92357, 92753, 106401]","fix(deps): update dependency cosmiconfig to v8
+chore(deps): update dependency testdouble to v3.16.8
+test(integration): omitted the `GITHUB_ACTION` env var as well
+Merge branch 'master' of github.com:semantic-release/semantic-release into beta
+fix(deps): update dependency env-ci to v8
+test(integration): updated the simulated environment to omit the `GITHUB_ACTIONS` variable from the test env
+Revert ""test(integration): ran tests serially in hope of avoiding conflicts in the ci environment""
+
+This reverts commit 71f45f97b11dcd87c90834ecd1da78bc340cc5c6.
+chore(deps): update dependency fs-extra to v11
+build(deps): bump json5 and tsconfig-paths
+
+Bumps [json5](https://github.com/json5/json5) and [tsconfig-paths](https://github.com/dividab/tsconfig-paths). These dependencies needed to be updated together.
+
+Updates `json5` from 2.2.0 to 2.2.3
+- [Release notes](https://github.com/json5/json5/releases)
+- [Changelog](https://github.com/json5/json5/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/json5/json5/compare/v2.2.0...v2.2.3)
+
+Updates `tsconfig-paths` from 3.9.0 to 3.10.1
+- [Release notes](https://github.com/dividab/tsconfig-paths/releases)
+- [Changelog](https://github.com/dividab/tsconfig-paths/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/dividab/tsconfig-paths/compare/v3.9.0...v3.10.1)
+
+---
+updated-dependencies:
+- dependency-name: json5
+  dependency-type: indirect
+- dependency-name: tsconfig-paths
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+style: prettier (#2624)
+fix(deps): update dependency hook-std to v3
+chore(deps): update dependency ava to v5
+feat(node-versions): raised the minimum required node version to v18 (#2620)
+test(integration): ran tests serially in hope of avoiding conflicts in the ci environment
+test(integration): used token auth for registry interactions rather than legacy auth
+chore(deps): update dependency xo to v0.39.1
+fix(secrets-masking): used the proper named import from hook-std to enable masking for stderr (#2619)
+fix(env-ci): updated to the stable esm-only version (#2632)
+fix(deps): update dependency read-pkg-up to v9
+build(deps): bump glob-parent and xo
+
+Bumps [glob-parent](https://github.com/gulpjs/glob-parent) to 5.1.2 and updates ancestor dependency [xo](https://github.com/xojs/xo). These dependencies need to be updated together.
+
+
+Updates `glob-parent` from 3.1.0 to 5.1.2
+- [Release notes](https://github.com/gulpjs/glob-parent/releases)
+- [Changelog](https://github.com/gulpjs/glob-parent/blob/main/CHANGELOG.md)
+- [Commits](https://github.com/gulpjs/glob-parent/compare/v3.1.0...v5.1.2)
+
+Updates `xo` from 0.32.1 to 0.52.3
+- [Release notes](https://github.com/xojs/xo/releases)
+- [Commits](https://github.com/xojs/xo/compare/v0.32.1...v0.52.3)
+
+---
+updated-dependencies:
+- dependency-name: glob-parent
+  dependency-type: indirect
+- dependency-name: xo
+  dependency-type: direct:development
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+fix: update find-versions package and use ESM import
+chore(deps): update dependency file-url to v4
+Merge pull request #2606 from semantic-release/travi/esm
+fix(deps): update dependency p-reduce to v3
+test(index): forced plugins to use semantic-release beta
+
+which deduped env-ci to the esm-only version, allowing test double to stub properly
+fix(deps): update dependency semver-diff to v4
+fix(deps): update dependency aggregate-error to v4
+docs(node-version): raised the minimum version to align with `engines.node`
+chore(deps): update dependency got to 11.8.5 [security]
+fix(deps): update dependency execa to v6
+test: aligned pluginName with naming for functions
+Merge pull request #2610 from semantic-release/index-test
+chore(overrides): removed the `overrides` definition (#2634)
+chore(deps): update dependency glob-parent to 5.1.2 [security]
+fix(deps): update dependency p-each-series to v3
+chore(deps): update dependency sinon to v14.0.2
+feat(esm): convert to esm (#2569)
+
+for #2543
+
+BREAKING CHANGE: semantic-release is now ESM-only. since it is used through its own executable, the impact on consuming projects should be minimal
+
+BREAKING CHANGE: references to plugin files in configs need to include the file extension because of executing in an ESM context
+fix(deps): update dependency hosted-git-info to v6
+chore(deps): update dependency sinon to v15
+fix(deps): update dependency find-versions to v5"
+2023-02-27,13,1.0,4.0,3.0,-3.5,8.5,True,high,1.5,23,19,"[""Merge branch 'master' into patch-1"", 'ci: integration test - fix package name conflict\n\nTwo tests had the same package name, causing random concurrency failures\nduring CI testing.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'fix(deps): update dependency execa to v7', 'chore(deps): update dependency ava to v5.2.0', 'ci: set test workflow timeout to 10 minutes\n\nIssues are preventing ci jobs from completing.  This patch reduces the\ntimeout from the default timeout of six hours.  The logs are not always\nviewable until the timeout so this should help in problem examination.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'ci: windows support\n\n1. change the path separator in a test regex when running on Windows\n2. turn off `credential.helper` in the git config in the credential\ntests.  This will suppress pop-ups for the password on Windows systems.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'Update ci-configuration.md\n\nlink unlinked url.\r\n\r\nLinking is okay in GitHub, but Not okay in document web(https://semantic-release.gitbook.io/semantic-release/usage/ci-configuration#authentication-for-plugins)', 'chore(deps): update dependency c8 to v7.13.0', 'build(deps): bump cacheable-request from 10.2.5 to 10.2.7\n\nBumps [cacheable-request](https://github.com/jaredwray/cacheable-request) from 10.2.5 to 10.2.7.\n- [Release notes](https://github.com/jaredwray/cacheable-request/releases)\n- [Commits](https://github.com/jaredwray/cacheable-request/commits)\n\n---\nupdated-dependencies:\n- dependency-name: cacheable-request\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'ci: use td.repleaseEsm instead of td.replace\n\nThe replace functions are now the same as the other tests.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'ci: change package name to avoid collision\n\nThere is a test-release package in the docker image at a higher release.\nA different package name will now be used.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'ci: index test should reset `testdouble`\n\nThe testdouble doc recommends resetting after each test.\n\nThe first test is now serial to ensure there is no conflict with future\ntests since it uses mocking.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'ci: avoid Windows pop-up in credential tests\n\nWindows uses a `credential.helper` that will open a pop-up for\ncredentials if they are missing.  A git config parameter will now be set\nto avoid the pop-up.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'ci: win32 escape slash as doubleslash for test\n\nPathing in stderr output has double backslash in the filename.  The test\nwill now use double backslash in the existence test.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'ci: run docker tests on Windows\n\nThe latest docker engine api needs some more config specs to allow an\nopen port (equivalent to -p on the command line).\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', 'chore(deps): lock file maintenance', 'ci: update docker config for windows support\n\nThere is legacy support for PortBindings and Binds at the root level of\nthe config.  Currently (including Windows) these reside under the\nHostConfig.  ExposedPorts is now used to identify the externally\navailable ports.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>', ""Merge branch 'master' into cw/timeout"", 'ci: serialize a plugin test\n\nThe index test `Plugins are called with expected values` is now\nserialized to avoid possible concurrency problems.  This matches the rest of\nthe tests in `index.test.js`.\n\nSigned-off-by: Chris. Webster <chris@webstech.net>']","['committed (#2648)', 'committed (#2719)', 'committed (#2709)', 'committed (#2702)', 'committed (#2720)', 'committed (#2681)', 'committed (#2716)', 'committed (#2708)', 'committed (#2723)', 'committed (#2722)', 'committed (#2684)', 'committed (#2721)']","[57306, 57359, 57371, 57423, 57475, 57487, 57524, 57612, 57780, 57835, 57893, 58236, 58369, 58377, 58385, 58393, 58401, 59618, 59626, 59634, 59642, 59650, 59658]","[57308, 57361, 57373, 57425, 57477, 57489, 57526, 57614, 57782, 57837, 57895, 58238, 58371, 58379, 58387, 58395, 58403, 59620, 59628, 59636, 59644, 59652, 59660]","Merge branch 'master' into patch-1
+ci: integration test - fix package name conflict
+
+Two tests had the same package name, causing random concurrency failures
+during CI testing.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+fix(deps): update dependency execa to v7
+chore(deps): update dependency ava to v5.2.0
+ci: set test workflow timeout to 10 minutes
+
+Issues are preventing ci jobs from completing.  This patch reduces the
+timeout from the default timeout of six hours.  The logs are not always
+viewable until the timeout so this should help in problem examination.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+ci: windows support
+
+1. change the path separator in a test regex when running on Windows
+2. turn off `credential.helper` in the git config in the credential
+tests.  This will suppress pop-ups for the password on Windows systems.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+Update ci-configuration.md
+
+link unlinked url.
+
+Linking is okay in GitHub, but Not okay in document web(https://semantic-release.gitbook.io/semantic-release/usage/ci-configuration#authentication-for-plugins)
+chore(deps): update dependency c8 to v7.13.0
+build(deps): bump cacheable-request from 10.2.5 to 10.2.7
+
+Bumps [cacheable-request](https://github.com/jaredwray/cacheable-request) from 10.2.5 to 10.2.7.
+- [Release notes](https://github.com/jaredwray/cacheable-request/releases)
+- [Commits](https://github.com/jaredwray/cacheable-request/commits)
+
+---
+updated-dependencies:
+- dependency-name: cacheable-request
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+ci: use td.repleaseEsm instead of td.replace
+
+The replace functions are now the same as the other tests.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+ci: change package name to avoid collision
+
+There is a test-release package in the docker image at a higher release.
+A different package name will now be used.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+ci: index test should reset `testdouble`
+
+The testdouble doc recommends resetting after each test.
+
+The first test is now serial to ensure there is no conflict with future
+tests since it uses mocking.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+ci: avoid Windows pop-up in credential tests
+
+Windows uses a `credential.helper` that will open a pop-up for
+credentials if they are missing.  A git config parameter will now be set
+to avoid the pop-up.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+ci: win32 escape slash as doubleslash for test
+
+Pathing in stderr output has double backslash in the filename.  The test
+will now use double backslash in the existence test.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+ci: run docker tests on Windows
+
+The latest docker engine api needs some more config specs to allow an
+open port (equivalent to -p on the command line).
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+chore(deps): lock file maintenance
+ci: update docker config for windows support
+
+There is legacy support for PortBindings and Binds at the root level of
+the config.  Currently (including Windows) these reside under the
+HostConfig.  ExposedPorts is now used to identify the externally
+available ports.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>
+Merge branch 'master' into cw/timeout
+ci: serialize a plugin test
+
+The index test `Plugins are called with expected values` is now
+serialized to avoid possible concurrency problems.  This matches the rest of
+the tests in `index.test.js`.
+
+Signed-off-by: Chris. Webster <chris@webstech.net>"
+2023-06-26,12,3.0,6.0,3.0,-1.5,10.5,True,high,0.5,11,11,"['ci(action): update ossf/scorecard-action action to v2.2.0', 'ci(action): update actions/checkout action to v3.5.3', 'ci(action): update actions/upload-artifact action to v3.1.2', 'ci(action): pin dependencies', 'test(integration): properly waited for the image pulls to complete', 'ci(action): update github/codeql-action action to v2.20.1', 'ci(ossf-scorecard): added workflow calculating scorecard metrics', 'fix: get correct version if prerelease branch shares version with other branches\n\nFix #2415', 'chore(deps): lock file maintenance', ""Merge branch 'master' of github.com:semantic-release/semantic-release into ossf-scorecard"", 'ci: added a codeql workflow\n\nwhich will help us understand if our code has any security issues that can be found through static analysis and will also satisfy the SAST check for the ossf scorecard']","['committed (#2854)', 'committed (#2852)', 'committed (#2851)', 'committed (#2850)', 'committed (#2842)', 'committed (#2853)', 'committed (#2848)', 'committed (#2416)', 'committed (#2849)', 'committed (#2856)']","[53365, 53406, 53445, 53501, 53553, 53589, 53648, 53693, 53720, 53863, 65568]","[53367, 53408, 53447, 53503, 53555, 53591, 53650, 53695, 53722, 53865, 65570]","ci(action): update ossf/scorecard-action action to v2.2.0
+ci(action): update actions/checkout action to v3.5.3
+ci(action): update actions/upload-artifact action to v3.1.2
+ci(action): pin dependencies
+test(integration): properly waited for the image pulls to complete
+ci(action): update github/codeql-action action to v2.20.1
+ci(ossf-scorecard): added workflow calculating scorecard metrics
+fix: get correct version if prerelease branch shares version with other branches
+
+Fix #2415
+chore(deps): lock file maintenance
+Merge branch 'master' of github.com:semantic-release/semantic-release into ossf-scorecard
+ci: added a codeql workflow
+
+which will help us understand if our code has any security issues that can be found through static analysis and will also satisfy the SAST check for the ossf scorecard"
+2023-08-14,12,3.0,6.0,3.0,-1.5,10.5,True,high,0.5,9,9,"['chore(deps): lock file maintenance', 'ci(action): update actions/setup-node digest to bea5baf', 'fix(deps): update dependency hosted-git-info to v7', 'ci(action): update github/codeql-action action to v2.21.4', 'fix(deps): update dependency get-stream to v7', 'chore(deps): update dependency prettier to v3.0.2', 'fix(deps): update dependency execa to v8', 'chore(deps): update dependency nock to v13.3.3', 'ci(action): update actions/setup-node digest to 5e21ff4']","['committed (#2905)', 'committed (#2906)', 'committed (#2908)', 'committed (#2907)', 'committed (#2811)', 'committed (#2909)', 'committed (#2914)', 'committed (#2911)', 'committed (#2912)']","[51288, 51328, 51368, 51929, 51978, 52018, 52058, 52098, 54798]","[51290, 51330, 51370, 51931, 51980, 52020, 52060, 52100, 54800]","chore(deps): lock file maintenance
+ci(action): update actions/setup-node digest to bea5baf
+fix(deps): update dependency hosted-git-info to v7
+ci(action): update github/codeql-action action to v2.21.4
+fix(deps): update dependency get-stream to v7
+chore(deps): update dependency prettier to v3.0.2
+fix(deps): update dependency execa to v8
+chore(deps): update dependency nock to v13.3.3
+ci(action): update actions/setup-node digest to 5e21ff4"
+2023-09-18,15,3.0,7.75,4.75,-4.125,14.875,True,high,0.02631578947368421,11,11,"['ci(action): update actions/checkout digest to 8ade135', 'ci(action): update github/codeql-action action to v2.21.8', 'docs: add community plugin `semantic-release-pub`', 'fix(exports): removed the `exports` definition for the time being\n\ncloses #2968', 'chore(deps): lock file maintenance', 'ci(matrix): prevent skipping the test job when test_matrix fails\n\nfor #semantic-release/.github#19', 'fix(deps): update dependency marked to v9', 'fix(deps): update dependency marked-terminal to v6', 'fix(deps): upgraded `release-notes-generator` and `commit-analyzer` plugins to stable versions\n\nfollow up to #2934', 'fix(deps): update dependency env-ci to v10', 'ci(action): update actions/checkout action to v4.1.0']","['committed (#2976)', 'committed (#2969)', 'committed (#2981)', 'committed (#2980)', 'committed (#2967)', 'committed (#2963)', 'committed (#2947)', 'committed (#2979)', 'committed (#2972)', 'committed (#2983)', 'committed (#2977)']","[48640, 48785, 48822, 48867, 48907, 48954, 49043, 49118, 49240, 49466, 50007]","[48642, 48787, 48824, 48869, 48909, 48956, 49045, 49120, 49242, 49468, 50009]","ci(action): update actions/checkout digest to 8ade135
+ci(action): update github/codeql-action action to v2.21.8
+docs: add community plugin `semantic-release-pub`
+fix(exports): removed the `exports` definition for the time being
+
+closes #2968
+chore(deps): lock file maintenance
+ci(matrix): prevent skipping the test job when test_matrix fails
+
+for #semantic-release/.github#19
+fix(deps): update dependency marked to v9
+fix(deps): update dependency marked-terminal to v6
+fix(deps): upgraded `release-notes-generator` and `commit-analyzer` plugins to stable versions
+
+follow up to #2934
+fix(deps): update dependency env-ci to v10
+ci(action): update actions/checkout action to v4.1.0"
+2024-09-02,1,5.0,7.0,2.0,2.0,10.0,True,low,0.5,0,0,[],[],,,
+2024-10-21,11,5.0,7.0,2.0,2.0,10.0,True,high,0.5,14,13,"['ci(action): update github/codeql-action action to v3.27.0', 'chore(deps): lock file maintenance', 'chore(deps): update dependency ava to v6.2.0', 'chore(deps): update dependency npm-run-all2 to v7.0.1', 'prettify', 'feat: clarify branch existence requirement in error messages\n\nUpdated error messages in `EMAINTENANCEBRANCHES`, `ERELEASEBRANCHES`, and `EPRERELEASEBRANCH` to explicitly state that branches must exist on the remote repository.\n\nThis change is necessary because it was confusing for developers configuring semantic-release who had not yet created the remote branches. By clearly stating that the branches must exist on the remote, we help prevent misconfigurations and improve the user experience.', 'chore(deps): update dependency npm-run-all2 to v7', ""Merge branch 'master' into docs/kaniko_plugin"", 'chore(deps): update dependency publint to v0.2.12', 'ci(action): update actions/checkout action to v4.2.2', 'chore(deps): update dependency npm-run-all2 to v6.2.6', 'ci(action): update actions/setup-node action to v4.1.0', 'docs(plugins): community plugin `semantic-release-kaniko`']","['committed (#3485)', 'committed (#3481)', 'committed (#3491)', 'committed (#3487)', 'committed (#3450)', 'committed (#3462)', 'committed (#3483)', 'committed (#3488)', 'committed (#3486)', 'committed (#3482)', 'committed (#3489)']","[32262, 32302, 32342, 32382, 32429, 32465, 32505, 32545, 32581, 33140, 33513, 33521, 33533, 33547]","[32264, 32304, 32344, 32384, 32431, 32467, 32507, 32547, 32583, 33142, 33515, 33523, 33535, 33549]","ci(action): update github/codeql-action action to v3.27.0
+chore(deps): lock file maintenance
+chore(deps): update dependency ava to v6.2.0
+chore(deps): update dependency npm-run-all2 to v7.0.1
+prettify
+feat: clarify branch existence requirement in error messages
+
+Updated error messages in `EMAINTENANCEBRANCHES`, `ERELEASEBRANCHES`, and `EPRERELEASEBRANCH` to explicitly state that branches must exist on the remote repository.
+
+This change is necessary because it was confusing for developers configuring semantic-release who had not yet created the remote branches. By clearly stating that the branches must exist on the remote, we help prevent misconfigurations and improve the user experience.
+chore(deps): update dependency npm-run-all2 to v7
+Merge branch 'master' into docs/kaniko_plugin
+chore(deps): update dependency publint to v0.2.12
+ci(action): update actions/checkout action to v4.2.2
+chore(deps): update dependency npm-run-all2 to v6.2.6
+ci(action): update actions/setup-node action to v4.1.0
+docs(plugins): community plugin `semantic-release-kaniko`"
+2024-10-28,1,5.0,7.0,2.0,2.0,10.0,True,low,0.5,1,1,['chore(deps): lock file maintenance'],['committed (#3492)'],[32222],[32224],chore(deps): lock file maintenance
+2025-02-10,16,4.0,6.75,2.75,-0.125,10.875,True,high,1.8636363636363635,13,13,"['fix(Types): Fixed typescript definition\n\nMissing options key for BaseContext\nFixes #3601', 'chore(deps): update dependency got to v14.4.6', 'chore(deps): update dependency prettier to v3.5.1', 'chore(deps): lock file maintenance', 'Use labels in issue templates', 'chore(deps): update dependency publint to v0.3.5', 'build(deps): bump @octokit/request-error from 6.1.6 to 6.1.7\n\nBumps [@octokit/request-error](https://github.com/octokit/request-error.js) from 6.1.6 to 6.1.7.\n- [Release notes](https://github.com/octokit/request-error.js/releases)\n- [Commits](https://github.com/octokit/request-error.js/compare/v6.1.6...v6.1.7)\n\n---\nupdated-dependencies:\n- dependency-name: ""@octokit/request-error""\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'feat(git): add ""git log"" options to get-commits.js via ""git-log"" in config file', 'chore(deps): pin dependencies', ""Merge branch 'master' into master"", 'build(deps): bump @octokit/endpoint from 10.1.2 to 10.1.3\n\nBumps [@octokit/endpoint](https://github.com/octokit/endpoint.js) from 10.1.2 to 10.1.3.\n- [Release notes](https://github.com/octokit/endpoint.js/releases)\n- [Commits](https://github.com/octokit/endpoint.js/compare/v10.1.2...v10.1.3)\n\n---\nupdated-dependencies:\n- dependency-name: ""@octokit/endpoint""\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Update 02_feature_request.yml', 'Update 03_plugin_suggestion.yml']","['committed (#3610)', 'committed (#3600)', 'committed (#3605)', 'committed (#3597)', 'committed (#3599)', 'committed (#3603)', 'committed (#3609)', 'committed (#3606)', 'committed (#3611)', 'committed (#3608)']","[27358, 27403, 27462, 27505, 27569, 27578, 27605, 27645, 27762, 27807, 27815, 27823, 27907]","[27360, 27405, 27464, 27507, 27571, 27580, 27607, 27647, 27764, 27809, 27817, 27825, 27909]","fix(Types): Fixed typescript definition
+
+Missing options key for BaseContext
+Fixes #3601
+chore(deps): update dependency got to v14.4.6
+chore(deps): update dependency prettier to v3.5.1
+chore(deps): lock file maintenance
+Use labels in issue templates
+chore(deps): update dependency publint to v0.3.5
+build(deps): bump @octokit/request-error from 6.1.6 to 6.1.7
+
+Bumps [@octokit/request-error](https://github.com/octokit/request-error.js) from 6.1.6 to 6.1.7.
+- [Release notes](https://github.com/octokit/request-error.js/releases)
+- [Commits](https://github.com/octokit/request-error.js/compare/v6.1.6...v6.1.7)
+
+---
+updated-dependencies:
+- dependency-name: ""@octokit/request-error""
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+feat(git): add ""git log"" options to get-commits.js via ""git-log"" in config file
+chore(deps): pin dependencies
+Merge branch 'master' into master
+build(deps): bump @octokit/endpoint from 10.1.2 to 10.1.3
+
+Bumps [@octokit/endpoint](https://github.com/octokit/endpoint.js) from 10.1.2 to 10.1.3.
+- [Release notes](https://github.com/octokit/endpoint.js/releases)
+- [Commits](https://github.com/octokit/endpoint.js/compare/v10.1.2...v10.1.3)
+
+---
+updated-dependencies:
+- dependency-name: ""@octokit/endpoint""
+  dependency-type: indirect
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Update 02_feature_request.yml
+Update 03_plugin_suggestion.yml"
+2025-10-13,14,6.0,9.0,3.0,1.5,13.5,True,high,0.16666666666666666,58,38,"['Revert ""fix(deps): temporarily force semantic-release v25 across plugin peer requirements""\n\nThis reverts commit c60a6c286900843734b55f365e652be1ba9c9267.', ""Merge branch 'beta' of github.com:semantic-release/semantic-release into alpha"", 'fix(deps): updated to the stable version of the commit-analyzer plugin', 'docs(trusted-publishing): mention the updated restrictions for auth against the officail registry\n\nfor semantic-release/npm#958', 'test(verdaccio): update to the current major of verdaccio', 'chore(deps): update dependency @types/node to v22.18.11', 'fix(deps): update to the latest alpha of the npm plugin', 'docs(trusted-publishing): update the github-actions recipe to account for trusted-publishing\n\nfor semantic-release/npm#958', 'feat(node-versions): raise the minimum node version for the v24 range\n\nsince v24 has not yet reached LTS status\n\nBREAKING CHANGE: the minimum node version for the v24 range is now v24.10.0', 'fix(deps): update dependency hosted-git-info to v9', 'fix(deps): use the alpha of the npm plugin\n\nfor semantic-release/npm#958', 'fix(deps): updated to latest alpha of the npm plugin', ""Merge branch 'master' of github.com:semantic-release/semantic-release into alpha"", 'fix(deps): upgrade to the latest alpha of the npm plugin\n\nfor semantic-release/npm#958', 'fix(deps): temporarily force semantic-release v25 across plugin peer requirements\n\nfor semantic-release/npm#958', 'Merge pull request #3905 from semantic-release/alpha', 'chore(deps): update dependency got to v14.6.0', 'ci(release): enable triggering the release workflow for the alpha branch', 'fix(deps): update dependency yargs to v18 (#3745)\n\nCo-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>', ""Merge branch 'master' of github.com:semantic-release/semantic-release into beta"", 'fix(deps): update to the stable version of the release-notes-generator plugin', 'fix(deps): upgrade to the beta of the github plugin', 'fix(deps): update to the stable version of the github plugin', 'fix(deps): update to the latest alpha of the npm plugin\n\nfor semantic-release/npm#958', 'fix(deps): update to the stable version of the npm plugin to add trusted publishing support\n\nfor semantic-release/npm#958', 'feat(node-versions): drop support for node versions v20, v21, and v23\n\nin accordance with our [Node Support\nPolicy](https://semantic-release.gitbook.io/semantic-release/support/node-support-policy)\n\nBREAKING CHANGE: a minimum of node v22.14 is now required', 'fix(deps): upgrade to the beta of the npm plugin', ""Merge branch 'master' into beta"", 'ci(action): update github/codeql-action action to v4.30.9', 'ci(node-versions): update verification matrix to match supported versions', 'ci(action): update actions/setup-node action to v6', 'fix(deps): update to the beta of the npm plugin\n\nfor semantic-release/npm#958', 'ci(node-versions): update node version matrix to match updated supported ranges', 'chore(deps): update dependency semantic-release to v25', 'fix(deps): upgrade to the new major version of the npm plugin', 'fix(deps): update dependency yargs to v18', 'fix(deps): update to latest npm plugin', 'chore(deps): lock file maintenance']","['committed (#3905)', 'committed (#3902)', 'committed (#3901)', 'committed (#3909)', 'committed (#3906)', 'committed (#3812)', 'committed (#3908)', 'committed (#3910)', 'committed (#3904)', 'committed (#3903)', 'committed (#3796)', 'committed (#3900)']","[13512, 13552, 13592, 13668, 13676, 13684, 13692, 13700, 13708, 13716, 13724, 13732, 13740, 13748, 13756, 13764, 13772, 13780, 13788, 13804, 13819, 13878, 13886, 13894, 13902, 13910, 13918, 13926, 13934, 13942, 13950, 13958, 13966, 13974, 13982, 13990, 14044, 14147, 14184, 14192, 14200, 14208, 14216, 14224, 14232, 14240, 14248, 14263, 14275, 14287, 14295, 14317, 14325, 14345, 14382, 14438, 18952, 19926]","[13514, 13554, 13594, 13670, 13678, 13686, 13694, 13702, 13710, 13718, 13726, 13734, 13742, 13750, 13758, 13766, 13774, 13782, 13790, 13806, 13821, 13880, 13888, 13896, 13904, 13912, 13920, 13928, 13936, 13944, 13952, 13960, 13968, 13976, 13984, 13992, 14046, 14149, 14186, 14194, 14202, 14210, 14218, 14226, 14234, 14242, 14250, 14265, 14277, 14289, 14297, 14319, 14327, 14347, 14384, 14440, 18954, 19928]","Revert ""fix(deps): temporarily force semantic-release v25 across plugin peer requirements""
+
+This reverts commit c60a6c286900843734b55f365e652be1ba9c9267.
+Merge branch 'beta' of github.com:semantic-release/semantic-release into alpha
+fix(deps): updated to the stable version of the commit-analyzer plugin
+docs(trusted-publishing): mention the updated restrictions for auth against the officail registry
+
+for semantic-release/npm#958
+test(verdaccio): update to the current major of verdaccio
+chore(deps): update dependency @types/node to v22.18.11
+fix(deps): update to the latest alpha of the npm plugin
+docs(trusted-publishing): update the github-actions recipe to account for trusted-publishing
+
+for semantic-release/npm#958
+feat(node-versions): raise the minimum node version for the v24 range
+
+since v24 has not yet reached LTS status
+
+BREAKING CHANGE: the minimum node version for the v24 range is now v24.10.0
+fix(deps): update dependency hosted-git-info to v9
+fix(deps): use the alpha of the npm plugin
+
+for semantic-release/npm#958
+fix(deps): updated to latest alpha of the npm plugin
+Merge branch 'master' of github.com:semantic-release/semantic-release into alpha
+fix(deps): upgrade to the latest alpha of the npm plugin
+
+for semantic-release/npm#958
+fix(deps): temporarily force semantic-release v25 across plugin peer requirements
+
+for semantic-release/npm#958
+Merge pull request #3905 from semantic-release/alpha
+chore(deps): update dependency got to v14.6.0
+ci(release): enable triggering the release workflow for the alpha branch
+fix(deps): update dependency yargs to v18 (#3745)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+Merge branch 'master' of github.com:semantic-release/semantic-release into beta
+fix(deps): update to the stable version of the release-notes-generator plugin
+fix(deps): upgrade to the beta of the github plugin
+fix(deps): update to the stable version of the github plugin
+fix(deps): update to the latest alpha of the npm plugin
+
+for semantic-release/npm#958
+fix(deps): update to the stable version of the npm plugin to add trusted publishing support
+
+for semantic-release/npm#958
+feat(node-versions): drop support for node versions v20, v21, and v23
+
+in accordance with our [Node Support
+Policy](https://semantic-release.gitbook.io/semantic-release/support/node-support-policy)
+
+BREAKING CHANGE: a minimum of node v22.14 is now required
+fix(deps): upgrade to the beta of the npm plugin
+Merge branch 'master' into beta
+ci(action): update github/codeql-action action to v4.30.9
+ci(node-versions): update verification matrix to match supported versions
+ci(action): update actions/setup-node action to v6
+fix(deps): update to the beta of the npm plugin
+
+for semantic-release/npm#958
+ci(node-versions): update node version matrix to match updated supported ranges
+chore(deps): update dependency semantic-release to v25
+fix(deps): upgrade to the new major version of the npm plugin
+fix(deps): update dependency yargs to v18
+fix(deps): update to latest npm plugin
+chore(deps): lock file maintenance"
+2026-06-29,14,6.0,9.0,3.0,1.5,13.5,True,high,0.16666666666666666,14,14,"['chore(deps): update dependency mockserver-client to v7.3.0', 'chore(deps): update dependency testcontainers to v12.0.4', 'chore(deps): update dependency got to v15.1.0', 'chore(deps): update dependency nock to v14.0.16', 'chore(deps): pin dependencies', 'chore(deps): update verdaccio/verdaccio:6.7.2 docker digest to dcd9922', 'chore(deps): update dependency got to v15.0.7', 'chore(deps): lock file maintenance', 'chore(deps): update dependency prettier to v3.8.5', 'chore(deps): update verdaccio/verdaccio docker tag to v6.7.4', 'chore(deps): update npm to v11.18.0', 'ci(action): update github/codeql-action action to v4.36.3', 'chore(deps): update dependency fs-extra to v11.3.6', 'chore(deps): update dependency js-yaml to v4.3.0']","['committed (#4237)', 'committed (#4233)', 'committed (#4238)', 'committed (#4227)', 'committed (#4223)', 'committed (#4225)', 'committed (#4231)', 'committed (#4222)', 'committed (#4228)', 'committed (#4226)', 'committed (#4235)', 'committed (#4234)', 'committed (#4236)', 'committed (#4229)']","[1883, 1927, 1971, 2015, 2059, 2113, 2149, 2193, 2248, 2284, 2345, 2387, 2416, 2456]","[1885, 1929, 1973, 2017, 2061, 2115, 2151, 2195, 2250, 2286, 2347, 2389, 2418, 2458]","chore(deps): update dependency mockserver-client to v7.3.0
+chore(deps): update dependency testcontainers to v12.0.4
+chore(deps): update dependency got to v15.1.0
+chore(deps): update dependency nock to v14.0.16
+chore(deps): pin dependencies
+chore(deps): update verdaccio/verdaccio:6.7.2 docker digest to dcd9922
+chore(deps): update dependency got to v15.0.7
+chore(deps): lock file maintenance
+chore(deps): update dependency prettier to v3.8.5
+chore(deps): update verdaccio/verdaccio docker tag to v6.7.4
+chore(deps): update npm to v11.18.0
+ci(action): update github/codeql-action action to v4.36.3
+chore(deps): update dependency fs-extra to v11.3.6
+chore(deps): update dependency js-yaml to v4.3.0"
+2026-08-17,0,6.0,9.75,3.75,0.375,15.375,True,low,0.1,0,0,[],[],,,
+2026-08-24,1,6.0,9.0,3.0,1.5,13.5,True,low,0.16666666666666666,0,0,[],[],,,

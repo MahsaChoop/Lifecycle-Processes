@@ -1,0 +1,1302 @@
+week_start,value,rolling_q1,rolling_q3,iqr,lower_bound,upper_bound,is_anomaly,anomaly_direction,anomaly_score,commit_event_count,message_count,messages_in_week,commit_event_descriptions,commit_event_ids,commit_object_ids,messages_text
+2014-06-09,5,0.0,1.25,1.25,-1.875,3.125,True,high,1.5,4,4,"['Change optimist to yargs in examples', 'Document second argument of usage(message, opts)', 'Fix a couple of bad interactions between aliases and defaults\n\n- Alias + boolean + default is broken (#7)\n- Default values and options with dashes not working (#20)', 'Changed optimist to yargs in usage-options.js example']","['committed (#23)', 'committed (#19)', 'committed (#21)']","[145294, 145302, 145365, 145485]","[145296, 145304, 145367, 145487]","Change optimist to yargs in examples
+Document second argument of usage(message, opts)
+Fix a couple of bad interactions between aliases and defaults
+
+- Alias + boolean + default is broken (#7)
+- Default values and options with dashes not working (#20)
+Changed optimist to yargs in usage-options.js example"
+2014-07-28,6,0.0,2.0,2.0,-3.0,5.0,True,high,0.5,5,5,"[""Added 'require' and 'required' as synonyms for 'demand'"", ""Merge remote-tracking branch 'chevex/master' into demand-option"", 'Allow boolean flag with .demand()', ""Remove unneeded dependency\n\nThe dependency on 'minimist' is not used anywhere in the code (we bundle\nour own version)."", 'Replaced short with alias in example. Resolves #28']","['committed (#29)', 'committed (#33)']","[144876, 145026, 145042, 145050, 145058]","[144878, 145028, 145044, 145052, 145060]","Added 'require' and 'required' as synonyms for 'demand'
+Merge remote-tracking branch 'chevex/master' into demand-option
+Allow boolean flag with .demand()
+Remove unneeded dependency
+
+The dependency on 'minimist' is not used anywhere in the code (we bundle
+our own version).
+Replaced short with alias in example. Resolves #28"
+2014-08-25,6,0.25,2.0,1.75,-2.375,4.625,True,high,0.7857142857142857,5,5,"['Auto-detect columns to wrap usage text\n\nThis commit adds support for `.wrap()` without the number of columns\nspecified using the `window-size` package to auto-detect the terminal\nwidth:\n\nhttps://github.com/jonschlinkert/window-size', ""Track aliases added by the parsing code, and don't display them in help\n\nFixes #41 and closes #42."", 'Added contributors section to package.json', 'Add failing test for camelCase, usage, and default options', 'version output will not print extra newline']","['committed (#45)', 'committed (#43)', 'committed (#38)', 'committed (#49)']","[143792, 144255, 144381, 144389, 144707]","[143794, 144257, 144383, 144391, 144709]","Auto-detect columns to wrap usage text
+
+This commit adds support for `.wrap()` without the number of columns
+specified using the `window-size` package to auto-detect the terminal
+width:
+
+https://github.com/jonschlinkert/window-size
+Track aliases added by the parsing code, and don't display them in help
+
+Fixes #41 and closes #42.
+Added contributors section to package.json
+Add failing test for camelCase, usage, and default options
+version output will not print extra newline"
+2015-02-02,25,0.0,2.0,2.0,-3.0,5.0,True,high,10.0,22,19,"['Added test and readme for boolean key default', ""Merge remote-tracking branch 'upstream/master'\n\n* upstream/master:\n  fix for #71\n  better handle hints about argument type\n  fix for #51\n  default should be obj not array, see #51\n  changes/fixes to how arguments from JSON config files are handled.\n  updated tests based on @mathroc's amazing testing script, fixed bug.\n  additional changes to how config.json is loaded, based on discussion in #12.\n  change load order of values from config file, see #12\n  flags explicitly set as strings, will now default to '' if they have no right-hand-value see #68.\n  fixes https://github.com/chevex/yargs/issues/71\n  revert automatic whitespace fixes in index.js\n  fixed bug with boolean parsing, when bools separated by = see #66\n  Mention .option in README"", ""document using .string('_') for string ids. see #56"", ""rebased @ashi009's changes with refactored master."", ""flags explicitly set as strings, will now default to '' if they have no right-hand-value see #68."", 'change load order of values from config file, see #12', 'default should be obj not array, see #51', 'remove mocha.opts.', 'Mention .option in README', 'added coverage badge', 'make sure coverage command is working.', 'fixes https://github.com/chevex/yargs/issues/71', 'Allow explicit `default: undefined` for flags\n\nit’s possible to know if the user not set certain flags, after set\n`default: undefined` for that field.', 'switch to using path.relative() see #77', 'clarify opt parameters', 'additional changes to how config.json is loaded, based on discussion in #12.', 'coverage command is working :thumbsup:.', ""updated tests based on @mathroc's amazing testing script, fixed bug."", ""in-prep for further refactoring, and a 3.x release I've shuffled some things around and gotten test-coverage to 100%.""]","['committed (#87)', 'committed (#70)', 'committed (#84)', 'committed (#73)', 'committed (#75)', 'committed (#80)', 'committed (#74)', 'committed (#82)', 'committed (#57)', 'committed (#85)', 'committed (#72)', 'committed (#86)', 'committed (#79)']","[142077, 142085, 142093, 142144, 142181, 142199, 142215, 142223, 142252, 142296, 142310, 142377, 142406, 142427, 142691, 142723, 142752, 142784, 142856, 142885, 142893, 143445]","[142079, 142087, 142095, 142146, 142183, 142201, 142217, 142225, 142254, 142298, 142312, 142379, 142408, 142429, 142693, 142725, 142754, 142786, 142858, 142887, 142895, 143447]","Added test and readme for boolean key default
+Merge remote-tracking branch 'upstream/master'
+
+* upstream/master:
+  fix for #71
+  better handle hints about argument type
+  fix for #51
+  default should be obj not array, see #51
+  changes/fixes to how arguments from JSON config files are handled.
+  updated tests based on @mathroc's amazing testing script, fixed bug.
+  additional changes to how config.json is loaded, based on discussion in #12.
+  change load order of values from config file, see #12
+  flags explicitly set as strings, will now default to '' if they have no right-hand-value see #68.
+  fixes https://github.com/chevex/yargs/issues/71
+  revert automatic whitespace fixes in index.js
+  fixed bug with boolean parsing, when bools separated by = see #66
+  Mention .option in README
+document using .string('_') for string ids. see #56
+rebased @ashi009's changes with refactored master.
+flags explicitly set as strings, will now default to '' if they have no right-hand-value see #68.
+change load order of values from config file, see #12
+default should be obj not array, see #51
+remove mocha.opts.
+Mention .option in README
+added coverage badge
+make sure coverage command is working.
+fixes https://github.com/chevex/yargs/issues/71
+Allow explicit `default: undefined` for flags
+
+it’s possible to know if the user not set certain flags, after set
+`default: undefined` for that field.
+switch to using path.relative() see #77
+clarify opt parameters
+additional changes to how config.json is loaded, based on discussion in #12.
+coverage command is working :thumbsup:.
+updated tests based on @mathroc's amazing testing script, fixed bug.
+in-prep for further refactoring, and a 3.x release I've shuffled some things around and gotten test-coverage to 100%."
+2015-02-09,7,0.0,2.0,2.0,-3.0,5.0,True,high,1.0,11,11,"['finished implementing my wish-list of fetures for yargs 3.0.', 'Auto-detect columns to wrap usage text\n\nThis commit adds support for `.wrap()` without the number of columns\nspecified using the `window-size` package to auto-detect the terminal\nwidth:\n\nhttps://github.com/jonschlinkert/window-size', 'document epilog shorthand of epilogue.', 'refactor two-column table layout so that we can use it for examples and usage', 'detect console width and perform word-wrapping.', 'major refactor of index.js, in prep for 3.x release.', 'removed process.stdout.write, isolated console output into usage.js', 'fix dot-notation logic, surrounding flag variables', 'changed check funtionality slightly see #76', 'fix coverage.', 'aliases were not being populated for dot-notation.']","['committed (#88)', 'committed (#45)', 'committed (#91)', 'committed (#90)']","[141791, 141829, 141882, 141900, 141908, 141926, 141934, 141942, 141953, 142048, 144255]","[141793, 141831, 141884, 141902, 141910, 141928, 141936, 141944, 141955, 142050, 144257]","finished implementing my wish-list of fetures for yargs 3.0.
+Auto-detect columns to wrap usage text
+
+This commit adds support for `.wrap()` without the number of columns
+specified using the `window-size` package to auto-detect the terminal
+width:
+
+https://github.com/jonschlinkert/window-size
+document epilog shorthand of epilogue.
+refactor two-column table layout so that we can use it for examples and usage
+detect console width and perform word-wrapping.
+major refactor of index.js, in prep for 3.x release.
+removed process.stdout.write, isolated console output into usage.js
+fix dot-notation logic, surrounding flag variables
+changed check funtionality slightly see #76
+fix coverage.
+aliases were not being populated for dot-notation."
+2015-02-16,12,0.0,2.75,2.75,-4.125,6.875,True,high,1.8636363636363635,10,10,"['various fixes for handling of alias values see #97', 'fix usage message for function() defaults, see #60', 'update github URL', 'Tweak NPM version badge\n\nConsistent visual style with the other badges, different color though.', 'fix my english.', 'allow a description to be provided for a default value.', 'wrap the left-hand-column if it gets too long see #89', 'slight code-style nit', 'updated the badges', 'version now accepts a function']","['committed (#99)', 'committed (#95)', 'committed (#93)', 'committed (#96)', 'committed (#98)', 'committed (#94)']","[141237, 141269, 141277, 141346, 141393, 141452, 141460, 141553, 141586, 141594]","[141239, 141271, 141279, 141348, 141395, 141454, 141462, 141555, 141588, 141596]","various fixes for handling of alias values see #97
+fix usage message for function() defaults, see #60
+update github URL
+Tweak NPM version badge
+
+Consistent visual style with the other badges, different color though.
+fix my english.
+allow a description to be provided for a default value.
+wrap the left-hand-column if it gets too long see #89
+slight code-style nit
+updated the badges
+version now accepts a function"
+2015-02-23,13,0.0,3.0,3.0,-4.5,7.5,True,high,1.8333333333333333,13,13,"['bump minor version', 'fix: count should not consume the next argument', 'how could I have missed the epilog\\!', 'fix for camel-case alias bug', 'actually make test do what I claimed it did.', 'slight README tweak.', 'replace $0 in epilog', 'slight tweak to README to show more complete example.', 'retire string see #106', 'implemented nargs features, which helps to solve several ambiguity problems', 'updating README with v3.0 API', 'improve reset() command so that it can be used for nested CLIs', 'fixed typo in README.md']","['committed (#105)', 'committed (#109)', 'committed (#104)', 'committed (#107)', 'committed (#108)', 'committed (#102)']","[140682, 140731, 140796, 140931, 140939, 140947, 140958, 140966, 140974, 141012, 141020, 141085, 141093]","[140684, 140733, 140798, 140933, 140941, 140949, 140960, 140968, 140976, 141014, 141022, 141087, 141095]","bump minor version
+fix: count should not consume the next argument
+how could I have missed the epilog\!
+fix for camel-case alias bug
+actually make test do what I claimed it did.
+slight README tweak.
+replace $0 in epilog
+slight tweak to README to show more complete example.
+retire string see #106
+implemented nargs features, which helps to solve several ambiguity problems
+updating README with v3.0 API
+improve reset() command so that it can be used for nested CLIs
+fixed typo in README.md"
+2016-02-08,21,2.0,7.0,5.0,-5.5,14.5,True,high,1.3,53,48,"['update changelog. fix merge conflict', 'Made help() only assign --help option if called without args', 'implemented the concept of global options', ""loop over argv._ for unknown arguments as per @maxrimue's code review"", 'update chanagelog', 'skeleton test for valid command validation', 'Pass the original error as the second argument of fail() handler.', 'update changelog', 'chore(package): update standard to version 6.0.5\n\nhttp://greenkeeper.io/', 'Provide default value for version in .version()', 'split out parser into yargs-parser library, and make yargs configurable see #352', 'switch to new approach for loading top-level configuration', 'starting to refactor commands to the new API', 'rm unnecessary commandKeys check', 'document our fancy new command API', 'fix cherry-picked conflict in index.js', 'add number to options to documentation', 'introduces the pkgConf feature', 'allow an alternative cwd to be specified', 'add a standard badge, because standard rocks', 'a command can now simply be a module', 'add commandKeys validation to unknownArguments', 'add new number integration from yargs-parser PR #7', 'starting to build out command parser', ""check if 'max' arg in demand is an array"", 'fix closing brace, duhhhh', 'leave command handlers as an object', 'add number to options to documentation\n\n(cherry picked from commit 93e9d104e0982e5625062dad368a78fc4b261a92)', 'upgrade standard, fix nit', 'starting to work on improvements to commands', 'you can now pass an object rather than a builder function, it uses a sane default for usage', 'test usage with both .demand() + .require()', ""add validation tests for '.demand(1, ['a', 'b'])'"", 'add note about the global short-hand', 'fix a couple more typos in README', 'provide a bit more documentation about command modules', 'add test for aliase + number usage', 'merge with 4.x', 'update readme with examples', ""test usage with no cmds, and all required args as per @bcoe's review"", 'update tests to work with yargs-parser@2.1.0', 'Simplified help() code, tuned help() tests, added docs', 'completion is a command not an option, we should reset it', 'we now support positional arguments \\o/', 'add test for aliase + number usage\n\n(cherry picked from commit 0dc6a460f0ab85aab39c612fe9690ad8da364447)', 'add tests around guessing version # based on parent package.json', 'remove yargs stanza from package.json', 'fix weird typo in README.md']","['committed (#377)', 'committed (#376)', 'committed (#368)', 'committed (#357)', 'committed (#382)', 'committed (#378)', 'committed (#375)', 'committed (#384)', 'committed (#381)', 'committed (#380)', 'committed (#374)', 'committed (#379)']","[122157, 122165, 122173, 122181, 122293, 122344, 122352, 122360, 122430, 122438, 122446, 122470, 122494, 122502, 122510, 122539, 122547, 122555, 122596, 122634, 122663, 122686, 123044, 123052, 123060, 123068, 123076, 123084, 123092, 123103, 123111, 123119, 123133, 123141, 123152, 123160, 123168, 123176, 123193, 123201, 123218, 123244, 123739, 123747, 123755, 123774, 123785, 123823, 123831, 123839, 123858, 123886, 123904]","[122159, 122167, 122175, 122183, 122295, 122346, 122354, 122362, 122432, 122440, 122448, 122472, 122496, 122504, 122512, 122541, 122549, 122557, 122598, 122636, 122665, 122688, 123046, 123054, 123062, 123070, 123078, 123086, 123094, 123105, 123113, 123121, 123135, 123143, 123154, 123162, 123170, 123178, 123195, 123203, 123220, 123246, 123741, 123749, 123757, 123776, 123787, 123825, 123833, 123841, 123860, 123888, 123906]","update changelog. fix merge conflict
+Made help() only assign --help option if called without args
+implemented the concept of global options
+loop over argv._ for unknown arguments as per @maxrimue's code review
+update chanagelog
+skeleton test for valid command validation
+Pass the original error as the second argument of fail() handler.
+update changelog
+chore(package): update standard to version 6.0.5
+
+http://greenkeeper.io/
+Provide default value for version in .version()
+split out parser into yargs-parser library, and make yargs configurable see #352
+switch to new approach for loading top-level configuration
+starting to refactor commands to the new API
+rm unnecessary commandKeys check
+document our fancy new command API
+fix cherry-picked conflict in index.js
+add number to options to documentation
+introduces the pkgConf feature
+allow an alternative cwd to be specified
+add a standard badge, because standard rocks
+a command can now simply be a module
+add commandKeys validation to unknownArguments
+add new number integration from yargs-parser PR #7
+starting to build out command parser
+check if 'max' arg in demand is an array
+fix closing brace, duhhhh
+leave command handlers as an object
+add number to options to documentation
+
+(cherry picked from commit 93e9d104e0982e5625062dad368a78fc4b261a92)
+upgrade standard, fix nit
+starting to work on improvements to commands
+you can now pass an object rather than a builder function, it uses a sane default for usage
+test usage with both .demand() + .require()
+add validation tests for '.demand(1, ['a', 'b'])'
+add note about the global short-hand
+fix a couple more typos in README
+provide a bit more documentation about command modules
+add test for aliase + number usage
+merge with 4.x
+update readme with examples
+test usage with no cmds, and all required args as per @bcoe's review
+update tests to work with yargs-parser@2.1.0
+Simplified help() code, tuned help() tests, added docs
+completion is a command not an option, we should reset it
+we now support positional arguments \o/
+add test for aliase + number usage
+
+(cherry picked from commit 0dc6a460f0ab85aab39c612fe9690ad8da364447)
+add tests around guessing version # based on parent package.json
+remove yargs stanza from package.json
+fix weird typo in README.md"
+2016-02-15,17,2.25,7.0,4.75,-4.875,14.125,True,high,0.6052631578947368,78,70,"['do not reset wrap for commands', 'check for module command before adding to usage', 'update chanagelog', 'update tests to work with yargs-parser@2.1.0', 'implemented the concept of global options', 'update readme with examples', 'Merge pull request #385 from bcoe/update-changelog\n\nupdate 4.x changelog', 'edits based on code review', 'get tests back up to 100%. add little known normalize() feature to docs', 'a command can now simply be a module', 'whoops, had a config stanza left in from testing', 'switch to using require-main-filename', 'you can now pass an object rather than a builder function, it uses a sane default for usage', 'fix a couple more typos in README', 'fix cherry-picked conflict in index.js', 'Merge pull request #382 from gajus/stack-trace-v4\n\nPass the original error as the second argument of fail() handler. (fixes #373)', 'you can now specify an option shorthand for numbers', 'split out parser into yargs-parser library, and make yargs configurable see #352', 'provide a bit more documentation about command modules', 'Merge pull request #368 from bcoe/command-improvements\n\nworking on a new API for commands that creates less redundant code', 'allow an alternative cwd to be specified', 'Merge pull request #384 from lrlna/add-number-type-opts\n\nadd number type opts', 'update 4.x changelog', 'yargs 4.0.0 \\o/ see changelog and blog post', ""loop over argv._ for unknown arguments as per @maxrimue's code review"", 'starting to build out command parser', 'we now support positional arguments \\o/', 'add commandKeys validation to unknownArguments', ""check if 'max' arg in demand is an array"", 'Fix .version() API inconsistency', 'Made help() only assign --help option if called without args', ""lookup package.version as default version # (see @maxrimue's work in #337)"", 'add number to options to documentation\n\n(cherry picked from commit 93e9d104e0982e5625062dad368a78fc4b261a92)', 'fix standard nit', 'update the 4.x changelog', 'we now load the yargs stanza only in yargs', 'starting to refactor commands to the new API', 'merge with 4.x', ""test usage with no cmds, and all required args as per @bcoe's review"", 'skeleton test for valid command validation', 'fix closing brace, duhhhh', 'Merge pull request #377 from bcoe/update-changelog\n\nkeep 4.x changelog up-to-date, fixed merge conflict', 'introduces the pkgConf feature', 'preserve groups containing global keys when resetting', 'use implicit usage string when not set by command builder function', 'leave command handlers as an object', 'add tests around guessing version # based on parent package.json', 'remove yargs stanza from package.json', 'Merge pull request #357 from lrlna/require-valid-command\n\nrequire valid command', 'Merge pull request #378 from bcoe/pkg-conf\n\nintroduces pkgConf feature', 'Merge pull request #387 from bcoe/number-option-shorthand\n\nnumber shot-hand for options', 'rm unnecessary commandKeys check', 'testing out copy of yargs-parser that uses app-root-path', 'update changelog. fix merge conflict', 'Provide default value for version in .version()', 'starting to work on improvements to commands', 'Simplified help() code, tuned help() tests, added docs', 'test usage with both .demand() + .require()', 'add note about the global short-hand', 'completion is a command not an option, we should reset it', 'switch to new approach for loading top-level configuration', 'document our fancy new command API', 'update changelog', 'Pass the original error as the second argument of fail() handler.', 'add test for aliase + number usage\n\n(cherry picked from commit 0dc6a460f0ab85aab39c612fe9690ad8da364447)', 'fix weird typo in README.md', ""add validation tests for '.demand(1, ['a', 'b'])'"", ""Merge pull request #376 from maxrimue/change-help-behaviour\n\nMade help() only assign '--help' option if called without args"", 'upgrade standard, fix nit', 'add a standard badge, because standard rocks']","['committed (#392)', 'committed (#391)', 'committed (#386)', 'committed (#387)', 'committed (#385)', 'committed (#395)', 'committed (#393)']","[121092, 121240, 121299, 121335, 121467, 121475, 121504, 121512, 121520, 121528, 121536, 121544, 121552, 121560, 121568, 121576, 121584, 121592, 121600, 121608, 121616, 121624, 121632, 121640, 121648, 121656, 121664, 121672, 121680, 121688, 121696, 121704, 121712, 121720, 121728, 121736, 121744, 121752, 121760, 121768, 121776, 121784, 121792, 121800, 121808, 121816, 121824, 121832, 121840, 121848, 121856, 121864, 121872, 121880, 121888, 121896, 121904, 121912, 121920, 121928, 121936, 121944, 121952, 121961, 121969, 121977, 121985, 121993, 122001, 122009, 122017, 122025, 122033, 122041, 122049, 122057, 122106, 122114]","[121094, 121242, 121301, 121337, 121469, 121477, 121506, 121514, 121522, 121530, 121538, 121546, 121554, 121562, 121570, 121578, 121586, 121594, 121602, 121610, 121618, 121626, 121634, 121642, 121650, 121658, 121666, 121674, 121682, 121690, 121698, 121706, 121714, 121722, 121730, 121738, 121746, 121754, 121762, 121770, 121778, 121786, 121794, 121802, 121810, 121818, 121826, 121834, 121842, 121850, 121858, 121866, 121874, 121882, 121890, 121898, 121906, 121914, 121922, 121930, 121938, 121946, 121954, 121963, 121971, 121979, 121987, 121995, 122003, 122011, 122019, 122027, 122035, 122043, 122051, 122059, 122108, 122116]","do not reset wrap for commands
+check for module command before adding to usage
+update chanagelog
+update tests to work with yargs-parser@2.1.0
+implemented the concept of global options
+update readme with examples
+Merge pull request #385 from bcoe/update-changelog
+
+update 4.x changelog
+edits based on code review
+get tests back up to 100%. add little known normalize() feature to docs
+a command can now simply be a module
+whoops, had a config stanza left in from testing
+switch to using require-main-filename
+you can now pass an object rather than a builder function, it uses a sane default for usage
+fix a couple more typos in README
+fix cherry-picked conflict in index.js
+Merge pull request #382 from gajus/stack-trace-v4
+
+Pass the original error as the second argument of fail() handler. (fixes #373)
+you can now specify an option shorthand for numbers
+split out parser into yargs-parser library, and make yargs configurable see #352
+provide a bit more documentation about command modules
+Merge pull request #368 from bcoe/command-improvements
+
+working on a new API for commands that creates less redundant code
+allow an alternative cwd to be specified
+Merge pull request #384 from lrlna/add-number-type-opts
+
+add number type opts
+update 4.x changelog
+yargs 4.0.0 \o/ see changelog and blog post
+loop over argv._ for unknown arguments as per @maxrimue's code review
+starting to build out command parser
+we now support positional arguments \o/
+add commandKeys validation to unknownArguments
+check if 'max' arg in demand is an array
+Fix .version() API inconsistency
+Made help() only assign --help option if called without args
+lookup package.version as default version # (see @maxrimue's work in #337)
+add number to options to documentation
+
+(cherry picked from commit 93e9d104e0982e5625062dad368a78fc4b261a92)
+fix standard nit
+update the 4.x changelog
+we now load the yargs stanza only in yargs
+starting to refactor commands to the new API
+merge with 4.x
+test usage with no cmds, and all required args as per @bcoe's review
+skeleton test for valid command validation
+fix closing brace, duhhhh
+Merge pull request #377 from bcoe/update-changelog
+
+keep 4.x changelog up-to-date, fixed merge conflict
+introduces the pkgConf feature
+preserve groups containing global keys when resetting
+use implicit usage string when not set by command builder function
+leave command handlers as an object
+add tests around guessing version # based on parent package.json
+remove yargs stanza from package.json
+Merge pull request #357 from lrlna/require-valid-command
+
+require valid command
+Merge pull request #378 from bcoe/pkg-conf
+
+introduces pkgConf feature
+Merge pull request #387 from bcoe/number-option-shorthand
+
+number shot-hand for options
+rm unnecessary commandKeys check
+testing out copy of yargs-parser that uses app-root-path
+update changelog. fix merge conflict
+Provide default value for version in .version()
+starting to work on improvements to commands
+Simplified help() code, tuned help() tests, added docs
+test usage with both .demand() + .require()
+add note about the global short-hand
+completion is a command not an option, we should reset it
+switch to new approach for loading top-level configuration
+document our fancy new command API
+update changelog
+Pass the original error as the second argument of fail() handler.
+add test for aliase + number usage
+
+(cherry picked from commit 0dc6a460f0ab85aab39c612fe9690ad8da364447)
+fix weird typo in README.md
+add validation tests for '.demand(1, ['a', 'b'])'
+Merge pull request #376 from maxrimue/change-help-behaviour
+
+Made help() only assign '--help' option if called without args
+upgrade standard, fix nit
+add a standard badge, because standard rocks"
+2016-08-08,24,4.0,11.0,7.0,-6.5,21.5,True,high,0.35714285714285715,27,26,"['docs: added gitter badge', 'feat: add coerce api', 'chore(package): update string-width to version 1.0.2\n\nhttps://greenkeeper.io/', 'feat: interpret demand() numbers as relative to executing command', 'chore(package): update yargs-parser to version 3.1.0\n\nhttps://greenkeeper.io/', 'feat: adds recommendCommands()', 'chore(package): update nyc to version 8.0.0\n\nhttps://greenkeeper.io/', 'perf: defer requiring most external libs until needed', ""update .recommendCommands() following @nexdrew's review"", 'fix silly mistake', 'chore(package): update nyc to version 8.1.0\n\nhttps://greenkeeper.io/', 'chore(package): update yargs-parser to version 3.2.0\n\nhttps://greenkeeper.io/', 'feat: apply fail() handlers globally', 'feat: provide suggestions if unknown command is called', ""fix: implement @nexdrew's suggestion; sort commands so that we recommend longest first"", 'fix tests for command recommendations', 'make german translation more personal', 'add didyoumean threshold', 'docs: add .coerce() method', 'support coercion of positional args in command', 'add y18n locale support for command recommendations', 'chore(package): update lodash.assign to version 4.2.0\n\nhttps://greenkeeper.io/', 'perf: do not require string-width more than once', 'add more tests for .recommendCommands()', 'feat: apply default builder to command()\n\nin order to apply reset, reparse, and validation to all commands', 'mention in readme no parameter is required for .recommendCommands()']","['committed (#593)', 'committed (#586)', 'committed (#592)', 'committed (#582)', 'committed (#581)', 'committed (#580)', 'committed (#589)', 'committed (#584)', 'committed (#591)', 'committed (#590)', 'committed (#588)', 'committed (#583)', 'committed (#587)']","[108937, 108963, 108989, 109018, 109044, 109067, 109096, 109125, 109133, 109150, 109221, 109229, 109255, 109263, 109301, 109394, 109426, 109434, 109442, 109450, 109458, 109466, 109474, 109482, 109490, 109498, 109532]","[108939, 108965, 108991, 109020, 109046, 109069, 109098, 109127, 109135, 109152, 109223, 109231, 109257, 109265, 109303, 109396, 109428, 109436, 109444, 109452, 109460, 109468, 109476, 109484, 109492, 109500, 109534]","docs: added gitter badge
+feat: add coerce api
+chore(package): update string-width to version 1.0.2
+
+https://greenkeeper.io/
+feat: interpret demand() numbers as relative to executing command
+chore(package): update yargs-parser to version 3.1.0
+
+https://greenkeeper.io/
+feat: adds recommendCommands()
+chore(package): update nyc to version 8.0.0
+
+https://greenkeeper.io/
+perf: defer requiring most external libs until needed
+update .recommendCommands() following @nexdrew's review
+fix silly mistake
+chore(package): update nyc to version 8.1.0
+
+https://greenkeeper.io/
+chore(package): update yargs-parser to version 3.2.0
+
+https://greenkeeper.io/
+feat: apply fail() handlers globally
+feat: provide suggestions if unknown command is called
+fix: implement @nexdrew's suggestion; sort commands so that we recommend longest first
+fix tests for command recommendations
+make german translation more personal
+add didyoumean threshold
+docs: add .coerce() method
+support coercion of positional args in command
+add y18n locale support for command recommendations
+chore(package): update lodash.assign to version 4.2.0
+
+https://greenkeeper.io/
+perf: do not require string-width more than once
+add more tests for .recommendCommands()
+feat: apply default builder to command()
+
+in order to apply reset, reparse, and validation to all commands
+mention in readme no parameter is required for .recommendCommands()"
+2016-10-10,29,2.25,11.0,8.75,-10.875,24.125,True,high,0.5571428571428572,60,59,"['add note about temporarily disabling exitProcess', 'Add ""aliases"" and ""did you mean %s?""\n\nAdd Spanish translation for ""aliases"" and ""did you mean %s?""', 'docs: document command aliases and command execution', ""fix: added concept of context object based on @scriptdaemon's review"", 'fix: nuke the resetForNextParse function, now that we have freeze and unfreeze', 'Add pt_BR translations to #649\n\nAddress brazilian portuguese translations for `aliases:` and `Did you mean %s?`', 'perf: remove one call to reset()', 'fix: context object was not being reset between runs', 'Added Hindi i18n. Locale: hi', 'feat(command): add camelcase commands to argv\n\nPopulate argv object with camelcase variants of hyphenated arguments', 'Switch key:value for one of polish translations', 'fix: the custom exit handler is now invoked in the next event loop, this makes it easier to build an async API around this new API: collect output from the logger., always return your response when exit is called', 'maybe lowercase anchor would be better [skip ci]', 'make property order of id locale consistent with others', 'Revert ""Russian locale file""', 'define the wrap value for consistency wih all terminals', 'fix: continuing to pull API towards headless implementation.', 'feat: continuing to iterate on headless API for yargs, @nexdrew and I have settled on an extension to the parse() function.\nBREAKING CHANGE: exitProcess(false) now acts as a global setting.', ""Turkish translations for 'did you mean' and 'aliases'\n\nRelated to #649"", ""Indonesian translations for 'did you mean' and 'aliases'"", 'no need to reset context', 'Fixed some unneeded spaces in Hindi translations', 'Add ""aliases"" translation', 'docs: add section to README.md about new parse API', ""fix(parse): suggestions to improve headless yargs (#668)\n\n* reinstate exitProcess and reset parseFn after it is called\r\n\r\n* add note about temporarily disabling exitProcess\r\n\r\n* test edge cases for exitProcess and parseFn\r\n\r\n* clarify note per @bcoe's review [skip ci]\r\n\r\n* maybe lowercase anchor would be better [skip ci]"", ""Italian translations for 'did you mean' and 'aliases'\n\nSigned-off-by: Davide Madrisan <davide.madrisan@gmail.com>"", ""fix: address @nexdrew's code review"", 'fix: grammar issue', 'test edge cases for exitProcess and parseFn', 'russian translation for the locales', 'chore(package): update standard-version to version 3.0.0\n\nhttps://greenkeeper.io/', 'feat: reworking yargs API to make it easier to run in headless environments', 'reinstate exitProcess and reset parseFn after it is called', 'feat(command): test variadric args & coerce\n\nTest hyphenated variadric arguments to ensure that camel-case keys\nare defined and hold the right values.\nTest coerce() to ensure coercing hyphenated arguments also applies\nthis result to camel-case values.', 'tests for command aliases', 'chore: added tests for validation handling', 'fix: slight naming tweaks', 'Added getRawOptions() method to get back reusable options', 'fix: had global leak in test', 'change some translations', 'Tests for proper validation skipping', ""clarify note per @bcoe's review [skip ci]"", 'fix(locales): conform hi locale to y18n.__n expectations', 'feat(command): add camelcase helper function', ""Polish translations for 'did you mean' and 'aliases'"", 'add German translation for ""aliases:""\n\nthanks to @maxrimue!', ""chore: added tests for commands; what I see as headless yargs' killer feature"", 'fix: stop applying parser to context object', 'fix: preserve top-level, reset-able state for execution of parse callback', 'chore(package): update read-pkg-up to version 2.0.0\n\nhttps://greenkeeper.io/', 'fix standard nits and failing tests', 'fix: with some refactoring and elbow grease, got us to the dream headless API; configure once, all parse N times', 'feat: initial support for command aliases', 'fix: preserve top-level, reset-able state for execution of parse callback (#669)', 'Fixes to the way skipValidation works', 'Hungarian translation added', 'Add ""Did you mean %s?"" translation', 'allow command module to use `aliases` property', 'docs: tweak layout.']","['committed (#668)', 'committed (#656)', 'committed (#647)', 'committed (#646)', 'committed (#674)', 'committed (#670)', 'committed (#664)', 'committed (#658)', 'committed (#650)', 'committed (#666)', 'committed (#662)', 'committed (#660)', 'committed (#652)', 'committed (#651)', 'committed (#673)', 'committed (#663)', 'committed (#661)', 'committed (#648)', 'committed (#640)', 'committed (#667)', 'committed (#645)', 'committed (#675)', 'committed (#669)', 'committed (#655)', 'committed (#665)']","[104056, 104101, 104128, 104287, 104304, 104312, 104341, 104383, 104391, 104399, 104417, 104425, 104456, 104483, 104491, 104520, 104551, 104560, 104587, 104611, 104634, 104678, 104809, 104834, 104842, 104928, 104961, 105103, 105130, 105138, 105182, 105194, 105597, 105626, 105634, 105646, 105654, 105672, 105680, 105734, 105792, 105800, 105808, 105816, 105824, 105832, 105843, 105854, 105862, 105906, 105914, 105934, 105942, 105958, 105978, 105986, 106004, 106099, 106108, 106401]","[104058, 104103, 104130, 104289, 104306, 104314, 104343, 104385, 104393, 104401, 104419, 104427, 104458, 104485, 104493, 104522, 104553, 104562, 104589, 104613, 104636, 104680, 104811, 104836, 104844, 104930, 104963, 105105, 105132, 105140, 105184, 105196, 105599, 105628, 105636, 105648, 105656, 105674, 105682, 105736, 105794, 105802, 105810, 105818, 105826, 105834, 105845, 105856, 105864, 105908, 105916, 105936, 105944, 105960, 105980, 105988, 106006, 106101, 106110, 106403]","add note about temporarily disabling exitProcess
+Add ""aliases"" and ""did you mean %s?""
+
+Add Spanish translation for ""aliases"" and ""did you mean %s?""
+docs: document command aliases and command execution
+fix: added concept of context object based on @scriptdaemon's review
+fix: nuke the resetForNextParse function, now that we have freeze and unfreeze
+Add pt_BR translations to #649
+
+Address brazilian portuguese translations for `aliases:` and `Did you mean %s?`
+perf: remove one call to reset()
+fix: context object was not being reset between runs
+Added Hindi i18n. Locale: hi
+feat(command): add camelcase commands to argv
+
+Populate argv object with camelcase variants of hyphenated arguments
+Switch key:value for one of polish translations
+fix: the custom exit handler is now invoked in the next event loop, this makes it easier to build an async API around this new API: collect output from the logger., always return your response when exit is called
+maybe lowercase anchor would be better [skip ci]
+make property order of id locale consistent with others
+Revert ""Russian locale file""
+define the wrap value for consistency wih all terminals
+fix: continuing to pull API towards headless implementation.
+feat: continuing to iterate on headless API for yargs, @nexdrew and I have settled on an extension to the parse() function.
+BREAKING CHANGE: exitProcess(false) now acts as a global setting.
+Turkish translations for 'did you mean' and 'aliases'
+
+Related to #649
+Indonesian translations for 'did you mean' and 'aliases'
+no need to reset context
+Fixed some unneeded spaces in Hindi translations
+Add ""aliases"" translation
+docs: add section to README.md about new parse API
+fix(parse): suggestions to improve headless yargs (#668)
+
+* reinstate exitProcess and reset parseFn after it is called
+
+* add note about temporarily disabling exitProcess
+
+* test edge cases for exitProcess and parseFn
+
+* clarify note per @bcoe's review [skip ci]
+
+* maybe lowercase anchor would be better [skip ci]
+Italian translations for 'did you mean' and 'aliases'
+
+Signed-off-by: Davide Madrisan <davide.madrisan@gmail.com>
+fix: address @nexdrew's code review
+fix: grammar issue
+test edge cases for exitProcess and parseFn
+russian translation for the locales
+chore(package): update standard-version to version 3.0.0
+
+https://greenkeeper.io/
+feat: reworking yargs API to make it easier to run in headless environments
+reinstate exitProcess and reset parseFn after it is called
+feat(command): test variadric args & coerce
+
+Test hyphenated variadric arguments to ensure that camel-case keys
+are defined and hold the right values.
+Test coerce() to ensure coercing hyphenated arguments also applies
+this result to camel-case values.
+tests for command aliases
+chore: added tests for validation handling
+fix: slight naming tweaks
+Added getRawOptions() method to get back reusable options
+fix: had global leak in test
+change some translations
+Tests for proper validation skipping
+clarify note per @bcoe's review [skip ci]
+fix(locales): conform hi locale to y18n.__n expectations
+feat(command): add camelcase helper function
+Polish translations for 'did you mean' and 'aliases'
+add German translation for ""aliases:""
+
+thanks to @maxrimue!
+chore: added tests for commands; what I see as headless yargs' killer feature
+fix: stop applying parser to context object
+fix: preserve top-level, reset-able state for execution of parse callback
+chore(package): update read-pkg-up to version 2.0.0
+
+https://greenkeeper.io/
+fix standard nits and failing tests
+fix: with some refactoring and elbow grease, got us to the dream headless API; configure once, all parse N times
+feat: initial support for command aliases
+fix: preserve top-level, reset-able state for execution of parse callback (#669)
+Fixes to the way skipValidation works
+Hungarian translation added
+Add ""Did you mean %s?"" translation
+allow command module to use `aliases` property
+docs: tweak layout."
+2017-10-16,14,1.0,6.0,5.0,-6.5,13.5,True,high,0.1,26,26,"['chore: remove extra space added to docs', 'chore: add id translation to #976', 'chore: see $0 work over the finish line', 'feat: add description of command to help output', 'feat(translation): Update pl-PL translations', 'Replacing /bin/bash with file basename', 'Update tr.json', 'feat: .usage() can now be used to configure a default command\n\nBREAKING CHANGE: .usage() no longer accepts an options object as the second argument', 'docs: slight tweak to wording in docs', 'chore: finish overhauling how we generate default usage message', 'chore: #976 add ko translation (#977)', 'chore: fix argument validation', ""fix: don't display -bash twice when default command is enabled"", 'fix: address a couple output bugs', 'fix: fix tiny spacing issue with usage', 'docs: adding more notes about .usage() API', 'fix: the positional argument parse was clobbering global flag arguments', 'fix: use correct completion command in generated completion script', 'feat: start showing -bash as part of command description', 'docs: slight nit', ""chore: fix tiny issue in tests, post-merging @lostintangent's work"", 'chore: new translations for command API overhaul', 'fix: help strings for nested commands were missing parent commands', 'chore: add pt-BR translation to #976 (#980)', 'Chore: new translations for API overhaul for locale: HI (Hindi)', 'fix: parse array rather than string, so that quotes are safe']","['committed (#975)', 'committed (#986)', 'committed (#985)', 'committed (#983)', 'committed (#982)', 'committed (#976)', 'committed (#992)', 'committed (#984)', 'committed (#988)', 'committed (#990)', 'committed (#991)', 'committed (#993)']","[84261, 84296, 84346, 84380, 84475, 84541, 84579, 84625, 84665, 84776, 84999, 85165, 85173, 85419, 85427, 85435, 85443, 85451, 85459, 85467, 85475, 85483, 85504, 85512, 85530, 85568]","[84263, 84298, 84348, 84382, 84477, 84543, 84581, 84627, 84667, 84778, 85001, 85167, 85175, 85421, 85429, 85437, 85445, 85453, 85461, 85469, 85477, 85485, 85506, 85514, 85532, 85570]","chore: remove extra space added to docs
+chore: add id translation to #976
+chore: see $0 work over the finish line
+feat: add description of command to help output
+feat(translation): Update pl-PL translations
+Replacing /bin/bash with file basename
+Update tr.json
+feat: .usage() can now be used to configure a default command
+
+BREAKING CHANGE: .usage() no longer accepts an options object as the second argument
+docs: slight tweak to wording in docs
+chore: finish overhauling how we generate default usage message
+chore: #976 add ko translation (#977)
+chore: fix argument validation
+fix: don't display -bash twice when default command is enabled
+fix: address a couple output bugs
+fix: fix tiny spacing issue with usage
+docs: adding more notes about .usage() API
+fix: the positional argument parse was clobbering global flag arguments
+fix: use correct completion command in generated completion script
+feat: start showing -bash as part of command description
+docs: slight nit
+chore: fix tiny issue in tests, post-merging @lostintangent's work
+chore: new translations for command API overhaul
+fix: help strings for nested commands were missing parent commands
+chore: add pt-BR translation to #976 (#980)
+Chore: new translations for API overhaul for locale: HI (Hindi)
+fix: parse array rather than string, so that quotes are safe"
+2018-06-25,20,0.25,6.0,5.75,-8.375,14.625,True,high,0.9347826086956522,51,48,"['Merge pull request #2 from aorinevo/FEATURE/PR-AN-02_master_AN_name_scope\n\nPR-AN-02: Add name scope for  NPM package.', 'Update with master', 'I-1150: Setup for Phase 2 integration of redux into usage.js', 'I-1150: Phase 3 - Hoist vars and functions to top of function scope.', 'I-1150: Phase 3 - Migrate usage commands to state - clean-up.', 'I-1150: Phase 3 - Migrate usage descriptions to redux state.', 'chore: cache node_modules', ""Bump engines to Node.js 6.x\n\nThis change was mentioned in the release notes for 12.0.0, so it shouldn't be a breaking change..."", 'I-1150: Phase 3 - Destructure dispatch and getState from store.', 'I-1150: Fix key typo.', 'I-1150: Fix specs.', 'I-1150: Resolve comments.', 'PR-AN-02: Add name scope for  NPM package.', 'I-1150: Phase 3 - Remove spawn sync.', 'I-1150: Bump @aorinevo/yargs.', 'feat: remove `setPlaceholderKeys`\n\nDo no add `undefined` properties in parsed result object for options absent from provided `argv`.\n\nBREAKING CHANGE: Options absent from `argv` (not set via CLI argument) are now absent from the parsed result object rather tahn being set with `undefined`', 'I-1150: Add Unit tests for reducers and action creators.', 'I-1150: Phase 3 - Destructure dispatch and getState.', 'chore: test Node.js 6, 8 and 10', 'I-1150: Increase coverage for reducers/usage.js', 'I-1150: Fix context reducers conflicts.', 'I-1150: Phase 3 - Migrate usage examples to state.', 'Fix breaking change note in CHANGELOG.md\n\nEarlier in the changelog for 12.0.0 it mentions that Node 6 was _added_ to the testing matrix, then under breaking changes it says the opposite. I _believe_ that the breaking change section intended to say that Node 4 was dropped (it is EOL after all) not Node 6.', 'Merge pull request #1 from aorinevo/FEATURE/PR-AN-01_master_AN_global_mw\n\nPR-AN-01: Global Middleware feature.', 'I-1150: Add Redux for State Management', 'Forgot to finish one line in yargs.js\n\nFixed. Now .reset() should reset printTypes as well.', ""Bump decamelize & find-up\n\nThe only breaking changes is that support for Node.js 4.x is dropped. Since Yargs currently only supports Node >= 6 this shouldn't be a problem."", 'I-1150: Complete phase 1 redux integration in usage', 'I-1150: Add redux state management for usage.js.', 'I-1150: Phase 3 - Fix addUsages function.', 'I-1150: Phase 3 - Fix usageDisabled check.', 'I-1150: Phase 3 - Parse issue.', 'Merge pull request #13 from aorinevo/I-1150_master_AN_redux\n\nI-1150: Redux', 'Merge pull request #3 from aorinevo/FEATURE/Update_cm\n\nFEATURE: Add Coremetrics', 'I-1150: Phase 3 - Migrate usage commands to state.', 'Increase coverage.', 'Readme: add info about installing @next version, see #1134', 'Remove file extension on usage output\n\nBefore, at least on Windows, the `Commands:` section included the file extension, e.g.:\r\n\r\n```\r\nC:\\Users\\emile>athom\r\nathom.js <command>\r\n\r\nCommands:\r\n  athom.js app      App related commands\r\n```\r\n\r\nWith this change, the `.js` will be automatically stripped.', 'PR-AN-01: Global Middleware feature.', 'I-1150: Add Unit tests for context reducers and action creators.', 'Fix scope.', 'I-1150: Phase 3 - Breakout changes for context into a separate branch.', 'I-1150: Move usageDisabled to usageReducer.', 'I-1150: Phase 3 - Fix spec failure.', 'I-1150: Phase 3 - Usage parse spec failure.', 'Expand context usage and add printTypes property.\n\nUse context to track yargs-wide state.\nAdded printTypes property to context for controlling if type should be printed in help.\nAdded yargsOptions switch for allowing users to set yargs config.\nFixes #969.', 'I-1150: Phase 3 - add usages to redux.', 'I-1150: Phase 3 - Resolve comments.']","['committed (#1167)', 'committed (#1159)', 'committed (#1169)', 'committed (#1105)', 'committed (#1160)', 'committed (#1166)', 'committed (#1053)', 'committed (#1168)', 'committed (#1165)', 'committed (#1073)']","[74084, 74120, 74154, 74162, 74170, 74178, 74186, 74194, 74202, 74210, 74218, 74226, 74234, 74242, 74250, 74258, 74266, 74274, 74282, 74290, 74298, 74306, 74314, 74322, 74330, 74338, 74346, 74354, 74362, 74370, 74378, 74386, 74394, 74402, 74410, 74418, 74426, 74434, 74442, 74450, 74458, 74466, 74474, 74502, 74543, 75197, 75241, 78658, 79846, 80785, 80794]","[74086, 74122, 74156, 74164, 74172, 74180, 74188, 74196, 74204, 74212, 74220, 74228, 74236, 74244, 74252, 74260, 74268, 74276, 74284, 74292, 74300, 74308, 74316, 74324, 74332, 74340, 74348, 74356, 74364, 74372, 74380, 74388, 74396, 74404, 74412, 74420, 74428, 74436, 74444, 74452, 74460, 74468, 74476, 74504, 74545, 75199, 75243, 78660, 79848, 80787, 80796]","Merge pull request #2 from aorinevo/FEATURE/PR-AN-02_master_AN_name_scope
+
+PR-AN-02: Add name scope for  NPM package.
+Update with master
+I-1150: Setup for Phase 2 integration of redux into usage.js
+I-1150: Phase 3 - Hoist vars and functions to top of function scope.
+I-1150: Phase 3 - Migrate usage commands to state - clean-up.
+I-1150: Phase 3 - Migrate usage descriptions to redux state.
+chore: cache node_modules
+Bump engines to Node.js 6.x
+
+This change was mentioned in the release notes for 12.0.0, so it shouldn't be a breaking change...
+I-1150: Phase 3 - Destructure dispatch and getState from store.
+I-1150: Fix key typo.
+I-1150: Fix specs.
+I-1150: Resolve comments.
+PR-AN-02: Add name scope for  NPM package.
+I-1150: Phase 3 - Remove spawn sync.
+I-1150: Bump @aorinevo/yargs.
+feat: remove `setPlaceholderKeys`
+
+Do no add `undefined` properties in parsed result object for options absent from provided `argv`.
+
+BREAKING CHANGE: Options absent from `argv` (not set via CLI argument) are now absent from the parsed result object rather tahn being set with `undefined`
+I-1150: Add Unit tests for reducers and action creators.
+I-1150: Phase 3 - Destructure dispatch and getState.
+chore: test Node.js 6, 8 and 10
+I-1150: Increase coverage for reducers/usage.js
+I-1150: Fix context reducers conflicts.
+I-1150: Phase 3 - Migrate usage examples to state.
+Fix breaking change note in CHANGELOG.md
+
+Earlier in the changelog for 12.0.0 it mentions that Node 6 was _added_ to the testing matrix, then under breaking changes it says the opposite. I _believe_ that the breaking change section intended to say that Node 4 was dropped (it is EOL after all) not Node 6.
+Merge pull request #1 from aorinevo/FEATURE/PR-AN-01_master_AN_global_mw
+
+PR-AN-01: Global Middleware feature.
+I-1150: Add Redux for State Management
+Forgot to finish one line in yargs.js
+
+Fixed. Now .reset() should reset printTypes as well.
+Bump decamelize & find-up
+
+The only breaking changes is that support for Node.js 4.x is dropped. Since Yargs currently only supports Node >= 6 this shouldn't be a problem.
+I-1150: Complete phase 1 redux integration in usage
+I-1150: Add redux state management for usage.js.
+I-1150: Phase 3 - Fix addUsages function.
+I-1150: Phase 3 - Fix usageDisabled check.
+I-1150: Phase 3 - Parse issue.
+Merge pull request #13 from aorinevo/I-1150_master_AN_redux
+
+I-1150: Redux
+Merge pull request #3 from aorinevo/FEATURE/Update_cm
+
+FEATURE: Add Coremetrics
+I-1150: Phase 3 - Migrate usage commands to state.
+Increase coverage.
+Readme: add info about installing @next version, see #1134
+Remove file extension on usage output
+
+Before, at least on Windows, the `Commands:` section included the file extension, e.g.:
+
+```
+C:\Users\emile>athom
+athom.js <command>
+
+Commands:
+  athom.js app      App related commands
+```
+
+With this change, the `.js` will be automatically stripped.
+PR-AN-01: Global Middleware feature.
+I-1150: Add Unit tests for context reducers and action creators.
+Fix scope.
+I-1150: Phase 3 - Breakout changes for context into a separate branch.
+I-1150: Move usageDisabled to usageReducer.
+I-1150: Phase 3 - Fix spec failure.
+I-1150: Phase 3 - Usage parse spec failure.
+Expand context usage and add printTypes property.
+
+Use context to track yargs-wide state.
+Added printTypes property to context for controlling if type should be printed in help.
+Added yargsOptions switch for allowing users to set yargs config.
+Fixes #969.
+I-1150: Phase 3 - add usages to redux.
+I-1150: Phase 3 - Resolve comments."
+2019-01-28,17,0.0,3.0,3.0,-4.5,7.5,True,high,3.1666666666666665,60,44,"[""feat: options/positionals with leading '+' and '0' no longer parse as numbers\n\nBREAKING CHANGE: options with leading '+' or '0' now parse as strings"", 'chore: correct wording of test', 'fix my bash', 'Revert whitespace', 'Oi vey, whitespace and newlines.', 'chore: update npm version on Travis on Node 6', 'fix autocomplete', 'use the instance-scoped logger', '#1237 async middleware', 'add parserConfiguration tests', 'Revert ""use the instance-scoped logger"" (non-cli deprecation message breaks test suite)\n\nThis reverts commit 41fe766a7a80d97ee5f8c81495bd405bcb82efe3.', 'chore: remove echo', ""npm i npm -g does not work on Windows; we'll look at retiring Node 6 in future pull request"", 'feat: support promises in middleware', ""chore: address @aorinevo's code review so that we can land"", 'make parserConfiguration override package.json', 'Fixed merge conflict in docs', 'Rebasing', ""Fix: .implies didn't work for values in nested objects"", 'chore: drop Node 6 from testing matrix\n\nBREAKING CHANGE: dropping Node 6 which hits end of life in April', 'chore: switch back to latest nyc', 'chore: fix yaml', 'fix: middleware added multiple times due to reference bug', 'Updated docs', 'what do you mean github PR reviewed code is immutable?! oi vey, whitespace. please squash this merge.', ""Fix: conflicts didn't work for values in nested objects"", 'upgrade nyc', 'doc: update docs to reflect new parserConfiguration method', 'what is TRAVIS_NODE_VERSION populated with', 'simplify logic for our use-case', 'merged from master', 'added sort', 'Merged in PR #1262, put sort under config, default to false, added tests', ""Fix: .demandOption didn't work for values in nested objects"", 'Feedback from docs', 'deprecate package.json config and add parserConfiguration method', 'whoops, we actually do override the separator', 'Edited help example to align with actual output', 'Resolved merge conflicts', 'slight tweak to working, to allow for https://github.com/yargs/yargs/pull/1256', 'chore: update dependencies\n\nBREAKING CHANGE: see [yargs-parser@12.0.0 CHANGELOG](https://github.com/yargs/yargs-parser/blob/master/CHANGELOG.md#breaking-changes)', 'Removed old-unnecessary opts, eol on yargs.js', ""chore: vendoring decamelize, we don't need the unicode added in 2.0"", ""Merge remote-tracking branch 'jean-emmanuel/parser-configuration' into sort-command-usage""]","['committed (#1286)', 'committed (#1284)', 'committed (#1256)', 'committed (#1272)', 'committed (#1262)', 'committed (#1257)', 'committed (#1278)', 'committed (#1191)', 'committed (#1287)', 'committed (#1282)', 'committed (#1280)', 'committed (#1271)']","[68076, 68117, 68125, 68185, 68199, 68207, 68215, 68223, 68231, 68243, 68251, 68259, 68267, 68275, 68283, 68334, 68394, 68402, 68428, 68436, 68686, 68785, 69088, 69097, 69115, 69135, 69143, 69475, 69484, 69621, 69669, 69677, 69685, 69693, 69701, 69719, 69727, 69735, 69743, 69751, 69759, 69783, 69791, 69813, 69834, 69842, 69850, 69858, 69866, 69874, 69882, 69890, 69898, 69906, 69914, 69922, 69944, 73212, 73224, 73238]","[68078, 68119, 68127, 68187, 68201, 68209, 68217, 68225, 68233, 68245, 68253, 68261, 68269, 68277, 68285, 68336, 68396, 68404, 68430, 68438, 68688, 68787, 69090, 69099, 69117, 69137, 69145, 69477, 69486, 69623, 69671, 69679, 69687, 69695, 69703, 69721, 69729, 69737, 69745, 69753, 69761, 69785, 69793, 69815, 69836, 69844, 69852, 69860, 69868, 69876, 69884, 69892, 69900, 69908, 69916, 69924, 69946, 73214, 73226, 73240]","feat: options/positionals with leading '+' and '0' no longer parse as numbers
+
+BREAKING CHANGE: options with leading '+' or '0' now parse as strings
+chore: correct wording of test
+fix my bash
+Revert whitespace
+Oi vey, whitespace and newlines.
+chore: update npm version on Travis on Node 6
+fix autocomplete
+use the instance-scoped logger
+#1237 async middleware
+add parserConfiguration tests
+Revert ""use the instance-scoped logger"" (non-cli deprecation message breaks test suite)
+
+This reverts commit 41fe766a7a80d97ee5f8c81495bd405bcb82efe3.
+chore: remove echo
+npm i npm -g does not work on Windows; we'll look at retiring Node 6 in future pull request
+feat: support promises in middleware
+chore: address @aorinevo's code review so that we can land
+make parserConfiguration override package.json
+Fixed merge conflict in docs
+Rebasing
+Fix: .implies didn't work for values in nested objects
+chore: drop Node 6 from testing matrix
+
+BREAKING CHANGE: dropping Node 6 which hits end of life in April
+chore: switch back to latest nyc
+chore: fix yaml
+fix: middleware added multiple times due to reference bug
+Updated docs
+what do you mean github PR reviewed code is immutable?! oi vey, whitespace. please squash this merge.
+Fix: conflicts didn't work for values in nested objects
+upgrade nyc
+doc: update docs to reflect new parserConfiguration method
+what is TRAVIS_NODE_VERSION populated with
+simplify logic for our use-case
+merged from master
+added sort
+Merged in PR #1262, put sort under config, default to false, added tests
+Fix: .demandOption didn't work for values in nested objects
+Feedback from docs
+deprecate package.json config and add parserConfiguration method
+whoops, we actually do override the separator
+Edited help example to align with actual output
+Resolved merge conflicts
+slight tweak to working, to allow for https://github.com/yargs/yargs/pull/1256
+chore: update dependencies
+
+BREAKING CHANGE: see [yargs-parser@12.0.0 CHANGELOG](https://github.com/yargs/yargs-parser/blob/master/CHANGELOG.md#breaking-changes)
+Removed old-unnecessary opts, eol on yargs.js
+chore: vendoring decamelize, we don't need the unicode added in 2.0
+Merge remote-tracking branch 'jean-emmanuel/parser-configuration' into sort-command-usage"
+2019-02-11,9,0.0,3.0,3.0,-4.5,7.5,True,high,0.5,6,6,"['Fixed docs and command name to include zsh as well as bash', 'test: add tests for alias behavior, based on conversations today', 'Adding tests for zsh, adds description to zsh auto-complete', 'Added initial skeleton test for completion script', 'chore: update deps', 'WIP zsh']","['committed (#1292)', 'committed (#1291)', 'committed (#1296)']","[67778, 67868, 67876, 67893, 67901, 67933]","[67780, 67870, 67878, 67895, 67903, 67935]","Fixed docs and command name to include zsh as well as bash
+test: add tests for alias behavior, based on conversations today
+Adding tests for zsh, adds description to zsh auto-complete
+Added initial skeleton test for completion script
+chore: update deps
+WIP zsh"
+2019-06-10,8,0.25,3.0,2.75,-3.875,7.125,True,high,0.3181818181818182,6,6,"['Do not allow extra positionals in strict mode\n\nThe test was disabled for commandless yargs,\nbut as the validation is done on the innermost yargs,\nit was always disabled.', 'feat: Inline code to detect current locale from environment\n\nThis eliminates half the dependencies of yargs without any change in\nfunctionality.  The extra dependencies were used by the os-locale module\nto execute detection utilities, this execution functionality was always\ndisabled by yargs.\n\nFixes #1354', 'updated CHANGELOG.md', 'docs: fix emphasis of note to .parserConfiguration', 'fix(deps): yargs-parser update addressing several parsing bugs', 'updated package.json']","['committed (#1364)', 'committed (#1356)', 'committed (#1358)', 'committed (#1361)', 'committed (#1357)']","[64606, 64735, 65035, 65043, 65075, 65110]","[64608, 64737, 65037, 65045, 65077, 65112]","Do not allow extra positionals in strict mode
+
+The test was disabled for commandless yargs,
+but as the validation is done on the innermost yargs,
+it was always disabled.
+feat: Inline code to detect current locale from environment
+
+This eliminates half the dependencies of yargs without any change in
+functionality.  The extra dependencies were used by the os-locale module
+to execute detection utilities, this execution functionality was always
+disabled by yargs.
+
+Fixes #1354
+updated CHANGELOG.md
+docs: fix emphasis of note to .parserConfiguration
+fix(deps): yargs-parser update addressing several parsing bugs
+updated package.json"
+2019-07-29,13,1.0,3.75,2.75,-3.125,7.875,True,high,1.8636363636363635,15,14,"['Add a separate test case for multiple epilogs', ""Don't alter the user supplied script name value"", 'review: correct install command', ""Don't set completionCommand in showCompletionScript"", 'docs: typescript', 'Allow completionCommand to be set via showCompletionScript', '(wip) add test to reproduce #1137\n\ncalling parse several times with commands gives different results', 'Support multiple epilogs being added', 'docs: slight fix to TypeScript documentation', 'fix! yargs.parsed now populated before returning, when yargs.parse() called with no args\n\nBREAKING CHANGE: we now only officially support yargs.$0 parameter and discourage direct access to yargs.parsed', '(fix) closes #1137\n\nAllows calling parse without arguments multiple times, when commands\nare defined.', 'Fix: Usage-options example #1176', 'Remove unnecessary options in test', 'review: flesh out TypeScript docs a bit further']","['committed (#1384)', 'committed (#1383)', 'committed (#1381)', 'committed (#1388)', 'committed (#1378)', 'committed (#1385)', 'committed (#1369)', 'committed (#1387)', 'committed (#1382)', 'committed (#1375)']","[63298, 63378, 63508, 63524, 63580, 63592, 63637, 63679, 63780, 63788, 63796, 63912, 64070, 64294, 64302]","[63300, 63380, 63510, 63526, 63582, 63594, 63639, 63681, 63782, 63790, 63798, 63914, 64072, 64296, 64304]","Add a separate test case for multiple epilogs
+Don't alter the user supplied script name value
+review: correct install command
+Don't set completionCommand in showCompletionScript
+docs: typescript
+Allow completionCommand to be set via showCompletionScript
+(wip) add test to reproduce #1137
+
+calling parse several times with commands gives different results
+Support multiple epilogs being added
+docs: slight fix to TypeScript documentation
+fix! yargs.parsed now populated before returning, when yargs.parse() called with no args
+
+BREAKING CHANGE: we now only officially support yargs.$0 parameter and discourage direct access to yargs.parsed
+(fix) closes #1137
+
+Allows calling parse without arguments multiple times, when commands
+are defined.
+Fix: Usage-options example #1176
+Remove unnecessary options in test
+review: flesh out TypeScript docs a bit further"
+2019-10-07,13,1.0,4.0,3.0,-3.5,8.5,True,high,1.5,3,3,"['feat(deps): introduce yargs-parser with support for unknown-options-as-args', ""Fixed import statement in typescript.md\n\n```\r\nimport yargs from 'yargs';\r\n\r\nconst argv = yargs.options({}).argv;\r\n```\r\ngives\r\n```\r\nerr.ts:3:20 - error TS2339: Property 'options' does not exist on type '{ <K extends never, V>(key: K, value: V, description?: string): Argv<Omit<{}, K> & { [key in K]: V; }>; <K extends string, V>(key: K, value: V, description?: string): Argv<{ [key in K]: V; }>; <D extends { [key: string]: any; }>(defaults: D, description?: string): Argv<...>; }'.\r\n\r\n3 const argv = yargs.options({}).argv;\r\n                     ~~~~~~~\r\n```\r\nwhile \r\n```\r\nimport * as yargs from 'yargs';\r\n\r\nconst argv = yargs.options({}).argv;\r\n```\r\nworks ok"", 'docs: fix TypeScript import to prevent a future major release warning\n\nImporting using `import yargs from \'yargs\';` prevents a warning log to console about the `parsed` property being dropped in a future major version.\n\nIn future major releases of yargs, ""parsed"" will be a private field. Use the return value of "".parse()"" or "".argv"" instead\n\nCloses #1439']","['committed (#1440)', 'committed (#1446)', 'committed (#1441)']","[59632, 59866, 59912]","[59634, 59868, 59914]","feat(deps): introduce yargs-parser with support for unknown-options-as-args
+Fixed import statement in typescript.md
+
+```
+import yargs from 'yargs';
+
+const argv = yargs.options({}).argv;
+```
+gives
+```
+err.ts:3:20 - error TS2339: Property 'options' does not exist on type '{ <K extends never, V>(key: K, value: V, description?: string): Argv<Omit<{}, K> & { [key in K]: V; }>; <K extends string, V>(key: K, value: V, description?: string): Argv<{ [key in K]: V; }>; <D extends { [key: string]: any; }>(defaults: D, description?: string): Argv<...>; }'.
+
+3 const argv = yargs.options({}).argv;
+                     ~~~~~~~
+```
+while 
+```
+import * as yargs from 'yargs';
+
+const argv = yargs.options({}).argv;
+```
+works ok
+docs: fix TypeScript import to prevent a future major release warning
+
+Importing using `import yargs from 'yargs';` prevents a warning log to console about the `parsed` property being dropped in a future major version.
+
+In future major releases of yargs, ""parsed"" will be a private field. Use the return value of "".parse()"" or "".argv"" instead
+
+Closes #1439"
+2019-10-21,12,1.25,5.5,4.25,-5.125,11.875,True,high,0.029411764705882353,16,16,"['updated CHANGELOG.md [ci skip]', 'chore: fix linting', 'chore!: drop Node 6 support', 'test: add back test for pkgConf', 'doc: weback example', ""Correct fr local file syntax error\n\nCorrect fr local file syntax error : there was a ',' that i removed"", 'doc(webpack): let people choose to accept or not webpack warnings', 'fix!: update to yargs-parser with fix for array default values\n\nBREAKING CHANGE: yargs-parser@16.0.0 drops support for Node 6', 'Add missing french translation\n\nAdd missing french translation for this message : ""Arguments %s and %s are mutually exclusive""', 'doc(webpack): keep only yargs as external dep', 'doc(webpack): ignore dynamic module loading warnings', ""Merge branch 'master' into drop-node-6"", 'missing array choice regression test', 'updated package.json [ci skip]', 'build: switch to c8 for coverage', 'refactor!: remove package.json-based parserConfiguration']","['committed (#1462)', 'committed (#1460)', 'committed (#1461)', 'committed (#1436)', 'committed (#1456)', 'committed (#1463)', 'committed (#1447)', 'committed (#1464)']","[58172, 58201, 58281, 58289, 58318, 58326, 58390, 58402, 58410, 58678, 58686, 59583, 60189, 60197, 60212, 60227]","[58174, 58203, 58283, 58291, 58320, 58328, 58392, 58404, 58412, 58680, 58688, 59585, 60191, 60199, 60214, 60229]","updated CHANGELOG.md [ci skip]
+chore: fix linting
+chore!: drop Node 6 support
+test: add back test for pkgConf
+doc: weback example
+Correct fr local file syntax error
+
+Correct fr local file syntax error : there was a ',' that i removed
+doc(webpack): let people choose to accept or not webpack warnings
+fix!: update to yargs-parser with fix for array default values
+
+BREAKING CHANGE: yargs-parser@16.0.0 drops support for Node 6
+Add missing french translation
+
+Add missing french translation for this message : ""Arguments %s and %s are mutually exclusive""
+doc(webpack): keep only yargs as external dep
+doc(webpack): ignore dynamic module loading warnings
+Merge branch 'master' into drop-node-6
+missing array choice regression test
+updated package.json [ci skip]
+build: switch to c8 for coverage
+refactor!: remove package.json-based parserConfiguration"
+2019-11-04,40,1.25,7.0,5.75,-7.375,15.625,True,high,4.239130434782608,11,11,"['updated CHANGELOG.md [ci skip]', 'chore(parse): refactor tests for sync/async API', 'feature(parse): add tests for parseAsync in sync/async API', 'feat(deps)!: yargs-parser now throws on invalid combinations of config', ""feat: Expose `Parser` from `require('yargs/yargs')`\n\nFixes #1475"", 'Support .command(cmd,desc,module) for ES6 class as module', 'docu: update boolean description', 'feature(parse): add tests for sync/async API', 'updated package.json [ci skip]', 'ES6 class as a command', ""Merge branch 'master' into yargs-parser-update""]","['committed (#1462)', 'committed (#1443)', 'committed (#1470)', 'committed (#1477)', 'committed (#1394)', 'committed (#1474)']","[57359, 57503, 57976, 57984, 58281, 58289, 59723, 59731, 59739, 62970, 62985]","[57361, 57505, 57978, 57986, 58283, 58291, 59725, 59733, 59741, 62972, 62987]","updated CHANGELOG.md [ci skip]
+chore(parse): refactor tests for sync/async API
+feature(parse): add tests for parseAsync in sync/async API
+feat(deps)!: yargs-parser now throws on invalid combinations of config
+feat: Expose `Parser` from `require('yargs/yargs')`
+
+Fixes #1475
+Support .command(cmd,desc,module) for ES6 class as module
+docu: update boolean description
+feature(parse): add tests for sync/async API
+updated package.json [ci skip]
+ES6 class as a command
+Merge branch 'master' into yargs-parser-update"
+2020-09-07,26,2.0,9.0,7.0,-8.5,19.5,True,high,0.9285714285714286,28,26,"['chore: release 16.0.2', 'feat: adds strictOptions()\n\nAdds strictOptions() as a partner to strictCommands()\n\nFixes #1701', 'chore: do not rename import', 'fix: code was not passed to process.exit', 'chore(deps): update typescript-eslint monorepo to v4', ""Merge branch 'master' into formalize-parser-export"", 'test: regression test for exit code', 'fix: make positionals in -- count towards validation', ':sparkles: allow custom version handler by consuming application', ':white_check_mark: fix failing test & lint', 'chore: release 16.0.0', 'chore: remove random thing added by vscode', 'fix(deps): update dependency yargs-parser to v20', 'feat(helpers): rebase, Parser, applyExtends now blessed helpers', 'Update CHANGELOG.md', 'fix: move yargs.cjs to yargs', 'chore: update tests', 'fix: chore missing file in exports', 'docs: correct comment', 'add test to reproduce #1701', 'docs: slight tweak to wording', 'fix(typescript): yargs-parser was breaking @types/yargs', 'chore: release 16.0.1', 'chore: release 16.0.3', 'chore: address bug with linter', 'chore: removed rebase helper']","['committed (#1746)', 'committed (#1738)', 'committed (#1737)', 'committed (#1742)', 'committed (#1733)', 'committed (#1752)', 'committed (#1750)', 'committed (#1698)', 'committed (#1744)', 'committed (#1730)', 'committed (#1747)', 'committed (#1710)', 'committed (#1745)', 'committed (#1743)', 'committed (#1748)']","[42140, 42148, 42208, 42217, 42423, 42461, 42469, 42513, 42555, 42590, 42617, 42659, 42667, 42803, 42814, 42822, 42874, 42882, 42890, 43017, 43031, 43039, 43047, 43190, 43945, 44919, 44933, 44941]","[42142, 42150, 42210, 42219, 42425, 42463, 42471, 42515, 42557, 42592, 42619, 42661, 42669, 42805, 42816, 42824, 42876, 42884, 42892, 43019, 43033, 43041, 43049, 43192, 43947, 44921, 44935, 44943]","chore: release 16.0.2
+feat: adds strictOptions()
+
+Adds strictOptions() as a partner to strictCommands()
+
+Fixes #1701
+chore: do not rename import
+fix: code was not passed to process.exit
+chore(deps): update typescript-eslint monorepo to v4
+Merge branch 'master' into formalize-parser-export
+test: regression test for exit code
+fix: make positionals in -- count towards validation
+:sparkles: allow custom version handler by consuming application
+:white_check_mark: fix failing test & lint
+chore: release 16.0.0
+chore: remove random thing added by vscode
+fix(deps): update dependency yargs-parser to v20
+feat(helpers): rebase, Parser, applyExtends now blessed helpers
+Update CHANGELOG.md
+fix: move yargs.cjs to yargs
+chore: update tests
+fix: chore missing file in exports
+docs: correct comment
+add test to reproduce #1701
+docs: slight tweak to wording
+fix(typescript): yargs-parser was breaking @types/yargs
+chore: release 16.0.1
+chore: release 16.0.3
+chore: address bug with linter
+chore: removed rebase helper"
+2020-09-21,30,2.0,8.5,6.5,-7.75,18.25,True,high,1.8076923076923077,16,16,"['test: throw on warning', 'docs: document onFinishCommand option', 'docs: adds back documentation about bundling', 'chore: fix formatting', ""Merge branch 'master' into document-bundling"", 'Include deprecated too', 'chore: add in advanced topics', ""Merge branch 'master' into fix-1758"", 'docs: remove documentation pointing folks to rollup', 'docs: fix ordering', ""Merge branch 'master' into docs/Add-Deprecate-To-Docs"", 'chore: remove only', 'chore: also add reference to ncc', 'docs(terminology): update terminology', 'Update docs to include deprecate', 'fix(positional): positional strings no longer drop decimals']","['committed (#1767)', 'committed (#1769)', 'committed (#1757)', 'committed (#1761)', 'committed (#1762)', 'committed (#1766)']","[41276, 41284, 41456, 41485, 41580, 41589, 41603, 41640, 41648, 41656, 41664, 41853, 41861, 41869, 41880, 41891]","[41278, 41286, 41458, 41487, 41582, 41591, 41605, 41642, 41650, 41658, 41666, 41855, 41863, 41871, 41882, 41893]","test: throw on warning
+docs: document onFinishCommand option
+docs: adds back documentation about bundling
+chore: fix formatting
+Merge branch 'master' into document-bundling
+Include deprecated too
+chore: add in advanced topics
+Merge branch 'master' into fix-1758
+docs: remove documentation pointing folks to rollup
+docs: fix ordering
+Merge branch 'master' into docs/Add-Deprecate-To-Docs
+chore: remove only
+chore: also add reference to ncc
+docs(terminology): update terminology
+Update docs to include deprecate
+fix(positional): positional strings no longer drop decimals"
+2021-11-22,12,1.0,4.75,3.75,-4.625,10.375,True,high,0.43333333333333335,17,9,"['chore: release 17.3.0', ""Merge branch 'main' into main"", 'fixes', 'build: fix ts build errors', 'Don\'t fail if  ""fileURLToPath(import.meta.url)"" throws for esm for usage like:\n - built final project used in a javascript vm\n - project built on unix via webpack and used on windows (path format are incompatible with drive letters on windows)', 'docs: add esbuild bundling guide', 'chore(main): release yargs 1.0.0', 'chore(deps): update dependency chalk to v5', 'pin typescript']","['committed (#2061)', 'committed (#2046)', 'committed (#2071)', 'committed (#2074)', 'committed (#2075)', 'committed (#2072)', 'committed (#2076)', 'committed (#2073)', 'committed (#2077)', 'committed (#2066)']","[25072, 25095, 25127, 25186, 25212, 25235, 25261, 25269, 25277, 25285, 25433, 25590, 26314, 26336, 26344, 26356, 26364]","[25074, 25097, 25129, 25188, 25214, 25237, 25263, 25271, 25279, 25287, 25435, 25592, 26316, 26338, 26346, 26358, 26366]","chore: release 17.3.0
+Merge branch 'main' into main
+fixes
+build: fix ts build errors
+Don't fail if  ""fileURLToPath(import.meta.url)"" throws for esm for usage like:
+ - built final project used in a javascript vm
+ - project built on unix via webpack and used on windows (path format are incompatible with drive letters on windows)
+docs: add esbuild bundling guide
+chore(main): release yargs 1.0.0
+chore(deps): update dependency chalk to v5
+pin typescript"
+2021-12-27,12,1.0,4.75,3.75,-4.625,10.375,True,high,0.43333333333333335,11,8,"[""Merge branch 'main' into unknown-argument-whitespace"", 'fix: wrap unknown args in quotes', 'fixes', ""Merge branch 'main' into choices-completion-improvements"", 'feat(usage): output the environment variable name', 'chore(deps): update dependency eslint to v8', 'Fix ""default command"" link in `.positional`\n\n- Link would 404 on the website', 'Improved completion for choices\n\nCompletion for choices will now work for all possible aliases of an\noption and not just the default long option.']","['committed (#2092)', 'committed (#2083)', 'committed (#2028)', 'committed (#2043)', 'committed (#2111)']","[23280, 24153, 24190, 24231, 24239, 24247, 24265, 24784, 24806, 26594, 27368]","[23282, 24155, 24192, 24233, 24241, 24249, 24267, 24786, 24808, 26596, 27370]","Merge branch 'main' into unknown-argument-whitespace
+fix: wrap unknown args in quotes
+fixes
+Merge branch 'main' into choices-completion-improvements
+feat(usage): output the environment variable name
+chore(deps): update dependency eslint to v8
+Fix ""default command"" link in `.positional`
+
+- Link would 404 on the website
+Improved completion for choices
+
+Completion for choices will now work for all possible aliases of an
+option and not just the default long option."
+2022-05-09,10,1.0,3.75,2.75,-3.125,7.875,True,high,0.7727272727272727,30,18,"['Update esm.mjs', ""Merge branch 'main' into fix-config-and-variadic-args"", 'Remove console.log', ""Merge branch 'main' into remove-console-log"", ""Merge branch 'main' into fix-pkg-notfound-issue-on-esm"", 'Revert ""chore: Set permissions for GitHub actions (#2168)""\n\nThis reverts commit d9fa18c435aa55bee982aea91507ff0e269188e6.', 'chore(deps): update dependency mocha to v10', 'fix: add browser.d.ts to package.json `files`', 'chore(main): release 17.5.0', 'chore: newline', ""fix: missing yargs.mjs\n\nDue to the `yargs.mjs` file not being published, the fix merged with #2151 is not effective yet. This change should fix that.\r\n\r\n```\r\nCannot find module './node_modules/yargs/yargs.mjs' imported from ./cli.js\r\n```"", 'fix!: provided values should not be combined with config values', 'fix: prevent infinite loop with locale', 'fix: import yargs/yargs in esm projects', 'fix: cjs warning', ""Merge branch 'main' into fix/yargs/yargs"", ""Merge branch 'main' into fix-locale-infinite-loop"", 'fixes']","['committed (#2123)', 'committed (#2100)', 'committed (#2157)', 'committed (#2183)', 'committed (#2173)', 'committed (#2185)', 'committed (#2184)', 'committed (#2151)', 'committed (#2179)']","[19148, 19159, 19233, 19276, 19525, 19546, 19776, 20972, 20980, 20988, 21000, 21529, 21538, 21546, 21577, 22847, 22861, 22905, 23792, 23800, 23835, 23847, 23855, 23867, 23875, 23883, 23896, 23904, 23925, 23933]","[19150, 19161, 19235, 19278, 19527, 19548, 19778, 20974, 20982, 20990, 21002, 21531, 21540, 21548, 21579, 22849, 22863, 22907, 23794, 23802, 23837, 23849, 23857, 23869, 23877, 23885, 23898, 23906, 23927, 23935]","Update esm.mjs
+Merge branch 'main' into fix-config-and-variadic-args
+Remove console.log
+Merge branch 'main' into remove-console-log
+Merge branch 'main' into fix-pkg-notfound-issue-on-esm
+Revert ""chore: Set permissions for GitHub actions (#2168)""
+
+This reverts commit d9fa18c435aa55bee982aea91507ff0e269188e6.
+chore(deps): update dependency mocha to v10
+fix: add browser.d.ts to package.json `files`
+chore(main): release 17.5.0
+chore: newline
+fix: missing yargs.mjs
+
+Due to the `yargs.mjs` file not being published, the fix merged with #2151 is not effective yet. This change should fix that.
+
+```
+Cannot find module './node_modules/yargs/yargs.mjs' imported from ./cli.js
+```
+fix!: provided values should not be combined with config values
+fix: prevent infinite loop with locale
+fix: import yargs/yargs in esm projects
+fix: cjs warning
+Merge branch 'main' into fix/yargs/yargs
+Merge branch 'main' into fix-locale-infinite-loop
+fixes"
+2022-05-16,11,1.0,4.0,3.0,-3.5,8.5,True,high,0.8333333333333334,23,15,"[""Merge branch 'main' into use-prototype"", 'Update the Russian translation', ""Merge branch 'main' into fix-async-middleware"", 'fix: config array combine logic', ""Merge branch 'main' into revert-is-defaulted"", 'fix: handle result of async middleware', 'refactor: make isDefaulted private', 'chore(main): release 17.5.1', 'cleanup', 'fix: array options should not eat posititionals', ""Merge branch 'main' into jg_fix_completion_installation_instructions"", 'Use gender-neutral adjectives', 'fix: use prototype', 'Simplify test', 'fix: completion installation instructions']","['committed (#2165)', 'committed (#2181)', 'committed (#2164)', 'committed (#2189)', 'committed (#2188)', 'committed (#2187)', 'committed (#1997)', 'committed (#2160)']","[18995, 19033, 19050, 19097, 19389, 19431, 20334, 20377, 20409, 20417, 20425, 20448, 20456, 20464, 20489, 20497, 20505, 20513, 20521, 20823, 20832, 20844, 28528]","[18997, 19035, 19052, 19099, 19391, 19433, 20336, 20379, 20411, 20419, 20427, 20450, 20458, 20466, 20491, 20499, 20507, 20515, 20523, 20825, 20834, 20846, 28530]","Merge branch 'main' into use-prototype
+Update the Russian translation
+Merge branch 'main' into fix-async-middleware
+fix: config array combine logic
+Merge branch 'main' into revert-is-defaulted
+fix: handle result of async middleware
+refactor: make isDefaulted private
+chore(main): release 17.5.1
+cleanup
+fix: array options should not eat posititionals
+Merge branch 'main' into jg_fix_completion_installation_instructions
+Use gender-neutral adjectives
+fix: use prototype
+Simplify test
+fix: completion installation instructions"
+2022-10-31,20,0.0,3.0,3.0,-4.5,7.5,True,high,4.166666666666667,16,14,"['chore(deps): update dependency which to v3', 'chore(main): release 17.6.1', 'chore(main): release 17.6.2', 'chore(deps): update dependency @types/node to v18', 'docs: add Typescript example for .terminalWidth()\n\nAdd example note of `.wrap()` method usage with `.terminalWidth()`.\r\n\r\nRef: https://github.com/yargs/yargs/pull/165#issuecomment-1214959504', 'build: harden release-please.yml permissions\nSigned-off-by: Alex <aleksandrosansan@gmail.com>', 'build: harden ci.yaml permissions\nSigned-off-by: Alex <aleksandrosansan@gmail.com>', ""Merge branch 'main' into patch-1"", 'chore(deps): update dependency rollup-plugin-ts to v3', 'fix(lang): typo in Finnish unknown argument singular form', 'chore(deps): update dependency rollup to v3', 'Bugfix: syntax error in JSON\n\nYargs crashes in runtime when trying to load the cs locales', 'fix(deps): update dependency yargs-parser to v21.1.1\n\nCurrently the `yargs` is not usable in Deno with `.env()`. \r\nThis was fixed in https://github.com/yargs/yargs-parser/pull/432\r\nIt was released in yargs-parser v21.0.1\r\nThis dependency bump will fix `yargs` for Deno.', 'fix(deno): refactor to avoid prompts during module import']","['committed (#2258)', 'committed (#2257)', 'committed (#2260)', 'committed (#2255)', 'committed (#2224)', 'committed (#2238)', 'committed (#2231)', 'committed (#2193)', 'committed (#2222)', 'committed (#2249)', 'committed (#2244)', 'committed (#2217)']","[15656, 15722, 15824, 15948, 16085, 16213, 16756, 16765, 16773, 16995, 17003, 17346, 17358, 17389, 17781, 18879]","[15658, 15724, 15826, 15950, 16087, 16215, 16758, 16767, 16775, 16997, 17005, 17348, 17360, 17391, 17783, 18881]","chore(deps): update dependency which to v3
+chore(main): release 17.6.1
+chore(main): release 17.6.2
+chore(deps): update dependency @types/node to v18
+docs: add Typescript example for .terminalWidth()
+
+Add example note of `.wrap()` method usage with `.terminalWidth()`.
+
+Ref: https://github.com/yargs/yargs/pull/165#issuecomment-1214959504
+build: harden release-please.yml permissions
+Signed-off-by: Alex <aleksandrosansan@gmail.com>
+build: harden ci.yaml permissions
+Signed-off-by: Alex <aleksandrosansan@gmail.com>
+Merge branch 'main' into patch-1
+chore(deps): update dependency rollup-plugin-ts to v3
+fix(lang): typo in Finnish unknown argument singular form
+chore(deps): update dependency rollup to v3
+Bugfix: syntax error in JSON
+
+Yargs crashes in runtime when trying to load the cs locales
+fix(deps): update dependency yargs-parser to v21.1.1
+
+Currently the `yargs` is not usable in Deno with `.env()`. 
+This was fixed in https://github.com/yargs/yargs-parser/pull/432
+It was released in yargs-parser v21.0.1
+This dependency bump will fix `yargs` for Deno.
+fix(deno): refactor to avoid prompts during module import"
+2022-12-26,14,0.0,1.0,1.0,-1.5,2.5,True,high,11.5,26,23,"['feat!: drop support for EOL Node 12', 'chore(deps): update dependency rollup-plugin-ts to v3', 'remove comment', ""Merge branch 'main' into fix/add-description-of-alias-on-zsh-completion"", 'chore: add en strings for unknown command', 'fixes', 'build: pin npm version', ""Merge branch 'main' into hide-option-extras"", 'cleanup', 'chore(deps): update dependency rollup to v3', 'chore(deps): update dependency which to v3', 'chore(deps): update dependency mocha to v10', 'Update dependency chalk to v5', 'Add method to hide option extras', 'fix: make the process finding desc from alias be a loop', 'Update dependency eslint to v8', 'chore: use default version of npm', 'test: add a test', ""Merge branch 'main' into feature/unknown-command-en"", 'fix: add a description of alias on the zsh completion', 'test: fix the title of the test', 'spelling', 'console log']","['committed (#2283)', 'committed (#2278)', 'committed (#2156)', 'committed (#2269)', 'committed (#2262)', 'committed (#2284)', 'committed (#2277)', 'committed (#2279)', 'committed (#2276)', 'committed (#2274)', 'committed (#2275)']","[14323, 14346, 14354, 14676, 14709, 14742, 14775, 14805, 14835, 15135, 15144, 15159, 15182, 15190, 15536, 15558, 21023, 21040, 21048, 21056, 21064, 21077, 21085, 21097, 21105, 21129]","[14325, 14348, 14356, 14678, 14711, 14744, 14777, 14807, 14837, 15137, 15146, 15161, 15184, 15192, 15538, 15560, 21025, 21042, 21050, 21058, 21066, 21079, 21087, 21099, 21107, 21131]","feat!: drop support for EOL Node 12
+chore(deps): update dependency rollup-plugin-ts to v3
+remove comment
+Merge branch 'main' into fix/add-description-of-alias-on-zsh-completion
+chore: add en strings for unknown command
+fixes
+build: pin npm version
+Merge branch 'main' into hide-option-extras
+cleanup
+chore(deps): update dependency rollup to v3
+chore(deps): update dependency which to v3
+chore(deps): update dependency mocha to v10
+Update dependency chalk to v5
+Add method to hide option extras
+fix: make the process finding desc from alias be a loop
+Update dependency eslint to v8
+chore: use default version of npm
+test: add a test
+Merge branch 'main' into feature/unknown-command-en
+fix: add a description of alias on the zsh completion
+test: fix the title of the test
+spelling
+console log"
+2023-01-30,3,0.0,1.0,1.0,-1.5,2.5,True,high,0.5,0,0,[],[],,,
+2023-02-13,19,0.0,2.5,2.5,-3.75,6.25,True,high,5.1,19,18,"['test: mock additional hasColors method introduced in Node 16', 'Merge pull request #1 from yargs/main\n\nMerge from yargs/yargs', 'fix: do not separate aliased options from the main option', 'fix: tests on node 12 and 14', 'fix: just skip validation', ""Merge branch 'main' into feat/convert-line-break-to-whitespace-on-zsh-completion"", 'test: improve coverage', 'fix: correctly handle demanded options', 'chore(main): release 17.7.0', ""Merge branch 'main' into feat/convert-line-break-to-whitespace-on-zsh-completion\n\n# Conflicts:\n#\ttest/completion.cjs"", 'fix: correctly negate options', ""Merge branch 'main' into feat/fig-completions"", 'fix: respect `boolean-negation` config', 'fix: do not throw for missing required args', 'feat: support implies and conflicts', 'feat: add fig completions', 'chore(deps): update dependency rimraf to v4', 'feat: convert line break to whitespace for the description of the option']","['committed (#2297)', 'committed (#2271)', 'committed (#2214)', 'committed (#2285)', 'committed (#2290)']","[13735, 13975, 14277, 14911, 14933, 14941, 14968, 17969, 18001, 18009, 18017, 18029, 18037, 18045, 18053, 18061, 18072, 18083, 18095]","[13737, 13977, 14279, 14913, 14935, 14943, 14970, 17971, 18003, 18011, 18019, 18031, 18039, 18047, 18055, 18063, 18074, 18085, 18097]","test: mock additional hasColors method introduced in Node 16
+Merge pull request #1 from yargs/main
+
+Merge from yargs/yargs
+fix: do not separate aliased options from the main option
+fix: tests on node 12 and 14
+fix: just skip validation
+Merge branch 'main' into feat/convert-line-break-to-whitespace-on-zsh-completion
+test: improve coverage
+fix: correctly handle demanded options
+chore(main): release 17.7.0
+Merge branch 'main' into feat/convert-line-break-to-whitespace-on-zsh-completion
+
+# Conflicts:
+#	test/completion.cjs
+fix: correctly negate options
+Merge branch 'main' into feat/fig-completions
+fix: respect `boolean-negation` config
+fix: do not throw for missing required args
+feat: support implies and conflicts
+feat: add fig completions
+chore(deps): update dependency rimraf to v4
+feat: convert line break to whitespace for the description of the option"
+2023-02-20,50,0.0,3.0,3.0,-4.5,7.5,True,high,14.166666666666666,3,3,"['fix: address display bug with default sub-commands\n\nfreeze() was not being called prior to reset(), resulting in display\nissues for default sub-commands.\n\nFixes #2291', 'grammar', 'chore(main): release 17.7.1']","['committed (#2303)', 'committed (#2304)']","[13290, 13336, 13366]","[13292, 13338, 13368]","fix: address display bug with default sub-commands
+
+freeze() was not being called prior to reset(), resulting in display
+issues for default sub-commands.
+
+Fixes #2291
+grammar
+chore(main): release 17.7.1"
+2023-04-24,11,0.0,2.0,2.0,-3.0,5.0,True,high,3.0,31,28,"['Use JSON.parse', 'chore: update showHelp assert', 'Add watch run-script\n\nCo-authored-by: jglanz@fb.com', 'If coerce returns a promise: argv is a promise', ""fix: do not crash completion when having negable options\n\nCurrent completion crashes when using ZSH and having negable options.\n\n```\n[error] TypeError: Cannot read properties of undefined (reading 'find')\n    at D.completeOptionKey (//node_modules/yargs/build/index.cjs:1255:20)\n    at //node_modules/yargs/build/index.cjs:1191:37\n    at Array.forEach (<anonymous>)\n    at D.optionCompletions (//node_modules/yargs/build/index.cjs:1184:26)\n    at D.defaultCompletion (//node_modules/yargs/build/index.cjs:1158:12)\n    at n (//node_modules/yargs/build/index.cjs:1313:23)\n    at D.getCompletion (//node_modules/yargs/build/index.cjs:1314:31)\n    at te.[runYargsParserAndExecuteCommands] (//node_modules/yargs/build/index.cjs:3161:27)\n    at _.parseAndUpdateUsage (//node_modules/yargs/build/index.cjs:426:8)\n    at _.applyBuilderUpdateUsageAndParse (//node_modules/yargs/build/index.cjs:412:17)\n```"", 'Downgrade concurrently while still supporting node 12', 'chore(main): release 17.7.2', 'Use async / await in example', 'fix: return after then', 'chore: remove callback', 'Add test for async help being displayed before process.exit', ""Merge branch 'main' into feature/watch"", 'chore: lint fix', 'Add more complex example for typescript', ""Merge branch 'main' into main"", 'fix: add callback for showHelp', ""Merge remote-tracking branch 'upstream/main' into fix/2307"", 'fix: coerce should play well with parser configuration', 'chore: expand coerce tests', 'chore(deps): update dependency concurrently to v8', 'Merge pull request #1 from shadowspawn/add-test-for-async-help\n\nAdd test for async help being displayed before process.exit', 'chore: fix comment', ""Merge branch 'main' into fix/2307"", ""Merge branch 'main' into patch-1"", 'chore(deps): update dependency rimraf to v5', 'chore: format', 'fix: rework coerce to remove assumptions about what keys are present in argv', 'docs: Fix example of coerce']","['committed (#2316)', 'committed (#2313)', 'committed (#2320)', 'committed (#2322)', 'committed (#2323)', 'committed (#2146)', 'committed (#2308)', 'committed (#2324)', 'committed (#2319)']","[12031, 12058, 12116, 12367, 12375, 12387, 12416, 12533, 12545, 12557, 12577, 12603, 12712, 12721, 12729, 12737, 12745, 12756, 12780, 12803, 12811, 12826, 12834, 12963, 12983, 12991, 12999, 13007, 13041, 13053, 21952]","[12033, 12060, 12118, 12369, 12377, 12389, 12418, 12535, 12547, 12559, 12579, 12605, 12714, 12723, 12731, 12739, 12747, 12758, 12782, 12805, 12813, 12828, 12836, 12965, 12985, 12993, 13001, 13009, 13043, 13055, 21954]","Use JSON.parse
+chore: update showHelp assert
+Add watch run-script
+
+Co-authored-by: jglanz@fb.com
+If coerce returns a promise: argv is a promise
+fix: do not crash completion when having negable options
+
+Current completion crashes when using ZSH and having negable options.
+
+```
+[error] TypeError: Cannot read properties of undefined (reading 'find')
+    at D.completeOptionKey (//node_modules/yargs/build/index.cjs:1255:20)
+    at //node_modules/yargs/build/index.cjs:1191:37
+    at Array.forEach (<anonymous>)
+    at D.optionCompletions (//node_modules/yargs/build/index.cjs:1184:26)
+    at D.defaultCompletion (//node_modules/yargs/build/index.cjs:1158:12)
+    at n (//node_modules/yargs/build/index.cjs:1313:23)
+    at D.getCompletion (//node_modules/yargs/build/index.cjs:1314:31)
+    at te.[runYargsParserAndExecuteCommands] (//node_modules/yargs/build/index.cjs:3161:27)
+    at _.parseAndUpdateUsage (//node_modules/yargs/build/index.cjs:426:8)
+    at _.applyBuilderUpdateUsageAndParse (//node_modules/yargs/build/index.cjs:412:17)
+```
+Downgrade concurrently while still supporting node 12
+chore(main): release 17.7.2
+Use async / await in example
+fix: return after then
+chore: remove callback
+Add test for async help being displayed before process.exit
+Merge branch 'main' into feature/watch
+chore: lint fix
+Add more complex example for typescript
+Merge branch 'main' into main
+fix: add callback for showHelp
+Merge remote-tracking branch 'upstream/main' into fix/2307
+fix: coerce should play well with parser configuration
+chore: expand coerce tests
+chore(deps): update dependency concurrently to v8
+Merge pull request #1 from shadowspawn/add-test-for-async-help
+
+Add test for async help being displayed before process.exit
+chore: fix comment
+Merge branch 'main' into fix/2307
+Merge branch 'main' into patch-1
+chore(deps): update dependency rimraf to v5
+chore: format
+fix: rework coerce to remove assumptions about what keys are present in argv
+docs: Fix example of coerce"
+2023-07-17,15,0.0,2.75,2.75,-4.125,6.875,True,high,2.9545454545454546,0,0,[],[],,,
+2024-01-01,13,0.0,2.0,2.0,-3.0,5.0,True,high,4.0,29,29,"['build: pin rollup-plugin-ts on version that works on Node 14', 'chore: pin back TypeScript to fix build', 'chore: update engines', 'build(node)!: require Node >=14.14.0', 'added hebrew translation', 'updated the list of supported locales', 'chore(deps): update dependency rollup to v4', 'chore(deps): update dependency typescript to v5', 'feat(build): update typescript / bundling deps', 'chore: fix engines field + formatting', 'docs: fix typos in .terminalWidth example', ""Merge branch 'main' into feature/fix-example-2381"", ""Merge branch 'main' into main"", 'doc: switch legacy .argv to .parse()', ""Merge branch 'main' into remove-coveralls"", 'chore: get tests passing', 'chore: update release please version', 'Reverse changes and wait for formatting', 'build: pin to older rollup-plubin-ts', 'chore(deps): update dependency gts to v5', 'build: update test matrix', 'chore(deps): update dependency @types/node to v20', 'build: require 14.18 to match rollup', 'chore: remove unused coveralls', 'build: requrie npm@8', 'chore(deps): update dependency c8 to v8', 'build: update ci', 'chore(deps): update dependency c8 to v9', ""Merge branch 'main' into argv-to-parse""]","['committed (#2384)', 'committed (#2375)', 'committed (#2357)', 'committed (#2364)', 'committed (#2314)', 'committed (#2382)', 'committed (#2346)', 'committed (#2326)', 'committed (#2349)', 'committed (#2370)', 'committed (#2339)', 'committed (#2383)']","[9141, 9150, 9169, 9177, 9188, 9196, 9204, 9212, 9220, 9228, 9236, 9244, 9311, 9337, 9345, 9573, 9789, 9982, 10184, 10205, 10225, 10589, 10703, 10711, 10723, 10968, 11809, 11817, 12678]","[9143, 9152, 9171, 9179, 9190, 9198, 9206, 9214, 9222, 9230, 9238, 9246, 9313, 9339, 9347, 9575, 9791, 9984, 10186, 10207, 10227, 10591, 10705, 10713, 10725, 10970, 11811, 11819, 12680]","build: pin rollup-plugin-ts on version that works on Node 14
+chore: pin back TypeScript to fix build
+chore: update engines
+build(node)!: require Node >=14.14.0
+added hebrew translation
+updated the list of supported locales
+chore(deps): update dependency rollup to v4
+chore(deps): update dependency typescript to v5
+feat(build): update typescript / bundling deps
+chore: fix engines field + formatting
+docs: fix typos in .terminalWidth example
+Merge branch 'main' into feature/fix-example-2381
+Merge branch 'main' into main
+doc: switch legacy .argv to .parse()
+Merge branch 'main' into remove-coveralls
+chore: get tests passing
+chore: update release please version
+Reverse changes and wait for formatting
+build: pin to older rollup-plubin-ts
+chore(deps): update dependency gts to v5
+build: update test matrix
+chore(deps): update dependency @types/node to v20
+build: require 14.18 to match rollup
+chore: remove unused coveralls
+build: requrie npm@8
+chore(deps): update dependency c8 to v8
+build: update ci
+chore(deps): update dependency c8 to v9
+Merge branch 'main' into argv-to-parse"
+2024-06-24,3,0.0,1.0,1.0,-1.5,2.5,True,high,0.5,4,3,"['Update test/completion.cjs', 'attempt a fix', 'Update lib/completion.ts']",['committed (#2388)'],"[8825, 8837, 8857, 8869]","[8827, 8839, 8859, 8871]","Update test/completion.cjs
+attempt a fix
+Update lib/completion.ts"
+2024-09-02,4,0.0,1.0,1.0,-1.5,2.5,True,high,1.5,1,1,['chore(deps): update dependency concurrently to v8'],['committed (#2404)'],[8484],[8486],chore(deps): update dependency concurrently to v8
+2024-10-14,8,0.0,1.0,1.0,-1.5,2.5,True,high,5.5,0,0,[],[],,,
+2024-12-30,9,0.0,1.0,1.0,-1.5,2.5,True,high,6.5,17,15,"['chore(deps): update dependency concurrently to v9', ""Merge branch 'main' into victorfernandesraton-doc-patch"", 'chore(deps): update dependency which to v5', 'fix(build): address problems with typescript compilation', 'chore: address failing coverage', 'docs: improve readme\n\nAdd information about `-deno` in the end of version tag url for deno.land', ""Merge branch 'main' into patch-1"", 'fix: remove example and explains only flag info', 'add example for objects using ENV vars', 'chore(deps): update dependency browserslist-generator to v3', 'Minor fixes', 'fix: using flag version in example', 'chore(deps): update dependency rimraf to v6', 'chore: use correct ignore', 'fix: propagate Dictionary including undefined in value type']","['committed (#2431)', 'committed (#2440)', 'committed (#2435)', 'committed (#2445)', 'committed (#2436)', 'committed (#2434)', 'committed (#2426)', 'committed (#2393)']","[6577, 6590, 6602, 6614, 6781, 6793, 6809, 6826, 6842, 6850, 6968, 6980, 7012, 7051, 7144, 7378, 8669]","[6579, 6592, 6604, 6616, 6783, 6795, 6811, 6828, 6844, 6852, 6970, 6982, 7014, 7053, 7146, 7380, 8671]","chore(deps): update dependency concurrently to v9
+Merge branch 'main' into victorfernandesraton-doc-patch
+chore(deps): update dependency which to v5
+fix(build): address problems with typescript compilation
+chore: address failing coverage
+docs: improve readme
+
+Add information about `-deno` in the end of version tag url for deno.land
+Merge branch 'main' into patch-1
+fix: remove example and explains only flag info
+add example for objects using ENV vars
+chore(deps): update dependency browserslist-generator to v3
+Minor fixes
+fix: using flag version in example
+chore(deps): update dependency rimraf to v6
+chore: use correct ignore
+fix: propagate Dictionary including undefined in value type"
+2025-04-07,24,0.0,1.0,1.0,-1.5,2.5,True,high,21.5,103,93,"['fix: handle spaces in bash completion\n\nThe spaces are not handled well in bash completion, the offered result\nneeds to be escaped. Fix parsing the word list and add quotation around\nsuggestions with spaces. See [here][1] for the details.\n\n[1]: https://stackoverflow.com/a/40944195/7080036\n\nSigned-off-by: Oldřich Jedlička <oldium.pro@gmail.com>', 'actually remove commandDir', 'chore: add back . import', 'try spawn rather than cross-spawn', 'docs: update advanced.md to show esm usage', 'corrected example and improved wording', ""Merge branch 'main' into fix/types-condition"", ""Merge branch 'main' into fix_deno_env_vars_depdency_missmatch"", 'chore: add test for helpers.mjs', 'boom, test coverage back up to 100%.', 'build: continue running windows on 23', 'build: use LTS node version', ""Merge branch 'main' into patch-1"", '- `package.json`: fixed nit\n- rebased against `desc` fix for zsh alias completions from @mshrtsr\n- fixed a `bash` misspelling in tests\n- added `stderr` to `testCmd` result for better error reporting', 'docs: remove dead link in README', 'buid: fiddling with build settings', 'build: fixing up build', 'build: add 20 back to matrix', 'test: add back support for commandDir', 'test: remove unnecessary getInternalMethods()', '17.6.3-0', 'chore: fix up windows tests', 'build: addressing build review', 'fix: propagate Dictionary including undefined in value type', 'docs: change desc to describe', 'fix: make require() more intuitive for CJS update cliui', 'ensure `--get-yargs-completion` works when strip-dashed is `true`', 'merge rather than replace parserConfiguration', 'chore(deps): update dependency rollup to v4', 'chore(deps): update dependency chai to v5', 'Fixed an issue with nested commands in the `fish` completion template.', 'chore: setup prettier to format all possible files', 'build: figure out actual versions of node required', 'add support for multi-word completion', 'chore(deps): update dependency c8 to v10', 'test: use test config for watch compiles', 'build: fiddling with build settings', 'build: are we pulling in a newer version of 22', 'deps: remove now unused deps', 'docs: recombined CHANGELOGs', 'test: --experimental-require-module no longer required', 'chore(deps): update dependency mocha to v11', 'fix eslint rule error', 'chore: format all possible files with prettier', 'chore: use v23 on windows too', 'docs: update typescript.md', 'feat: add back support for include / exclude', 'Update lib/platform-shims/browser.mjs', ""Merge branch 'main' into use-test-config-for-watch"", 'Align Deno yargs_parser version with package.json version.\n\nRefs https://github.com/yargs/yargs/issues/2136 and\nhttps://github.com/yargs/yargs/pull/2231/files where it looks like the\nDeno shim got missed in the version bump.\n\nThis should allow `.env()` to work in Deno resolving the original\nhttps://github.com/yargs/yargs/issues/2136 issue.', 'feat: add method to hide option extras (#2156)', '- add support for completions in `fish` shell\n- add scripts making `dev` a bit easier\n\nTo use with `fish`, in fish shell, run `<app-name> completion >> ~/.config/fish/config.fish`', 'test: continuing to migrate tests', 'chore: addressing review', 'chore(deps): update dependency chalk to v5', 'fix: copy the description of the option to its alias in completion (#2269)', 'fix(browser): fix shims so that yargs continues working in browser context', 'docs: updating docs', 'docs: update README to be ESM first', 'chore(deps): update dependency gts to v6', ""Merge branch 'main' into docs/inquirer"", 'fix: move `types` condition to the front where needed', 'test: finished porting integration', ""Merge branch 'main' into main"", 'chore: pull in new string wrapping logic', 'Update package.json\n\nCo-authored-by: John Gee <john@ruru.gen.nz>', 'pin typescript', 'fix: align browser shim version', 'Updated gitignore to ignore tgz files', 'experiment with actions', 'docs: remove a couple references to require I missed', 'chore: disable linting for named function expression', 'fix windows tests', 'tests: fix tests for windows', 'chore(deps): update dependency eslint to v9', 'correcting username positional', ""Update lib/platform-shims/browser.mjs\r\n\r\nwhoops that doesn't quite work, I need the version from yargs-parser and cliui, not yargs."", 'feat!: yargs is now ESM only\nrefactor!: commandDir removed (due to not working with ESM)', 'test: port completion tests to esm', 'chore(deps): update dependency @types/node to v22', 'chore(deps): update dependency @types/mocha to v10', 'fix(browser): move readdirSync to shims\n\nMove readdirSync to shim which fixes the browser build.', ""Merge branch 'main' into fix/bashcompletion-spaces"", 'I was being siilly and clobbering env', 'chore: increase max timeout', 'docs: remove out of date bundling docs', 'build: windows still having issues on 22', 'docs: update examples.md to use esm', 'test: remove unused log line', 'example using inquirer to prompt user', 'docs: fix typo from desc to describe\n\nProbably left over from the previous API version', 'build: pin npm version (#2284)', 'chore: add en strings for unknown command (#2262)\n\nCo-authored-by: Benjamin E. Coe <bencoe@google.com>']","['committed (#2452)', 'committed (#2451)', 'committed (#2385)', 'committed (#2327)', 'committed (#2306)', 'committed (#2373)', 'committed (#2281)', 'committed (#2458)', 'committed (#2422)', 'committed (#2415)', 'committed (#2407)', 'committed (#2380)', 'committed (#2172)', 'committed (#2417)', 'committed (#2334)', 'committed (#2448)', 'committed (#2350)', 'committed (#2403)', 'committed (#2457)', 'committed (#2447)', 'committed (#2411)', 'committed (#2446)', 'committed (#2405)']","[5575, 5598, 5606, 5788, 5813, 5895, 5917, 5925, 5956, 5964, 5972, 5980, 5988, 6004, 6012, 6020, 6028, 6046, 6054, 6062, 6070, 6078, 6095, 6103, 6111, 6119, 6127, 6135, 6143, 6151, 6195, 6213, 6221, 6233, 6244, 6324, 6332, 6340, 6348, 6356, 6364, 6372, 6380, 6388, 6396, 6404, 6412, 6420, 6428, 6436, 6496, 6523, 6550, 7763, 7772, 7780, 7788, 7796, 8056, 8091, 8216, 8386, 8454, 8519, 9041, 9073, 9093, 9105, 9464, 9660, 9676, 9688, 9696, 10513, 10542, 10554, 10566, 11180, 11188, 11700, 11725, 11771, 11779, 13131, 13155, 13163, 13205, 13213, 14414, 14423, 14431, 14439, 14450, 14458, 14466, 14474, 14490, 14498, 14506, 14514, 19879, 19895, 19906]","[5577, 5600, 5608, 5790, 5815, 5897, 5919, 5927, 5958, 5966, 5974, 5982, 5990, 6006, 6014, 6022, 6030, 6048, 6056, 6064, 6072, 6080, 6097, 6105, 6113, 6121, 6129, 6137, 6145, 6153, 6197, 6215, 6223, 6235, 6246, 6326, 6334, 6342, 6350, 6358, 6366, 6374, 6382, 6390, 6398, 6406, 6414, 6422, 6430, 6438, 6498, 6525, 6552, 7765, 7774, 7782, 7790, 7798, 8058, 8093, 8218, 8388, 8456, 8521, 9043, 9075, 9095, 9107, 9466, 9662, 9678, 9690, 9698, 10515, 10544, 10556, 10568, 11182, 11190, 11702, 11727, 11773, 11781, 13133, 13157, 13165, 13207, 13215, 14416, 14425, 14433, 14441, 14452, 14460, 14468, 14476, 14492, 14500, 14508, 14516, 19881, 19897, 19908]","fix: handle spaces in bash completion
+
+The spaces are not handled well in bash completion, the offered result
+needs to be escaped. Fix parsing the word list and add quotation around
+suggestions with spaces. See [here][1] for the details.
+
+[1]: https://stackoverflow.com/a/40944195/7080036
+
+Signed-off-by: Oldřich Jedlička <oldium.pro@gmail.com>
+actually remove commandDir
+chore: add back . import
+try spawn rather than cross-spawn
+docs: update advanced.md to show esm usage
+corrected example and improved wording
+Merge branch 'main' into fix/types-condition
+Merge branch 'main' into fix_deno_env_vars_depdency_missmatch
+chore: add test for helpers.mjs
+boom, test coverage back up to 100%.
+build: continue running windows on 23
+build: use LTS node version
+Merge branch 'main' into patch-1
+- `package.json`: fixed nit
+- rebased against `desc` fix for zsh alias completions from @mshrtsr
+- fixed a `bash` misspelling in tests
+- added `stderr` to `testCmd` result for better error reporting
+docs: remove dead link in README
+buid: fiddling with build settings
+build: fixing up build
+build: add 20 back to matrix
+test: add back support for commandDir
+test: remove unnecessary getInternalMethods()
+17.6.3-0
+chore: fix up windows tests
+build: addressing build review
+fix: propagate Dictionary including undefined in value type
+docs: change desc to describe
+fix: make require() more intuitive for CJS update cliui
+ensure `--get-yargs-completion` works when strip-dashed is `true`
+merge rather than replace parserConfiguration
+chore(deps): update dependency rollup to v4
+chore(deps): update dependency chai to v5
+Fixed an issue with nested commands in the `fish` completion template.
+chore: setup prettier to format all possible files
+build: figure out actual versions of node required
+add support for multi-word completion
+chore(deps): update dependency c8 to v10
+test: use test config for watch compiles
+build: fiddling with build settings
+build: are we pulling in a newer version of 22
+deps: remove now unused deps
+docs: recombined CHANGELOGs
+test: --experimental-require-module no longer required
+chore(deps): update dependency mocha to v11
+fix eslint rule error
+chore: format all possible files with prettier
+chore: use v23 on windows too
+docs: update typescript.md
+feat: add back support for include / exclude
+Update lib/platform-shims/browser.mjs
+Merge branch 'main' into use-test-config-for-watch
+Align Deno yargs_parser version with package.json version.
+
+Refs https://github.com/yargs/yargs/issues/2136 and
+https://github.com/yargs/yargs/pull/2231/files where it looks like the
+Deno shim got missed in the version bump.
+
+This should allow `.env()` to work in Deno resolving the original
+https://github.com/yargs/yargs/issues/2136 issue.
+feat: add method to hide option extras (#2156)
+- add support for completions in `fish` shell
+- add scripts making `dev` a bit easier
+
+To use with `fish`, in fish shell, run `<app-name> completion >> ~/.config/fish/config.fish`
+test: continuing to migrate tests
+chore: addressing review
+chore(deps): update dependency chalk to v5
+fix: copy the description of the option to its alias in completion (#2269)
+fix(browser): fix shims so that yargs continues working in browser context
+docs: updating docs
+docs: update README to be ESM first
+chore(deps): update dependency gts to v6
+Merge branch 'main' into docs/inquirer
+fix: move `types` condition to the front where needed
+test: finished porting integration
+Merge branch 'main' into main
+chore: pull in new string wrapping logic
+Update package.json
+
+Co-authored-by: John Gee <john@ruru.gen.nz>
+pin typescript
+fix: align browser shim version
+Updated gitignore to ignore tgz files
+experiment with actions
+docs: remove a couple references to require I missed
+chore: disable linting for named function expression
+fix windows tests
+tests: fix tests for windows
+chore(deps): update dependency eslint to v9
+correcting username positional
+Update lib/platform-shims/browser.mjs
+
+whoops that doesn't quite work, I need the version from yargs-parser and cliui, not yargs.
+feat!: yargs is now ESM only
+refactor!: commandDir removed (due to not working with ESM)
+test: port completion tests to esm
+chore(deps): update dependency @types/node to v22
+chore(deps): update dependency @types/mocha to v10
+fix(browser): move readdirSync to shims
+
+Move readdirSync to shim which fixes the browser build.
+Merge branch 'main' into fix/bashcompletion-spaces
+I was being siilly and clobbering env
+chore: increase max timeout
+docs: remove out of date bundling docs
+build: windows still having issues on 22
+docs: update examples.md to use esm
+test: remove unused log line
+example using inquirer to prompt user
+docs: fix typo from desc to describe
+
+Probably left over from the previous API version
+build: pin npm version (#2284)
+chore: add en strings for unknown command (#2262)
+
+Co-authored-by: Benjamin E. Coe <bencoe@google.com>"
+2025-04-21,10,0.0,1.0,1.0,-1.5,2.5,True,high,7.5,27,21,"['chore: add failing test for parser configuration and completion', 'chore: update examples to run from examples folder', 'Update docs/api.md\n\nCo-authored-by: John Gee <john@ruru.gen.nz>', ""Merge branch 'main' into esm-command-dir"", ""Fix Zsh autoloaded completion to not require double tab\n\nCurrently when you use the generated completion script in Zsh via autoloading, it doesn't provide completions on the first tab press. This is because when Zsh autoloads a completion script, it expects it to directly generate completions, this little trick allows it to be directly evaluated and used as an autoloaded script.\r\n\r\nP.S. I think if the shell function is named the same as the autoloaded script, Zsh will call it directly on subsequent calls, bypassing the rest of the script, e.g. the `if` code below. See https://zsh.sourceforge.io/Doc/Release/Functions.html#Autoloading-Functions\r\n\r\nSee https://github.com/kislyuk/argcomplete/pull/475"", ""Merge branch 'main' into patch-1"", 'fix: addDirectory do not support absolute command dir', 'Review fixes', 'chore: rebase', 'test: add test to catch the issue and make sure it support absolute dirs', 'docs: do not imply that commandDir does not work for ESM', 'Update docs', 'docs: remove to old slack channel', ""Merge branch 'main' into main"", 'Fix escaping', 'feat: commandDir now works with ESM files', 'docs: nit', 'Dummy commit to trigger GitHub checks', 'fix: completion should play well with strip-dashed', 'docs: correct API description', 'docs: use mjs extension']","['committed (#2332)', 'committed (#2463)', 'committed (#2424)', 'committed (#2461)', 'committed (#2465)', 'committed (#2466)']","[5178, 5204, 5225, 5233, 5241, 5327, 5395, 5408, 5416, 5444, 5452, 5460, 7450, 7531, 7556, 7572, 7593, 7620, 7632, 7640, 7664, 7673, 7705, 7717, 11331, 11339, 11347]","[5180, 5206, 5227, 5235, 5243, 5329, 5397, 5410, 5418, 5446, 5454, 5462, 7452, 7533, 7558, 7574, 7595, 7622, 7634, 7642, 7666, 7675, 7707, 7719, 11333, 11341, 11349]","chore: add failing test for parser configuration and completion
+chore: update examples to run from examples folder
+Update docs/api.md
+
+Co-authored-by: John Gee <john@ruru.gen.nz>
+Merge branch 'main' into esm-command-dir
+Fix Zsh autoloaded completion to not require double tab
+
+Currently when you use the generated completion script in Zsh via autoloading, it doesn't provide completions on the first tab press. This is because when Zsh autoloads a completion script, it expects it to directly generate completions, this little trick allows it to be directly evaluated and used as an autoloaded script.
+
+P.S. I think if the shell function is named the same as the autoloaded script, Zsh will call it directly on subsequent calls, bypassing the rest of the script, e.g. the `if` code below. See https://zsh.sourceforge.io/Doc/Release/Functions.html#Autoloading-Functions
+
+See https://github.com/kislyuk/argcomplete/pull/475
+Merge branch 'main' into patch-1
+fix: addDirectory do not support absolute command dir
+Review fixes
+chore: rebase
+test: add test to catch the issue and make sure it support absolute dirs
+docs: do not imply that commandDir does not work for ESM
+Update docs
+docs: remove to old slack channel
+Merge branch 'main' into main
+Fix escaping
+feat: commandDir now works with ESM files
+docs: nit
+Dummy commit to trigger GitHub checks
+fix: completion should play well with strip-dashed
+docs: correct API description
+docs: use mjs extension"
+2025-09-01,6,0.0,2.0,2.0,-3.0,5.0,True,high,0.5,0,0,[],[],,,
+2026-05-04,6,0.0,1.0,1.0,-1.5,2.5,True,high,3.5,6,6,"['i18n(hu): add missing Hungarian translations for deprecated, command, Positionals, Arguments mutually exclusive, Unknown command', 'fix: ignore defaulted version collisions', 'fix: normalize quoted string positionals', 'i18n(pt): add missing Portuguese translations for deprecated, command, Positionals, aliases, Unknown command', 'chore(deps): update dependency which to v6', 'i18n(de): add missing German translations for deprecated, command, Positionals, Unknown command']","['committed (#2531)', 'committed (#2533)', 'committed (#2532)', 'committed (#2530)', 'committed (#2494)', 'committed (#2529)']","[1528, 1561, 1594, 1623, 1651, 4067]","[1530, 1563, 1596, 1625, 1653, 4069]","i18n(hu): add missing Hungarian translations for deprecated, command, Positionals, Arguments mutually exclusive, Unknown command
+fix: ignore defaulted version collisions
+fix: normalize quoted string positionals
+i18n(pt): add missing Portuguese translations for deprecated, command, Positionals, aliases, Unknown command
+chore(deps): update dependency which to v6
+i18n(de): add missing German translations for deprecated, command, Positionals, Unknown command"
+2026-05-25,3,0.0,1.0,1.0,-1.5,2.5,True,high,0.5,2,2,"['fix: scriptName with whitespace breaks completion script (#2387)', 'fix: show-hidden breaks when parser has strip-dashed config (#2356)']","['committed (#2538)', 'committed (#2537)']","[1328, 1358]","[1330, 1360]","fix: scriptName with whitespace breaks completion script (#2387)
+fix: show-hidden breaks when parser has strip-dashed config (#2356)"
+2026-06-08,3,0.0,1.0,1.0,-1.5,2.5,True,high,0.5,10,10,"[""fix: populate positionals from argv['--'] when halt-at-non-option is set"", 'fix: restore yargs file for early versions of node 12', 'Add plain yargs file back into package', ""fix(completion): sanitize scriptName for shell identifiers\n\nscriptName() with whitespace (e.g. 'yarn whatever') produces\ninvalid bash completion scripts with spaces in function names:\n_yarn whatever_yargs_completions()\n\nFix: replace non-alphanumeric chars with underscores in the\napp_name used for shell identifiers. The app_path used for\nactually invoking the application remains unchanged.\n\nFixes #2387"", 'fix: rename yargs/yargs entrypoint file for CommonJS from extension-less yargs to yargs.cjs (for compatibility with Node.js 25.7)', 'chore: test recent node versions, and leave out --engine-strict which fails for some dependencies on node<18', 'Change not required when adding require entrypoint yargs.cjs, so minimise changes and revert', 'chore: pin enough dependecies to build on clean install', 'chore: update rollup-plugin-ts to fix build', 'Reexport so simple shim']","['committed (#2524)', 'committed (#2514)', 'committed (#2545)']","[1179, 1769, 2106, 2117, 2125, 2133, 2141, 2199, 2207, 2343]","[1181, 1771, 2108, 2119, 2127, 2135, 2143, 2201, 2209, 2345]","fix: populate positionals from argv['--'] when halt-at-non-option is set
+fix: restore yargs file for early versions of node 12
+Add plain yargs file back into package
+fix(completion): sanitize scriptName for shell identifiers
+
+scriptName() with whitespace (e.g. 'yarn whatever') produces
+invalid bash completion scripts with spaces in function names:
+_yarn whatever_yargs_completions()
+
+Fix: replace non-alphanumeric chars with underscores in the
+app_name used for shell identifiers. The app_path used for
+actually invoking the application remains unchanged.
+
+Fixes #2387
+fix: rename yargs/yargs entrypoint file for CommonJS from extension-less yargs to yargs.cjs (for compatibility with Node.js 25.7)
+chore: test recent node versions, and leave out --engine-strict which fails for some dependencies on node<18
+Change not required when adding require entrypoint yargs.cjs, so minimise changes and revert
+chore: pin enough dependecies to build on clean install
+chore: update rollup-plugin-ts to fix build
+Reexport so simple shim"
+2026-06-15,13,0.0,1.75,1.75,-2.625,4.375,True,high,4.928571428571429,13,12,"['Try BYO override for old versions of node', 'fix: use entry point with file extension for anything that supports exports', ""fix: sanitize scriptName spaces in completion script function names\n\nShell function identifiers cannot contain spaces. When scriptName includes\na space (e.g. 'my tool'), the generated bash/zsh completion script would\nproduce invalid syntax like _my tool_yargs_completions().\n\nAdd a separate {{app_function_name}} template token that replaces non-\nidentifier characters with underscores. The {{app_name}} token is kept\nfor places where the literal command string is needed, such as the\ncomplete builtin and compdef arguments.\n\nFixes #2387"", 'Pin development dependencies for old working build', 'Fix negative boolean option completion', 'Add Node.js 26 to CI matrix', ""Merge branch 'main' into update-CI-node-matrix"", 'Remove coverage from CI, c8 unavailable', 'Sanitize completion function names', 'Remove --engine-strict in CI', 'Reapply formatting to fix lint checks', 'Replace EOL node 23 in CI version matrix with node 24']","['committed (#2546)', 'committed (#2523)', 'committed (#2542)', 'committed (#2507)', 'committed (#2541)', 'committed (#2511)']","[1095, 1108, 1116, 1124, 1132, 1140, 1148, 1221, 1246, 1802, 2535, 3304, 3332]","[1097, 1110, 1118, 1126, 1134, 1142, 1150, 1223, 1248, 1804, 2537, 3306, 3334]","Try BYO override for old versions of node
+fix: use entry point with file extension for anything that supports exports
+fix: sanitize scriptName spaces in completion script function names
+
+Shell function identifiers cannot contain spaces. When scriptName includes
+a space (e.g. 'my tool'), the generated bash/zsh completion script would
+produce invalid syntax like _my tool_yargs_completions().
+
+Add a separate {{app_function_name}} template token that replaces non-
+identifier characters with underscores. The {{app_name}} token is kept
+for places where the literal command string is needed, such as the
+complete builtin and compdef arguments.
+
+Fixes #2387
+Pin development dependencies for old working build
+Fix negative boolean option completion
+Add Node.js 26 to CI matrix
+Merge branch 'main' into update-CI-node-matrix
+Remove coverage from CI, c8 unavailable
+Sanitize completion function names
+Remove --engine-strict in CI
+Reapply formatting to fix lint checks
+Replace EOL node 23 in CI version matrix with node 24"
+2026-06-22,42,0.0,2.0,2.0,-3.0,5.0,True,high,18.5,26,26,"['chore(deps): update babel monorepo to v8', 'chore(deps): update dependency eslint to v10', 'chore(deps): update dependency @types/chai to v5', ""fix: resolve show-hidden key via camelCase when strip-dashed is enabled\n\nWhen parserConfiguration({ 'strip-dashed': true }) is set, yargs-parser\nstrips dashed keys from the parsed argv and only keeps camelCase variants.\nfilterHiddenOptions was looking up the show-hidden option by its raw\n(dashed) name, which is always undefined under strip-dashed, causing\n--show-hidden to silently do nothing.\n\nFix: also check argv[shim.Parser.camelCase(showHiddenOpt)] as a fallback.\nIf the dashed key is present (normal mode) the first lookup hits; if only\nthe camelCase key is present (strip-dashed mode) the second lookup hits.\n\nFixes #2356"", 'Apply suggestion from @shadowspawn', 'chore(deps): update dependency typescript to v6', 'fix: centralize option presence lookup', 'fix: suppress webpack warning by destructing import.meta before using resolve', 'Reapply formatting to fix lint checks', 'chore(deps): update dependency gts to v7', ""Merge branch 'main' into fix-typos"", 'fix(deps): update dependency string-width to v8', 'chore(deps): update dependency which to v7', 'Update docs/api.md', 'docs: fix various typos in source code', 'chore(deps): update dependency cross-env to v10', 'chore(deps): update dependency c8 to v11', ""Merge branch 'main' into nightt5879/docs-nargs-eats-options"", 'Fix .wrap() docs\n\nFixes #2477', 'docs: clarify nargs option-like values', 'docs: update nargs examples', 'chore: fix typos', 'chore: update the easy dependencies', ""Merge branch 'main' into patch-typos-yargs"", 'chore(deps): update dependency chai to v6', 'docs: fix broken links in api.md']","['committed (#2547)', 'committed (#2504)', 'committed (#2483)', 'committed (#2553)', 'committed (#2551)', 'committed (#2522)', 'committed (#2516)', 'committed (#2490)', 'committed (#2500)', 'committed (#2492)', 'committed (#2485)', 'committed (#2534)', 'committed (#2493)', 'committed (#2525)', 'committed (#2480)', 'committed (#2510)', 'committed (#2552)', 'committed (#2484)', 'committed (#2549)']","[848, 880, 908, 921, 939, 947, 1016, 1061, 1489, 1732, 1741, 1843, 2019, 2039, 2592, 3565, 3614, 4101, 4118, 4153, 4166, 4244, 4383, 4427, 4471, 4563]","[850, 882, 910, 923, 941, 949, 1018, 1063, 1491, 1734, 1743, 1845, 2021, 2041, 2594, 3567, 3616, 4103, 4120, 4155, 4168, 4246, 4385, 4429, 4473, 4565]","chore(deps): update babel monorepo to v8
+chore(deps): update dependency eslint to v10
+chore(deps): update dependency @types/chai to v5
+fix: resolve show-hidden key via camelCase when strip-dashed is enabled
+
+When parserConfiguration({ 'strip-dashed': true }) is set, yargs-parser
+strips dashed keys from the parsed argv and only keeps camelCase variants.
+filterHiddenOptions was looking up the show-hidden option by its raw
+(dashed) name, which is always undefined under strip-dashed, causing
+--show-hidden to silently do nothing.
+
+Fix: also check argv[shim.Parser.camelCase(showHiddenOpt)] as a fallback.
+If the dashed key is present (normal mode) the first lookup hits; if only
+the camelCase key is present (strip-dashed mode) the second lookup hits.
+
+Fixes #2356
+Apply suggestion from @shadowspawn
+chore(deps): update dependency typescript to v6
+fix: centralize option presence lookup
+fix: suppress webpack warning by destructing import.meta before using resolve
+Reapply formatting to fix lint checks
+chore(deps): update dependency gts to v7
+Merge branch 'main' into fix-typos
+fix(deps): update dependency string-width to v8
+chore(deps): update dependency which to v7
+Update docs/api.md
+docs: fix various typos in source code
+chore(deps): update dependency cross-env to v10
+chore(deps): update dependency c8 to v11
+Merge branch 'main' into nightt5879/docs-nargs-eats-options
+Fix .wrap() docs
+
+Fixes #2477
+docs: clarify nargs option-like values
+docs: update nargs examples
+chore: fix typos
+chore: update the easy dependencies
+Merge branch 'main' into patch-typos-yargs
+chore(deps): update dependency chai to v6
+docs: fix broken links in api.md"
+2026-07-06,10,0.0,2.0,2.0,-3.0,5.0,True,high,2.5,2,2,"['chore: improve build robustness\n- pin GitHub actions\n- add package-lock.json\n- add CI test with updated direct dependencies\n- lint changes from updates', 'chore: in CI stop overriding npm version, and use ""npm ci"" instead of ""npm install""']",['committed (#2554)'],"[791, 814]","[793, 816]","chore: improve build robustness
+- pin GitHub actions
+- add package-lock.json
+- add CI test with updated direct dependencies
+- lint changes from updates
+chore: in CI stop overriding npm version, and use ""npm ci"" instead of ""npm install"""
+2026-07-20,18,0.0,2.75,2.75,-4.125,6.875,True,high,4.045454545454546,2,2,"['chore: add workflow_dispatch for release-please', 'chore(main): release 18.1.0']","['committed (#2564)', 'committed (#2475)']","[508, 4778]","[510, 4780]","chore: add workflow_dispatch for release-please
+chore(main): release 18.1.0"
+2026-07-27,33,0.0,3.0,3.0,-4.5,7.5,True,high,8.5,23,19,"['fix(choices): use explicit check-before-push instead of Set spread\n\nPer review feedback from @shadowspawn: replace the Set-based dedup\nwith a more readable check-before-push loop. Each value is only\nappended if not already present in the existing array.\n\nBefore:\n  this.#options[type][key] = [...new Set(existing.concat(value))]\n\nAfter:\n  const existing = (this.#options[type][key] || []) as unknown[];\n  for (const v of ([] as unknown[]).concat(value)) {\n    if (!existing.includes(v)) existing.push(v);\n  }\n  this.#options[type][key] = existing as Options[T][K];', 'chore(deps): update dependency c8 to v12', 'chore(deps): update dependency typescript to v7', ""Merge branch 'main' into fix/completion-negative-boolean"", 'fix(choices): deduplicate when same value added multiple times\n\nMultiple calls to `.choices(key, values)` with overlapping values\npreviously produced duplicate entries via a plain `.concat()`.\n\nThe docs say all enumerated values will be ""merged together"", which\nimplies a set union. This change wraps the concat result in `new Set`\nbefore assigning so each choice value appears at most once.\n\nBefore:\n  .choices(\'color\', [\'red\', \'green\', \'blue\'])\n  .choices(\'color\', [\'blue\', \'rainbow\'])\n  // => [\'red\', \'green\', \'blue\', \'blue\', \'rainbow\']\n\nAfter:\n  .choices(\'color\', [\'red\', \'green\', \'blue\'])\n  .choices(\'color\', [\'blue\', \'rainbow\'])\n  // => [\'red\', \'green\', \'blue\', \'rainbow\']\n\nFixes #2454', 'fix: reveal hidden options with --show-hidden when strip-dashed is set\n\nSigned-off-by: Charlie Tonneslan <cst0520@gmail.com>', 'docs: add richer completion example', 'feat: support creating completions for fish shell', ""Merge branch 'main' into pr/2495"", 'chore(deps): update dependency chalk to v6', ""fix(completion): default boolean-negation to true per yargs-parser default\n\nUse ?? true so --no-<flag> suggestions apply when boolean-negation is\nnot explicitly configured, matching yargs-parser's default behavior.\n\nSuggested by @shadowspawn."", 'fix: complete negated boolean options\n\nFixes #2254', 'Remove copy-pasted email address', ""test: update completion tests for boolean-negation=all-booleans behavior\n\nUpdate affected tests to reflect the new behavior where --no-<flag> is\nsuggested for ALL boolean options (not just those with default: true)\nwhen boolean-negation is set:\n\n- 'includes flags that have default' → renamed and updated to expect\n  --no-somebool alongside --no-somebool2 (both are negatable booleans)\n- zsh test: updated to reflect --no-bar, --no-help, --no-version all\n  appearing (consistent with parser treating all booleans as negatable)\n\n826 tests passing."", 'fix(completion): show --no-<opt> for all boolean options\n\nWhen boolean-negation is enabled, bash/zsh completion now shows the\n--no-<opt> form for ALL boolean options, not just those with truthy\ndefault values.\n\nPreviously, --no-opt would only appear in completions if the option\nhad a default value of true. This was inconsistent - users need to\nsee --no-opt for any boolean option they might want to negate.\n\nFixes #2254', 'test: add additional tests to improve coverage', 'chore: tidy fish completion', ""Merge branch 'main' into fix/choices-dedup"", ""fix: show-hidden displays hidden options when strip-dashed is enabled\n\nWhen strip-dashed parser configuration is active, yargs-parser stores\nparsed option values under camelCase keys (e.g. 'showHidden') instead of\nthe original kebab-case key ('show-hidden'). The filterHiddenOptions\nfunction only checked argv[showHiddenOpt] using the original key, so\nthe lookup always returned undefined and hidden options were never shown.\n\nThe fix also checks the camelCase form of the showHiddenOpt key, which\nis the key actually present in argv when strip-dashed is enabled.\n\nFixes #2356\n\nCo-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>""]","['committed (#2508)', 'committed (#2561)', 'committed (#2558)', 'committed (#2505)', 'committed (#2559)', 'committed (#2521)', 'committed (#2568)', 'committed (#2565)', 'committed (#2495)', 'committed (#2571)', 'committed (#2566)', 'committed (#2570)']","[309, 339, 364, 373, 381, 389, 449, 480, 586, 662, 701, 1882, 3248, 3260, 3280, 3403, 3430, 3460, 3497, 3509, 3517, 3959, 3967]","[311, 341, 366, 375, 383, 391, 451, 482, 588, 664, 703, 1884, 3250, 3262, 3282, 3405, 3432, 3462, 3499, 3511, 3519, 3961, 3969]","fix(choices): use explicit check-before-push instead of Set spread
+
+Per review feedback from @shadowspawn: replace the Set-based dedup
+with a more readable check-before-push loop. Each value is only
+appended if not already present in the existing array.
+
+Before:
+  this.#options[type][key] = [...new Set(existing.concat(value))]
+
+After:
+  const existing = (this.#options[type][key] || []) as unknown[];
+  for (const v of ([] as unknown[]).concat(value)) {
+    if (!existing.includes(v)) existing.push(v);
+  }
+  this.#options[type][key] = existing as Options[T][K];
+chore(deps): update dependency c8 to v12
+chore(deps): update dependency typescript to v7
+Merge branch 'main' into fix/completion-negative-boolean
+fix(choices): deduplicate when same value added multiple times
+
+Multiple calls to `.choices(key, values)` with overlapping values
+previously produced duplicate entries via a plain `.concat()`.
+
+The docs say all enumerated values will be ""merged together"", which
+implies a set union. This change wraps the concat result in `new Set`
+before assigning so each choice value appears at most once.
+
+Before:
+  .choices('color', ['red', 'green', 'blue'])
+  .choices('color', ['blue', 'rainbow'])
+  // => ['red', 'green', 'blue', 'blue', 'rainbow']
+
+After:
+  .choices('color', ['red', 'green', 'blue'])
+  .choices('color', ['blue', 'rainbow'])
+  // => ['red', 'green', 'blue', 'rainbow']
+
+Fixes #2454
+fix: reveal hidden options with --show-hidden when strip-dashed is set
+
+Signed-off-by: Charlie Tonneslan <cst0520@gmail.com>
+docs: add richer completion example
+feat: support creating completions for fish shell
+Merge branch 'main' into pr/2495
+chore(deps): update dependency chalk to v6
+fix(completion): default boolean-negation to true per yargs-parser default
+
+Use ?? true so --no-<flag> suggestions apply when boolean-negation is
+not explicitly configured, matching yargs-parser's default behavior.
+
+Suggested by @shadowspawn.
+fix: complete negated boolean options
+
+Fixes #2254
+Remove copy-pasted email address
+test: update completion tests for boolean-negation=all-booleans behavior
+
+Update affected tests to reflect the new behavior where --no-<flag> is
+suggested for ALL boolean options (not just those with default: true)
+when boolean-negation is set:
+
+- 'includes flags that have default' → renamed and updated to expect
+  --no-somebool alongside --no-somebool2 (both are negatable booleans)
+- zsh test: updated to reflect --no-bar, --no-help, --no-version all
+  appearing (consistent with parser treating all booleans as negatable)
+
+826 tests passing.
+fix(completion): show --no-<opt> for all boolean options
+
+When boolean-negation is enabled, bash/zsh completion now shows the
+--no-<opt> form for ALL boolean options, not just those with truthy
+default values.
+
+Previously, --no-opt would only appear in completions if the option
+had a default value of true. This was inconsistent - users need to
+see --no-opt for any boolean option they might want to negate.
+
+Fixes #2254
+test: add additional tests to improve coverage
+chore: tidy fish completion
+Merge branch 'main' into fix/choices-dedup
+fix: show-hidden displays hidden options when strip-dashed is enabled
+
+When strip-dashed parser configuration is active, yargs-parser stores
+parsed option values under camelCase keys (e.g. 'showHidden') instead of
+the original kebab-case key ('show-hidden'). The filterHiddenOptions
+function only checked argv[showHiddenOpt] using the original key, so
+the lookup always returned undefined and hidden options were never shown.
+
+The fix also checks the camelCase form of the showHiddenOpt key, which
+is the key actually present in argv when strip-dashed is enabled.
+
+Fixes #2356
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+2026-08-03,16,0.0,3.75,3.75,-5.625,9.375,True,high,1.7666666666666666,2,2,"['chore: add FUNDING links', 'Ignore defaulted version values for version output']","['committed (#2573)', 'committed (#2539)']","[279, 1291]","[281, 1293]","chore: add FUNDING links
+Ignore defaulted version values for version output"
