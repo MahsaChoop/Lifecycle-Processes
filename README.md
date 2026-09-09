@@ -60,9 +60,9 @@ pip install -r requirements.txt
 5. **Commit context + Conventional Commit classification** — Link commits to issues that closed in anomalous weeks via a shared `event_id`, classify those messages, and plot stacked weekly categories.
 6. **Flatten OCEL2 issue log** — Convert the OCEL2 SQLite export into a flat issue-level event log.
 7a. **Category-log preprocess** — Keep traces that contain `closed` or `head_ref_deleted`.
-7b. **Commit-category logs + discovery F1** — Split the cleaned log into disjoint category logs (plus whole) and score F1 with `DISCOVERY_MINERS` (inductive IMF 0.2, split miner, heuristics).
-7c. **Anomaly vs normal + discovery F1** — Split the cleaned log by anomaly object IDs; reuse whole-log F1 from 7b.
-7d. **Anomaly × category + discovery F1** — Cross anomaly/normal with the category logs; write `consolidated_results_tables.xlsx`.
+7b. **Commit-category logs + discovery F1** — Isolate the effect of action categories. Split the cleaned log into disjoint category logs (plus whole) and score F1 with `DISCOVERY_MINERS` (inductive IMF 0.2, split miner, heuristics).
+7c. **Anomaly vs normal + discovery F1** — Isolate the effect of states. Split the cleaned log by anomaly object IDs; reuse whole-log F1 from 7b.
+7d. **Anomaly × category + discovery F1** — Examine the combination effect: Cross anomaly/normal with the category logs; write `consolidated_results_tables.xlsx`.
 8. **Petri nets by commit category** — Discover nets per disjoint category with `inductive_IMf_noise_0.2`.
 9. **Petri nets by anomaly, normal, and whole** — Same miner on the anomaly/normal/whole logs.
 10. **Example Petri PDF** — Compose and render selected nets (`petri_nets_commit_categories.pdf`).
