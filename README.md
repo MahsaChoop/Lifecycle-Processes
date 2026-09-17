@@ -32,6 +32,8 @@ Lifecycles-Processes/
 
 Full steps, code snippet, and expected outputs: see [data/README.md](data/README.md).
 
+Thanks a lot to Lien Bosmans for dveloping the [LienBosmans/pystackt](https://github.com/LienBosmans/pystackt).
+
 ## How to run `commitizen.ipynb`?
 
 1. Use Python 3.10+ and install dependencies:
