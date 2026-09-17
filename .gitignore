@@ -33,6 +33,9 @@ Thumbs.db
 
 
 
+# Third-party EPA toolkit (cloned by commitizen.ipynb step 11a)
+process-complexity/
+
 # Local scratch / build helpers
 _extract_tmp/
 _parity_baseline/
@@ -44,24 +47,3 @@ _list_cells.py
 _migrate_layout.py
 _parity_check.py
 
-# Local-only replication notebooks and results
-replication/Qlib.ipynb
-replication/OpenBB.ipynb
-replication/Nautilus_trader.ipynb
-replication/FinRL.ipynb
-replication/FinGPT.ipynb
-results/figures/Qlib/
-results/figures/OpenBB/
-results/figures/Nautilus_trader/
-results/figures/FinRL/
-results/figures/FinGPT/
-results/figures_no_titles/Qlib/
-results/figures_no_titles/OpenBB/
-results/figures_no_titles/Nautilus_trader/
-results/figures_no_titles/FinRL/
-results/figures_no_titles/FinGPT/
-results/tables/Qlib/
-results/tables/OpenBB/
-results/tables/Nautilus_trader/
-results/tables/FinRL/
-results/tables/FinGPT/

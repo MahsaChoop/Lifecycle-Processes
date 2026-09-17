@@ -25,12 +25,14 @@ Lifecycles-Processes/
 ## How to extract data? (If you want to replicate from scratch with your own target repository)
 
 1. Install dependencies from the repository root: `pip install -r requirements.txt`.
-  ATTENTION: Do not trust me and always read what you are installing.
+  (ATTENTION: Do not trust me and always read what you are installing.)
 2. Create a gitignored GitHub token file at `data/configToken.py`.
-   ATTENTION: Do not commit your personal token in public.
+   (ATTENTION: Do not commit your personal token in public.)
 3. Run `data/data extraction.ipynb` (working directory: `data/`) to build the DuckDB and OCEL2 SQLite files under `data/raw/`.
 
 Full steps, code snippet, and expected outputs: see [data/README.md](data/README.md).
+
+Thanks a lot to Lien Bosmans for dveloping the [LienBosmans/pystackt](https://github.com/LienBosmans/pystackt).
 
 ## How to run `commitizen.ipynb`?
 
@@ -51,6 +53,7 @@ pip install -r requirements.txt
 
 5. Petri-net cells (steps 8–10) need Graphviz on `PATH` (the notebook includes a Windows cell for `C:\Program Files\Graphviz\bin`).
 
+
 ## What are the analyses in `commitizen.ipynb`?
 
 1. **Load DuckDB + weekly issue counts** — Load OCED tables and build weekly open/closed issue activity series as vital sign.
@@ -67,6 +70,7 @@ pip install -r requirements.txt
 8. **Petri nets by commit category** — Discover nets per disjoint category with `inductive_IMf_noise_0.2`.
 9. **Petri nets by anomaly, normal, and whole** — Same miner on the anomaly/normal/whole logs.
 10. **Example Petri PDF** — Compose and render selected nets (`petri_nets_commit_categories.pdf`).
+11. **EPA log complexity** — Clone [MaxVidgof/process-complexity](https://github.com/MaxVidgof/process-complexity) if needed, then compute entropy, magnitude, variety, and affinity on the same partitioned logs as step 7. Write `epa_complexity_tables.xlsx`.
 
 Each step calls into `functions/` and writes CSVs/figures under `results/`.
 
@@ -75,7 +79,9 @@ Each step calls into `functions/` and writes CSVs/figures under `results/`.
 [`evaluation-ablation study.ipynb`](evaluation-ablation%20study.ipynb) compares log partitioning across five repositories (Commitizen, yargs, semantic-release, TradingAgents, Vibe-Trading) using the same three miners as Commitizen.
 
 1. **Whole-log descriptives** — Case/event counts, cycle time, and related stats per repo.
-2. **F-score ablation** — Whole-log F1 (baseline) vs case-weighted F1 on anomaly/normal, commit-category, and anomaly×category partitions.
-3. **Cycle-time comparison** — Commitizen plot of average cycle time by category (normal vs anomaly).
+2. **F-score ablation** — Whole-log F1 vs case-weighted F1 on anomaly/normal, commit-category, and anomaly×category partitions.
+3. **Model complexity ablation** — Same partitions for size, CFC, and simplicity.
+4. **EPA complexity ablation** — Same partitions for affinity and normalized variant/sequence entropy.
+5. **Cycle-time comparison** — Commitizen plot of average cycle time by category (normal vs anomaly).
 
-Outputs go to `results/tables/compare/` and the Commitizen figure dirs. Run `commitizen.ipynb` and the replication notebooks first so each repo has `consolidated_results_tables.xlsx`.
+Outputs go to `results/tables/compare/` and the Commitizen figure dirs. Run `commitizen.ipynb` and the replication notebooks through step 11 first so each repo has `consolidated_results_tables.xlsx` and `epa_complexity_tables.xlsx`.
