@@ -17,7 +17,7 @@ Lifecycles-Processes/
     tables/                           # CSV outputs
     figures/                          # figures (PNG + PDF)
     figures_no_titles/                # untitled figure copies
-  replication/                        # same pipeline for other reposiories (yargs, semantic-release, TradingAgents, Vibe-Trading)
+  replication/                        # same pipeline for other reposiories (yargs, semantic-release, TradingAgents, Vibe-Trading, FinRL)
   docs/                               # motivation, threats to validity, future work
   requirements.txt
 ```
