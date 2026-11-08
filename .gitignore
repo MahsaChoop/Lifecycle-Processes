@@ -19,6 +19,12 @@ notebooks/legacy/
 data/configToken.py
 data/raw/OpenBB.duckdb
 data/raw/OpenBB.sqlite
+data/raw/FinGPT.duckdb
+data/raw/FinGPT.sqlite
+data/raw/FinRL.duckdb
+data/raw/FinRL.sqlite
+data/raw/Nautilus_trader.duckdb
+data/raw/Nautilus_trader.sqlite
 scripts/
 
 # Environments

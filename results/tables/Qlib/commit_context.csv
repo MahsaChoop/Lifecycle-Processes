@@ -1,0 +1,1416 @@
+week_start,value,rolling_q1,rolling_q3,iqr,lower_bound,upper_bound,is_anomaly,anomaly_direction,anomaly_score,commit_event_count,message_count,messages_in_week,commit_event_descriptions,commit_event_ids,commit_object_ids,messages_text
+2020-12-07,18,2.75,5.75,3.0,-1.75,10.25,True,high,2.5833333333333335,62,49,"['update readme', 'black format', 'add the config of readthedocs', 'update Note', 'fix bug of workflow', 'Update record to support time series dataset.', 'Update benchmark performance', 'fix typo\n\nfix typo', 'update setup', 'Fix code.', 'remove dataloader', 'Update test_dataset', 'Fix models.', 'Update settings.', 'Add author names', 'fix req', 'Fix bugs of model.', 'Fix bugs for Gats model.', 'Update tft results', 'support multi indexing of TSDatasetSample', 'Fix bugs for models.', 'Add files via upload', 'Test CSRankNorm.', 'Add sample for Gats.', 'Fix CI', 'update TimeSeriesDataset', 'Add filter columns.', 'Update models.', 'Delete the setting of SFM on the Alpha158.', 'Update readme', 'Update mlp results and add doc', 'fix the config of readthedocs', 'add downcast to save data', 'Update CI', 'CI updating', 'rename for pytest', 'Update benchmark readme', 'Add benchmark results', 'add arg weight_decay', 'update mlp model', 'fix setup', 'Fix SFM bug.', 'fix docs req', 'fix system package', ""Merge branch 'main' into HEAD"", 'dataset performance optm', 'fix sampler performance bug', ""Merge branch 'main' of github.com:you-n-g/qlib into main"", 'Format']","['committed (#106)', 'committed (#89)', 'committed (#84)', 'committed (#75)', 'committed (#99)', 'committed (#95)', 'committed (#81)', 'committed (#79)', 'committed (#94)', 'committed (#83)']","[108396, 108404, 108669, 108677, 109024, 109082, 109090, 109628, 109636, 109644, 109652, 109660, 109668, 109676, 109684, 109904, 109912, 109944, 109973, 109981, 109989, 109997, 110005, 110013, 110146, 110345, 110353, 110361, 110369, 110377, 110385, 110393, 110401, 110409, 110417, 110425, 110437, 110445, 110453, 110461, 110469, 110477, 110485, 110493, 110501, 110509, 110517, 110529, 110537, 110545, 110553, 110565, 110573, 110581, 110589, 110597, 110605, 110613, 110621, 110629, 110637, 110645]","[108398, 108406, 108671, 108679, 109026, 109084, 109092, 109630, 109638, 109646, 109654, 109662, 109670, 109678, 109686, 109906, 109914, 109946, 109975, 109983, 109991, 109999, 110007, 110015, 110148, 110347, 110355, 110363, 110371, 110379, 110387, 110395, 110403, 110411, 110419, 110427, 110439, 110447, 110455, 110463, 110471, 110479, 110487, 110495, 110503, 110511, 110519, 110531, 110539, 110547, 110555, 110567, 110575, 110583, 110591, 110599, 110607, 110615, 110623, 110631, 110639, 110647]","update readme
+black format
+add the config of readthedocs
+update Note
+fix bug of workflow
+Update record to support time series dataset.
+Update benchmark performance
+fix typo
+
+fix typo
+update setup
+Fix code.
+remove dataloader
+Update test_dataset
+Fix models.
+Update settings.
+Add author names
+fix req
+Fix bugs of model.
+Fix bugs for Gats model.
+Update tft results
+support multi indexing of TSDatasetSample
+Fix bugs for models.
+Add files via upload
+Test CSRankNorm.
+Add sample for Gats.
+Fix CI
+update TimeSeriesDataset
+Add filter columns.
+Update models.
+Delete the setting of SFM on the Alpha158.
+Update readme
+Update mlp results and add doc
+fix the config of readthedocs
+add downcast to save data
+Update CI
+CI updating
+rename for pytest
+Update benchmark readme
+Add benchmark results
+add arg weight_decay
+update mlp model
+fix setup
+Fix SFM bug.
+fix docs req
+fix system package
+Merge branch 'main' into HEAD
+dataset performance optm
+fix sampler performance bug
+Merge branch 'main' of github.com:you-n-g/qlib into main
+Format"
+2020-12-14,18,3.0,8.0,5.0,-4.5,15.5,True,high,0.5,20,20,"[""Merge branch 'main' into main"", 'Add stale bot', 'Update CI and script', 'Add demo', 'Update tft', 'Update benchmark results', 'Typo fix', 'Refactor to Python3 style', 'Make __getattr__ to raise  AttributeError instead of return it.Avoid using try except.', 'fixing typos #4', 'fixing typos #2', ""Merge remote-tracking branch 'upstream/main' into demo"", 'Update Sign in ops.py', 'Update benchmark performance', 'fixing typos #3\n\nI just randomly find these by the way. Good work on the framework!', 'formatting', 'Update ops.py\n\nFix the bug when Sign followed by True/False', 'add more doc to PortAnaRecord', 'Format', 'fix wrong attribute']","['committed (#97)', 'committed (#124)', 'committed (#118)', 'committed (#122)', 'committed (#123)', 'committed (#119)', 'committed (#129)', 'committed (#135)', 'committed (#130)', 'committed (#113)', 'committed (#134)', 'committed (#138)']","[106934, 107043, 107079, 107239, 107272, 107280, 107307, 107476, 107511, 107541, 107549, 107704, 107741, 107754, 108164, 108199, 108735, 108747, 108775, 108783]","[106936, 107045, 107081, 107241, 107274, 107282, 107309, 107478, 107513, 107543, 107551, 107706, 107743, 107756, 108166, 108201, 108737, 108749, 108777, 108785]","Merge branch 'main' into main
+Add stale bot
+Update CI and script
+Add demo
+Update tft
+Update benchmark results
+Typo fix
+Refactor to Python3 style
+Make __getattr__ to raise  AttributeError instead of return it.Avoid using try except.
+fixing typos #4
+fixing typos #2
+Merge remote-tracking branch 'upstream/main' into demo
+Update Sign in ops.py
+Update benchmark performance
+fixing typos #3
+
+I just randomly find these by the way. Good work on the framework!
+formatting
+Update ops.py
+
+Fix the bug when Sign followed by True/False
+add more doc to PortAnaRecord
+Format
+fix wrong attribute"
+2021-02-01,26,4.0,12.75,8.75,-9.125,25.875,True,high,0.014285714285714285,41,38,"['update index', 'Update pytorch_gats.py', 'update docs', 'update', ""Merge remote-tracking branch 'origin/main' into main"", 'black format', 'Update pytorch_alstm_ts.py', 'simplify parameters', 'Fix bug in alpha360', 'Fix CI', 'Update pytorch_lstm.py', 'Update docs about record-temp', 'Update serial.rst', 'Update pytorch_lstm_ts.py', 'Update models to enable save/load', 'Update readme and setup.py', 'Update CI', 'Update readme', 'fix contrib data freq', 'Merge github.com:microsoft/qlib into rl-highfreq-include-examples', 'Update record temp API', 'add docstring & fix code', 'Update pytorch_gru_ts.py', 'Update pytorch_alstm.py', 'Update workflow_by_code.py', 'move `freq` params to dataloader', 'Add model saving for qrun and workflow example', 'update data.rst docs', 'Update pytorch_nn.py', 'add docs & fix reinit of datatset', 'add Cut ops', 'fix market', 'Update workflow_by_code.py\n\nFix typo in workflow_by_code.py', 'Update workflow.py', 'fix bug', 'Update pytorch_gru.py', 'Update Windows CI', 'update 1min docs']","['committed (#257)', 'committed (#244)', 'committed (#254)', 'committed (#234)', 'committed (#243)', 'committed (#236)', 'committed (#253)', 'committed (#247)', 'committed (#260)', 'committed (#248)', 'committed (#261)', 'committed (#258)', 'committed (#251)', 'committed (#246)', 'committed (#242)', 'committed (#259)', 'committed (#250)', 'committed (#264)', 'committed (#241)', 'committed (#256)', 'committed (#245)', 'committed (#252)']","[101543, 101631, 101675, 101714, 101726, 101762, 101803, 101811, 101819, 101827, 101835, 101843, 101866, 101874, 101903, 101932, 101940, 101948, 101963, 101971, 101983, 102006, 102014, 102025, 102038, 102067, 102104, 102131, 102202, 102228, 102251, 102277, 102306, 102335, 102358, 102384, 102533, 102568, 102589, 102597, 102623]","[101545, 101633, 101677, 101716, 101728, 101764, 101805, 101813, 101821, 101829, 101837, 101845, 101868, 101876, 101905, 101934, 101942, 101950, 101965, 101973, 101985, 102008, 102016, 102027, 102040, 102069, 102106, 102133, 102204, 102230, 102253, 102279, 102308, 102337, 102360, 102386, 102535, 102570, 102591, 102599, 102625]","update index
+Update pytorch_gats.py
+update docs
+update
+Merge remote-tracking branch 'origin/main' into main
+black format
+Update pytorch_alstm_ts.py
+simplify parameters
+Fix bug in alpha360
+Fix CI
+Update pytorch_lstm.py
+Update docs about record-temp
+Update serial.rst
+Update pytorch_lstm_ts.py
+Update models to enable save/load
+Update readme and setup.py
+Update CI
+Update readme
+fix contrib data freq
+Merge github.com:microsoft/qlib into rl-highfreq-include-examples
+Update record temp API
+add docstring & fix code
+Update pytorch_gru_ts.py
+Update pytorch_alstm.py
+Update workflow_by_code.py
+move `freq` params to dataloader
+Add model saving for qrun and workflow example
+update data.rst docs
+Update pytorch_nn.py
+add docs & fix reinit of datatset
+add Cut ops
+fix market
+Update workflow_by_code.py
+
+Fix typo in workflow_by_code.py
+Update workflow.py
+fix bug
+Update pytorch_gru.py
+Update Windows CI
+update 1min docs"
+2021-05-10,40,3.25,11.75,8.5,-9.5,24.5,True,high,1.8235294117647058,13,11,"['Fix CI lint with black', 'Merge pull request #2 from microsoft/main\n\nsync', 'Skip enhancement in stale bot', 'Add configurable dataset to examples', 'Add docstrings to set_global_logger_level', ""Merge branch 'microsoft:main' into stale"", 'Modify set_global_logger_level use of contextmanager', 'LightGBM hyperparameter', 'Fix bug and update doc', 'Merge pull request #1 from microsoft/main\n\nsyn 2021.1.1', 'Update stale bot']","['committed (#423)', 'committed (#306)', 'committed (#413)', 'committed (#416)', 'committed (#418)', 'committed (#419)']","[91457, 91485, 91493, 91629, 91679, 91695, 91769, 91878, 91886, 91894, 91912, 98182, 98194]","[91459, 91487, 91495, 91631, 91681, 91697, 91771, 91880, 91888, 91896, 91914, 98184, 98196]","Fix CI lint with black
+Merge pull request #2 from microsoft/main
+
+sync
+Skip enhancement in stale bot
+Add configurable dataset to examples
+Add docstrings to set_global_logger_level
+Merge branch 'microsoft:main' into stale
+Modify set_global_logger_level use of contextmanager
+LightGBM hyperparameter
+Fix bug and update doc
+Merge pull request #1 from microsoft/main
+
+syn 2021.1.1
+Update stale bot"
+2021-12-20,23,6.25,12.75,6.5,-3.5,22.5,True,high,0.07692307692307693,13,12,"['Update setup.py', 'Add Cache to avoid frequently loading calendar', 'Replace scripts/get_data.py to get_data.py.\n\nFor the consitency in this page, replace scripts/get_data.py to get_data.py.', 'Enhance Task Dict Var', 'Add docs about the patameters', 'update 3.9 CI and qlib version', 'Update Docs of Alpha360', 'Use encoding=""utf-8"" in open.', 'Update Contributor list', 'Fix typo leanable to learnable.', 'Change BCELoss in MLP model', 'fix cn_index collector']","['committed (#605)', 'committed (#766)', 'committed (#775)', 'committed (#778)', 'committed (#771)', 'committed (#777)', 'committed (#773)', 'committed (#779)', 'committed (#774)', 'committed (#756)', 'committed (#780)']","[64894, 64940, 64972, 65007, 65069, 65108, 65151, 65223, 65417, 65845, 75930, 75938, 75946]","[64896, 64942, 64974, 65009, 65071, 65110, 65153, 65225, 65419, 65847, 75932, 75940, 75948]","Update setup.py
+Add Cache to avoid frequently loading calendar
+Replace scripts/get_data.py to get_data.py.
+
+For the consitency in this page, replace scripts/get_data.py to get_data.py.
+Enhance Task Dict Var
+Add docs about the patameters
+update 3.9 CI and qlib version
+Update Docs of Alpha360
+Use encoding=""utf-8"" in open.
+Update Contributor list
+Fix typo leanable to learnable.
+Change BCELoss in MLP model
+fix cn_index collector"
+2022-01-17,34,6.25,13.75,7.5,-5.0,25.0,True,high,1.2,72,69,"[""Merge remote-tracking branch 'origin/main' into lcy_main"", 'update scripts and docs', 'del weight_decay', 'add topswrappers', 'Add docs for download and test data', 'fix CI error', 'clean the logic of handler', 'Update config.py', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/GRU\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/SFM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'full layer', 'delete some debug', 'new format of arctic', 'Add more docs about initialization', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/ADD\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'safe_load yaml', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/LSTM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/TCTS\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'fix connection problem', 'fix empty df bug', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/MLP\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'no weight decay', 'add some operator', 'remove not used function', 'Successfully run all high-freq expressions', '1, fix Topkdropn holding stocks could be larger than k; 2, fix Topkdropn turnover rate could be larger than n/k', 'big weight_decay', 'small layer', '2 layer', 'successfully import data and run first test', 'Update data.rst', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/DoubleEnsemble\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Update pytorch_nn.py', 'mid weight_decay', 'divide into two data source', 'merge microsoft qlib', 'Refine docs', 'fix workflow bug', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/CatBoost\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Remove arctic from Qlib core to Contrib', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/GATs\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/LightGBM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'add_pylint_to_workflow', 'Fix output of pytorch NN', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/ADARNN\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'fall back error', 'change weight_decay & batchsize', 'change parse field', 'Black format and fix add docs', 'fix bug', 'Fix parameter bug', 'Update initialization.rst', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/Localformer\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'fix test bug', 'clean code', 'final version for arcitc', 'A simpler version to support arctic', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/TRA\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'clear HZ cache', 'Update README.md', 'add some docs about workflow and online', 'DDG-DA paper link and comments for code', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/ALSTM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'reformat_with_black', 'Docs for model and strategy', 'fix cache bug to arctic read', 'Add docs', 'Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/TCN\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)\n- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'add Toperator']","['committed (#744)', 'committed (#877)', 'committed (#871)', 'committed (#833)', 'committed (#829)', 'committed (#880)', 'committed (#869)', 'committed (#853)', 'committed (#838)', 'committed (#834)', 'committed (#865)', 'committed (#836)', 'committed (#646)', 'committed (#878)', 'committed (#866)', 'committed (#864)', 'committed (#882)', 'committed (#867)', 'committed (#831)', 'committed (#830)', 'committed (#859)', 'committed (#870)', 'committed (#875)', 'committed (#835)', 'committed (#832)', 'committed (#863)', 'committed (#868)', 'committed (#837)']","[60189, 60197, 60205, 60240, 60251, 60334, 60372, 60500, 60723, 60770, 60814, 60855, 60899, 60943, 60975, 60983, 61015, 61023, 61061, 61202, 61210, 61520, 61531, 61539, 61555, 62169, 62210, 62251, 62292, 62339, 62386, 62424, 62465, 62512, 62559, 66801, 66809, 66817, 66825, 66833, 66841, 66849, 66857, 66865, 66874, 66882, 66890, 66898, 66906, 66914, 66922, 66930, 66938, 66950, 66958, 66988, 66996, 67004, 67012, 67024, 67032, 67040, 67048, 67056, 67064, 67075, 67083, 67094, 67102, 67110, 67118, 73449]","[60191, 60199, 60207, 60242, 60253, 60336, 60374, 60502, 60725, 60772, 60816, 60857, 60901, 60945, 60977, 60985, 61017, 61025, 61063, 61204, 61212, 61522, 61533, 61541, 61557, 62171, 62212, 62253, 62294, 62341, 62388, 62426, 62467, 62514, 62561, 66803, 66811, 66819, 66827, 66835, 66843, 66851, 66859, 66867, 66876, 66884, 66892, 66900, 66908, 66916, 66924, 66932, 66940, 66952, 66960, 66990, 66998, 67006, 67014, 67026, 67034, 67042, 67050, 67058, 67066, 67077, 67085, 67096, 67104, 67112, 67120, 73451]","Merge remote-tracking branch 'origin/main' into lcy_main
+update scripts and docs
+del weight_decay
+add topswrappers
+Add docs for download and test data
+fix CI error
+clean the logic of handler
+Update config.py
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/GRU
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/SFM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+full layer
+delete some debug
+new format of arctic
+Add more docs about initialization
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/ADD
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+safe_load yaml
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/LSTM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/TCTS
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+fix connection problem
+fix empty df bug
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/MLP
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+no weight decay
+add some operator
+remove not used function
+Successfully run all high-freq expressions
+1, fix Topkdropn holding stocks could be larger than k; 2, fix Topkdropn turnover rate could be larger than n/k
+big weight_decay
+small layer
+2 layer
+successfully import data and run first test
+Update data.rst
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/DoubleEnsemble
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Update pytorch_nn.py
+mid weight_decay
+divide into two data source
+merge microsoft qlib
+Refine docs
+fix workflow bug
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/CatBoost
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Remove arctic from Qlib core to Contrib
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/GATs
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/LightGBM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+add_pylint_to_workflow
+Fix output of pytorch NN
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/ADARNN
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+fall back error
+change weight_decay & batchsize
+change parse field
+Black format and fix add docs
+fix bug
+Fix parameter bug
+Update initialization.rst
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/Localformer
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+fix test bug
+clean code
+final version for arcitc
+A simpler version to support arctic
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/TRA
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+clear HZ cache
+Update README.md
+add some docs about workflow and online
+DDG-DA paper link and comments for code
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/ALSTM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+reformat_with_black
+Docs for model and strategy
+fix cache bug to arctic read
+Add docs
+Bump numpy from 1.17.4 to 1.21.0 in /examples/benchmarks/TCN
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.17.4 to 1.21.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst.txt)
+- [Commits](https://github.com/numpy/numpy/compare/v1.17.4...v1.21.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+add Toperator"
+2022-03-07,28,7.25,14.5,7.25,-3.625,25.375,True,high,0.3620689655172414,113,61,"['add CSI500 data collector', 'format code & DocString', 'add pit data read', 'update PIT test', 'update test_PIT name', 'fix bugs', 'mv crypto collector', '[ImgBot] Optimize images\n\n*Total -- 1,498.69kb -> 1,366.22kb (8.84%)\n\n/docs/_static/img/logo/yellow_bg_rec.png -- 5.02kb -> 2.96kb (40.91%)\n/docs/_static/img/analysis/analysis_model_long_short.png -- 16.31kb -> 9.77kb (40.13%)\n/docs/_static/img/analysis/risk_analysis_bar.png -- 12.62kb -> 7.83kb (38.01%)\n/docs/_static/img/analysis/analysis_model_monthly_IC.png -- 16.53kb -> 12.00kb (27.41%)\n/docs/_static/img/logo/yellow_bg_rec+word .png -- 9.19kb -> 6.72kb (26.89%)\n/docs/_static/img/logo/yel_bg_rec+word.png -- 9.66kb -> 7.08kb (26.69%)\n/docs/_static/img/topk_drop.png -- 50.44kb -> 39.90kb (20.9%)\n/docs/_static/img/framework.png -- 270.99kb -> 221.43kb (18.29%)\n/docs/_static/img/logo/white_bg_rec+word.png -- 14.95kb -> 12.58kb (15.9%)\n/docs/_static/img/analysis/risk_analysis_std.png -- 47.26kb -> 44.05kb (6.8%)\n/docs/_static/img/analysis/cumulative_return_hold.png -- 42.51kb -> 39.72kb (6.57%)\n/docs/_static/img/analysis/analysis_model_IC.png -- 32.71kb -> 30.77kb (5.94%)\n/docs/_static/img/analysis/cumulative_return_buy.png -- 42.38kb -> 39.88kb (5.91%)\n/docs/_static/img/analysis/analysis_model_NDQ.png -- 23.17kb -> 21.88kb (5.56%)\n/docs/_static/img/analysis/cumulative_return_buy_minus_sell.png -- 44.28kb -> 41.82kb (5.55%)\n/docs/_static/img/analysis/risk_analysis_annualized_return.png -- 45.74kb -> 43.20kb (5.55%)\n/docs/_static/img/analysis/cumulative_return_sell.png -- 52.27kb -> 49.52kb (5.26%)\n/docs/_static/img/analysis/risk_analysis_max_drawdown.png -- 53.10kb -> 50.39kb (5.1%)\n/docs/_static/img/logo/2.png -- 17.66kb -> 16.81kb (4.86%)\n/docs/_static/img/analysis/rank_label_hold.png -- 71.18kb -> 68.00kb (4.46%)\n/docs/_static/img/logo/3.png -- 13.22kb -> 12.63kb (4.42%)\n/docs/_static/img/analysis/risk_analysis_information_ratio.png -- 54.24kb -> 51.87kb (4.37%)\n/docs/_static/img/analysis/report.png -- 160.53kb -> 153.88kb (4.14%)\n/docs/_static/img/logo/1.png -- 17.90kb -> 17.25kb (3.67%)\n/docs/_static/img/analysis/analysis_model_auto_correlation.png -- 47.28kb -> 45.74kb (3.26%)\n/docs/_static/img/analysis/rank_label_sell.png -- 81.23kb -> 78.59kb (3.25%)\n/docs/_static/img/analysis/score_ic.png -- 101.90kb -> 98.67kb (3.16%)\n/docs/_static/img/analysis/rank_label_buy.png -- 81.41kb -> 78.96kb (3.01%)\n/docs/_static/img/analysis/analysis_model_cumulative_return.png -- 63.01kb -> 62.34kb (1.06%)\n\nSigned-off-by: ImgBotApp <ImgBotHelp@gmail.com>', 'Use verbose_eval_callback to replace verbose_eval augument.', 'Change import sequence.', 'Add 1 more blank for PEP8 E302.', 'update code format', 'Update collector.py', 'Add REG_TW.', 'Skip idx.is_lexsorted() when pandas version is larger than 1.3.0. The future warning is annoying.', 'Use early stop callback to fix the warning.', 'add period ops class', 'update tets_PIT', 'Merge https://github.com/microsoft/qlib', ""Merge remote-tracking branch 'origin/main' into PIT"", 'fix PYlint', 'Fix black removed import.', 'fix cn annotation in PIT script', 'Fix pit docs format', 'update ops runnable', 'black format', 'Remove redundant import [fix pylint]', 'Fix bug.', 'fix bug in period ops', 'update PIT test example', 'fix bug', 'optimize the PIT Algorithm', 'fix bug & add dump_pit.py', 'Add some docs and remove a bug', 'add pit collector', 'Fix removed #.', '[949] - Remove argument internal in BaseRun::download_data.', 'Fix black.', 'fix-csi500', ""Merge branch 'microsoft:main' into safe_pandas"", 'fix try', 'Pass test and fix code', 'Rename', 'remove useless PIT code', 'fix docstring', 'feat: add context to data loader', 'update-csi500', 'Successfully run and understand PIT', 'Use callback in LGBM.train.', 'Update scripts/data_collector/yahoo/collector.py\n\nCo-authored-by: you-n-g <you-n-g@users.noreply.github.com>', 'add check_feature_exist', 'Merge pull request #1 from GaochaoZhu/imgbot\n\n[ImgBot] Optimize images', 'Fix black error.', 'save remove file and more friendly log', 'Fix pit docs list format', 'update example', 'Run succesfully after merging master', ""Merge branch 'safe_pandas' of github.com:ChiahungTai/qlib into safe_pandas"", 'Rewrite code.', 'fix pylint', 'refactor: add instrument to interface of InstProcessor']","['committed (#152)', 'committed (#343)', 'committed (#972)', 'committed (#970)', 'committed (#969)', 'committed (#966)', 'committed (#960)', 'committed (#955)', 'committed (#973)', 'committed (#971)', 'committed (#963)', 'committed (#938)', 'committed (#965)', 'committed (#958)', 'committed (#957)', 'committed (#962)', 'committed (#953)', 'committed (#961)', 'committed (#959)', 'committed (#974)', 'committed (#967)']","[56100, 56145, 56157, 56165, 56173, 56181, 56213, 56221, 56247, 56270, 56278, 56286, 56294, 56302, 56310, 56318, 56344, 56352, 56360, 56368, 56376, 56384, 56442, 56450, 56485, 56493, 56501, 56509, 56517, 56525, 56533, 56541, 56549, 56561, 56569, 56577, 56585, 56617, 56625, 56633, 56641, 56649, 56657, 56665, 56673, 56774, 56782, 56790, 56798, 56806, 56814, 56822, 56842, 56874, 56882, 56890, 56898, 56906, 56930, 56938, 56963, 56976, 57014, 57051, 57059, 57123, 57202, 57210, 57218, 57797, 57805, 57821, 95931, 95939, 95947, 95955, 95963, 95971, 95979, 95987, 95995, 96003, 96011, 96019, 96027, 96035, 96043, 96051, 96059, 96067, 96075, 96083, 96091, 96099, 96152, 96160, 96171, 96179, 96187, 96195, 96203, 96211, 96219, 96227, 96238, 96259, 106131, 106140, 106149, 106157, 106165, 106217, 106226]","[56102, 56147, 56159, 56167, 56175, 56183, 56215, 56223, 56249, 56272, 56280, 56288, 56296, 56304, 56312, 56320, 56346, 56354, 56362, 56370, 56378, 56386, 56444, 56452, 56487, 56495, 56503, 56511, 56519, 56527, 56535, 56543, 56551, 56563, 56571, 56579, 56587, 56619, 56627, 56635, 56643, 56651, 56659, 56667, 56675, 56776, 56784, 56792, 56800, 56808, 56816, 56824, 56844, 56876, 56884, 56892, 56900, 56908, 56932, 56940, 56965, 56978, 57016, 57053, 57061, 57125, 57204, 57212, 57220, 57799, 57807, 57823, 95933, 95941, 95949, 95957, 95965, 95973, 95981, 95989, 95997, 96005, 96013, 96021, 96029, 96037, 96045, 96053, 96061, 96069, 96077, 96085, 96093, 96101, 96154, 96162, 96173, 96181, 96189, 96197, 96205, 96213, 96221, 96229, 96240, 96261, 106133, 106142, 106151, 106159, 106167, 106219, 106228]","add CSI500 data collector
+format code & DocString
+add pit data read
+update PIT test
+update test_PIT name
+fix bugs
+mv crypto collector
+[ImgBot] Optimize images
+
+*Total -- 1,498.69kb -> 1,366.22kb (8.84%)
+
+/docs/_static/img/logo/yellow_bg_rec.png -- 5.02kb -> 2.96kb (40.91%)
+/docs/_static/img/analysis/analysis_model_long_short.png -- 16.31kb -> 9.77kb (40.13%)
+/docs/_static/img/analysis/risk_analysis_bar.png -- 12.62kb -> 7.83kb (38.01%)
+/docs/_static/img/analysis/analysis_model_monthly_IC.png -- 16.53kb -> 12.00kb (27.41%)
+/docs/_static/img/logo/yellow_bg_rec+word .png -- 9.19kb -> 6.72kb (26.89%)
+/docs/_static/img/logo/yel_bg_rec+word.png -- 9.66kb -> 7.08kb (26.69%)
+/docs/_static/img/topk_drop.png -- 50.44kb -> 39.90kb (20.9%)
+/docs/_static/img/framework.png -- 270.99kb -> 221.43kb (18.29%)
+/docs/_static/img/logo/white_bg_rec+word.png -- 14.95kb -> 12.58kb (15.9%)
+/docs/_static/img/analysis/risk_analysis_std.png -- 47.26kb -> 44.05kb (6.8%)
+/docs/_static/img/analysis/cumulative_return_hold.png -- 42.51kb -> 39.72kb (6.57%)
+/docs/_static/img/analysis/analysis_model_IC.png -- 32.71kb -> 30.77kb (5.94%)
+/docs/_static/img/analysis/cumulative_return_buy.png -- 42.38kb -> 39.88kb (5.91%)
+/docs/_static/img/analysis/analysis_model_NDQ.png -- 23.17kb -> 21.88kb (5.56%)
+/docs/_static/img/analysis/cumulative_return_buy_minus_sell.png -- 44.28kb -> 41.82kb (5.55%)
+/docs/_static/img/analysis/risk_analysis_annualized_return.png -- 45.74kb -> 43.20kb (5.55%)
+/docs/_static/img/analysis/cumulative_return_sell.png -- 52.27kb -> 49.52kb (5.26%)
+/docs/_static/img/analysis/risk_analysis_max_drawdown.png -- 53.10kb -> 50.39kb (5.1%)
+/docs/_static/img/logo/2.png -- 17.66kb -> 16.81kb (4.86%)
+/docs/_static/img/analysis/rank_label_hold.png -- 71.18kb -> 68.00kb (4.46%)
+/docs/_static/img/logo/3.png -- 13.22kb -> 12.63kb (4.42%)
+/docs/_static/img/analysis/risk_analysis_information_ratio.png -- 54.24kb -> 51.87kb (4.37%)
+/docs/_static/img/analysis/report.png -- 160.53kb -> 153.88kb (4.14%)
+/docs/_static/img/logo/1.png -- 17.90kb -> 17.25kb (3.67%)
+/docs/_static/img/analysis/analysis_model_auto_correlation.png -- 47.28kb -> 45.74kb (3.26%)
+/docs/_static/img/analysis/rank_label_sell.png -- 81.23kb -> 78.59kb (3.25%)
+/docs/_static/img/analysis/score_ic.png -- 101.90kb -> 98.67kb (3.16%)
+/docs/_static/img/analysis/rank_label_buy.png -- 81.41kb -> 78.96kb (3.01%)
+/docs/_static/img/analysis/analysis_model_cumulative_return.png -- 63.01kb -> 62.34kb (1.06%)
+
+Signed-off-by: ImgBotApp <ImgBotHelp@gmail.com>
+Use verbose_eval_callback to replace verbose_eval augument.
+Change import sequence.
+Add 1 more blank for PEP8 E302.
+update code format
+Update collector.py
+Add REG_TW.
+Skip idx.is_lexsorted() when pandas version is larger than 1.3.0. The future warning is annoying.
+Use early stop callback to fix the warning.
+add period ops class
+update tets_PIT
+Merge https://github.com/microsoft/qlib
+Merge remote-tracking branch 'origin/main' into PIT
+fix PYlint
+Fix black removed import.
+fix cn annotation in PIT script
+Fix pit docs format
+update ops runnable
+black format
+Remove redundant import [fix pylint]
+Fix bug.
+fix bug in period ops
+update PIT test example
+fix bug
+optimize the PIT Algorithm
+fix bug & add dump_pit.py
+Add some docs and remove a bug
+add pit collector
+Fix removed #.
+[949] - Remove argument internal in BaseRun::download_data.
+Fix black.
+fix-csi500
+Merge branch 'microsoft:main' into safe_pandas
+fix try
+Pass test and fix code
+Rename
+remove useless PIT code
+fix docstring
+feat: add context to data loader
+update-csi500
+Successfully run and understand PIT
+Use callback in LGBM.train.
+Update scripts/data_collector/yahoo/collector.py
+
+Co-authored-by: you-n-g <you-n-g@users.noreply.github.com>
+add check_feature_exist
+Merge pull request #1 from GaochaoZhu/imgbot
+
+[ImgBot] Optimize images
+Fix black error.
+save remove file and more friendly log
+Fix pit docs list format
+update example
+Run succesfully after merging master
+Merge branch 'safe_pandas' of github.com:ChiahungTai/qlib into safe_pandas
+Rewrite code.
+fix pylint
+refactor: add instrument to interface of InstProcessor"
+2023-04-03,24,3.0,9.0,6.0,-6.0,18.0,True,high,1.0,30,30,"['Support include valid; More parameters', 'Blackformat', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/IGMTF\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TCTS\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'fix: removed extra blank link between sections', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/GRU\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/CatBoost\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/ADARNN\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TRA\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/ALSTM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/XGBoost\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/LSTM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/HIST\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TabNet\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/Localformer\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/SFM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TCN\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/GATs\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Run ddg-da successfully', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/DoubleEnsemble\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/LightGBM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Update handler.py', 'Support specify handler & optim dataset', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/Transformer\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Enable fill_method', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/hyperparameter/LightGBM\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/MLP\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>', 'Support L2 reg & visualization', 'Fix Pylint', 'Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/ADD\n\nBumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.\n- [Release notes](https://github.com/numpy/numpy/releases)\n- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)\n- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)\n\n---\nupdated-dependencies:\n- dependency-name: numpy\n  dependency-type: direct:production\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>']","['committed (#1472)', 'committed (#1163)', 'committed (#1151)', 'committed (#1451)', 'committed (#1156)', 'committed (#1146)', 'committed (#1158)', 'committed (#1152)', 'committed (#1148)', 'committed (#1159)', 'committed (#1155)', 'committed (#1164)', 'committed (#1162)', 'committed (#1150)', 'committed (#1147)', 'committed (#1157)', 'committed (#1144)', 'committed (#1149)', 'committed (#1145)', 'committed (#1485)', 'committed (#1161)', 'committed (#1160)', 'committed (#1154)', 'committed (#1153)']","[27763, 28406, 28414, 28422, 28433, 28441, 28449, 28460, 29048, 45282, 45340, 45395, 45453, 45511, 45569, 45627, 45685, 45743, 45801, 45859, 45917, 45972, 46030, 46088, 46146, 46204, 46262, 46317, 46375, 46433]","[27765, 28408, 28416, 28424, 28435, 28443, 28451, 28462, 29050, 45284, 45342, 45397, 45455, 45513, 45571, 45629, 45687, 45745, 45803, 45861, 45919, 45974, 46032, 46090, 46148, 46206, 46264, 46319, 46377, 46435]","Support include valid; More parameters
+Blackformat
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/IGMTF
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TCTS
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+fix: removed extra blank link between sections
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/GRU
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/CatBoost
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/ADARNN
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TRA
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/ALSTM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/XGBoost
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/LSTM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/HIST
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TabNet
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/Localformer
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/SFM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/TCN
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/GATs
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Run ddg-da successfully
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/DoubleEnsemble
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/LightGBM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Update handler.py
+Support specify handler & optim dataset
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/Transformer
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Enable fill_method
+Bump numpy from 1.21.0 to 1.22.0 in /examples/hyperparameter/LightGBM
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/MLP
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Support L2 reg & visualization
+Fix Pylint
+Bump numpy from 1.21.0 to 1.22.0 in /examples/benchmarks/ADD
+
+Bumps [numpy](https://github.com/numpy/numpy) from 1.21.0 to 1.22.0.
+- [Release notes](https://github.com/numpy/numpy/releases)
+- [Changelog](https://github.com/numpy/numpy/blob/main/doc/HOWTO_RELEASE.rst)
+- [Commits](https://github.com/numpy/numpy/compare/v1.21.0...v1.22.0)
+
+---
+updated-dependencies:
+- dependency-name: numpy
+  dependency-type: direct:production
+...
+
+Signed-off-by: dependabot[bot] <support@github.com>"
+2023-10-23,66,3.25,7.0,3.75,-2.375,12.625,True,high,14.233333333333333,0,0,[],[],,,
+2025-03-10,12,0.25,3.0,2.75,-3.875,7.125,True,high,1.7727272727272727,0,0,[],[],,,
+2025-04-21,7,0.25,2.0,1.75,-2.375,4.625,True,high,1.3571428571428572,26,17,"['update ubuntu version for action', ""Merge branch 'microsoft:main' into fix-issue-1892"", 'fix the bug that the HS STMBOLS URL is faild', 'fix: resolve #1892 by retriving the data page by page', 'fix issue 1887', ""Merge branch 'main' of github.com:microsoft/qlib into fix-issue-1892"", 'fix pytest error', 'fix black error', 'fix pylint error', 'format with black', 'add  instruments', 'reformat with black', 'add Fillna test', 'fixed pytest error in CI', 'remove code', 'fix fillna bug', 'fix flake8 error']","['committed (#1914)', 'committed (#1901)', 'committed (#1894)', 'committed (#1916)']","[9892, 9901, 9909, 9920, 9931, 10006, 10017, 10025, 10033, 10041, 10049, 10057, 10065, 10073, 10081, 10089, 10097, 10563, 10571, 10614, 10967, 10978, 10986, 10994, 11002, 11013]","[9894, 9903, 9911, 9922, 9933, 10008, 10019, 10027, 10035, 10043, 10051, 10059, 10067, 10075, 10083, 10091, 10099, 10565, 10573, 10616, 10969, 10980, 10988, 10996, 11004, 11015]","update ubuntu version for action
+Merge branch 'microsoft:main' into fix-issue-1892
+fix the bug that the HS STMBOLS URL is faild
+fix: resolve #1892 by retriving the data page by page
+fix issue 1887
+Merge branch 'main' of github.com:microsoft/qlib into fix-issue-1892
+fix pytest error
+fix black error
+fix pylint error
+format with black
+add  instruments
+reformat with black
+add Fillna test
+fixed pytest error in CI
+remove code
+fix fillna bug
+fix flake8 error"
+2025-05-19,7,1.0,3.0,2.0,-2.0,6.0,True,high,0.5,15,13,"['fix some bugs in general_nn workflow', ""I didn't use nbqa black to reformat my code. Now\nis done!"", 'Update README.md', 'fix install lightgbm error', 'update qlib general_nn for rdagent_qlib', 'fix install lightgbm error & format with black', 'recover_code', ""I've completed the initial implementation of a Java CLI application for trading.\n\nThis application connects to the MOFSL Open API (via a provided Java SDK) to allow you to place orders.\n\nFeatures:\n- Configuration via a properties file for API credentials and settings.\n- Login mechanism, including handling for OTP verification.\n- Command-line interface to gather order details from you.\n- Client-side input validation for order parameters.\n- Placement of orders using the SDK.\n- Parsing and display of API responses for login and order placement.\n- Comprehensive error handling for API interactions, configuration issues, and your input.\n- I've included unit tests for configuration loading (`AppConfig`) and API service logic (`ApiService`) using JUnit 5 and Mockito.\n- I've also created placeholder SDK classes to allow development in the absence of the actual SDK JAR during automated tasks.\n- You'll find a detailed README.md with setup, configuration, build, and run instructions.\n\nKnown Limitations:\n- Unit tests for `Main.java`'s CLI input methods are limited due to coupling with System.in.\n- The actual `MOFSLOPENAPI_V3.1.jar` is a prerequisite and must be manually added to the `lib/` directory.\n- I encountered issues resolving the system-scoped JAR dependency without the physical file, so unit tests could not be fully executed in the development environment."", 'fix na bug', 'comply with the code style guidelines.\nSpecifically, I had used double quotes ""notebook""\nfor the string, whereas the required format was\nsingle quotes \'notebook\'.\nThis has now been corrected.', 'Update detailed_workflow.ipynb\n\nthe result figure is empty', 'Update detailed_workflow.ipynb\n\nfix issue: the plotly figure is empty', 'The error message indicated that my code did not\ncomply with the code style guidelines.\nSpecifically, I had used double quotes ""notebook""\nfor the string, whereas the required format was\nsingle quotes \'notebook\'.\nThis has now been corrected.']","['committed (#1912)', 'committed (#1902)', 'committed (#1929)', 'committed (#1928)', 'committed (#1931)', 'committed (#1936)']","[9216, 9265, 9383, 9394, 9434, 9446, 9454, 10229, 10240, 10418, 10426, 10451, 10460, 10474, 10508]","[9218, 9267, 9385, 9396, 9436, 9448, 9456, 10231, 10242, 10420, 10428, 10453, 10462, 10476, 10510]","fix some bugs in general_nn workflow
+I didn't use nbqa black to reformat my code. Now
+is done!
+Update README.md
+fix install lightgbm error
+update qlib general_nn for rdagent_qlib
+fix install lightgbm error & format with black
+recover_code
+I've completed the initial implementation of a Java CLI application for trading.
+
+This application connects to the MOFSL Open API (via a provided Java SDK) to allow you to place orders.
+
+Features:
+- Configuration via a properties file for API credentials and settings.
+- Login mechanism, including handling for OTP verification.
+- Command-line interface to gather order details from you.
+- Client-side input validation for order parameters.
+- Placement of orders using the SDK.
+- Parsing and display of API responses for login and order placement.
+- Comprehensive error handling for API interactions, configuration issues, and your input.
+- I've included unit tests for configuration loading (`AppConfig`) and API service logic (`ApiService`) using JUnit 5 and Mockito.
+- I've also created placeholder SDK classes to allow development in the absence of the actual SDK JAR during automated tasks.
+- You'll find a detailed README.md with setup, configuration, build, and run instructions.
+
+Known Limitations:
+- Unit tests for `Main.java`'s CLI input methods are limited due to coupling with System.in.
+- The actual `MOFSLOPENAPI_V3.1.jar` is a prerequisite and must be manually added to the `lib/` directory.
+- I encountered issues resolving the system-scoped JAR dependency without the physical file, so unit tests could not be fully executed in the development environment.
+fix na bug
+comply with the code style guidelines.
+Specifically, I had used double quotes ""notebook""
+for the string, whereas the required format was
+single quotes 'notebook'.
+This has now been corrected.
+Update detailed_workflow.ipynb
+
+the result figure is empty
+Update detailed_workflow.ipynb
+
+fix issue: the plotly figure is empty
+The error message indicated that my code did not
+comply with the code style guidelines.
+Specifically, I had used double quotes ""notebook""
+for the string, whereas the required format was
+single quotes 'notebook'.
+This has now been corrected."
+2025-05-26,9,1.0,3.0,2.0,-2.0,6.0,True,high,1.5,27,26,"['Update tests', 'Update README.md', ""Merge branch 'main' of github.com:microsoft/qlib into dev/chendi/horizon"", 'Add util function to help automatically get horizon', 'Adapt to pickled handler', 'Remove redundant check', 'Fixing Security Vulnerabilities', 'Fixing Pylint Error', ""Merge branch 'main' of github.com:microsoft/qlib into eabjab/main"", 'Leverage horizon change', 'fix: typo', 'using returncode to locate problems', 'remove blank', 'modify the code as suggested', 'Udpate config yaml', 'Fix CI error', 'fix pytest error', 'Implement geometric accumulation mode for risk_analysis function (#964)', 'format code with pylint', 'format with black', 'Fixing Security Vulnerabilities windows', 'fix pylint error', 'Reformat for CI', 'Fix lint', 'Implement exponential mode for annualized_return calculation in risk_analysis\n\nResolves #964', 'Update for formatting']","['committed (#1509)', 'committed (#1940)', 'committed (#1941)', 'committed (#1938)', 'committed (#1943)', 'committed (#1895)', 'committed (#1433)']","[8969, 9019, 9030, 9038, 9046, 9062, 9070, 9111, 9149, 9158, 10924, 26232, 26243, 26251, 26259, 26267, 26275, 26283, 26291, 26299, 26307, 26323, 26338, 26346, 26354, 26362, 29869]","[8971, 9021, 9032, 9040, 9048, 9064, 9072, 9113, 9151, 9160, 10926, 26234, 26245, 26253, 26261, 26269, 26277, 26285, 26293, 26301, 26309, 26325, 26340, 26348, 26356, 26364, 29871]","Update tests
+Update README.md
+Merge branch 'main' of github.com:microsoft/qlib into dev/chendi/horizon
+Add util function to help automatically get horizon
+Adapt to pickled handler
+Remove redundant check
+Fixing Security Vulnerabilities
+Fixing Pylint Error
+Merge branch 'main' of github.com:microsoft/qlib into eabjab/main
+Leverage horizon change
+fix: typo
+using returncode to locate problems
+remove blank
+modify the code as suggested
+Udpate config yaml
+Fix CI error
+fix pytest error
+Implement geometric accumulation mode for risk_analysis function (#964)
+format code with pylint
+format with black
+Fixing Security Vulnerabilities windows
+fix pylint error
+Reformat for CI
+Fix lint
+Implement exponential mode for annualized_return calculation in risk_analysis
+
+Resolves #964
+Update for formatting"
+2025-09-01,8,1.0,3.0,2.0,-2.0,6.0,True,high,1.0,35,30,"[""feat: Create visual GUI tool for Qlib\n\nThis commit introduces a comprehensive, user-friendly visual application for the Qlib library, built using Streamlit. It is designed for non-programmers to access Qlib's core functionalities.\n\nThe application is structured into two main files:\n- `app.py`: Contains the Streamlit frontend UI, with separate pages for each major function.\n- `qlib_utils.py`: Encapsulates the backend logic for interacting with the Qlib API.\n- `requirements.txt`: Manages all Python dependencies.\n\nKey Features:\n- **Data Management:** A UI to trigger and monitor the download of Qlib's market data.\n- **Model Training:** Allows users to select a model configuration, train it, and save the resulting model (`.pkl`) and its configuration (`.yaml`) for later use.\n- **Prediction:** Users can load a saved model to get predictions for a specific date, with results displayed in a table and a bar chart.\n- **Backtesting:** Users can run a backtest on a saved model over a specified historical period. Results, including key performance indicators (e.g., annualized return, Sharpe ratio) and an equity curve, are visualized.\n\nThe implementation separates UI from logic, handles long-running processes asynchronously, and robustly manages model/configuration persistence."", ""Merge branch 'main' of https://github.com/microsoft/qlib"", 'Fix vnindex function', ""feat: Finalize Qlib visual tool with robust script handling\n\nThis commit delivers the final, robust, and feature-complete version of the visual Qlib application. It definitively fixes the critical `ModuleNotFoundError` by reverting the data management logic to use `subprocess` calls, as per the user's guidance.\n\nKey changes:\n- **Robust Data Management:** All data functions in `qlib_utils.py` now use `subprocess` to call the necessary scripts from a local `scripts` folder. This removes the fragile dependency on the `pyqlib` package structure.\n- **Updated Documentation:** `TUTORIAL.md` now includes a critical instruction for the user to download the `scripts` folder from the Qlib GitHub repository and place it alongside the application files.\n- **Complete Feature Set:** The application includes all previously developed features: multi-model support (LGBM, XGBoost, CatBoost, ALSTM), multi-factor support (Alpha158, Alpha360), hyperparameter tuning, model fine-tuning, custom naming, multi-model prediction comparison, and configurable backtesting.\n\nThis version is complete, correct, and directly addresses all user feedback to produce a stable and user-friendly application."", ""fix: Add missing yahooquery dependency\n\nThis commit fixes a critical `ModuleNotFoundError: No module named 'yahooquery'` that occurred when running the data collection scripts.\n\nThe `qlib` data collector scripts have an implicit dependency on the `yahooquery` library, which was not included in the main `pyqlib` package and was missing from `requirements.txt`.\n\nThis commit adds `yahooquery` to `requirements.txt`, ensuring that all necessary dependencies are installed and the data management features of the application are fully functional. This resolves the last known bug in the project."", 'feat: Finalize Qlib tool with bug fixes and new features\n\nThis commit delivers the final, complete, and robust version of the visual Qlib application. It addresses the last remaining bugs and implements the final set of user-requested features.\n\nKey Fixes and Features in this version:\n- **Bug Fix:** Corrected a critical `yaml.YAMLError` by replacing `yaml.safe_load` with `yaml.load(..., Loader=yaml.FullLoader)`. This resolves crashes during the prediction and backtesting phases.\n- **New Feature:** Added a ""Single Stock Historical Score Tracking"" section to the prediction page. This allows users to select a model and a stock to visualize the model\'s prediction score for that stock over a specified time range, plotted as a line chart.\n- **Documentation Update:** The `QLIB_INTRO.md` file has been significantly updated to include a clear explanation of what the models predict (short-term relative ranking, not long-term prices), their inputs, and their outputs.\n\nThis commit represents the definitive version of the project, incorporating all user feedback and ensuring the application is stable, feature-rich, and well-documented.', 'Add launch config for VSCode', 'Fix normalize data', ""feat: Build professional-grade visual tool for Qlib\n\nThis commit completes the development of a comprehensive, professional-grade visual application for the Qlib library. It fulfills all user requirements by providing an intuitive Streamlit-based GUI for the entire quantitative research workflow.\n\nThe application is structured into four main pages and includes extensive documentation:\n- `app.py`: The main Streamlit application UI.\n- `qlib_utils.py`: A robust backend encapsulating all Qlib logic.\n- `requirements.txt`: A finalized list of all dependencies.\n- `TUTORIAL.md`: A detailed user manual.\n- `QLIB_INTRO.md`: A conceptual guide for beginners.\n\nKey Features Implemented:\n- **Data Management:** Correctly uses `qlib`'s `collector.py` for full data downloads, incremental updates, and data health checks, with all operations logged to the UI.\n- **Advanced Model Training:**\n    - Supports multiple models (LightGBM, XGBoost, CatBoost) and factors (Alpha158, Alpha360).\n    - Includes a deep learning model (ALSTM) with appropriate warnings.\n    - Allows for fine-tuning (continued training) of existing models.\n    - Features a UI for custom model naming, stock pool selection, and hyperparameter tuning.\n    - Provides a real-time progress bar for model training.\n- **Multi-Model Prediction:** The prediction page allows for the selection and side-by-side comparison of multiple models.\n- **Configurable Backtesting:** The backtesting page allows for visual configuration of strategy parameters and transaction costs.\n\nThis commit represents the final, complete, and bug-fixed version of the application, addressing all issues from previous code reviews."", 'polish', 'Update logic to fetch VN stock data', 'fix: Finalize all project files with complete and correct code\n\nThis commit provides the definitive and complete versions of all project files, fixing all previously identified bugs and documentation omissions. It represents the final, stable, and user-ready version of the Qlib Visual Tool.\n\nKey Fixes and Finalizations:\n- **`qlib_utils.py`**: The data management functions have been reverted to a robust `subprocess`-based implementation that relies on a local `scripts` folder. The file now contains the full, non-abbreviated code for all helper, data, and model functions.\n- **`app.py`**: The file is now complete, containing the full UI implementation for all four pages of the application.\n- **`TUTORIAL.md`**: The user manual is now complete and unabbreviated. It includes a critical new step instructing the user to download the `qlib` `scripts` folder, which resolves a major deployment issue.\n- **`requirements.txt`**: The `streamlit` version has been corrected to `1.27.0` to match the features used in the UI code.\n\nThis commit ensures that all files are complete, correct, and work together as intended, providing a high-quality, deliverable product that meets all user specifications.', 'Implement vn_index', 'Add VN region to qrun', 'chore: Align collect_info.py with pyproject.toml', 'Clone VNStock data collector from Yahoo', 'Create run.bat', ""fix: Correct final ImportError in app.py\n\nThis commit fixes a critical `ImportError: cannot import name 'StreamlitLogHandler'` that occurred on application startup.\n\nThe error was caused by an import statement remaining in `app.py` for a class (`StreamlitLogHandler`) that had been removed from `qlib_utils.py` during a previous refactoring. This commit removes the extraneous import from `app.py`.\n\nThis resolves the last known bug and makes the application fully runnable. All other features and documentation remain complete and correct."", 'delete version info', 'fix: Resolve ImportError in backtesting by updating API usage\n\nThis commit fixes a critical ImportError that caused the application to crash. The error was due to an incorrect import of `PortAnaRecord`, which is not available in the specified qlib version as previously assumed.\n\nThe fix involves two main changes in `qlib_utils.py`:\n1.  Removed the problematic import of `PortAnaRecord`.\n2.  Refactored the `backtest_strategy` function to use the higher-level, more stable `qlib.contrib.evaluate.backtest_daily` API.\n\nThis new implementation is more robust, aligns with modern Qlib examples, and directly resolves the startup crash reported by the user.', ""feat: Final, robust Qlib visual tool with hybrid data management\n\nThis commit delivers the definitive, complete, and robust version of the visual Qlib application. It incorporates all user feedback and fixes all previously identified bugs, resulting in a feature-rich, stable, and user-friendly tool.\n\nThe most critical change in this version is the implementation of a hybrid data management strategy as directed by the user:\n- **Full Data Download:** The UI now instructs the user to manually download a community-provided data package via `wget`, which is the most stable method for the initial setup.\n- **Incremental Updates:** The UI uses a `subprocess` call to `qlib`'s `collector.py` script for reliable daily data updates.\n- **Documentation:** The `TUTORIAL.md` has been updated to reflect this new, robust workflow, including the requirement of placing the `qlib` `scripts` folder alongside the application.\n\nThis commit also includes all previously developed features:\n- Advanced model training (multi-model, multi-factor, finetuning, hyperparameter tuning).\n- Multi-model prediction comparison.\n- Configurable backtesting.\n- Corrected and complete dependencies in `requirements.txt`.\n\nThis represents the final, high-quality, and fully functional deliverable."", 'Fix error of vnstock lib', 'Update .gitignore', ""feat: Deliver final, robust, and feature-complete Qlib visual tool\n\nThis commit delivers the definitive, complete, and robust version of the visual Qlib application. It incorporates all user feedback and fixes all previously identified bugs, resulting in a feature-rich, stable, and user-friendly tool for quantitative analysis.\n\nKey Fixes and Finalizations:\n- **Robust Data Management:** Implements a hybrid data management strategy. The UI instructs the user to manually download a community-provided data package for the initial setup and uses a `subprocess` call to `qlib`'s `collector.py` script for reliable daily updates.\n- **Stable Model Training:** Fixes a critical `TypeError` related to `callbacks` by simplifying the `model.fit()` call, ensuring the training process is stable for all supported models.\n- **Complete Dependencies:** The `requirements.txt` file is now complete and includes the previously missing `yahooquery` dependency.\n- **Comprehensive Feature Set:** The application includes all previously developed features: multi-model support (LGBM, XGBoost, CatBoost, ALSTM), multi-factor support (Alpha158, Alpha360), hyperparameter tuning, model fine-tuning, custom naming, multi-model prediction comparison, and configurable backtesting.\n- **Accurate Documentation:** The `TUTORIAL.md` is updated to reflect the final, robust data setup workflow.\n\nThis commit represents the final, high-quality, and fully functional deliverable."", ""feat: Enhance Qlib tool with new features and documentation\n\nThis commit significantly enhances the visual Qlib tool by adding new features, increasing configurability, and providing comprehensive documentation.\n\nKey Enhancements:\n1.  **Multi-Model Support:** Added XGBoost as a trainable model alongside LightGBM.\n2.  **Hyperparameter Tuning:** The 'Model Training' page now features a UI with sliders to visually tune key hyperparameters (e.g., n_estimators, learning_rate) for all supported models.\n3.  **Configurable Backtesting:** The 'Strategy Backtesting' page now allows users to configure strategy parameters (e.g., topk) and transaction costs, making the simulation more realistic and flexible.\n4.  **User Documentation:**\n    - `TUTORIAL.md`: A new, detailed user manual explaining how to install, run, and use every feature of the application.\n    - `QLIB_INTRO.md`: A new, beginner-friendly guide to the core concepts of quantitative investing and Qlib, written for a non-technical audience.\n\nThese changes fulfill the user's request to make the tool more powerful and to provide clear, accessible documentation."", ""feat: Deliver final, robust, and feature-complete Qlib visual tool\n\nThis commit delivers the final, comprehensively tested, and feature-complete version of the visual Qlib application. It addresses all user requirements and fixes all bugs identified in previous code reviews, resulting in a robust, user-friendly, and powerful tool for quantitative analysis.\n\nKey Features & Enhancements in this definitive version:\n- **Robust Data Management:** Data management functions have been refactored to use Qlib's direct Python APIs instead of fragile subprocess calls to scripts. This includes a custom logging handler to stream output to the Streamlit UI.\n- **Advanced Model Training:** Supports multiple models (LightGBM, XGBoost, CatBoost), factors (Alpha158, Alpha360), and a deep learning model (ALSTM). Features a full UI for hyperparameter tuning, custom model naming, stock pool selection, and fine-tuning existing models.\n- **Advanced Analysis:** Implements multi-model prediction comparison and highly configurable backtesting.\n- **Polished UI:** Includes real-time progress bars, clear user instructions, and refined layouts for a better user experience.\n- **Complete Documentation:** Features a comprehensive user manual (`TUTORIAL.md`) and a conceptual introduction for beginners (`QLIB_INTRO.md`).\n- **Correct Dependencies:** All dependencies in `requirements.txt` have been verified to be compatible with the implemented features.\n\nThis commit represents a complete and high-quality implementation of the user's vision for a visual Qlib tool."", 'chore: align collect_info.py with pyproject.toml', 'Update run.bat', ""feat: Add in-depth documentation and Windows startup script\n\nThis commit delivers the final enhancements to the Qlib Visual Tool, focusing on documentation and usability as per the user's final request.\n\nKey additions:\n- **`DEEP_DIVE_TUTORIAL.md`**: A new, comprehensive tutorial file that explains the fundamental concepts of quantitative finance (factors, models, backtesting, evaluation metrics) in a detailed, step-by-step manner suitable for complete beginners.\n- **`run.bat`**: A new Windows batch script that allows users to install all dependencies and launch the Streamlit application with a single double-click, significantly improving ease of use.\n- **Updated `TUTORIAL.md`**: The main tutorial has been updated to include instructions for the new `run.bat` script and to provide a link to the new deep-dive tutorial for users who wish to learn more.\n\nThis commit completes the project, leaving it in a feature-rich, stable, and extremely user-friendly state, with comprehensive documentation for users of all skill levels."", ""Merge branch 'main' of github.com:XYUU/qlib into pr_xyuu_main""]","['committed (#1998)', 'committed (#1899)', 'committed (#2001)', 'committed (#1996)', 'committed (#1997)']","[6539, 6548, 6556, 6564, 6572, 6580, 6588, 6596, 6604, 6612, 6685, 6716, 6724, 6732, 6740, 6748, 6756, 6764, 6772, 6780, 6788, 6796, 6804, 6812, 6820, 6853, 6864, 6872, 6909, 6918, 6926, 6934, 10683, 10691, 10699]","[6541, 6550, 6558, 6566, 6574, 6582, 6590, 6598, 6606, 6614, 6687, 6718, 6726, 6734, 6742, 6750, 6758, 6766, 6774, 6782, 6790, 6798, 6806, 6814, 6822, 6855, 6866, 6874, 6911, 6920, 6928, 6936, 10685, 10693, 10701]","feat: Create visual GUI tool for Qlib
+
+This commit introduces a comprehensive, user-friendly visual application for the Qlib library, built using Streamlit. It is designed for non-programmers to access Qlib's core functionalities.
+
+The application is structured into two main files:
+- `app.py`: Contains the Streamlit frontend UI, with separate pages for each major function.
+- `qlib_utils.py`: Encapsulates the backend logic for interacting with the Qlib API.
+- `requirements.txt`: Manages all Python dependencies.
+
+Key Features:
+- **Data Management:** A UI to trigger and monitor the download of Qlib's market data.
+- **Model Training:** Allows users to select a model configuration, train it, and save the resulting model (`.pkl`) and its configuration (`.yaml`) for later use.
+- **Prediction:** Users can load a saved model to get predictions for a specific date, with results displayed in a table and a bar chart.
+- **Backtesting:** Users can run a backtest on a saved model over a specified historical period. Results, including key performance indicators (e.g., annualized return, Sharpe ratio) and an equity curve, are visualized.
+
+The implementation separates UI from logic, handles long-running processes asynchronously, and robustly manages model/configuration persistence.
+Merge branch 'main' of https://github.com/microsoft/qlib
+Fix vnindex function
+feat: Finalize Qlib visual tool with robust script handling
+
+This commit delivers the final, robust, and feature-complete version of the visual Qlib application. It definitively fixes the critical `ModuleNotFoundError` by reverting the data management logic to use `subprocess` calls, as per the user's guidance.
+
+Key changes:
+- **Robust Data Management:** All data functions in `qlib_utils.py` now use `subprocess` to call the necessary scripts from a local `scripts` folder. This removes the fragile dependency on the `pyqlib` package structure.
+- **Updated Documentation:** `TUTORIAL.md` now includes a critical instruction for the user to download the `scripts` folder from the Qlib GitHub repository and place it alongside the application files.
+- **Complete Feature Set:** The application includes all previously developed features: multi-model support (LGBM, XGBoost, CatBoost, ALSTM), multi-factor support (Alpha158, Alpha360), hyperparameter tuning, model fine-tuning, custom naming, multi-model prediction comparison, and configurable backtesting.
+
+This version is complete, correct, and directly addresses all user feedback to produce a stable and user-friendly application.
+fix: Add missing yahooquery dependency
+
+This commit fixes a critical `ModuleNotFoundError: No module named 'yahooquery'` that occurred when running the data collection scripts.
+
+The `qlib` data collector scripts have an implicit dependency on the `yahooquery` library, which was not included in the main `pyqlib` package and was missing from `requirements.txt`.
+
+This commit adds `yahooquery` to `requirements.txt`, ensuring that all necessary dependencies are installed and the data management features of the application are fully functional. This resolves the last known bug in the project.
+feat: Finalize Qlib tool with bug fixes and new features
+
+This commit delivers the final, complete, and robust version of the visual Qlib application. It addresses the last remaining bugs and implements the final set of user-requested features.
+
+Key Fixes and Features in this version:
+- **Bug Fix:** Corrected a critical `yaml.YAMLError` by replacing `yaml.safe_load` with `yaml.load(..., Loader=yaml.FullLoader)`. This resolves crashes during the prediction and backtesting phases.
+- **New Feature:** Added a ""Single Stock Historical Score Tracking"" section to the prediction page. This allows users to select a model and a stock to visualize the model's prediction score for that stock over a specified time range, plotted as a line chart.
+- **Documentation Update:** The `QLIB_INTRO.md` file has been significantly updated to include a clear explanation of what the models predict (short-term relative ranking, not long-term prices), their inputs, and their outputs.
+
+This commit represents the definitive version of the project, incorporating all user feedback and ensuring the application is stable, feature-rich, and well-documented.
+Add launch config for VSCode
+Fix normalize data
+feat: Build professional-grade visual tool for Qlib
+
+This commit completes the development of a comprehensive, professional-grade visual application for the Qlib library. It fulfills all user requirements by providing an intuitive Streamlit-based GUI for the entire quantitative research workflow.
+
+The application is structured into four main pages and includes extensive documentation:
+- `app.py`: The main Streamlit application UI.
+- `qlib_utils.py`: A robust backend encapsulating all Qlib logic.
+- `requirements.txt`: A finalized list of all dependencies.
+- `TUTORIAL.md`: A detailed user manual.
+- `QLIB_INTRO.md`: A conceptual guide for beginners.
+
+Key Features Implemented:
+- **Data Management:** Correctly uses `qlib`'s `collector.py` for full data downloads, incremental updates, and data health checks, with all operations logged to the UI.
+- **Advanced Model Training:**
+    - Supports multiple models (LightGBM, XGBoost, CatBoost) and factors (Alpha158, Alpha360).
+    - Includes a deep learning model (ALSTM) with appropriate warnings.
+    - Allows for fine-tuning (continued training) of existing models.
+    - Features a UI for custom model naming, stock pool selection, and hyperparameter tuning.
+    - Provides a real-time progress bar for model training.
+- **Multi-Model Prediction:** The prediction page allows for the selection and side-by-side comparison of multiple models.
+- **Configurable Backtesting:** The backtesting page allows for visual configuration of strategy parameters and transaction costs.
+
+This commit represents the final, complete, and bug-fixed version of the application, addressing all issues from previous code reviews.
+polish
+Update logic to fetch VN stock data
+fix: Finalize all project files with complete and correct code
+
+This commit provides the definitive and complete versions of all project files, fixing all previously identified bugs and documentation omissions. It represents the final, stable, and user-ready version of the Qlib Visual Tool.
+
+Key Fixes and Finalizations:
+- **`qlib_utils.py`**: The data management functions have been reverted to a robust `subprocess`-based implementation that relies on a local `scripts` folder. The file now contains the full, non-abbreviated code for all helper, data, and model functions.
+- **`app.py`**: The file is now complete, containing the full UI implementation for all four pages of the application.
+- **`TUTORIAL.md`**: The user manual is now complete and unabbreviated. It includes a critical new step instructing the user to download the `qlib` `scripts` folder, which resolves a major deployment issue.
+- **`requirements.txt`**: The `streamlit` version has been corrected to `1.27.0` to match the features used in the UI code.
+
+This commit ensures that all files are complete, correct, and work together as intended, providing a high-quality, deliverable product that meets all user specifications.
+Implement vn_index
+Add VN region to qrun
+chore: Align collect_info.py with pyproject.toml
+Clone VNStock data collector from Yahoo
+Create run.bat
+fix: Correct final ImportError in app.py
+
+This commit fixes a critical `ImportError: cannot import name 'StreamlitLogHandler'` that occurred on application startup.
+
+The error was caused by an import statement remaining in `app.py` for a class (`StreamlitLogHandler`) that had been removed from `qlib_utils.py` during a previous refactoring. This commit removes the extraneous import from `app.py`.
+
+This resolves the last known bug and makes the application fully runnable. All other features and documentation remain complete and correct.
+delete version info
+fix: Resolve ImportError in backtesting by updating API usage
+
+This commit fixes a critical ImportError that caused the application to crash. The error was due to an incorrect import of `PortAnaRecord`, which is not available in the specified qlib version as previously assumed.
+
+The fix involves two main changes in `qlib_utils.py`:
+1.  Removed the problematic import of `PortAnaRecord`.
+2.  Refactored the `backtest_strategy` function to use the higher-level, more stable `qlib.contrib.evaluate.backtest_daily` API.
+
+This new implementation is more robust, aligns with modern Qlib examples, and directly resolves the startup crash reported by the user.
+feat: Final, robust Qlib visual tool with hybrid data management
+
+This commit delivers the definitive, complete, and robust version of the visual Qlib application. It incorporates all user feedback and fixes all previously identified bugs, resulting in a feature-rich, stable, and user-friendly tool.
+
+The most critical change in this version is the implementation of a hybrid data management strategy as directed by the user:
+- **Full Data Download:** The UI now instructs the user to manually download a community-provided data package via `wget`, which is the most stable method for the initial setup.
+- **Incremental Updates:** The UI uses a `subprocess` call to `qlib`'s `collector.py` script for reliable daily data updates.
+- **Documentation:** The `TUTORIAL.md` has been updated to reflect this new, robust workflow, including the requirement of placing the `qlib` `scripts` folder alongside the application.
+
+This commit also includes all previously developed features:
+- Advanced model training (multi-model, multi-factor, finetuning, hyperparameter tuning).
+- Multi-model prediction comparison.
+- Configurable backtesting.
+- Corrected and complete dependencies in `requirements.txt`.
+
+This represents the final, high-quality, and fully functional deliverable.
+Fix error of vnstock lib
+Update .gitignore
+feat: Deliver final, robust, and feature-complete Qlib visual tool
+
+This commit delivers the definitive, complete, and robust version of the visual Qlib application. It incorporates all user feedback and fixes all previously identified bugs, resulting in a feature-rich, stable, and user-friendly tool for quantitative analysis.
+
+Key Fixes and Finalizations:
+- **Robust Data Management:** Implements a hybrid data management strategy. The UI instructs the user to manually download a community-provided data package for the initial setup and uses a `subprocess` call to `qlib`'s `collector.py` script for reliable daily updates.
+- **Stable Model Training:** Fixes a critical `TypeError` related to `callbacks` by simplifying the `model.fit()` call, ensuring the training process is stable for all supported models.
+- **Complete Dependencies:** The `requirements.txt` file is now complete and includes the previously missing `yahooquery` dependency.
+- **Comprehensive Feature Set:** The application includes all previously developed features: multi-model support (LGBM, XGBoost, CatBoost, ALSTM), multi-factor support (Alpha158, Alpha360), hyperparameter tuning, model fine-tuning, custom naming, multi-model prediction comparison, and configurable backtesting.
+- **Accurate Documentation:** The `TUTORIAL.md` is updated to reflect the final, robust data setup workflow.
+
+This commit represents the final, high-quality, and fully functional deliverable.
+feat: Enhance Qlib tool with new features and documentation
+
+This commit significantly enhances the visual Qlib tool by adding new features, increasing configurability, and providing comprehensive documentation.
+
+Key Enhancements:
+1.  **Multi-Model Support:** Added XGBoost as a trainable model alongside LightGBM.
+2.  **Hyperparameter Tuning:** The 'Model Training' page now features a UI with sliders to visually tune key hyperparameters (e.g., n_estimators, learning_rate) for all supported models.
+3.  **Configurable Backtesting:** The 'Strategy Backtesting' page now allows users to configure strategy parameters (e.g., topk) and transaction costs, making the simulation more realistic and flexible.
+4.  **User Documentation:**
+    - `TUTORIAL.md`: A new, detailed user manual explaining how to install, run, and use every feature of the application.
+    - `QLIB_INTRO.md`: A new, beginner-friendly guide to the core concepts of quantitative investing and Qlib, written for a non-technical audience.
+
+These changes fulfill the user's request to make the tool more powerful and to provide clear, accessible documentation.
+feat: Deliver final, robust, and feature-complete Qlib visual tool
+
+This commit delivers the final, comprehensively tested, and feature-complete version of the visual Qlib application. It addresses all user requirements and fixes all bugs identified in previous code reviews, resulting in a robust, user-friendly, and powerful tool for quantitative analysis.
+
+Key Features & Enhancements in this definitive version:
+- **Robust Data Management:** Data management functions have been refactored to use Qlib's direct Python APIs instead of fragile subprocess calls to scripts. This includes a custom logging handler to stream output to the Streamlit UI.
+- **Advanced Model Training:** Supports multiple models (LightGBM, XGBoost, CatBoost), factors (Alpha158, Alpha360), and a deep learning model (ALSTM). Features a full UI for hyperparameter tuning, custom model naming, stock pool selection, and fine-tuning existing models.
+- **Advanced Analysis:** Implements multi-model prediction comparison and highly configurable backtesting.
+- **Polished UI:** Includes real-time progress bars, clear user instructions, and refined layouts for a better user experience.
+- **Complete Documentation:** Features a comprehensive user manual (`TUTORIAL.md`) and a conceptual introduction for beginners (`QLIB_INTRO.md`).
+- **Correct Dependencies:** All dependencies in `requirements.txt` have been verified to be compatible with the implemented features.
+
+This commit represents a complete and high-quality implementation of the user's vision for a visual Qlib tool.
+chore: align collect_info.py with pyproject.toml
+Update run.bat
+feat: Add in-depth documentation and Windows startup script
+
+This commit delivers the final enhancements to the Qlib Visual Tool, focusing on documentation and usability as per the user's final request.
+
+Key additions:
+- **`DEEP_DIVE_TUTORIAL.md`**: A new, comprehensive tutorial file that explains the fundamental concepts of quantitative finance (factors, models, backtesting, evaluation metrics) in a detailed, step-by-step manner suitable for complete beginners.
+- **`run.bat`**: A new Windows batch script that allows users to install all dependencies and launch the Streamlit application with a single double-click, significantly improving ease of use.
+- **Updated `TUTORIAL.md`**: The main tutorial has been updated to include instructions for the new `run.bat` script and to provide a link to the new deep-dive tutorial for users who wish to learn more.
+
+This commit completes the project, leaving it in a feature-rich, stable, and extremely user-friendly state, with comprehensive documentation for users of all skill levels.
+Merge branch 'main' of github.com:XYUU/qlib into pr_xyuu_main"
+2025-09-08,7,1.0,3.0,2.0,-2.0,6.0,True,high,0.5,21,19,"['2', ""Merge branch 'microsoft:main' into main"", 'create pure branch', 'init', 'add configure file for sp500', 'update url to get qlib source code from own repository', 'update requirements', 'claude init', 'fix the error for run_all_model.py', 'fix: the bug when auto_mount=True', 'SECURITY.md add back', '添加：启动.txt', 'update cli.py to make it can run with gpu', 'fix some requirement issue', 'add test notebook for us market', 'add comfig to support us market', 'fix', 'Merge pull request #1 from microsoft/main\n\nmerge to the latest on 2025 Feb 8', 'remove extra files']","['committed (#2003)', 'committed (#2011)', 'committed (#2007)', 'committed (#2008)', 'committed (#2009)']","[6032, 6041, 6049, 6058, 6067, 6075, 6083, 6091, 6099, 6107, 6190, 6198, 6244, 6253, 6261, 6299, 6307, 6331, 6457, 6472, 6480]","[6034, 6043, 6051, 6060, 6069, 6077, 6085, 6093, 6101, 6109, 6192, 6200, 6246, 6255, 6263, 6301, 6309, 6333, 6459, 6474, 6482]","2
+Merge branch 'microsoft:main' into main
+create pure branch
+init
+add configure file for sp500
+update url to get qlib source code from own repository
+update requirements
+claude init
+fix the error for run_all_model.py
+fix: the bug when auto_mount=True
+SECURITY.md add back
+添加：启动.txt
+update cli.py to make it can run with gpu
+fix some requirement issue
+add test notebook for us market
+add comfig to support us market
+fix
+Merge pull request #1 from microsoft/main
+
+merge to the latest on 2025 Feb 8
+remove extra files"
+2025-09-15,14,1.0,3.0,2.0,-2.0,6.0,True,high,4.0,8,7,"['docs: update Docker run command in README.md to specify the correct image name', 'fix: refine code', 'fix readme.md', 'add: GCN, GAT_INDUS model', ""Merge branch 'microsoft:main' into main"", 'fix: readme.md', 'fix get_version']","['committed (#2010)', 'committed (#1476)', 'committed (#1992)']","[6138, 7006, 28123, 28132, 28146, 28154, 28162, 28170]","[6140, 7008, 28125, 28134, 28148, 28156, 28164, 28172]","docs: update Docker run command in README.md to specify the correct image name
+fix: refine code
+fix readme.md
+add: GCN, GAT_INDUS model
+Merge branch 'microsoft:main' into main
+fix: readme.md
+fix get_version"
+2026-01-19,7,1.0,3.0,2.0,-2.0,6.0,True,high,0.5,9,8,"['fix: github action failure caused by black upgrade', 'ignore generated file: qlib/_version.py', 'refactor(data_collector): use akshare to build unified trade calendar', 'docs: add background reference for lowercase features dir check', 'fix: use semantic version comparison for PyTorch scheduler compatibility', 'fix: handle ReduceLROnPlateau verbose removal', ""Merge branch 'microsoft:main' into ignore-generated-file"", 'feat: check lowercase naming for qlib features directories']","['committed (#2093)', 'committed (#2091)', 'committed (#2087)', 'committed (#2094)', 'committed (#2095)']","[3825, 3856, 3888, 3896, 3980, 3992, 4013, 4065, 4073]","[3827, 3858, 3890, 3898, 3982, 3994, 4015, 4067, 4075]","fix: github action failure caused by black upgrade
+ignore generated file: qlib/_version.py
+refactor(data_collector): use akshare to build unified trade calendar
+docs: add background reference for lowercase features dir check
+fix: use semantic version comparison for PyTorch scheduler compatibility
+fix: handle ReduceLROnPlateau verbose removal
+Merge branch 'microsoft:main' into ignore-generated-file
+feat: check lowercase naming for qlib features directories"
+2026-02-02,7,1.0,3.0,2.0,-2.0,6.0,True,high,0.5,24,18,"['fix package dependence error', ""Merge branch 'main' of github.com:microsoft/qlib into fix_download_us_symbol_error"", 'style: relocate test files per maintainer request', 'disable pylint error', 'handle yahoo US collecotr api limit issue (Fix #1953)', 'refactor: simplify SoftTopkStrategy impact limit', 'Fix', 'refactor: implement deterministic budget allocation in SoftTopkStrategy', ""Merge remote-tracking branch 'upstream/main' into fix-soft-topk-strategy"", ""feat(my-quant): add plotting functionality and fix empty dataset bug\n\n- Fix get_data_handler_config() to use correct date range from data_config\n- Add comprehensive plotting module (plot_utils.py) with:\n  - Portfolio performance charts (cumulative returns + drawdown)\n  - IC analysis (time series, heatmap, distribution)\n  - Risk metrics visualization\n  - Monthly returns heatmap\n  - Summary statistics generation and file output\n- Add new 'plot' command to train.py for generating charts from existing experiments\n- Update config.yaml with correct date ranges matching available data\n\n🤖 Generated with Claude Code (claude.ai/code)"", 'style: fix formatting issues using black', 'Update _get_eastmoney', 'fix: remove unused imports and pass pylint', 'feat(my-quant): add new utility scripts and update visualization\n\n- Add news analysis module (news_filter.py, llm_strategy.py)\n- Add clean_instruments.py for instrument data cleanup\n- Add download_benchmark.py for benchmark data download\n- Add get_data.py for A-share daily data acquisition\n- Add normalize.py for trading calendar alignment\n- Add TRADE_DETAILS_GUIDE.md documentation\n- Update plot_utils.py with enhanced visualization\n- Update train.py with improved training workflow\n- Update config.yaml with GRU model configuration\n- Add CLAUDE.md and Knowledge/ for project documentation\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>', 'Fix yahoo collector for us stock', 'format with black', 'fix the bug that the US STMBOLS URL is faild', 'recover code']","['committed (#1975)', 'committed (#2077)', 'committed (#1970)', 'committed (#1954)', 'committed (#2123)']","[3600, 3609, 4325, 4343, 4351, 4378, 4428, 4460, 7761, 7772, 7780, 7788, 7796, 7804, 7815, 7823, 7831, 7839, 7865, 7926, 8769, 8781, 8789, 8797]","[3602, 3611, 4327, 4345, 4353, 4380, 4430, 4462, 7763, 7774, 7782, 7790, 7798, 7806, 7817, 7825, 7833, 7841, 7867, 7928, 8771, 8783, 8791, 8799]","fix package dependence error
+Merge branch 'main' of github.com:microsoft/qlib into fix_download_us_symbol_error
+style: relocate test files per maintainer request
+disable pylint error
+handle yahoo US collecotr api limit issue (Fix #1953)
+refactor: simplify SoftTopkStrategy impact limit
+Fix
+refactor: implement deterministic budget allocation in SoftTopkStrategy
+Merge remote-tracking branch 'upstream/main' into fix-soft-topk-strategy
+feat(my-quant): add plotting functionality and fix empty dataset bug
+
+- Fix get_data_handler_config() to use correct date range from data_config
+- Add comprehensive plotting module (plot_utils.py) with:
+  - Portfolio performance charts (cumulative returns + drawdown)
+  - IC analysis (time series, heatmap, distribution)
+  - Risk metrics visualization
+  - Monthly returns heatmap
+  - Summary statistics generation and file output
+- Add new 'plot' command to train.py for generating charts from existing experiments
+- Update config.yaml with correct date ranges matching available data
+
+🤖 Generated with Claude Code (claude.ai/code)
+style: fix formatting issues using black
+Update _get_eastmoney
+fix: remove unused imports and pass pylint
+feat(my-quant): add new utility scripts and update visualization
+
+- Add news analysis module (news_filter.py, llm_strategy.py)
+- Add clean_instruments.py for instrument data cleanup
+- Add download_benchmark.py for benchmark data download
+- Add get_data.py for A-share daily data acquisition
+- Add normalize.py for trading calendar alignment
+- Add TRADE_DETAILS_GUIDE.md documentation
+- Update plot_utils.py with enhanced visualization
+- Update train.py with improved training workflow
+- Update config.yaml with GRU model configuration
+- Add CLAUDE.md and Knowledge/ for project documentation
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+Fix yahoo collector for us stock
+format with black
+fix the bug that the US STMBOLS URL is faild
+recover code"
+2026-04-20,12,1.0,3.0,2.0,-2.0,6.0,True,high,3.0,11,11,"['Fix TCN predict crash on single-sample last batch\n\nWhen the final batch has a single sample, model output becomes a 0-d\nnumpy array after .cpu().numpy(). np.concatenate cannot mix 0-d and\n1-d arrays, causing a crash. Wrap with np.atleast_1d() before\nappending to preds list.\n\nFixes #1752', 'Fix model state leakage from mutable default evals_result parameter\n\nMultiple contrib models used evals_result=dict() as a default parameter\nin fit(), causing state leakage between sequential model.fit() calls.\nReplaced with evals_result=None and guard pattern across 27 model files.\n\nFixes #1890', 'Fix record_temp to look up datetime level by position\n\nPortAnaRecord._generate and MultiPassPortAnaRecord.random_init used\npred.index.get_level_values(""datetime"") which assumes datetime is a\nnamed level that pandas can resolve directly. This can fail when the\nMultiIndex level ordering differs. Now we first resolve the position\nwith index.names.index(""datetime"") and pass the integer position to\nget_level_values().\n\nFixes #1909', 'Fix incorrect index implementation in FileCalendarStorage', 'Add RQAlpha A-share research workflows', 'Fix TanhProcess to use correct MultiIndex column level\n\nTanhProcess.tanh_denoise was using get_level_values(1) to find LABEL\ncolumns, but level 0 holds the group names (LABEL0, FEATURE0, etc.).\nChanged to get_level_values(0). Also fixed the inner function to\nreference ""data.columns"" instead of the outer ""df.columns"" for the\nnon-label column mask.\n\nFixes #1687', 'docs: replace broken RD-Agent demo links in README', ""Merge branch 'main' of github.com:microsoft/qlib into fix/readme-rdagent-demo-links-2149"", ""Thread freq parameter from backtest() through to Account (#1846)\n\nPreviously create_account_instance() did not accept a freq parameter,\nso Account always initialized with the default freq='day' regardless\nof the actual backtest frequency. Add freq parameter to\ncreate_account_instance(), get_strategy_executor(), backtest(), and\ncollect_data(), threading it through to Account() construction.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"", ""Fix freq normalization so '1day' and 'day' are equivalent (#1925)\n\nAdd normalize_freq() helper in resam.py that converts frequency strings\nto their canonical form via Freq(freq).__str__(), ensuring that\n'1day'/'d'/'1d' all map to 'day', '1min'/'minute' map to '1min', etc.\nApplied at the entry of get_higher_eq_freq_feature to prevent cache\nmisses and lookup failures from equivalent but non-identical freq strings.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"", 'Fix ParallelExt _backend_args AttributeError (#1927)\n\nReplace version-gated _backend_args/_backend_kwargs with unified\n_backend_kwargs, which is the attribute name in joblib >= 1.5.0.\nThe old _backend_args attribute no longer exists in modern joblib,\ncausing AttributeError when using multiprocessing backend.\n\nCo-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>']","['committed (#2172)', 'committed (#2177)', 'committed (#2173)', 'committed (#2195)', 'committed (#2196)', 'committed (#2171)', 'committed (#2150)', 'committed (#2176)', 'committed (#2175)', 'committed (#2174)']","[2472, 2504, 2907, 2932, 2956, 2980, 3004, 3037, 3070, 3253, 3261]","[2474, 2506, 2909, 2934, 2958, 2982, 3006, 3039, 3072, 3255, 3263]","Fix TCN predict crash on single-sample last batch
+
+When the final batch has a single sample, model output becomes a 0-d
+numpy array after .cpu().numpy(). np.concatenate cannot mix 0-d and
+1-d arrays, causing a crash. Wrap with np.atleast_1d() before
+appending to preds list.
+
+Fixes #1752
+Fix model state leakage from mutable default evals_result parameter
+
+Multiple contrib models used evals_result=dict() as a default parameter
+in fit(), causing state leakage between sequential model.fit() calls.
+Replaced with evals_result=None and guard pattern across 27 model files.
+
+Fixes #1890
+Fix record_temp to look up datetime level by position
+
+PortAnaRecord._generate and MultiPassPortAnaRecord.random_init used
+pred.index.get_level_values(""datetime"") which assumes datetime is a
+named level that pandas can resolve directly. This can fail when the
+MultiIndex level ordering differs. Now we first resolve the position
+with index.names.index(""datetime"") and pass the integer position to
+get_level_values().
+
+Fixes #1909
+Fix incorrect index implementation in FileCalendarStorage
+Add RQAlpha A-share research workflows
+Fix TanhProcess to use correct MultiIndex column level
+
+TanhProcess.tanh_denoise was using get_level_values(1) to find LABEL
+columns, but level 0 holds the group names (LABEL0, FEATURE0, etc.).
+Changed to get_level_values(0). Also fixed the inner function to
+reference ""data.columns"" instead of the outer ""df.columns"" for the
+non-label column mask.
+
+Fixes #1687
+docs: replace broken RD-Agent demo links in README
+Merge branch 'main' of github.com:microsoft/qlib into fix/readme-rdagent-demo-links-2149
+Thread freq parameter from backtest() through to Account (#1846)
+
+Previously create_account_instance() did not accept a freq parameter,
+so Account always initialized with the default freq='day' regardless
+of the actual backtest frequency. Add freq parameter to
+create_account_instance(), get_strategy_executor(), backtest(), and
+collect_data(), threading it through to Account() construction.
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+Fix freq normalization so '1day' and 'day' are equivalent (#1925)
+
+Add normalize_freq() helper in resam.py that converts frequency strings
+to their canonical form via Freq(freq).__str__(), ensuring that
+'1day'/'d'/'1d' all map to 'day', '1min'/'minute' map to '1min', etc.
+Applied at the entry of get_higher_eq_freq_feature to prevent cache
+misses and lookup failures from equivalent but non-identical freq strings.
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+Fix ParallelExt _backend_args AttributeError (#1927)
+
+Replace version-gated _backend_args/_backend_kwargs with unified
+_backend_kwargs, which is the attribute name in joblib >= 1.5.0.
+The old _backend_args attribute no longer exists in modern joblib,
+causing AttributeError when using multiprocessing backend.
+
+Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+2026-08-17,19,1.0,2.0,1.0,-0.5,3.5,True,high,15.5,25,19,"['Fix mutable default arguments across config & infrastructure\n\nMerge 3 individual fixes into one module-level PR:\n\n1. config (4 files) — manager.py, loader.py, data_selection/dataset.py, tests/config.py\n2. utils (3 files) — __init__.py (load_dataset), mod.py (init_instance_by_config), resam.py (resample)\n3. workflow (2 files) — online/strategy.py, task/gen.py\n\nAll follow standard Python mutable-default fix pattern.', 'Fix DataFrame.applymap deprecation in CSIIndex._parse_excel\n\nReplace  with .\n\nDataFrame.applymap() was removed in pandas 2.2.0 (replaced by DataFrame.map()\nsince pandas 1.4.0). This call in CSIIndex._parse_excel at line 174 would\nraise AttributeError on pandas >= 2.2.0 when processing index constituent\nchanges from Excel files.\n\nNote: _parse_table at line 197 and get_new_companies at line 321 already use\n.map(), so this brings _parse_excel in line with the rest of the collector.', ""Fix Yahoo date parsing with mixed timezone formats (#2014)\n\nYahooCollectorCN1d.download_index_data calls pd.to_datetime(df['date'])\non timestamps from East Money API that may include timezone offsets\n(e.g. ' 09:30:00+08:00'). Similarly, YahooNormalize.normalize_yahoo calls\npd.to_datetime(df.index) on date strings from Yahoo Finance.\n\nWithout specifying format='mixed', pd.to_datetime raises when it encounters\nmixed formats in the same column — some entries are date-only strings while\nothers carry timezone info. Adding format='mixed' lets pandas infer the\nformat per-entry and parse them correctly."", 'Fix mutable default arguments across qlib data layer\n\nMerge 5 individual fixes into one module-level PR:\n\n1. data.py (10 occurrences) — list/dict default arguments in D/XD/RNNData\n2. cache.py (11 occurrences) — list default in Cache, CalendarCache, InstrumentCache\n3. processor.py — mutable list defaults in DropCol, FilterCol\n4. utils/index_data.py — mutable list default in SingleData.__init__\n5. backtest/high_performance_ds.py — mutable dict default in PandasSingleMetric\n\nAll follow the standard Python pattern: replace mutable default with None,\nadd `if arg is None: arg = []` guard inside the function body.', 'feat: add courage strict v1 qlib pipeline', 'fix: mask degenerate expanding rsquare windows', 'Fix no-op sort_index() in SeriesDFilter._toTimestamp\n\n`timestamp_series.sort_index()` was called without reassignment or\ninplace=True, making it a silent no-op. The _toTimestamp state machine\niterates over `timestamp_series.items()` and depends on the index being\nsorted to correctly detect transitions between contiguous True/False\nranges. Without the sort, adjacent timestamps in arbitrary insertion\norder can produce spurious split intervals or merged ones, causing\nExpressionDFilter and NameDFilter to yield incorrect instrument coverage\nintervals.\n\nThis went unnoticed because ExpressionDFilter typically operates on\ncalendar-ordered data from DatasetD, meaning the series often arrives\npre-sorted by coincidence. Explicitly reassigning the sorted result\nguarantees correctness regardless of input order.', 'Propagate trading freq to Account via _create_account (#1846)\n\nAccount.__init__ defaults freq=""day"" regardless of the actual trading\nfrequency of the backtest.  When users run with a different frequency\n(e.g. ""1min"", ""30min"") the portfolio metrics and indicator reports\nuse the wrong frequency throughout the backtest.\n\nThe root cause is a missing parameter thread: get_strategy_executor()\nreceives freq in exchange_kwargs but never forwards it to\ncreate_account_instance(), which always constructs Account(freq=""day"").\n\nFix: add a freq parameter to create_account_instance() and read it\nfrom exchange_kwargs in get_strategy_executor().  All existing\ncallers already pass freq inside exchange_kwargs, so no other changes\nare needed.', 'Fix ParallelExt AttributeError on _backend_args with joblib >=1.5.0 (#1927)\n\nThe existing code used joblib.__version__ to decide whether to write\nmaxtasksperchild to _backend_args (joblib <1.5.0) or _backend_kwargs\n(joblib >=1.5.0). However:\n\n1. The version check fails on local joblib forks or patched installs.\n2. The attribute may not exist yet during Parallel.__init__() depending\n   on which backend is selected and how far initialization has progressed.\n\nFix: use hasattr() to probe for _backend_kwargs first (joblib >=1.5.0),\nthen fall back to _backend_args (legacy joblib). This is both more\nrobust and simpler — no version string parsing needed.\n\nAlso removed the now-unused  statement.', 'fix: change assert tp_idx > 0 to tp_idx >= 0 in TimeAdjuster.truncate()\n\nFixes #1610\n\nWhen start_time in the workflow config exactly matches the first trading\nday in the calendar, tp_idx is 0, causing the assertion to fail.\nThe >= check handles this edge case without affecting existing behavior.', 'Fix mutable default arguments across contrib modules\n\nMerge 3 individual fixes into one module-level PR:\n\n1. contrib handlers (8 files) — data.py, handler.py, highfreq_handler.py, etc.\n2. contrib models (3 files) — pytorch_adarnn.py, pytorch_general_nn.py, pytorch_nn.py\n3. contrib strategy (4 files) — evaluate.py, enhanced_indexing.py, signal_strategy.py, analysis_model_performance.py\n\nAll follow standard Python mutable-default fix pattern.', ""Centralize instrument name normalization in code_to_fname (#2053)\n\nThe root cause is that code_to_fname() — the central normalization\nfunction for instrument names — doesn't normalize case before\nreturning. Individual consumers (FileFeatureStorage, LocalPITProvider)\neach add ad-hoc .lower() calls, but any code path that skips them uses\nthe original case, causing path mismatches on case-sensitive\nfilesystems (Linux ext4).\n\nFix:\n1. Normalize to lowercase in code_to_fname() — the single source of\n   truth for instrument-to-filename conversion.\n2. Remove the redundant instrument.lower() from FileFeatureStorage\n   (instrument already flows through code_to_fname in LocalFeatureProvider).\n3. Remove the redundant instrument.lower() from LocalPITProvider\n   (same reason).\n\nThis is a no-op on Windows/macOS (case-insensitive FS) and fixes\nFileNotFoundError on Linux when callers pass mixed-case instrument\nnames."", ""fix: handle missing minute-level data in get_higher_eq_freq_feature\n\nFixes #1854\n\nWhen running backtests with time_per_step='30min', the benchmark\ncalculation in PortfolioMetrics calls get_higher_eq_freq_feature()\nwith freq='30min'. The benchmark (CSI300) only has daily data, so\nD.features() raises ValueError/KeyError.\n\nThe minute-level fallback branch hardcoded a fallback to '1min' without\na try/except wrapper — if 1min data also doesn't exist (e.g., when only\n30min daily data files are available), the ValueError propagates up\nwith the misleading message 'can't find a freq from [Freq(30min)] that\ncan resample to 1min!'.\n\nFix: wrap the 1min fallback in the same try/except pattern used by the\nday/week/month branch, adding a 'day' fallback when 1min is unavailable.\n\nAlso fix type inconsistency in Freq.get_recent_freq(): the first\ncandidate was stored as str(_freq) while subsequent candidates stored\nthe raw _freq (str|Freq), making the return type unpredictable."", 'Fix mutable default arguments in RL files (2 files: PPO actor/critic, simulator simple)', 'fix: correct typo occured -> occurred in br_index/collector.py', ""Fix WMA weighted_mean NaN handling (#1993)\n\nThe weighted_mean function in WMA._load_internal uses np.nanmean(w * x),\nwhich produces incorrect results when NaN values are present in the input.\nThe problem is that np.nanmean renormalizes the product (w * x) by counting\nhow many non-NaN products there are, but it doesn't renormalize the weights\nthemselves — so the weight denominator still sums over all elements including\nthe NaN positions, leading to a biased result.\n\nFor example, with x = [1, NaN, 3] and w = [1/6, 2/6, 3/6]:\n  Old: np.nanmean(w * x) = (1/6 + 9/6) / 2 = 0.833\n  Correct weighted avg: (1*1/4 + 3*3/4) = 2.5\n\nThe fix filters out NaN positions from both x and w before computing the\nweighted sum, then renormalizes w so it sums to 1 over the valid elements."", 'fix: correct model objective in High-Freq Tree Alpha158 workflow config\n\nFixes #1739\n\nThe label is a continuous regression value (Ref($close, -2) / Ref($close, -1) - 1)\nbut the model objective was set to ""binary"". Changed to ""l2"" regression\nto match the label semantics. Also updated metric from binary_logloss/auc\nto mae/mse/rmse appropriate for regression.', ""Fix register_from_C AttributeError in joblib workers (#2038)\n\nregister_from_C is called from joblib worker processes, which are forked\nfrom the main process. In freshly spawned workers, the global config object\nC is a plain Config instance (not QlibConfig), so C.registered raises\nAttributeError because Config.__getattr__ falls through to raise when\nthe key isn't in _config dict.\n\nThe fix changes C.registered to getattr(C, 'registered', False), which\nreturns False for plain Config instances where the attribute doesn't exist.\nThis ensures the registration logic runs in worker processes rather than\nsilently crashing."", 'Fix mutable default arguments across backtest engine\n\nMerge 5 individual fixes into one module-level PR:\n\n1. backtest/__init__.py — mutable list in get_strategy_executor\n2. backtest/exchange.py, backtest/executor.py — mutable list in exchange/executor\n3. backtest/account.py — 10 occurrences of list/dict defaults\n4. backtest/position.py — mutable list in Position.__init__\n5. backtest/report.py — mutable list in PortfolioMetrics, Indicator\n\nAll follow standard Python mutable-default fix pattern.']","['committed (#2272)', 'committed (#2270)', 'committed (#2268)', 'committed (#2271)', 'committed (#2266)', 'committed (#2326)', 'committed (#2325)', 'committed (#2269)', 'committed (#2267)', 'committed (#2245)', 'committed (#2274)', 'committed (#2247)', 'committed (#2275)', 'committed (#2191)', 'committed (#2263)', 'committed (#2265)', 'committed (#2246)', 'committed (#2264)', 'committed (#2273)']","[716, 752, 1291, 1345, 1398, 1451, 1504, 1557, 1580, 1603, 1611, 1619, 1627, 1677, 1685, 1693, 1743, 1751, 1801, 1824, 1847, 2056, 2121, 2141, 2648]","[718, 754, 1293, 1347, 1400, 1453, 1506, 1559, 1582, 1605, 1613, 1621, 1629, 1679, 1687, 1695, 1745, 1753, 1803, 1826, 1849, 2058, 2123, 2143, 2650]","Fix mutable default arguments across config & infrastructure
+
+Merge 3 individual fixes into one module-level PR:
+
+1. config (4 files) — manager.py, loader.py, data_selection/dataset.py, tests/config.py
+2. utils (3 files) — __init__.py (load_dataset), mod.py (init_instance_by_config), resam.py (resample)
+3. workflow (2 files) — online/strategy.py, task/gen.py
+
+All follow standard Python mutable-default fix pattern.
+Fix DataFrame.applymap deprecation in CSIIndex._parse_excel
+
+Replace  with .
+
+DataFrame.applymap() was removed in pandas 2.2.0 (replaced by DataFrame.map()
+since pandas 1.4.0). This call in CSIIndex._parse_excel at line 174 would
+raise AttributeError on pandas >= 2.2.0 when processing index constituent
+changes from Excel files.
+
+Note: _parse_table at line 197 and get_new_companies at line 321 already use
+.map(), so this brings _parse_excel in line with the rest of the collector.
+Fix Yahoo date parsing with mixed timezone formats (#2014)
+
+YahooCollectorCN1d.download_index_data calls pd.to_datetime(df['date'])
+on timestamps from East Money API that may include timezone offsets
+(e.g. ' 09:30:00+08:00'). Similarly, YahooNormalize.normalize_yahoo calls
+pd.to_datetime(df.index) on date strings from Yahoo Finance.
+
+Without specifying format='mixed', pd.to_datetime raises when it encounters
+mixed formats in the same column — some entries are date-only strings while
+others carry timezone info. Adding format='mixed' lets pandas infer the
+format per-entry and parse them correctly.
+Fix mutable default arguments across qlib data layer
+
+Merge 5 individual fixes into one module-level PR:
+
+1. data.py (10 occurrences) — list/dict default arguments in D/XD/RNNData
+2. cache.py (11 occurrences) — list default in Cache, CalendarCache, InstrumentCache
+3. processor.py — mutable list defaults in DropCol, FilterCol
+4. utils/index_data.py — mutable list default in SingleData.__init__
+5. backtest/high_performance_ds.py — mutable dict default in PandasSingleMetric
+
+All follow the standard Python pattern: replace mutable default with None,
+add `if arg is None: arg = []` guard inside the function body.
+feat: add courage strict v1 qlib pipeline
+fix: mask degenerate expanding rsquare windows
+Fix no-op sort_index() in SeriesDFilter._toTimestamp
+
+`timestamp_series.sort_index()` was called without reassignment or
+inplace=True, making it a silent no-op. The _toTimestamp state machine
+iterates over `timestamp_series.items()` and depends on the index being
+sorted to correctly detect transitions between contiguous True/False
+ranges. Without the sort, adjacent timestamps in arbitrary insertion
+order can produce spurious split intervals or merged ones, causing
+ExpressionDFilter and NameDFilter to yield incorrect instrument coverage
+intervals.
+
+This went unnoticed because ExpressionDFilter typically operates on
+calendar-ordered data from DatasetD, meaning the series often arrives
+pre-sorted by coincidence. Explicitly reassigning the sorted result
+guarantees correctness regardless of input order.
+Propagate trading freq to Account via _create_account (#1846)
+
+Account.__init__ defaults freq=""day"" regardless of the actual trading
+frequency of the backtest.  When users run with a different frequency
+(e.g. ""1min"", ""30min"") the portfolio metrics and indicator reports
+use the wrong frequency throughout the backtest.
+
+The root cause is a missing parameter thread: get_strategy_executor()
+receives freq in exchange_kwargs but never forwards it to
+create_account_instance(), which always constructs Account(freq=""day"").
+
+Fix: add a freq parameter to create_account_instance() and read it
+from exchange_kwargs in get_strategy_executor().  All existing
+callers already pass freq inside exchange_kwargs, so no other changes
+are needed.
+Fix ParallelExt AttributeError on _backend_args with joblib >=1.5.0 (#1927)
+
+The existing code used joblib.__version__ to decide whether to write
+maxtasksperchild to _backend_args (joblib <1.5.0) or _backend_kwargs
+(joblib >=1.5.0). However:
+
+1. The version check fails on local joblib forks or patched installs.
+2. The attribute may not exist yet during Parallel.__init__() depending
+   on which backend is selected and how far initialization has progressed.
+
+Fix: use hasattr() to probe for _backend_kwargs first (joblib >=1.5.0),
+then fall back to _backend_args (legacy joblib). This is both more
+robust and simpler — no version string parsing needed.
+
+Also removed the now-unused  statement.
+fix: change assert tp_idx > 0 to tp_idx >= 0 in TimeAdjuster.truncate()
+
+Fixes #1610
+
+When start_time in the workflow config exactly matches the first trading
+day in the calendar, tp_idx is 0, causing the assertion to fail.
+The >= check handles this edge case without affecting existing behavior.
+Fix mutable default arguments across contrib modules
+
+Merge 3 individual fixes into one module-level PR:
+
+1. contrib handlers (8 files) — data.py, handler.py, highfreq_handler.py, etc.
+2. contrib models (3 files) — pytorch_adarnn.py, pytorch_general_nn.py, pytorch_nn.py
+3. contrib strategy (4 files) — evaluate.py, enhanced_indexing.py, signal_strategy.py, analysis_model_performance.py
+
+All follow standard Python mutable-default fix pattern.
+Centralize instrument name normalization in code_to_fname (#2053)
+
+The root cause is that code_to_fname() — the central normalization
+function for instrument names — doesn't normalize case before
+returning. Individual consumers (FileFeatureStorage, LocalPITProvider)
+each add ad-hoc .lower() calls, but any code path that skips them uses
+the original case, causing path mismatches on case-sensitive
+filesystems (Linux ext4).
+
+Fix:
+1. Normalize to lowercase in code_to_fname() — the single source of
+   truth for instrument-to-filename conversion.
+2. Remove the redundant instrument.lower() from FileFeatureStorage
+   (instrument already flows through code_to_fname in LocalFeatureProvider).
+3. Remove the redundant instrument.lower() from LocalPITProvider
+   (same reason).
+
+This is a no-op on Windows/macOS (case-insensitive FS) and fixes
+FileNotFoundError on Linux when callers pass mixed-case instrument
+names.
+fix: handle missing minute-level data in get_higher_eq_freq_feature
+
+Fixes #1854
+
+When running backtests with time_per_step='30min', the benchmark
+calculation in PortfolioMetrics calls get_higher_eq_freq_feature()
+with freq='30min'. The benchmark (CSI300) only has daily data, so
+D.features() raises ValueError/KeyError.
+
+The minute-level fallback branch hardcoded a fallback to '1min' without
+a try/except wrapper — if 1min data also doesn't exist (e.g., when only
+30min daily data files are available), the ValueError propagates up
+with the misleading message 'can't find a freq from [Freq(30min)] that
+can resample to 1min!'.
+
+Fix: wrap the 1min fallback in the same try/except pattern used by the
+day/week/month branch, adding a 'day' fallback when 1min is unavailable.
+
+Also fix type inconsistency in Freq.get_recent_freq(): the first
+candidate was stored as str(_freq) while subsequent candidates stored
+the raw _freq (str|Freq), making the return type unpredictable.
+Fix mutable default arguments in RL files (2 files: PPO actor/critic, simulator simple)
+fix: correct typo occured -> occurred in br_index/collector.py
+Fix WMA weighted_mean NaN handling (#1993)
+
+The weighted_mean function in WMA._load_internal uses np.nanmean(w * x),
+which produces incorrect results when NaN values are present in the input.
+The problem is that np.nanmean renormalizes the product (w * x) by counting
+how many non-NaN products there are, but it doesn't renormalize the weights
+themselves — so the weight denominator still sums over all elements including
+the NaN positions, leading to a biased result.
+
+For example, with x = [1, NaN, 3] and w = [1/6, 2/6, 3/6]:
+  Old: np.nanmean(w * x) = (1/6 + 9/6) / 2 = 0.833
+  Correct weighted avg: (1*1/4 + 3*3/4) = 2.5
+
+The fix filters out NaN positions from both x and w before computing the
+weighted sum, then renormalizes w so it sums to 1 over the valid elements.
+fix: correct model objective in High-Freq Tree Alpha158 workflow config
+
+Fixes #1739
+
+The label is a continuous regression value (Ref($close, -2) / Ref($close, -1) - 1)
+but the model objective was set to ""binary"". Changed to ""l2"" regression
+to match the label semantics. Also updated metric from binary_logloss/auc
+to mae/mse/rmse appropriate for regression.
+Fix register_from_C AttributeError in joblib workers (#2038)
+
+register_from_C is called from joblib worker processes, which are forked
+from the main process. In freshly spawned workers, the global config object
+C is a plain Config instance (not QlibConfig), so C.registered raises
+AttributeError because Config.__getattr__ falls through to raise when
+the key isn't in _config dict.
+
+The fix changes C.registered to getattr(C, 'registered', False), which
+returns False for plain Config instances where the attribute doesn't exist.
+This ensures the registration logic runs in worker processes rather than
+silently crashing.
+Fix mutable default arguments across backtest engine
+
+Merge 5 individual fixes into one module-level PR:
+
+1. backtest/__init__.py — mutable list in get_strategy_executor
+2. backtest/exchange.py, backtest/executor.py — mutable list in exchange/executor
+3. backtest/account.py — 10 occurrences of list/dict defaults
+4. backtest/position.py — mutable list in Position.__init__
+5. backtest/report.py — mutable list in PortfolioMetrics, Indicator
+
+All follow standard Python mutable-default fix pattern."
