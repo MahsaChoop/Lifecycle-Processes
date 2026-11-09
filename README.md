@@ -68,7 +68,7 @@ Each step calls into `functions/` and writes CSVs and figures under `results/`. 
 - **7c. Anomaly vs normal and discovery F1.** Split the cleaned log by anomaly object IDs. The whole-log F1 is the one already computed in 7b.
 - **7d. Anomaly × category and discovery F1.** Cross anomaly and normal with the category logs, then write `consolidated_results_tables.xlsx`.
 - **7e. Random 10-bucket partition.** Shuffle the cleaned log into 10 nearly equal buckets, repeat for seeds 42–51, and score discovery F1. Results go to `random partitioning 10 buckets.xlsx`.
-- **7f. Trace clustering.** Cluster the cleaned log into 10 trace clusters and score discovery F1. Results go to `trace clustering 10 clusters.xlsx`.
+- **7f. Trace clustering.** Cluster the cleaned log into 5 trace clusters (`N_CLUSTERS = 5`) and score discovery F1. Results go to `trace clustering 5 clusters.xlsx`.
 - **8. Petri nets by commit category.** Discover one net per disjoint category with `inductive_IMf_noise_0.2`.
 - **9. Petri nets by anomaly, normal, and whole.** Run the same miner on the anomaly, normal, and whole logs.
 - **9b. Petri net of the whole log.** Discover one net for the preprocessed whole log and save it as a PDF without a log-name title.
@@ -78,7 +78,7 @@ Each step calls into `functions/` and writes CSVs and figures under `results/`. 
 - **11d. EPA for anomaly × category.** Compute those metrics on the crossed partitions.
 - **11e. Combine EPA tables.** Write the three EPA tables into `epa_complexity_tables.xlsx`.
 - **11f. EPA for random 10-bucket partitions.** Repeat the 7e split and record affinity and normalized sequence entropy in `random partitioning 10 buckets epa.xlsx`.
-- **11g. EPA for trace clustering.** Recluster the cleaned log into 5 trace clusters and record affinity and normalized sequence entropy in `trace clustering 5 clusters epa.xlsx`.
+- **11g. EPA for trace clustering.** Recluster the cleaned log into 5 trace clusters (`N_CLUSTERS = 5`) and record affinity and normalized sequence entropy in `trace clustering 5 clusters epa.xlsx`.
 
 ## What are the analyses in the ablation study?
 
