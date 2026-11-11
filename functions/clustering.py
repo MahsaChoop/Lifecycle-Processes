@@ -6,7 +6,7 @@ import pm4py
 from sklearn.cluster import KMeans
 
 
-def cluster_flat_log(flat_df: pd.DataFrame, n_clusters: int = 10, random_state: int = 42) -> dict:
+def cluster_flat_log(flat_df: pd.DataFrame, n_clusters: int = 5, random_state: int = 42) -> dict:
     """Cluster traces with pm4py.cluster_log and return named dataframes.
 
     pm4py 2.7.23 yields EventLog objects (the dataframe conversion in that

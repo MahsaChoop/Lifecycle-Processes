@@ -1,91 +1,51 @@
 # Data
 
-Raw inputs for the analyses are extracted from the GitHub REST API with [pystackt](https://github.com/LienBosmans/pystackt) (via PyGitHub). Issues, commits, events, users, and labels are stored in DuckDB as Object-Centric Event Data (OCED), then optionally exported to OCEL 2.0 SQLite.
+This folder turns any public GitHub repository into an event log you can analyze.
 
-## Prerequisites
-
-From the repository root:
-
-```bash
-pip install -r requirements.txt
+```text
+GitHub API  ->  DuckDB (object-centric event data)  ->  OCEL 2.0 SQLite
 ```
 
-You also need a GitHub personal access token that can read the target public repository.
+Extraction uses [pystackt](https://github.com/LienBosmans/pystackt) (via PyGitHub). It collects issues, commits, events, users, and labels.
 
-## Token file
+## Extract your own repository
 
-Create `data/configToken.py` (this path is gitignored; do not commit it):
+1. **Install dependencies** (from the repository root):
 
-```python
-GITHUB_ACCESS_TOKEN = "YOUR_GITHUB_PAT"
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Extract Commitizen (main study)
+2. **Create a GitHub token.** In GitHub, go to *Settings > Developer settings > Personal access tokens*. A token that can read public repositories is enough.
 
-Open [`data extraction.ipynb`](data%20extraction.ipynb) with the working directory set to `data/` (paths such as `raw/...` are relative).
+3. **Save the token** in `data/configToken.py`. This file is gitignored. Never commit it.
 
-Run the Commitizen cells, then add `prepare_graph_data` if it is not already in that block (analysis loading expects `graph_data_prep.graph_base_table`):
+   ```python
+   GITHUB_ACCESS_TOKEN = "YOUR_GITHUB_TOKEN"
+   ```
 
-```python
-from pystackt import (
-    get_github_log,
-    export_to_ocel2,
-    create_statistics_views,
-    prepare_graph_data,
-)
-from configToken import GITHUB_ACCESS_TOKEN
+Then open [`data extraction.ipynb`](data%20extraction.ipynb) with the working directory set to `data/` (the `raw/` paths are relative to it). It has ready-made cells for every repository in the study. Copy one and change the repository owner and name.
 
-DUCKDB_PATH = "raw/commitizen.duckdb"
-SQLITE_PATH = "raw/ocel2_commitizen.sqlite"
+## What you get
 
-get_github_log(
-    GITHUB_ACCESS_TOKEN=GITHUB_ACCESS_TOKEN,
-    repo_owner="commitizen-tools",
-    repo_name="commitizen",
-    max_issues=None,
-    quack_db=str(DUCKDB_PATH),
-    schema="main",
-)
+| Output | Used for |
+|--------|----------|
+| `raw/<repo>.duckdb` | Weekly counts, anomalies, commits, and the `graph_data_prep.graph_base_table` table |
+| `raw/<repo>.sqlite` | OCEL 2.0 log that the analysis notebooks flatten |
 
-export_to_ocel2(
-    quack_db=DUCKDB_PATH,
-    schema_in="main",
-    schema_out="ocel2",
-    sqlite_db=SQLITE_PATH,
-)
+## Use it in the analysis
 
-create_statistics_views(
-    quack_db=DUCKDB_PATH,
-    schema_in="main",
-    schema_out="statistics",
-)
+- File paths are set per repository in `functions/configs/` (for example `commitizen.py`).
+- `commitizen.ipynb` (repository root) expects `raw/commitizen.duckdb` and `raw/ocel2_commitizen.sqlite`.
+- To analyze your own repository, either save your files under those names or edit `DUCKDB_PATH` and `SQLITE_PATH` in the matching config.
+- The notebooks in `replication/` use the other configs (for example `raw/Qlib.duckdb` and `raw/Qlib.sqlite`).
 
-prepare_graph_data(
-    quack_db=DUCKDB_PATH,
-    schema_in="main",
-    schema_out="graph_data_prep",
-)
-```
+## Data already included
 
-Pipeline order:
-
-1. `get_github_log` → writes `raw/commitizen.duckdb`
-2. `export_to_ocel2` → writes `raw/ocel2_commitizen.sqlite`
-3. `create_statistics_views` → optional statistics schema
-4. `prepare_graph_data` → creates `graph_data_prep.graph_base_table` required by `commitizen.ipynb`
-
-## Expected outputs
-
-| File | Role |
-|------|------|
-| `data/raw/commitizen.duckdb` | OCED DuckDB for weekly counts, anomalies, and commits |
-| `data/raw/ocel2_commitizen.sqlite` | OCEL2 export flattened in `commitizen.ipynb` |
-
-## Other repositories
-
-The same notebook has cells for TradingAgents, FinGPT, FinRL, OpenBB, Qlib, Vibe-Trading, Nautilus Trader, and related projects. They write matching `raw/*.duckdb` and `raw/*.sqlite` files used by notebooks under `replication/`.
+- `raw/` holds the databases for the study repositories.
+- `event logs/` holds the cleaned whole log of each dataset as a zipped XES file (one `.xes` per zip): `commitizen`, `TradingAgents`, `Vibe-Trading`, `Qlib`, `yargs`, and `semantic-release`.
 
 ## Tips
 
-- Extraction can take a long time because of GitHub API rate limits.
-- More tutorials: [pystackt docs](https://lienbosmans.github.io/pystackt/) and [LienBosmans/pystackt](https://github.com/LienBosmans/pystackt).
+- Extraction can take a long time because of GitHub API rate limits. Test with `max_issues=100` first.
+- More tutorials: [pystackt docs](https://lienbosmans.github.io/pystackt/).
