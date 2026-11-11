@@ -85,6 +85,19 @@ Pipeline order:
 
 The same notebook has cells for TradingAgents, FinGPT, FinRL, OpenBB, Qlib, Vibe-Trading, Nautilus Trader, and related projects. They write matching `raw/*.duckdb` and `raw/*.sqlite` files used by notebooks under `replication/`.
 
+## Event logs
+
+`data/event logs/` holds the cleaned whole log (`flat_df_category_clean`) of each dataset as a zipped XES file. Each zip contains one `.xes` file with the same name.
+
+| File | Dataset |
+|------|---------|
+| `data/event logs/commitizen.zip` | Commitizen |
+| `data/event logs/TradingAgents.zip` | TradingAgents |
+| `data/event logs/Vibe-Trading.zip` | Vibe-Trading |
+| `data/event logs/Qlib.zip` | Qlib |
+| `data/event logs/yargs.zip` | yargs |
+| `data/event logs/semantic-release.zip` | semantic-release |
+
 ## Tips
 
 - Extraction can take a long time because of GitHub API rate limits.

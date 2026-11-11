@@ -14,6 +14,7 @@ Lifecycles-Processes/
 ├── data/                            # extraction notebook, raw databases, token file
 │   ├── data extraction.ipynb
 │   ├── raw/                         # DuckDB and OCEL2 SQLite files
+│   ├── event logs/                  # zipped XES logs for the six repositories
 │   └── README.md                    # how to extract raw data
 ├── results/
 │   ├── tables/                      # CSV and Excel outputs
