@@ -49,7 +49,7 @@ Outputs go to `results/`. Petri-net cells need Graphviz on `PATH`.
 2. Rolling IQR anomaly detection
 3. Export anomaly IDs
 4. Anomaly figures
-5. Commit classification (Conventional Commits)
+5. Commit classification (Regex method)
 6. Flatten the OCEL2 issue log
 7. Partition the log and score discovery F1 (categories, anomaly/normal, anomaly x category, random, clustering)
 8. Petri nets by commit category
@@ -60,9 +60,9 @@ Outputs go to `results/`. Petri-net cells need Graphviz on `PATH`.
 
 [`evaluation-ablation study.ipynb`](evaluation-ablation%20study.ipynb):
 
-- Goal: test whether partitioning the log by state and category beats simple alternatives.
+- Goal: test whether partitioning the log by state and category beats other alternatives as baselines.
 - Ours: States, Categories, States x Categories.
-- Baselines: None, Random (10 buckets), Clustering (5 clusters).
+- Baselines: None, Random (10 buckets, 10 seeds), Clustering (kmean with 5 clusters).
 - Repositories: commitizen, yargs, semantic-release, TradingAgents, Vibe-Trading, Qlib.
-- Metrics: cycle time, F-score, complexity (size, CFC, simplicity).
+- Metrics: cycle time, F-score, log complexity (entorpy).
 - Run the repo notebooks first; outputs go to `results/tables/compare/`.
